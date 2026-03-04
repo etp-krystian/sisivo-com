@@ -1,40 +1,23 @@
 ---
 layout: base
-title: Autonomous AI agents — landing page template
+title: Strategic technical partner for HubSpot agencies
 ---
 
-# Autonomous AI agents for real‑world workflows
+# Strategic Technical Partner for HubSpot Agencies
 
-This is a simple landing page starter for teams exploring autonomous agents.
-Use it as a base to describe your product, process and example use cases, then
-wire it up to real demos when you are ready.
+Straightforward tech support to help you stay ahead as marketing gets more technical — and AI‑driven.
 
-## Why agents, not another chatbot?
+We help marketing agencies handle the technical side of HubSpot, automation, websites, webshops and integrations. From cleaning up messy data to setting up workflows, we focus on what actually works. No fluff. Just practical solutions.
 
-- agents not only respond – they **take actions** in your systems,  
-- they work in loops: **observe → plan → act → learn**,  
-- they can **coordinate other agentic and classic services**, instead of living in isolation,  
-- they respect constraints: budget, data access and compliance rules.
+## Services
 
-## Example use cases {#solutions}
+- **HubSpot** – We help you get the most out of HubSpot. Whether you need technical support, or help building a HubSpot CMS website, we’ve got you covered.  
+- **Integrations** – We make sure your tools work well together. Using APIs, we connect HubSpot with the other systems.  
+- **E‑commerce** – If you’re building or running an online store, we can help. We specialize in Shopify.  
+- **Data Insights** – We bring all your important business metrics together in one easy‑to‑use dashboard.
 
-- **Ops & SRE**: an agent that tracks alerts, correlates events and proposes or executes actions,  
-- **Customer experience**: an agent that moves between CRM, helpdesk and billing to close cases end‑to‑end,  
-- **Engineering**: an agent that keeps documentation and repetitive tasks under control for dev teams.
+## Technology and teamwork go hand in hand
 
-## Typical industries {#industries}
+Since 2017, we’ve combined Scandinavian innovation with Polish technical talent to deliver more than just code. Communication is the cornerstone of everything we do. We listen, we learn, and we grow with you making sure our solutions don’t just solve problems but help your team work smarter, collaborate better, and achieve more.
 
-- B2B SaaS with a complex tool stack,  
-- financial services where audit trails matter,  
-- product teams and agencies building with AI components.
-
-## How you might work with agents {#process}
-
-1. **Process diagnosis** – find a specific, measurable point where agents could add value.  
-2. **Architecture workshop** – design agent architecture, interfaces and constraints.  
-3. **Production pilot** – a small, controlled scope with clear success metrics.  
-4. **Roll‑out** – only then scale, automate more and integrate deeper.
-
-If you already have data, a repeatable process and the appetite to experiment,
-swap this copy for your own and point the contact links to your team:  
-`contact@yourcompany.ai`.
+You can learn more about us, our story and our way of working on the dedicated **About us** page. We also regularly share practical learnings from client work in the Insights section on the main site.
