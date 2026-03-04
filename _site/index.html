@@ -3,13 +3,688 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Hej</title>
+    <title>Autonomous AI agents — landing page template</title>
+    <meta name="description" content="Autonomous AI agents — a clean, minimal landing page template for teams experimenting with fully autonomous agent systems." />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f5f5f7;
+        --bg-elevated: #ffffff;
+        --border-subtle: #e0e0e5;
+        --accent: #2563eb;
+        --accent-soft: #dbeafe;
+        --accent-dark: #1d4ed8;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+        --text-soft: #9ca3af;
+        --danger: #b91c1c;
+        --shadow-soft: 0 16px 40px rgba(15, 23, 42, 0.08);
+        --radius-lg: 18px;
+        --radius-full: 999px;
+        --layout-width: 980px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+          "Segoe UI", sans-serif;
+        background: radial-gradient(circle at top, #ffffff 0, #f5f5f7 55%, #e5e7eb 100%);
+        color: var(--text-main);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page-shell {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .page-inner {
+        width: 100%;
+        max-width: var(--layout-width);
+        margin: 0 auto;
+        padding: 24px 20px 40px;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 10px 16px;
+        border-radius: var(--radius-full);
+        border: 1px solid rgba(156, 163, 175, 0.35);
+        background: rgba(249, 250, 251, 0.88);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        position: sticky;
+        top: 16px;
+        z-index: 10;
+      }
+
+      .nav-left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .logo-mark {
+        width: 28px;
+        height: 28px;
+        border-radius: 12px;
+        border: 1px solid rgba(148, 163, 184, 0.6);
+        background: radial-gradient(circle at 20% 0%, #dbeafe 0, #eff6ff 40%, #e5e7eb 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .logo-orbit {
+        width: 70%;
+        height: 70%;
+        border-radius: 999px;
+        border: 1px solid rgba(37, 99, 235, 0.55);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      .logo-core {
+        width: 9px;
+        height: 9px;
+        border-radius: 999px;
+        background: radial-gradient(circle at 30% 0%, #eff6ff 0, #2563eb 45%, #1d4ed8 100%);
+        box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.5), 0 0 0 6px rgba(37, 99, 235, 0.12);
+      }
+
+      .logo-spark {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 999px;
+        background: #38bdf8;
+        top: 14%;
+        right: 10%;
+        box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.3);
+      }
+
+      .nav-brand {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+      }
+
+      .nav-title {
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+      }
+
+      .nav-subtitle {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: var(--text-soft);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+
+      .nav-link {
+        padding: 4px 0;
+        border-bottom: 1px solid transparent;
+      }
+
+      .nav-link:hover {
+        color: var(--text-main);
+        border-color: rgba(148, 163, 184, 0.9);
+      }
+
+      .nav-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 12px;
+        border-radius: 999px;
+        font-size: 12px;
+        border: 1px solid rgba(148, 163, 184, 0.9);
+        background: linear-gradient(135deg, #ffffff 0, #f9fafb 60%, #eff6ff 100%);
+      }
+
+      .nav-cta-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 999px;
+        background: #22c55e;
+        box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.3);
+      }
+
+      .nav-cta span {
+        white-space: nowrap;
+      }
+
+      .layout-main {
+        display: grid;
+        grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
+        gap: 32px;
+        margin-top: 32px;
+        align-items: stretch;
+      }
+
+      .card {
+        background: rgba(248, 250, 252, 0.96);
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--border-subtle);
+        box-shadow: var(--shadow-soft);
+        padding: 26px 26px 22px;
+      }
+
+      .card-muted {
+        background: rgba(255, 255, 255, 0.88);
+      }
+
+      .hero-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 3px 8px 3px 4px;
+        border-radius: 999px;
+        border: 1px solid rgba(191, 219, 254, 0.9);
+        background: rgba(239, 246, 255, 0.9);
+        color: var(--accent-dark);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        margin-bottom: 12px;
+      }
+
+      .hero-dot {
+        width: 18px;
+        height: 18px;
+        border-radius: 999px;
+        background: radial-gradient(circle at 30% 0%, #eff6ff 0, #1d4ed8 45%, #020617 100%);
+        box-shadow: 0 0 0 3px rgba(191, 219, 254, 0.9);
+      }
+
+      .hero-title {
+        font-size: clamp(32px, 4vw, 38px);
+        line-height: 1.1;
+        margin: 0 0 12px;
+        letter-spacing: -0.03em;
+      }
+
+      .hero-title span {
+        background: linear-gradient(135deg, #0f172a, #1d4ed8);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .hero-subtitle {
+        font-size: 15px;
+        line-height: 1.6;
+        color: var(--text-muted);
+        margin: 0 0 18px;
+      }
+
+      .hero-metadata {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 16px;
+        font-size: 12px;
+        color: var(--text-soft);
+        margin-bottom: 16px;
+      }
+
+      .hero-metadata span {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .hero-metadata-badge {
+        width: 16px;
+        height: 16px;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 9px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 8px;
+      }
+
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 9px 16px;
+        border-radius: 999px;
+        border: none;
+        background: linear-gradient(135deg, #1d4ed8, #2563eb);
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 550;
+        cursor: pointer;
+        box-shadow: 0 18px 40px rgba(37, 99, 235, 0.35);
+      }
+
+      .btn-primary span:last-child {
+        font-size: 12px;
+        opacity: 0.9;
+      }
+
+      .btn-primary:focus-visible {
+        outline: 2px solid #1d4ed8;
+        outline-offset: 2px;
+      }
+
+      .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        border: 1px dashed rgba(148, 163, 184, 0.9);
+        background: rgba(249, 250, 251, 0.95);
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+
+      .btn-secondary-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        border: 1px solid rgba(156, 163, 175, 0.85);
+      }
+
+      .hero-footnote {
+        font-size: 11px;
+        color: var(--text-soft);
+      }
+
+      .side-card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .side-title {
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: var(--text-soft);
+      }
+
+      .side-badge {
+        padding: 3px 10px;
+        border-radius: 999px;
+        font-size: 11px;
+        background: rgba(15, 23, 42, 0.04);
+        color: var(--text-muted);
+      }
+
+      .side-metrics {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+
+      .metric {
+        padding: 10px 10px;
+        border-radius: 14px;
+        border: 1px solid rgba(209, 213, 219, 0.9);
+        background: rgba(248, 250, 252, 0.9);
+      }
+
+      .metric-label {
+        font-size: 11px;
+        color: var(--text-muted);
+        margin-bottom: 4px;
+      }
+
+      .metric-value {
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: -0.03em;
+      }
+
+      .metric-tag {
+        margin-top: 4px;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--text-soft);
+      }
+
+      .side-list {
+        border-radius: 14px;
+        border: 1px dashed rgba(209, 213, 219, 0.9);
+        padding: 10px 10px 8px;
+        background: rgba(249, 250, 251, 0.9);
+        font-size: 12px;
+        color: var(--text-muted);
+      }
+
+      .side-list-title {
+        font-weight: 500;
+        margin-bottom: 6px;
+      }
+
+      .side-list ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 4px;
+      }
+
+      .side-list li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .pill {
+        width: 7px;
+        height: 16px;
+        border-radius: 999px;
+        background: linear-gradient(180deg, #22c55e, #15803d);
+      }
+
+      .pill-soft {
+        background: linear-gradient(180deg, #e5e7eb, #9ca3af);
+      }
+
+      .content-wrapper {
+        margin-top: 26px;
+      }
+
+      .content-inner {
+        max-width: var(--layout-width);
+        margin: 0 auto;
+        padding: 0 2px 18px;
+        font-size: 15px;
+        line-height: 1.7;
+        color: var(--text-muted);
+      }
+
+      .content-inner h1,
+      .content-inner h2,
+      .content-inner h3 {
+        color: var(--text-main);
+      }
+
+      .content-inner h1 {
+        font-size: 24px;
+        margin-top: 0;
+      }
+
+      .content-inner h2 {
+        font-size: 18px;
+        margin-top: 24px;
+      }
+
+      .content-inner h3 {
+        font-size: 16px;
+        margin-top: 18px;
+      }
+
+      .content-inner p {
+        margin: 0 0 12px;
+      }
+
+      .content-inner ul {
+        padding-left: 18px;
+        margin: 0 0 12px;
+      }
+
+      .content-inner li {
+        margin-bottom: 4px;
+      }
+
+      .page-footer {
+        border-top: 1px solid rgba(209, 213, 219, 0.9);
+        padding-top: 12px;
+        margin-top: 8px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 8px;
+        font-size: 11px;
+        color: var(--text-soft);
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .footer-links a {
+        text-decoration: none;
+      }
+
+      .footer-links a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 800px) {
+        .page-inner {
+          padding: 16px 14px 32px;
+        }
+
+        .nav {
+          padding-inline: 12px;
+        }
+
+        .nav-links {
+          display: none;
+        }
+
+        .layout-main {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 20px;
+          margin-top: 22px;
+        }
+
+        .card {
+          padding: 22px 20px 20px;
+        }
+
+        .side-metrics {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+    </style>
   </head>
   <body>
-    <main>
-      <h1>Witaj 👋</h1>
-<p>To moja strona na Eleventy.</p>
+    <div class="page-shell">
+      <div class="page-inner">
+        <header class="nav" aria-label="Primary navigation">
+          <div class="nav-left">
+            <div class="logo-mark" aria-hidden="true">
+              <div class="logo-orbit">
+                <div class="logo-core"></div>
+              </div>
+              <div class="logo-spark"></div>
+            </div>
+            <div class="nav-brand">
+              <div class="nav-title">Autonomous Agents Studio</div>
+              <div class="nav-subtitle">Production‑grade AI agents</div>
+            </div>
+          </div>
+          <nav class="nav-links" aria-label="Page sections">
+            <a href="#solutions" class="nav-link">Solutions</a>
+            <a href="#industries" class="nav-link">Industries</a>
+            <a href="#process" class="nav-link">How we work</a>
+          </nav>
+          <a href="mailto:contact@yourcompany.ai" class="nav-cta">
+            <span class="nav-cta-dot"></span>
+            <span>Talk to an agent architect</span>
+          </a>
+        </header>
 
-    </main>
+        <main class="layout-main">
+          <section class="card">
+            <div class="hero-eyebrow">
+              <span class="hero-dot"></span>
+              <span>Production‑ready agent systems</span>
+            </div>
+            <h1 class="hero-title">
+              Fully autonomous
+              <span>AI agents</span>
+              for demanding teams.
+            </h1>
+            <p class="hero-subtitle">
+              A minimal landing page template for teams exploring autonomous agents
+              that plan, act and coordinate across your stack — from prototype to
+              production, with safety and observability in mind.
+            </p>
+            <div class="hero-metadata">
+              <span>
+                <span class="hero-metadata-badge">EU</span>
+                Remote‑first product team in Europe
+              </span>
+              <span>
+                <span class="hero-metadata-badge">24/7</span>
+                Agents keep working while your team sleeps
+              </span>
+            </div>
+            <div class="hero-actions">
+              <a href="mailto:contact@yourcompany.ai?subject=Autonomous%20agents%20pilot"
+                class="btn-primary">
+                <span>Book a 30‑min session</span>
+                <span>No sales deck, just systems</span>
+              </a>
+              <a href="#solutions" class="btn-secondary">
+                <span class="btn-secondary-dot"></span>
+                <span>Explore common use cases</span>
+              </a>
+            </div>
+            <p class="hero-footnote">
+              This is a starting point for your own brand. Swap the copy, plug in
+              your metrics and connect it to real agent demos when you are ready.
+            </p>
+          </section>
+
+          <aside class="card card-muted" aria-label="Agent use case summary">
+            <div class="side-card-header">
+              <div class="side-title">Agent profile</div>
+              <div class="side-badge">Autonomous agents in production</div>
+            </div>
+            <div class="side-metrics">
+              <div class="metric">
+                <div class="metric-label">Time saved on ops</div>
+                <div class="metric-value">‑68%</div>
+                <div class="metric-tag">from manual work to agents</div>
+              </div>
+              <div class="metric">
+                <div class="metric-label">Average response time</div>
+                <div class="metric-value">3.2 s</div>
+                <div class="metric-tag">first agent decision</div>
+              </div>
+            </div>
+            <div class="side-list">
+              <div class="side-list-title">Typical collaboration areas</div>
+              <ul>
+                <li>
+                  <span class="pill"></span>
+                  <span>Coordinating work across tools (CRM, helpdesk, code)</span>
+                </li>
+                <li>
+                  <span class="pill"></span>
+                  <span>Proactive monitoring, escalation and risk reporting</span>
+                </li>
+                <li>
+                  <span class="pill pill-soft"></span>
+                  <span>Keeping documentation up‑to‑date in real time</span>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </main>
+
+        <div class="content-wrapper">
+          <div class="content-inner">
+            <h1>Autonomous AI agents for real‑world workflows</h1>
+<p>This is a simple landing page starter for teams exploring autonomous agents.
+Use it as a base to describe your product, process and example use cases, then
+wire it up to real demos when you are ready.</p>
+<h2>Why agents, not another chatbot?</h2>
+<ul>
+<li>agents not only respond – they <strong>take actions</strong> in your systems,</li>
+<li>they work in loops: <strong>observe → plan → act → learn</strong>,</li>
+<li>they can <strong>coordinate other agentic and classic services</strong>, not live in isolation,</li>
+<li>they respect constraints: budget, data access and compliance rules.</li>
+</ul>
+<h2>Example use cases {#solutions}</h2>
+<ul>
+<li><strong>Ops &amp; SRE</strong>: an agent that tracks alerts, correlates events and proposes or executes actions,</li>
+<li><strong>Customer experience</strong>: an agent that moves between CRM, helpdesk and billing to close cases end‑to‑end,</li>
+<li><strong>Engineering</strong>: an agent that keeps documentation and repetitive tasks under control for dev teams.</li>
+</ul>
+<h2>Typical industries {#industries}</h2>
+<ul>
+<li>B2B SaaS with a complex tool stack,</li>
+<li>financial services where audit trails matter,</li>
+<li>product teams and agencies building with AI components.</li>
+</ul>
+<h2>How you might work with agents {#process}</h2>
+<ol>
+<li><strong>Process diagnosis</strong> – find a specific, measurable point where agents could add value.</li>
+<li><strong>Architecture workshop</strong> – design agent architecture, interfaces and constraints.</li>
+<li><strong>Production pilot</strong> – a small, controlled scope with clear success metrics.</li>
+<li><strong>Roll‑out</strong> – only then scale, automate more and integrate deeper.</li>
+</ol>
+<p>If you already have data, a repeatable process and the appetite to experiment,
+swap this copy for your own and point the contact links to your team:<br>
+<code>contact@yourcompany.ai</code>.</p>
+
+            <footer class="page-footer">
+              <div>© Autonomous AI agents — placeholder landing page template.</div>
+              <div class="footer-links">
+                <a href="mailto:contact@yourcompany.ai">Contact</a>
+                <a href="#process">How we work</a>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
