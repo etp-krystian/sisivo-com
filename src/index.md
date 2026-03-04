@@ -1,39 +1,40 @@
 ---
 layout: base
-title: Nordic Agents — autonomiczne systemy AI
+title: Autonomous AI agents — landing page template
 ---
 
-# Autonomiczne agentowe systemy AI dla realnych procesów
+# Autonomous AI agents for real‑world workflows
 
-Jesteśmy niewielkim, technicznym zespołem z północy Europy. Projektujemy i wdrażamy
-autonomicznych agentów AI, którzy potrafią samodzielnie planować, wykonywać i nadzorować
-złożone zadania, zachowując przejrzysty ślad decyzyjny.
+This is a simple landing page starter for teams exploring autonomous agents.
+Use it as a base to describe your product, process and example use cases, then
+wire it up to real demos when you are ready.
 
-## Dlaczego agenci, a nie kolejny chatbot?
+## Why agents, not another chatbot?
 
-- agent nie tylko odpowiada – **podejmuje działania** w Twoich systemach,
-- działa w pętlach: **obserwuje → planuje → wykonuje → uczy się**, 
-- potrafi **koordynować inne agentowe i klasyczne usługi**, zamiast zostać samotną wyspą,
-- respektuje ograniczenia: budżet, dostęp do danych, reguły compliance.
+- agents not only respond – they **take actions** in your systems,  
+- they work in loops: **observe → plan → act → learn**,  
+- they can **coordinate other agentic and classic services**, instead of living in isolation,  
+- they respect constraints: budget, data access and compliance rules.
 
-## Przykładowe zastosowania {#solutions}
+## Example use cases {#solutions}
 
-- **Ops & SRE**: agent, który śledzi alerty, koreluje zdarzenia, proponuje i egzekwuje akcje,
-- **Customer experience**: agent, który łączy CRM, helpdesk i billing, aby domykać sprawy end‑to‑end,
-- **Inżynieria**: agent wspierający zespoły dev w utrzymaniu dokumentacji i powtarzalnych zadań.
+- **Ops & SRE**: an agent that tracks alerts, correlates events and proposes or executes actions,  
+- **Customer experience**: an agent that moves between CRM, helpdesk and billing to close cases end‑to‑end,  
+- **Engineering**: an agent that keeps documentation and repetitive tasks under control for dev teams.
 
-## Branże, z którymi pracujemy najczęściej {#industries}
+## Typical industries {#industries}
 
-- SaaS B2B z rozbudowanym stackiem narzędziowym,
-- fintech i płatności, gdzie liczy się ślad audytowy,
-- software houses budujące produkty z komponentem AI.
+- B2B SaaS with a complex tool stack,  
+- financial services where audit trails matter,  
+- product teams and agencies building with AI components.
 
-## Jak pracujemy {#process}
+## How you might work with agents {#process}
 
-1. **Diagnoza procesu** – identyfikujemy konkretne, mierzalne miejsce, w którym agent wniesie wartość.  
-2. **Warsztat architektoniczny** – wspólnie projektujemy architekturę agentów, interfejsy i ograniczenia.  
-3. **Pilotaż w produkcji** – mały, kontrolowany zakres z jasnymi metrykami sukcesu.  
-4. **Twarde wdrożenie** – dopiero po tym etapie skalujemy, automatyzujemy więcej i integrujemy głębiej.
+1. **Process diagnosis** – find a specific, measurable point where agents could add value.  
+2. **Architecture workshop** – design agent architecture, interfaces and constraints.  
+3. **Production pilot** – a small, controlled scope with clear success metrics.  
+4. **Roll‑out** – only then scale, automate more and integrate deeper.
 
-Jeśli masz proces, który jest zbyt złożony na zwykłą automatyzację, a zbyt powtarzalny dla ludzi –
-**odezwij się**: `hello@nordicagents.ai`. Chętnie sprawdzimy, czy da się mu dodać autonomię.
+If you already have data, a repeatable process and the appetite to experiment,
+swap this copy for your own and point the contact links to your team:  
+`contact@yourcompany.ai`.
