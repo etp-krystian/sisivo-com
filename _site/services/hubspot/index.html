@@ -7,6 +7,14 @@
     
     <title>HubSpot support for agency teams</title>
     <meta name="description" content="Technical delivery support for HubSpot agencies — available when needed, often as part of an agent system’s data layer and tooling." />
+    
+    <meta property="og:site_name" content="Easy Tech Partners" />
+    <meta property="og:title" content="HubSpot support for agency teams" />
+    <meta property="og:description" content="Technical delivery support for HubSpot agencies — available when needed, often as part of an agent system’s data layer and tooling." />
+    <meta property="og:type" content="website" />
+    
+    
+    <meta name="twitter:card" content="summary" />
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     <style>
       :root {
@@ -242,6 +250,19 @@
         font-size: 13px;
         font-weight: 700;
         cursor: pointer;
+      }
+
+      .mobile-nav-icon {
+        display: inline-flex;
+        width: 18px;
+        height: 18px;
+        color: currentColor;
+      }
+
+      .mobile-nav-icon svg {
+        width: 18px;
+        height: 18px;
+        display: block;
       }
 
       .mobile-nav-panel {
@@ -738,6 +759,221 @@
         max-width: 70ch;
       }
 
+      .blog-header {
+        display: grid;
+        gap: 8px;
+        margin-bottom: 18px;
+      }
+
+      .blog-title {
+        margin: 0;
+        font-size: 28px;
+        letter-spacing: -0.03em;
+      }
+
+      .blog-lead {
+        margin: 0;
+        color: var(--muted);
+        max-width: 78ch;
+        font-size: 14px;
+        line-height: 1.75;
+      }
+
+      .blog-search {
+        display: grid;
+        gap: 8px;
+        padding: 12px;
+        border-radius: var(--radius);
+        border: 1px solid rgba(226, 232, 240, 0.95);
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 8px 24px rgba(2, 6, 23, 0.04);
+      }
+
+      .blog-search-label {
+        font-size: 12px;
+        font-weight: 800;
+        color: var(--muted);
+        letter-spacing: -0.01em;
+      }
+
+      .blog-search-input {
+        width: 100%;
+        padding: 12px 12px;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        font: inherit;
+      }
+
+      .blog-search-input:focus-visible {
+        outline: 3px solid var(--ring);
+        outline-offset: 2px;
+      }
+
+      .blog-search-meta {
+        font-size: 12px;
+        color: var(--muted-soft);
+      }
+
+      .blog-list {
+        list-style: none;
+        padding: 0;
+        margin: 16px 0 0;
+        display: grid;
+        gap: 12px;
+      }
+
+      .blog-grid {
+        margin-top: 16px;
+        display: grid;
+        gap: 12px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .blog-more {
+        margin-top: 14px;
+      }
+
+      .post-card {
+        display: grid;
+        gap: 8px;
+        padding: 16px;
+        border-radius: var(--radius);
+        border: 1px solid rgba(226, 232, 240, 0.95);
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 8px 24px rgba(2, 6, 23, 0.06);
+      }
+
+      .post-card--compact {
+        padding: 14px;
+      }
+
+      .post-card-thumb {
+        width: 100%;
+        height: 140px;
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid rgba(226, 232, 240, 0.95);
+        background: rgba(241, 245, 249, 0.9);
+      }
+
+      .post-card-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .post-card-content {
+        min-width: 0;
+        display: grid;
+        gap: 8px;
+      }
+
+      .post-card-meta {
+        margin: 0;
+        color: var(--muted-soft);
+        font-size: 12px;
+      }
+
+      .post-card-title {
+        margin: 0;
+        font-size: 16px;
+        letter-spacing: -0.02em;
+      }
+
+      .post-card-title a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .post-card-title a:hover {
+        text-decoration: underline;
+      }
+
+      .post-card-desc {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.7;
+        max-width: 78ch;
+      }
+
+      .post-card-more {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        font-weight: 800;
+        color: var(--primary-dark);
+        text-decoration: none;
+      }
+
+      .post-card-more:hover {
+        text-decoration: underline;
+      }
+
+      .blog-empty {
+        margin-top: 14px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .post-header {
+        display: grid;
+        gap: 10px;
+        margin-bottom: 18px;
+        max-width: 80ch;
+      }
+
+      .post-meta {
+        margin: 0;
+        color: var(--muted-soft);
+        font-size: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .post-meta-link {
+        color: inherit;
+        text-decoration: none;
+        font-weight: 750;
+      }
+
+      .post-meta-link:hover {
+        text-decoration: underline;
+      }
+
+      .post-title {
+        margin: 0;
+        font-size: clamp(28px, 3.6vw, 40px);
+        line-height: 1.1;
+        letter-spacing: -0.045em;
+      }
+
+      .post-lead {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.75;
+      }
+
+      .post-figure {
+        margin: 16px 0 0;
+        border-radius: var(--radius);
+        overflow: hidden;
+        border: 1px solid rgba(226, 232, 240, 0.95);
+        box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+        background: rgba(255, 255, 255, 0.9);
+      }
+
+      .post-figure img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
       @media (max-width: 980px) {
         .services-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -761,6 +997,10 @@
 
         .home-hero {
           padding-top: calc(77px + var(--header-height));
+        }
+
+        .blog-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
       }
 
@@ -791,6 +1031,10 @@
         .info-grid {
           grid-template-columns: minmax(0, 1fr);
         }
+
+        .blog-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
       }
     </style>
   </head>
@@ -811,7 +1055,7 @@
           <nav class="nav" aria-label="Site">
             <a href="/services/" class="nav-link is-active">Services</a>
             <a href="/about-us/" class="nav-link">About</a>
-            <a href="/contact-us/" class="nav-link">Contact</a>
+            <a href="/blog/" class="nav-link">Blog</a>
           </nav>
 
           <div class="header-actions">
@@ -820,10 +1064,20 @@
           </div>
 
           <details class="mobile-nav">
-            <summary class="mobile-nav-trigger">Menu</summary>
+            <summary class="mobile-nav-trigger">
+              <span class="mobile-nav-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 7H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  <path d="M4 12H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  <path d="M4 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </span>
+              <span>Menu</span>
+            </summary>
             <div class="mobile-nav-panel" role="dialog" aria-label="Mobile navigation">
               <a href="/services/">Services <span aria-hidden="true">→</span></a>
               <a href="/about-us/">About <span aria-hidden="true">→</span></a>
+              <a href="/blog/">Blog <span aria-hidden="true">→</span></a>
               <a href="/contact-us/">Contact <span aria-hidden="true">→</span></a>
               <a class="mobile-nav-cta" href="mailto:krystian@easytechpartners.com?subject=Intro%20call%20-%20Autonomous%20AI%20agents">Book a meeting <span aria-hidden="true">→</span></a>
             </div>
@@ -835,17 +1089,18 @@
         
           
 
-          <section class="section">
-            <div class="container">
-              <div class="page-header">
-                <h1>HubSpot support for agency teams</h1>
-                
-                  <p class="page-lead">Technical delivery support for HubSpot agencies — available when needed, often as part of an agent system’s data layer and tooling.</p>
-                
-              </div>
+          
+            <section class="section">
+              <div class="container">
+                <div class="page-header">
+                  <h1>HubSpot support for agency teams</h1>
+                  
+                    <p class="page-lead">Technical delivery support for HubSpot agencies — available when needed, often as part of an agent system’s data layer and tooling.</p>
+                  
+                </div>
 
-              <article class="prose">
-                <p>Easy Tech Partners offers technical HubSpot solutions designed for marketing agencies. We focus on efficiency, simplicity, and results, ensuring your HubSpot setup supports your business needs seamlessly.</p>
+                <article class="prose">
+                  <p>Easy Tech Partners offers technical HubSpot solutions designed for marketing agencies. We focus on efficiency, simplicity, and results, ensuring your HubSpot setup supports your business needs seamlessly.</p>
 <p>This is not our main focus anymore. Our primary direction is autonomous AI agents, but we still support agency teams when HubSpot work is required to make the system run reliably.</p>
 <h2>Services</h2>
 <p><strong>Website and Email Templates</strong><br>
@@ -865,9 +1120,10 @@ Fast, reliable help whenever you need it.</p>
 <h2>Why us?</h2>
 <p>We make HubSpot work for you. With a clear and practical approach, we act as your technical partner, so you can focus on what you do best — marketing.</p>
 
-              </article>
-            </div>
-          </section>
+                </article>
+              </div>
+            </section>
+          
         
       </main>
 
@@ -879,6 +1135,7 @@ Fast, reliable help whenever you need it.</p>
           <div class="footer-links" aria-label="Footer links">
             <a href="/services/">Services</a>
             <a href="/about-us/">About</a>
+            <a href="/blog/">Blog</a>
             <a href="/contact-us/">Contact</a>
             <a href="/privacy-policy/">Privacy policy</a>
             <a href="/cookie-policy/">Cookies</a>

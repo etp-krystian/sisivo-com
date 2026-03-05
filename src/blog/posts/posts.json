@@ -1,0 +1,7 @@
+{
+  "layout": "blog-post",
+  "tags": ["post"],
+  "permalink": "/blog/{{ page.fileSlug }}/",
+  "pageType": "article"
+}
+

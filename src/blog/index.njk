@@ -1,0 +1,61 @@
+---
+layout: base
+renderPageHeader: false
+title: Blog
+description: Notes on autonomous agents, growth systems, and building production-ready AI workflows.
+permalink: /blog/
+---
+
+<section class="section">
+  <div class="container">
+    <div class="blog-header">
+      <h1 class="blog-title">{{ title | escape }}</h1>
+      {% if description %}
+        <p class="blog-lead">{{ description | escape }}</p>
+      {% endif %}
+    </div>
+
+    <div class="blog-search" role="search" aria-label="Search blog posts">
+      <label class="blog-search-label" for="blog-search-input">Search</label>
+      <input
+        class="blog-search-input"
+        id="blog-search-input"
+        type="search"
+        inputmode="search"
+        placeholder="Search posts…"
+        autocomplete="off"
+      />
+      <div class="blog-search-meta" aria-live="polite" id="blog-search-meta"></div>
+    </div>
+
+    {% if collections.posts and collections.posts.length %}
+      <ul class="blog-list" id="blog-posts-list">
+        {% for post in collections.posts %}
+          <li
+            class="blog-item"
+            data-search="{{ (post.data.title or '') ~ ' ' ~ (post.data.description or '') }}"
+          >
+            <article class="post-card">
+              <p class="post-card-meta">
+                {% if post.date %}
+                  <time datetime="{{ post.date.toISOString() }}">{{ post.date | readableDate(site.locale) }}</time>
+                {% endif %}
+              </p>
+              <h2 class="post-card-title">
+                <a href="{{ post.url }}">{{ post.data.title | escape }}</a>
+              </h2>
+              {% if post.data.description %}
+                <p class="post-card-desc">{{ post.data.description | escape }}</p>
+              {% endif %}
+            </article>
+          </li>
+        {% endfor %}
+      </ul>
+      <div class="blog-empty" id="blog-no-results" hidden>No posts match your search.</div>
+    {% else %}
+      <p class="blog-empty">No posts yet.</p>
+    {% endif %}
+  </div>
+</section>
+
+<script src="/js/blog-search.js" defer></script>

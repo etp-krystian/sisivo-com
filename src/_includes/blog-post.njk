@@ -1,0 +1,63 @@
+---
+layout: base
+renderPageHeader: false
+---
+
+{% set canonical = (site.url + page.url) if site and site.url else page.url %}
+
+<section class="section">
+  <div class="container">
+    <header class="post-header">
+      <p class="post-meta">
+        <a class="post-meta-link" href="/blog/">Blog</a>
+        {% if date %}
+          <span aria-hidden="true">·</span>
+          <time datetime="{{ date.toISOString() }}">{{ date | readableDate(site.locale) }}</time>
+        {% endif %}
+      </p>
+      <h1 class="post-title">{{ title | escape }}</h1>
+      {% if description %}
+        <p class="post-lead">{{ description | escape }}</p>
+      {% endif %}
+
+      {% if image %}
+        <figure class="post-figure">
+          <img
+            src="{{ image }}"
+            alt="{{ imageAlt | default('') | escape }}"
+            loading="eager"
+            decoding="async"
+            {% if imageWidth %}width="{{ imageWidth }}"{% endif %}
+            {% if imageHeight %}height="{{ imageHeight }}"{% endif %}
+          />
+        </figure>
+      {% endif %}
+    </header>
+
+    <article class="prose">
+      {{ content | safe }}
+    </article>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ title | json | safe }},
+  {% if description %}"description": {{ description | json | safe }},{% endif %}
+  {% if date %}"datePublished": {{ date.toISOString() | json | safe }},{% endif %}
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ canonical | json | safe }}
+  },
+  "author": {
+    "@type": "Organization",
+    "name": {{ site.author.name | json | safe }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.name | json | safe }}
+  }
+}
+</script>
