@@ -25,6 +25,12 @@
     
     <meta name="twitter:card" content="summary" />
     <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,300..700,0..1,-50..200"
+    />
     
       <link rel="preload" as="image" href="/images/hero.jpg" type="image/jpeg" fetchpriority="high" />
     
@@ -75,6 +81,23 @@
 
       a:hover {
         text-decoration: underline;
+      }
+
+      .material-symbols-rounded {
+        font-variation-settings:
+          "FILL" var(--ms-fill, 0),
+          "wght" var(--ms-wght, 500),
+          "GRAD" var(--ms-grad, 0),
+          "opsz" var(--ms-opsz, 24);
+        font-size: 1.05em;
+        line-height: 1;
+        vertical-align: -0.18em;
+        user-select: none;
+      }
+
+      .btn .material-symbols-rounded,
+      .mobile-nav-cta .material-symbols-rounded {
+        margin-right: 2px;
       }
 
       .skip-link {
@@ -1416,7 +1439,7 @@
 
           <div class="header-actions">
             <a href="/contact-us/" class="btn btn-ghost">Contact</a>
-            <a href="mailto:krystian@easytechpartners.com?subject=Intro%20call%20-%20Autonomous%20AI%20agents" class="btn btn-primary">Book a meeting</a>
+            <a href="mailto:krystian@easytechpartners.com?subject=Intro%20call%20-%20Autonomous%20AI%20agents" class="btn btn-primary"><span class="material-symbols-rounded" aria-hidden="true">calendar_month</span><span>Book a meeting</span></a>
           </div>
 
           <details class="mobile-nav">
@@ -1431,11 +1454,11 @@
               <span>Menu</span>
             </summary>
             <div class="mobile-nav-panel" role="dialog" aria-label="Mobile navigation">
-              <a href="/services/">Services <span aria-hidden="true">→</span></a>
-              <a href="/about-us/">About <span aria-hidden="true">→</span></a>
-              <a href="/blog/">Blog <span aria-hidden="true">→</span></a>
-              <a href="/contact-us/">Contact <span aria-hidden="true">→</span></a>
-              <a class="mobile-nav-cta" href="mailto:krystian@easytechpartners.com?subject=Intro%20call%20-%20Autonomous%20AI%20agents">Book a meeting <span aria-hidden="true">→</span></a>
+              <a href="/services/">Services <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
+              <a href="/about-us/">About <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
+              <a href="/blog/">Blog <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
+              <a href="/contact-us/">Contact</a>
+              <a class="mobile-nav-cta" href="mailto:krystian@easytechpartners.com?subject=Intro%20call%20-%20Autonomous%20AI%20agents"><span class="material-symbols-rounded" aria-hidden="true">calendar_month</span><span>Book a meeting</span></a>
             </div>
           </details>
         </div>
@@ -1467,8 +1490,8 @@
                     from content and operations to distribution and measurement. Designed to run in a loop, grounded in your data.
                   </p>
                   <div class="home-cta">
-                    <a class="btn btn-primary" href="mailto:krystian@easytechpartners.com?subject=Intro%20call%20-%20Autonomous%20AI%20agents">Book a meeting</a>
-                    <a class="btn btn-ghost" href="#pilot">Apply for the pilot</a>
+                    <a class="btn btn-primary" href="mailto:krystian@easytechpartners.com?subject=Intro%20call%20-%20Autonomous%20AI%20agents"><span class="material-symbols-rounded" aria-hidden="true">calendar_month</span><span>Book a meeting</span></a>
+                    <a class="btn btn-ghost" href="#pilot"><span class="material-symbols-rounded" aria-hidden="true">rocket_launch</span><span>Apply for the pilot</span></a>
                   </div>
                   <div class="home-note">Straight to the point. Measurable. Production‑minded.</div>
                 </div>
@@ -1608,8 +1631,8 @@
                   <li>You want measurable outcomes and you’re comfortable iterating.</li>
                 </ul>
                 <div class="home-cta">
-                  <a class="btn btn-primary" href="mailto:krystian@easytechpartners.com?subject=Pilot%20application%20-%20Autonomous%20AI%20agents&body=Hi%20Krystian%2C%0A%0AWe%20want%20to%20apply%20for%20the%20pilot.%0A%0ACompany%3A%0AWebsite%3A%0APrimary%20goal%20(1%20sentence)%3A%0AWorkflow%20to%20automate%3A%0AKey%20systems%20and%20data%20sources%3A%0AConstraints%20(security%2Fcompliance)%3A%0ATeam%20size%3A%0ATimeline%3A%0A%0AThanks%2C">Apply for the pilot</a>
-                  <a class="btn btn-ghost" href="mailto:krystian@easytechpartners.com?subject=Intro%20call%20-%20Autonomous%20AI%20agents">Book a meeting</a>
+                  <a class="btn btn-primary" href="mailto:krystian@easytechpartners.com?subject=Pilot%20application%20-%20Autonomous%20AI%20agents&body=Hi%20Krystian%2C%0A%0AWe%20want%20to%20apply%20for%20the%20pilot.%0A%0ACompany%3A%0AWebsite%3A%0APrimary%20goal%20(1%20sentence)%3A%0AWorkflow%20to%20automate%3A%0AKey%20systems%20and%20data%20sources%3A%0AConstraints%20(security%2Fcompliance)%3A%0ATeam%20size%3A%0ATimeline%3A%0A%0AThanks%2C"><span class="material-symbols-rounded" aria-hidden="true">rocket_launch</span><span>Apply for the pilot</span></a>
+                  <a class="btn btn-ghost" href="mailto:krystian@easytechpartners.com?subject=Intro%20call%20-%20Autonomous%20AI%20agents">Book a meeting <span class="material-symbols-rounded" aria-hidden="true">calendar_month</span></a>
                 </div>
               </div>
             </div>
@@ -1654,7 +1677,7 @@
                     If you need a reliable delivery partner, book a quick meeting.
                   </p>
                   <div class="home-cta">
-                    <a class="btn btn-primary" href="mailto:krystian@easytechpartners.com?subject=Meeting%20-%20HubSpot%20delivery">Book a meeting</a>
+                    <a class="btn btn-primary" href="mailto:krystian@easytechpartners.com?subject=Meeting%20-%20HubSpot%20delivery"><span class="material-symbols-rounded" aria-hidden="true">calendar_month</span><span>Book a meeting</span></a>
                     <a class="btn btn-ghost" href="/contact-us/">Contact</a>
                   </div>
                 </div>
@@ -1688,7 +1711,7 @@
 	                          
 	                            <p class="post-card-desc">A practical blueprint for an automated AI agent that writes one post per week, publishes to HubSpot, checks GA4 + Search Console, and iterates to grow organic traffic.</p>
 	                          
-	                          <a class="post-card-more" href="/blog/automated-ai-agent-weekly-hubspot-seo-loop/">Read more <span aria-hidden="true">→</span></a>
+	                          <a class="post-card-more" href="/blog/automated-ai-agent-weekly-hubspot-seo-loop/">Read more <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
 	                        </div>
 	                      </article>
 	                    
@@ -1710,14 +1733,14 @@
 	                          
 	                            <p class="post-card-desc">A practical guide to deciding when to build a custom integration for HubSpot, what to automate, and how to ship it safely.</p>
 	                          
-	                          <a class="post-card-more" href="/blog/custom-hubspot-integrations-when-native-apps-arent-enough/">Read more <span aria-hidden="true">→</span></a>
+	                          <a class="post-card-more" href="/blog/custom-hubspot-integrations-when-native-apps-arent-enough/">Read more <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
 	                        </div>
 	                      </article>
 	                    
 	                  
 	                </div>
 	                <div class="hero-cta blog-more">
-	                  <a class="btn btn-ghost" href="/blog/">See all posts</a>
+	                  <a class="btn btn-ghost" href="/blog/">See all posts <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
 	                </div>
 	              </div>
 	            </section>

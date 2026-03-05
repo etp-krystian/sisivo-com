@@ -28,7 +28,7 @@ permalink: /blog/
 <section class="section">
   <div class="container">
     <div class="blog-search" role="search" aria-label="Search blog posts">
-      <label class="blog-search-label" for="blog-search-input">Search</label>
+      <label class="blog-search-label" for="blog-search-input">Search {% ms "search" %}</label>
       <input
         class="blog-search-input"
         id="blog-search-input"
@@ -70,7 +70,7 @@ permalink: /blog/
                 {% if post.data.description %}
                   <p class="post-card-desc">{{ post.data.description | escape }}</p>
                 {% endif %}
-                <a class="post-card-more" href="{{ post.url }}">Read more <span aria-hidden="true">→</span></a>
+                <a class="post-card-more" href="{{ post.url }}">Read more {% ms "arrow_forward" %}</a>
               </div>
             </article>
           </div>

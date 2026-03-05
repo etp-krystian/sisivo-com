@@ -1,4 +1,26 @@
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addShortcode("ms", (name, options = {}) => {
+    const iconName = (name || "").toString().trim();
+    if (!iconName.length) return "";
+
+    const opts = options && typeof options === "object" ? options : {};
+    const className = (opts.class || "material-symbols-rounded").toString().trim();
+    const label = (opts.label || "").toString().trim();
+    const filled = Boolean(opts.filled);
+    const weight = Number.isFinite(Number(opts.weight)) ? Number(opts.weight) : null;
+
+    const styleVars = [];
+    if (filled) styleVars.push("--ms-fill: 1");
+    if (weight) styleVars.push(`--ms-wght: ${weight}`);
+    const styleAttr = styleVars.length ? ` style="${styleVars.join("; ")}"` : "";
+
+    if (label.length) {
+      return `<span class="${className}" role="img" aria-label="${label.replace(/\"/g, "&quot;")}"${styleAttr}>${iconName}</span>`;
+    }
+
+    return `<span class="${className}" aria-hidden="true"${styleAttr}>${iconName}</span>`;
+  });
+
   eleventyConfig.addPassthroughCopy({
     "src/images": "images",
     "src/js": "js"
