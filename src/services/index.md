@@ -1,18 +1,25 @@
 ---
 layout: base
 title: Services
-description: Four service lines covering HubSpot, integrations, e‑commerce delivery, and data insights — built for agency teams.
+description: Autonomous AI agents for growth teams — plus HubSpot integrations and delivery support when needed.
 ---
 
-We support marketing agencies with technical delivery and ongoing support. Choose a focused engagement or treat us as an extension of your delivery team.
+Our main focus is building autonomous AI agents that run growth work in a loop: planning, execution, and continuous improvement — grounded in your data.
 
-## Typical engagements
+## Autonomous AI agents (main focus)
 
-- **Delivery support** for HubSpot builds, automation and migrations.
-- **Integrations** to make client systems talk to HubSpot reliably.
-- **E‑commerce** help for Shopify projects and performance work.
-- **Reporting & dashboards** that make data usable and actionable.
+We design and implement multi‑agent systems with an orchestrator (e.g. LangGraph / CrewAI) and specialized agents (strategy, SEO, content, distribution, campaigns, analytics).
 
-If you’re not sure where your request fits, send a short note and we’ll point you to the right service line.
+[Read more about AI agents →](/services/ai-agents/)
 
-[Contact us →](/contact-us/)
+## HubSpot integrations
+
+We still deliver integrations across the HubSpot ecosystem and your wider stack: APIs, data sync, automation, and reliable operational flows.
+
+[Read more about HubSpot integrations →](/services/integrations/)
+
+## HubSpot support (secondary)
+
+We support HubSpot agency teams with technical delivery when needed — especially where it intersects with the data layer for autonomous agents.
+
+[Read more about HubSpot support →](/services/hubspot/)

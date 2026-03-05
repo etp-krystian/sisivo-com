@@ -1,10 +1,12 @@
 ---
 layout: base
-title: HubSpot technical services for marketing agencies
-description: HubSpot CMS builds, templates, modules, automations, migrations and ongoing technical support.
+title: HubSpot support for agency teams
+description: Technical delivery support for HubSpot agencies — available when needed, often as part of an agent system’s data layer and tooling.
 ---
 
 Easy Tech Partners offers technical HubSpot solutions designed for marketing agencies. We focus on efficiency, simplicity, and results, ensuring your HubSpot setup supports your business needs seamlessly.
+
+This is not our main focus anymore. Our primary direction is autonomous AI agents, but we still support agency teams when HubSpot work is required to make the system run reliably.
 
 ## Services
 

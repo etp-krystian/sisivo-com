@@ -1,20 +1,28 @@
 ---
 layout: base
 title: Contact Easy Tech Partners
-description: Reach out to discuss HubSpot support, integrations, e‑commerce delivery, or reporting and data dashboards.
+description: Book a meeting to learn more about autonomous AI agents, or apply for the pilot.
 ---
 
-We’d love to hear from you! Whether you have questions about our services, need technical support, or want to explore how Easy Tech Partners can help your business, we’re here to help.
+Book a meeting to learn more about our autonomous AI agent systems — or apply for the pilot.
 
-## Connect with Krystian
+## Book a meeting
 
-Have questions or want to discuss your needs? Reach out directly to our CEO, Krystian Sułek, for personalized support and guidance.
+The simplest way to start is a short call with Krystian.
 
 Email: [krystian@easytechpartners.com](mailto:krystian@easytechpartners.com)  
 LinkedIn: [linkedin.com/in/krystiansulek](https://www.linkedin.com/in/krystiansulek/)
 
-## Use form
+## Apply for the pilot
 
-Have a specific request or question? Fill out the form below, and we’ll get back to you as soon as possible.
+We’re selecting 3 companies for a pilot implementation of autonomous AI agents.
 
-*(In this static version, you can replace this section with your own contact form implementation or link to your main site.)*
+Send an email with:
+
+- Company + website
+- Primary goal (one sentence)
+- Workflow you want to automate first
+- Key systems and data sources involved
+- Constraints (security / compliance) if any
+
+Email: [krystian@easytechpartners.com](mailto:krystian@easytechpartners.com?subject=Pilot%20application%20-%20Autonomous%20AI%20agents)

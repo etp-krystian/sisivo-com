@@ -1,8 +1,10 @@
 ---
 layout: base
 title: Shopify e‑commerce solutions for agencies
-description: Shopify delivery, integrations, performance improvements, and ongoing support for agency webshop projects.
+description: Shopify delivery support — available on request (not our main focus).
 ---
+
+This is not our main focus. Our primary direction is autonomous AI agents. We still support Shopify projects when it’s part of a broader delivery need.
 
 At Easy Tech Partners, we support marketing agencies with the technical side of Shopify‑based webshops. Our expertise ensures your online store runs smoothly, offering a seamless experience for your customers while empowering your team to focus on driving sales.
 

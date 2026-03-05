@@ -1,10 +1,12 @@
 ---
 layout: base
 title: About Easy Tech Partners
-description: A partnership approach to technical support for HubSpot agencies, founded in 2024 after years of delivery work since 2017.
+description: We build production‑minded autonomous AI agent systems — with clear communication and measurable outcomes.
 ---
 
 Our journey began in 2017, when we worked together at Chimera Prime, focusing on building startups for Norwegian companies. During this time, we expanded our expertise. In 2024, we decided to take the next step and founded Easy Tech Partners, focusing exclusively on supporting HubSpot marketing agencies with tailored tech solutions.
+
+Today, our main focus is autonomous AI agents: systems that can plan, execute, and improve growth work in a loop, grounded in real data.
 
 ## A partnership approach
 
@@ -49,7 +51,7 @@ We look for people who are able to produce meaningful results with their own gui
 
 ## Why work with us?
 
-**We’re partners, not just providers** – We integrate into your team, sharing your goals and challenges.  
-**Communication comes first** – Strong collaboration leads to better outcomes.  
-**We build for people** – Our solutions work seamlessly for your team and clients.  
-**Innovation meets simplicity** – We simplify the complex without cutting corners.
+**Partners, not vendors** – We integrate into your team and deliver with shared ownership.  
+**Clear communication** – Straight to the point, no fluff.  
+**Production‑minded** – Reliability, observability, and guardrails come first.  
+**Measurable outcomes** – Grounded in data, not opinions.
