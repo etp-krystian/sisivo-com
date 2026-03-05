@@ -1,0 +1,23 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {%- for item in collections.all -%}
+    {%- if item.url
+      and item.url != "/robots.txt"
+      and item.url != "/sitemap.xml"
+      and item.data
+      and item.data.draft != true
+      and (site and site.url and site.url.length)
+    -%}
+  <url>
+    <loc>{{ (site.url + item.url) | escape }}</loc>
+    {%- if item.date -%}
+    <lastmod>{{ item.date.toISOString() }}</lastmod>
+    {%- endif -%}
+  </url>
+    {%- endif -%}
+  {%- endfor -%}
+</urlset>
