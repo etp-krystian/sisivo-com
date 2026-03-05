@@ -4,27 +4,82 @@ title: About Easy Tech Partners
 description: We build production‑minded autonomous AI agent systems — with clear communication and measurable outcomes.
 ---
 
-Our journey began in 2017, when we worked together at Chimera Prime, focusing on building startups for Norwegian companies. During this time, we expanded our expertise. In 2024, we decided to take the next step and founded Easy Tech Partners, focusing exclusively on supporting HubSpot marketing agencies with tailored tech solutions.
+<div class="about-split">
+  <figure class="about-photo">
+    <img
+      src="/images/krystian-mariusz.webp"
+      alt="Krystian Sułek and Mariusz Wróbel"
+      width="1200"
+      height="800"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+    />
+    <figcaption>Krystian & Mariusz — building systems that ship.</figcaption>
+  </figure>
+  <div class="about-intro">
+    <p>
+      Easy Tech Partners is a small team with a startup mindset: move fast, measure what matters, and build things that survive contact with reality.
+    </p>
+    <p>
+      We design autonomous AI agent systems that don’t just “generate content” — they plan, execute, verify, and improve in a loop, grounded in your data.
+    </p>
+  </div>
+</div>
 
-Today, our main focus is autonomous AI agents: systems that can plan, execute, and improve growth work in a loop, grounded in real data.
+## The story (why we started)
 
-## A partnership approach
+In 2017, we worked together at Chimera Prime building startups for Norwegian companies. It was the kind of environment where you learn the hard lessons quickly:
 
-At Easy Tech Partners, we view every collaboration as a partnership. Working closely with marketing agencies, we act as an extension of your team.
+- shipping beats polishing,
+- reliability beats cleverness,
+- and “it worked on my machine” doesn’t count.
 
-We believe that great results stem from teamwork. By sharing knowledge, learning from each other, and fostering open dialogue, we ensure our solutions align perfectly with needs, both technically and strategically.
+By 2024, we kept seeing the same pattern across marketing and growth teams: the ideas were strong, but execution got stuck. Too many handoffs. Too many tools. Too many tasks that “should happen every week” — and then didn’t.
 
-## Listening first, solving together
+So we founded Easy Tech Partners with a simple thesis:
 
-For us, it’s not just about delivering code or implementing tools. We take the time to understand the situation, the people, and the goals before recommending the right path forward. Whether it’s a complex integration or a simple technical tweak, we prioritize solutions that balance functionality and cost‑effectiveness.
+**If the work is repeatable, it can be systematized. If it can be systematized, it can be automated — with guardrails.**
 
-## Who we are
+Today we focus on autonomous AI agents: production‑minded systems that can plan, execute, and improve growth work in a loop — measured with real outcomes, not vibes.
 
-Our team combine technical and soft skills to ensure our clients receive solutions that are innovative, practical, and easy to use. Every member of our team embodies our core values, guiding everything we do from communication to problem‑solving.
+## The moment it clicked
+
+The breakthrough wasn’t “AI can write a blog post”.
+
+It was realizing that most growth work already has a loop:
+
+- decide what to do next,
+- execute it,
+- measure results,
+- adjust,
+- repeat.
+
+The problem is that humans don’t get to stay in that loop. Teams get interrupted, priorities change, dashboards go stale, and “we’ll do it next week” becomes a monthly ritual.
+
+So we build agents that *stay* in the loop — not as a replacement for a team, but as a reliable system that keeps momentum between meetings.
+
+## How we work (what it feels like to partner with us)
+
+Think of us as your technical co‑founders for a very specific mission: turning recurring growth work into a dependable system.
+
+- **We start with outcomes.** What should change in 30–60 days? What’s measurable?
+- **We map the loop.** Inputs → steps → checks → outputs → measurement.
+- **We add guardrails.** Human approval where it matters, audit trails, and “stop” conditions.
+- **We ship small, then compound.** First working version fast; then we iterate weekly.
+
+## What we believe (startup rules that keep us honest)
+
+- **Clarity wins** — if we can’t explain it simply, it’s not ready.
+- **Guardrails over heroics** — production is about systems, not late nights.
+- **Measure → learn → iterate** — we ship, instrument, and improve.
+- **Own the outcome** — we don’t disappear after delivery.
 
 ## Founders
 
-Easy Tech Partners was founded by Mariusz Wróbel and Krystian Sułek, experienced developers and technical experts with a shared vision of providing technology solutions for marketing agencies. Together, we bring years of hands‑on expertise and a passion for problem‑solving to every project. As CEO, Krystian leads our company with a focus on innovation and customer success, while Mariusz, as COO, ensures seamless operations and effective project execution.
+Easy Tech Partners was founded by Mariusz Wróbel and Krystian Sułek — builders who care as much about execution as they do about ideas.
+
+Krystian (CEO) leads product direction and client success with a focus on clarity, speed, and measurable impact. Mariusz (COO) drives operational excellence: the calm, systematic force that turns prototypes into production systems.
 
 Our commitment to collaboration and technology is the foundation of our success.
 
