@@ -775,6 +775,221 @@
         background: rgba(2, 6, 23, 0.28);
       }
 
+      .ai-loop {
+        position: relative;
+        --ai-loop-accent-rgb: 6, 182, 212;
+        --ai-loop-accent: rgb(var(--ai-loop-accent-rgb));
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(248, 250, 252, 0.92) 100%);
+        border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+        overflow: hidden;
+      }
+
+      .ai-loop.section.compact {
+        padding: 26px 0 0;
+      }
+
+      .ai-loop::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(circle at 18% 40%, rgba(6, 182, 212, 0.10), transparent 60%),
+          radial-gradient(circle at 62% 52%, rgba(2, 6, 23, 0.06), transparent 58%),
+          radial-gradient(circle at 86% 30%, rgba(6, 182, 212, 0.07), transparent 55%);
+        pointer-events: none;
+      }
+
+      .ai-loop-grid {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+        align-items: center;
+      }
+
+      .ai-loop-copy {
+        max-width: 70ch;
+      }
+
+      .ai-loop-wrap .section-header {
+        gap: 6px;
+        margin-bottom: 10px;
+      }
+
+      .ai-loop-lead {
+        margin: 0 0 14px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.75;
+        max-width: 72ch;
+      }
+
+      .ai-loop-steps {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 8px;
+      }
+
+      .ai-loop-step {
+        width: 100%;
+        text-align: left;
+        display: grid;
+        grid-template-columns: 22px minmax(0, 1fr);
+        gap: 10px;
+        align-items: start;
+        padding: 12px 12px;
+        border-radius: 14px;
+        border: 1px solid rgba(226, 232, 240, 0.95);
+        background: rgba(255, 255, 255, 0.86);
+        box-shadow: 0 10px 26px rgba(2, 6, 23, 0.05);
+        cursor: pointer;
+        transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease, background 140ms ease;
+        color: inherit;
+      }
+
+      .ai-loop-step:hover {
+        transform: translateY(-1px);
+        border-color: rgba(6, 182, 212, 0.22);
+        box-shadow: 0 14px 34px rgba(2, 6, 23, 0.07);
+        background: rgba(255, 255, 255, 0.92);
+      }
+
+      .ai-loop-step:focus-visible {
+        outline: 3px solid var(--ring);
+        outline-offset: 2px;
+      }
+
+      .ai-loop-step-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 999px;
+        margin-top: 3px;
+        background: rgba(148, 163, 184, 0.9);
+        border: 2px solid rgba(255, 255, 255, 0.95);
+        box-shadow: 0 10px 20px rgba(2, 6, 23, 0.12);
+      }
+
+      .ai-loop-step-title {
+        margin: 0 0 2px;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: -0.01em;
+        color: var(--text);
+      }
+
+      .ai-loop-step-desc {
+        margin: 0;
+        font-size: 12px;
+        line-height: 1.6;
+        color: var(--muted);
+      }
+
+      .ai-loop-step.is-active {
+        border-color: rgba(6, 182, 212, 0.32);
+        background: rgba(6, 182, 212, 0.06);
+      }
+
+      .ai-loop-step.is-active .ai-loop-step-dot {
+        background: rgba(6, 182, 212, 0.92);
+      }
+
+      .ai-loop-visual {
+        display: none;
+        justify-content: center;
+        padding: 12px;
+        overflow: visible;
+      }
+
+      .ai-loop-orbit {
+        position: relative;
+        width: min(360px, 100%);
+        aspect-ratio: 1 / 1;
+        border-radius: 999px;
+        margin: 0 auto;
+        overflow: visible;
+      }
+
+      .ai-loop-orbit svg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .ai-loop-center {
+        position: absolute;
+        inset: 50% auto auto 50%;
+        transform: translate(-50%, -50%);
+        width: min(240px, 72%);
+        text-align: center;
+        pointer-events: none;
+      }
+
+      .ai-loop-center-label {
+        font-size: 11px;
+        font-weight: 850;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(71, 85, 105, 0.8);
+        margin-bottom: 6px;
+      }
+
+      .ai-loop-center-step {
+        font-size: 15px;
+        font-weight: 900;
+        letter-spacing: -0.015em;
+        color: rgba(15, 23, 42, 0.96);
+        line-height: 1.25;
+      }
+
+      .ai-loop-track {
+        stroke: rgba(148, 163, 184, 0.35);
+        stroke-width: 8;
+        fill: none;
+        filter: drop-shadow(0 10px 16px rgba(2, 6, 23, 0.08));
+      }
+
+      .ai-loop-progress {
+        stroke: rgba(6, 182, 212, 0.92);
+        stroke-width: 8;
+        fill: none;
+        stroke-linecap: round;
+        transform: rotate(-90deg);
+        transform-origin: 50% 50%;
+        filter:
+          drop-shadow(0 0 6px rgba(6, 182, 212, 0.26))
+          drop-shadow(0 0 16px rgba(6, 182, 212, 0.14))
+          drop-shadow(0 14px 18px rgba(6, 182, 212, 0.08));
+        animation: aiLoopLineGlow 2.4s ease-in-out infinite;
+      }
+
+      @keyframes aiLoopLineGlow {
+        0% {
+          filter:
+            drop-shadow(0 0 5px rgba(6, 182, 212, 0.18))
+            drop-shadow(0 0 12px rgba(6, 182, 212, 0.10))
+            drop-shadow(0 14px 16px rgba(6, 182, 212, 0.06));
+        }
+        50% {
+          filter:
+            drop-shadow(0 0 8px rgba(6, 182, 212, 0.30))
+            drop-shadow(0 0 18px rgba(6, 182, 212, 0.16))
+            drop-shadow(0 14px 22px rgba(6, 182, 212, 0.10));
+        }
+        100% {
+          filter:
+            drop-shadow(0 0 5px rgba(6, 182, 212, 0.18))
+            drop-shadow(0 0 12px rgba(6, 182, 212, 0.10))
+            drop-shadow(0 14px 16px rgba(6, 182, 212, 0.06));
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .ai-loop-progress { animation: none; }
+      }
+
       .info-grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1184,6 +1399,18 @@
           grid-template-columns: minmax(0, 1fr);
         }
       }
+
+      @media (min-width: 920px) {
+        .ai-loop-grid {
+          grid-template-columns: minmax(0, 1fr) minmax(0, 440px);
+          align-items: center;
+        }
+
+        .ai-loop-visual {
+          display: flex;
+          align-self: center;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1260,6 +1487,82 @@
                     <a class="btn btn-ghost" href="#pilot">Apply for the pilot</a>
                   </div>
                   <div class="home-note">Straight to the point. Measurable. Production‑minded.</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section compact ai-loop" id="ai-loop" aria-labelledby="ai-loop-title">
+            <div class="container">
+              <div class="ai-loop-wrap">
+                <div class="section-header">
+                  <h2 class="section-title" id="ai-loop-title">The automation loop</h2>
+                  <p class="section-lead">Five steps that turn inputs into execution, feedback, and the next set of better instructions.</p>
+                </div>
+
+                <div class="ai-loop-grid">
+                  <div class="ai-loop-copy">
+                    <ol class="ai-loop-steps">
+                      <li>
+                        <button class="ai-loop-step is-active" type="button" data-step="0" aria-current="step">
+                          <span class="ai-loop-step-dot" aria-hidden="true"></span>
+                          <span>
+                            <span class="ai-loop-step-title">Analyze Data</span>
+                            <span class="ai-loop-step-desc">Read your context, constraints, and data signals.</span>
+                          </span>
+                        </button>
+                      </li>
+                      <li>
+                        <button class="ai-loop-step" type="button" data-step="1">
+                          <span class="ai-loop-step-dot" aria-hidden="true"></span>
+                          <span>
+                            <span class="ai-loop-step-title">Plan the work</span>
+                            <span class="ai-loop-step-desc">Create a task plan with checks and acceptance criteria.</span>
+                          </span>
+                        </button>
+                      </li>
+                      <li>
+                        <button class="ai-loop-step" type="button" data-step="2">
+                          <span class="ai-loop-step-dot" aria-hidden="true"></span>
+                          <span>
+                            <span class="ai-loop-step-title">Execute</span>
+                            <span class="ai-loop-step-desc">Do the work across tools and systems with guardrails.</span>
+                          </span>
+                        </button>
+                      </li>
+                      <li>
+                        <button class="ai-loop-step" type="button" data-step="3">
+                          <span class="ai-loop-step-dot" aria-hidden="true"></span>
+                          <span>
+                            <span class="ai-loop-step-title">Evaluate results</span>
+                            <span class="ai-loop-step-desc">Measure outcomes and validate quality.</span>
+                          </span>
+                        </button>
+                      </li>
+                      <li>
+                        <button class="ai-loop-step" type="button" data-step="4">
+                          <span class="ai-loop-step-dot" aria-hidden="true"></span>
+                          <span>
+                            <span class="ai-loop-step-title">Report + feed the next cycle</span>
+                            <span class="ai-loop-step-desc">Produce a report and generate improved next inputs.</span>
+                          </span>
+                        </button>
+                      </li>
+                    </ol>
+                  </div>
+
+                  <div class="ai-loop-visual" aria-hidden="true">
+                    <div class="ai-loop-orbit">
+                      <svg viewBox="0 0 200 200" role="img" aria-label="Animated agent loop">
+                        <circle class="ai-loop-track" cx="100" cy="100" r="74"></circle>
+                        <circle class="ai-loop-progress" cx="100" cy="100" r="74"></circle>
+                      </svg>
+                      <div class="ai-loop-center" aria-hidden="true">
+                        <div class="ai-loop-center-label">Now</div>
+                        <div class="ai-loop-center-step" id="ai-loop-current-step">Analyze Data</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1505,5 +1808,8 @@
         </div>
       </footer>
     </div>
+  {% if isHome %}
+    <script src="/js/ai-loop.js" defer></script>
+  {% endif %}
   </body>
 </html>
