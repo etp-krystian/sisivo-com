@@ -1,5 +1,10 @@
 <!doctype html>
 
+
+
+
+
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -455,24 +460,73 @@
       }
 
       .page-header {
-        padding: 28px 0 18px;
-        border-bottom: 1px solid rgba(226, 232, 240, 0.9);
-        margin-bottom: 26px;
+        padding: 0;
+        margin: 0;
       }
 
       .page-header h1 {
-        margin: 0 0 8px;
-        font-size: 28px;
-        letter-spacing: -0.03em;
+        margin: 0 0 10px;
+        font-size: clamp(28px, 2.6vw, 44px);
+        line-height: 1.06;
+        letter-spacing: -0.05em;
       }
 
       .page-lead {
         margin: 0;
-        color: var(--muted);
+        color: rgba(15, 23, 42, 0.76);
         max-width: 72ch;
-        font-size: 14px;
-        line-height: 1.75;
+        font-size: 15px;
+        line-height: 1.8;
       }
+
+      .page-hero {
+        position: relative;
+        padding: 34px 0 22px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.9) 100%);
+        border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+        overflow: hidden;
+      }
+
+      .page-hero::before {
+        content: "";
+        position: absolute;
+        inset: -40% -20% auto -20%;
+        height: 380px;
+        background:
+          radial-gradient(circle at 18% 28%, rgba(0, 143, 76, 0.16), transparent 60%),
+          radial-gradient(circle at 62% 52%, rgba(2, 6, 23, 0.08), transparent 58%),
+          radial-gradient(circle at 84% 18%, rgba(0, 143, 76, 0.10), transparent 52%);
+        pointer-events: none;
+      }
+
+      .page-hero-inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .page-breadcrumbs {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 14px;
+        color: rgba(71, 85, 105, 0.85);
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .page-breadcrumbs a {
+        color: rgba(71, 85, 105, 0.95);
+      }
+
+      .page-breadcrumbs .crumb-sep {
+        color: rgba(148, 163, 184, 0.9);
+      }
+
+      
 
       .prose {
         max-width: 76ch;
@@ -1117,8 +1171,6 @@
     </style>
   </head>
   <body>
-    
-    
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="site">
       <header class="site-header site-header--overlay" aria-label="Primary navigation">
@@ -1199,9 +1251,27 @@
 
           <section class="section compact">
             <div class="container">
+              <div class="partner">
+                <div>
+                  <p class="partner-kicker">AI adoption</p>
+                  <h2 class="partner-title">AI adoption, beyond experiments</h2>
+                  <p class="partner-body">
+                    Turn AI from scattered experiments into a repeatable capability. We help you define where AI fits, train the team,
+                    and put the operating model in place: governance, guardrails, and measurement—so adoption sticks.
+                  </p>
+                  <p class="partner-body">
+                    When you’re ready to ship, we run a focused pilot on one workflow to prove value and establish the pattern for what comes next.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section compact">
+            <div class="container">
               <div class="section-header">
                 <h2 class="section-title">What we build</h2>
-                <p class="section-lead">Not “chatbots”. Systems that execute work and report results.</p>
+                <p class="section-lead">As Easy Tech Partners, we build autonomous agent systems — not “chatbots”. They execute work and report results.</p>
               </div>
               <div class="info-grid">
                 <div class="info-card">
@@ -1320,6 +1390,28 @@
 	                      </article>
 	                    
 	                  
+	                    
+	                      <article class="post-card post-card--compact">
+	                        
+	                          <div class="post-card-thumb" aria-hidden="true">
+	                            <img src="/images/blog/custom-integration.jpg" alt="" loading="lazy" decoding="async" />
+	                          </div>
+	                        
+	                        <div class="post-card-content">
+	                          <p class="post-card-meta">
+	                            
+	                              <time datetime="2026-03-05T00:00:00.000Z">March 05, 2026</time>
+	                            
+	                          </p>
+	                          <h3 class="post-card-title"><a href="/blog/custom-hubspot-integrations-when-native-apps-arent-enough/">Custom HubSpot integrations: when native apps aren’t enough</a></h3>
+	                          
+	                            <p class="post-card-desc">A practical guide to deciding when to build a custom integration for HubSpot, what to automate, and how to ship it safely.</p>
+	                          
+	                          <a class="post-card-more" href="/blog/custom-hubspot-integrations-when-native-apps-arent-enough/">Read more <span aria-hidden="true">→</span></a>
+	                        </div>
+	                      </article>
+	                    
+	                  
 	                </div>
 	                <div class="hero-cta blog-more">
 	                  <a class="btn btn-ghost" href="/blog/">See all posts</a>
@@ -1333,7 +1425,7 @@
       <footer class="site-footer">
         <div class="container footer-grid">
           <div>
-            <div>Copyrights Easy Tech Partners.</div>
+            <div>© 2025, Easy Tech Partners.</div>
           </div>
           <div class="footer-links" aria-label="Footer links">
             <a href="/services/">Services</a>

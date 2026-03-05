@@ -1,5 +1,10 @@
 <!doctype html>
 
+
+
+
+
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -453,24 +458,73 @@
       }
 
       .page-header {
-        padding: 28px 0 18px;
-        border-bottom: 1px solid rgba(226, 232, 240, 0.9);
-        margin-bottom: 26px;
+        padding: 0;
+        margin: 0;
       }
 
       .page-header h1 {
-        margin: 0 0 8px;
-        font-size: 28px;
-        letter-spacing: -0.03em;
+        margin: 0 0 10px;
+        font-size: clamp(28px, 2.6vw, 44px);
+        line-height: 1.06;
+        letter-spacing: -0.05em;
       }
 
       .page-lead {
         margin: 0;
-        color: var(--muted);
+        color: rgba(15, 23, 42, 0.76);
         max-width: 72ch;
-        font-size: 14px;
-        line-height: 1.75;
+        font-size: 15px;
+        line-height: 1.8;
       }
+
+      .page-hero {
+        position: relative;
+        padding: 34px 0 22px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.9) 100%);
+        border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+        overflow: hidden;
+      }
+
+      .page-hero::before {
+        content: "";
+        position: absolute;
+        inset: -40% -20% auto -20%;
+        height: 380px;
+        background:
+          radial-gradient(circle at 18% 28%, rgba(0, 143, 76, 0.16), transparent 60%),
+          radial-gradient(circle at 62% 52%, rgba(2, 6, 23, 0.08), transparent 58%),
+          radial-gradient(circle at 84% 18%, rgba(0, 143, 76, 0.10), transparent 52%);
+        pointer-events: none;
+      }
+
+      .page-hero-inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .page-breadcrumbs {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 14px;
+        color: rgba(71, 85, 105, 0.85);
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .page-breadcrumbs a {
+        color: rgba(71, 85, 105, 0.95);
+      }
+
+      .page-breadcrumbs .crumb-sep {
+        color: rgba(148, 163, 184, 0.9);
+      }
+
+      
 
       .prose {
         max-width: 76ch;
@@ -1115,8 +1169,6 @@
     </style>
   </head>
   <body>
-    
-    
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="site">
       <header class="site-header" aria-label="Primary navigation">
@@ -1163,50 +1215,63 @@
       <main id="main">
         
           
-            <section class="section compact">
+            <section class="page-hero">
               <div class="container">
-                <div class="section-header">
-                  <h2 class="section-title">Services</h2>
-                  <p class="section-lead">
-                    Our main focus is autonomous AI agents. We also support HubSpot integrations and HubSpot agency teams.
-                  </p>
-                </div>
-                <div class="services-grid">
-                  <a class="service-card" href="/services/ai-agents/">
-                    <h3 class="service-title">Autonomous AI agents</h3>
-                    <p class="service-desc">Agent systems that plan, execute, and improve growth work in a loop.</p>
-                    <div class="service-meta">Explore <span aria-hidden="true">→</span></div>
-                  </a>
-                  <a class="service-card" href="/services/integrations/">
-                    <h3 class="service-title">HubSpot integrations</h3>
-                    <p class="service-desc">APIs, reliable sync, and integrations across your stack.</p>
-                    <div class="service-meta">Explore <span aria-hidden="true">→</span></div>
-                  </a>
-                  <a class="service-card" href="/services/hubspot/">
-                    <h3 class="service-title">HubSpot support</h3>
-                    <p class="service-desc">Technical delivery support for HubSpot agencies (available when needed).</p>
-                    <div class="service-meta">Explore <span aria-hidden="true">→</span></div>
-                  </a>
-                  <a class="service-card" href="/contact-us/">
-                    <h3 class="service-title">Pilot application</h3>
-                    <p class="service-desc">Applying for the pilot is the fastest way to get started.</p>
-                    <div class="service-meta">Contact us <span aria-hidden="true">→</span></div>
-                  </a>
+                <nav class="page-breadcrumbs" aria-label="Breadcrumb">
+                  <a href="/">Home</a>
+                  <span class="crumb-sep" aria-hidden="true">/</span>
+                  
+                  <span aria-current="page">Services</span>
+                </nav>
+
+                <div class="page-hero-inner">
+                  <div class="page-header">
+                    <h1>Services</h1>
+                    
+                      <p class="page-lead">Autonomous AI agents for growth teams — plus HubSpot integrations and delivery support when needed.</p>
+                    
+                  </div>
                 </div>
               </div>
             </section>
-          
 
-          
+            
+              <section class="section compact">
+                <div class="container">
+                  <div class="section-header">
+                    <h2 class="section-title">Services</h2>
+                    <p class="section-lead">
+                      Our main focus is autonomous AI agents. We also support HubSpot integrations and HubSpot agency teams.
+                    </p>
+                  </div>
+                  <div class="services-grid">
+                    <a class="service-card" href="/services/ai-agents/">
+                      <h3 class="service-title">Autonomous AI agents</h3>
+                      <p class="service-desc">Agent systems that plan, execute, and improve growth work in a loop.</p>
+                      <div class="service-meta">Explore <span aria-hidden="true">→</span></div>
+                    </a>
+                    <a class="service-card" href="/services/integrations/">
+                      <h3 class="service-title">HubSpot integrations</h3>
+                      <p class="service-desc">APIs, reliable sync, and integrations across your stack.</p>
+                      <div class="service-meta">Explore <span aria-hidden="true">→</span></div>
+                    </a>
+                    <a class="service-card" href="/services/hubspot/">
+                      <h3 class="service-title">HubSpot support</h3>
+                      <p class="service-desc">Technical delivery support for HubSpot agencies (available when needed).</p>
+                      <div class="service-meta">Explore <span aria-hidden="true">→</span></div>
+                    </a>
+                    <a class="service-card" href="/contact-us/">
+                      <h3 class="service-title">Pilot application</h3>
+                      <p class="service-desc">Applying for the pilot is the fastest way to get started.</p>
+                      <div class="service-meta">Contact us <span aria-hidden="true">→</span></div>
+                    </a>
+                  </div>
+                </div>
+              </section>
+            
+
             <section class="section">
               <div class="container">
-                <div class="page-header">
-                  <h1>Services</h1>
-                  
-                    <p class="page-lead">Autonomous AI agents for growth teams — plus HubSpot integrations and delivery support when needed.</p>
-                  
-                </div>
-
                 <article class="prose">
                   <p>Our main focus is building autonomous AI agents that run growth work in a loop: planning, execution, and continuous improvement — grounded in your data.</p>
 <h2>Autonomous AI agents (main focus)</h2>
@@ -1229,7 +1294,7 @@
       <footer class="site-footer">
         <div class="container footer-grid">
           <div>
-            <div>Copyrights Easy Tech Partners.</div>
+            <div>© 2025, Easy Tech Partners.</div>
           </div>
           <div class="footer-links" aria-label="Footer links">
             <a href="/services/">Services</a>
