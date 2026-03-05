@@ -1,9 +1,8 @@
 ---
 layout: base
 title: About Easy Tech Partners
+description: A partnership approach to technical support for HubSpot agencies, founded in 2024 after years of delivery work since 2017.
 ---
-
-# About Easy Tech Partners
 
 Our journey began in 2017, when we worked together at Chimera Prime, focusing on building startups for Norwegian companies. During this time, we expanded our expertise. In 2024, we decided to take the next step and founded Easy Tech Partners, focusing exclusively on supporting HubSpot marketing agencies with tailored tech solutions.
 
@@ -54,4 +53,3 @@ We look for people who are able to produce meaningful results with their own gui
 **Communication comes first** – Strong collaboration leads to better outcomes.  
 **We build for people** – Our solutions work seamlessly for your team and clients.  
 **Innovation meets simplicity** – We simplify the complex without cutting corners.
-

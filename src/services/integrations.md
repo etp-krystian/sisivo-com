@@ -1,9 +1,8 @@
 ---
 layout: base
 title: HubSpot integration services
+description: Reliable API integrations and data sync between HubSpot and the tools your clients rely on.
 ---
-
-# Integrations
 
 At Easy Tech Partners, we specialize in seamless integrations between HubSpot and other systems. Whether you need to connect your CRM with accounting software, e‑commerce platforms, or custom applications, we ensure smooth data flow and efficient workflows tailored to your business needs.
 
@@ -30,4 +29,3 @@ Build custom APIs to integrate HubSpot with even the most niche or complex syste
 ## Why us?
 
 We bring technical expertise and a deep understanding of HubSpot’s ecosystem to every project. With a focus on precision and simplicity, we create integrations that save time, reduce manual effort, and improve efficiency.
-

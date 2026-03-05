@@ -1,9 +1,8 @@
 ---
 layout: base
 title: Data insights dashboards
+description: Real‑time dashboards that bring HubSpot, ads, analytics and sales data into one clear view.
 ---
-
-# Data Insights
 
 At Easy Tech Partners, we make data simple and actionable with our real‑time dashboard solutions. We combine data from all your essential tools — Google Analytics, Google Ads, HubSpot, webshops, sales platforms and custom sources — into a single, easy‑to‑read dashboard. Updated continuously, our dashboards ensure you always have the most accurate and up‑to‑date reports at your fingertips.
 
@@ -27,4 +26,3 @@ Need adjustments or new metrics? Our team is always available to adapt your dash
 ## Schedule a demo
 
 Experience the power of real‑time insights for yourself. Schedule a demo to see how our dashboards can simplify your data and help you make smarter, faster decisions.
-

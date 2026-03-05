@@ -1,9 +1,8 @@
 ---
 layout: base
 title: Shopify e‑commerce solutions for agencies
+description: Shopify delivery, integrations, performance improvements, and ongoing support for agency webshop projects.
 ---
-
-# E‑commerce
 
 At Easy Tech Partners, we support marketing agencies with the technical side of Shopify‑based webshops. Our expertise ensures your online store runs smoothly, offering a seamless experience for your customers while empowering your team to focus on driving sales.
 
@@ -30,4 +29,3 @@ Integrate Shopify with analytics tools like Google Analytics or our Data Insight
 ## Why us
 
 We understand the challenges marketing agencies face when managing e‑commerce projects. Our technical expertise in Shopify helps you deliver outstanding webshops for your clients, with a focus on reliability, scalability, and results.
-
