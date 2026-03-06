@@ -1,42 +1,57 @@
 ---
 layout: base
-title: Autonomous AI agents
-description: We build autonomous AI agent systems that plan, execute, and improve work end‑to‑end — grounded in your data.
+title: "Autonomous AI Agents"
+description: "Autonomous AI agents for business workflows: task automation agents, multi-agent systems, research agents, and custom internal workflow agents."
 ---
 
-Easy Tech Partners builds fully autonomous AI agent systems for teams that want real work executed automatically.
+Autonomous AI Agents are digital workers that can complete tasks with less manual input from your team.
 
-These systems don’t just “suggest” work — they execute tasks, validate outcomes against data, and keep improving in a loop.
+Instead of only suggesting what to do, agents can execute work steps in your real business process.
 
-## What the system includes
+## What is included in this service
 
-- **Data layer:** your existing data sources for decisions, verification, and continuous improvement.
-- **Orchestrator:** a workflow engine that plans tasks, assigns work to agents, and tracks state.
-- **Specialized agents:** tailored to your workflows — each with clear responsibilities and the right tools for execution.
+- [**Design and development of autonomous AI agents**](/services/autonomous-ai-agent-design-development/)
+- [**Multi-agent systems**](/services/multi-agent-systems/) where several agents collaborate
+- [**Task automation agents**](/services/task-automation-agents/) for repetitive, time-consuming activities
+- [**Internal workflow agents**](/services/internal-workflow-agents/) for operations and team processes
+- [**AI research and analysis agents**](/services/ai-research-analysis-agents/) for faster decision support
+- [**Custom business agents**](/services/custom-business-agents/) tailored to your workflow
 
-## What agents can do (examples)
+## Business outcomes you can expect
 
-- Create and update website pages (content, structure, on‑page SEO).
-- Analyze performance and surface what to change next.
-- Build content plans, produce drafts, and publish in a controlled workflow.
-- Distribute content, run experiments, and report results.
+- Less manual coordination work
+- Faster turnaround on recurring tasks
+- More consistent output quality
+- Better visibility into what was done and why
 
-## Reliability and control
+## Typical business scenarios
 
-Autonomy only works in production with guardrails. We design for:
+- Weekly reporting and analysis prepared automatically
+- Content or campaign workflows that run with approvals
+- Internal operations workflows with fewer handoffs
+- Research support for strategy, sales, or product teams
 
-- Clear permissions and “tool access” per agent.
-- Validation steps (data checks, content checks, change review where needed).
-- Observability: logs, metrics, and human‑readable reports.
+## How implementation works
 
-## Pilot: we’re selecting 3 companies
+1. We choose one workflow with clear business value.
+2. We design agent roles and boundaries.
+3. We implement with quality checks and human control points.
+4. We monitor performance and optimize over time.
 
-We are currently selecting three companies for a pilot implementation.
+## FAQ
 
-If you want to apply, email Krystian with a short description of your workflow, systems, and constraints:
+### Are autonomous agents safe for business use?
+Yes, if they are designed with permissions, checks, and clear approval points. That is how we build them.
 
-[Apply for the pilot →](mailto:krystian@easytechpartners.com?subject=Pilot%20application%20-%20Autonomous%20AI%20agents)
+### Will this replace our team?
+No. Most teams use agents to remove repetitive work so people can focus on higher-value tasks.
 
-If you prefer to start with a quick call:
+### Do we need advanced internal AI knowledge?
+No. We keep the setup and operating model simple for non-technical teams.
 
-[Book a meeting →](mailto:krystian@easytechpartners.com?subject=Intro%20call%20-%20Autonomous%20AI%20agents)
+## Related services
+
+- [AI Solutions Development](/services/ai-solutions-development/)
+- [AI Consulting & Strategy](/services/ai-consulting-strategy/)
+
+[Book a meeting about Autonomous AI Agents →](mailto:krystian@easytechpartners.com?subject=Autonomous%20AI%20Agents%20-%20Intro%20call)

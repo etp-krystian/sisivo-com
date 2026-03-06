@@ -450,6 +450,12 @@
         gap: 10px;
       }
 
+      .nav-item {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+      }
+
       .nav-link {
         display: inline-flex;
         align-items: center;
@@ -462,6 +468,33 @@
         text-decoration: none;
       }
 
+      .nav-item--mega .nav-link {
+        gap: 6px;
+      }
+
+      .nav-item--mega .nav-link::after {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-right: 1.5px solid currentColor;
+        border-bottom: 1.5px solid currentColor;
+        transform: translateY(1px) rotate(45deg);
+        transform-origin: 50% 50%;
+        opacity: 0.75;
+        transition:
+          transform 240ms cubic-bezier(0.22, 1, 0.36, 1),
+          opacity 200ms ease-in-out;
+      }
+
+      .nav-item--mega::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        height: 12px;
+      }
+
       .nav-link:hover {
         color: var(--text);
         background: rgba(226, 232, 240, 0.65);
@@ -471,6 +504,203 @@
       .nav-link.is-active {
         background: rgba(var(--primary-rgb), 0.12);
         color: var(--primary-dark);
+      }
+
+      .nav-item--mega .nav-link.is-active {
+        background: rgba(226, 232, 240, 0.62);
+        color: var(--text);
+      }
+
+      .nav-item--mega:hover .nav-link::after,
+      .nav-item--mega:focus-within .nav-link::after {
+        transform: translateY(1px) rotate(225deg);
+        opacity: 1;
+      }
+
+      .mega-menu {
+        position: fixed;
+        top: calc(var(--header-height) + 6px);
+        left: 50%;
+        width: calc(100vw - 28px);
+        max-width: 1560px;
+        padding: var(--space-sm);
+        border-radius: var(--radius);
+        border: 1px solid rgba(148, 163, 184, 0.26);
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow:
+          0 18px 36px rgba(2, 6, 23, 0.10),
+          0 2px 6px rgba(2, 6, 23, 0.04);
+        backdrop-filter: blur(6px);
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(-50%, 10px) scale(0.985);
+        pointer-events: none;
+        transition:
+          opacity 240ms ease-in-out,
+          transform 280ms cubic-bezier(0.22, 1, 0.36, 1),
+          visibility 240ms linear;
+        z-index: 80;
+      }
+
+      .nav-item--mega:hover .mega-menu,
+      .nav-item--mega:focus-within .mega-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, 0) scale(1);
+        pointer-events: auto;
+      }
+
+      .mega-menu-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-xs);
+        margin-bottom: var(--space-sm);
+        padding: 0 4px;
+        border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+        padding-bottom: var(--space-xs);
+      }
+
+      .mega-menu-title {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 850;
+        letter-spacing: -0.01em;
+        color: var(--text);
+      }
+
+      .mega-menu-subtitle {
+        margin: 3px 0 0;
+        font-size: 13px;
+        line-height: 1.45;
+        color: var(--muted);
+      }
+
+      .mega-menu-all {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.38);
+        background: rgba(248, 250, 252, 0.92);
+        color: var(--text);
+        font-size: 12px;
+        font-weight: 750;
+      }
+
+      .mega-menu-all:hover {
+        text-decoration: none;
+        background: rgba(241, 245, 249, 0.9);
+      }
+
+      .mega-menu-groups {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-sm);
+      }
+
+      .mega-group {
+        display: grid;
+        gap: 10px;
+        padding: 14px;
+        border-radius: 12px;
+        border: 1px solid rgba(226, 232, 240, 0.92);
+        background: rgba(255, 255, 255, 1);
+        min-height: 100%;
+        box-shadow: 0 2px 8px rgba(2, 6, 23, 0.03);
+      }
+
+      .mega-group-heading {
+        display: grid;
+        gap: 3px;
+        color: var(--text);
+        padding-bottom: 8px;
+        border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+      }
+
+      .mega-group-heading:hover {
+        text-decoration: none;
+      }
+
+      .mega-group-heading::after {
+        content: "";
+        width: 26px;
+        height: 2px;
+        border-radius: 2px;
+        background: rgba(100, 116, 139, 0.45);
+        margin-top: 3px;
+      }
+
+      .mega-group-title {
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+        color: var(--text);
+      }
+
+      .mega-group-kicker {
+        font-size: 12px;
+        font-weight: 650;
+        line-height: 1.45;
+        color: var(--muted);
+      }
+
+      .mega-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 4px;
+      }
+
+      .mega-list a {
+        display: block;
+        padding: 7px 8px;
+        border-radius: 8px;
+        font-size: 13px;
+        line-height: 1.4;
+        color: var(--muted);
+        transition: background 140ms ease, color 140ms ease;
+      }
+
+      .mega-list a:hover {
+        text-decoration: none;
+        color: var(--text);
+        background: rgba(241, 245, 249, 0.85);
+      }
+
+      .mega-menu-note {
+        margin-top: var(--space-sm);
+        padding: 11px 12px;
+        border-radius: 10px;
+        border: 1px solid rgba(203, 213, 225, 0.9);
+        background: rgba(248, 250, 252, 0.92);
+        font-size: 13px;
+        line-height: 1.5;
+        color: rgba(15, 23, 42, 0.9);
+      }
+
+      .mega-menu-note a {
+        font-weight: 800;
+        color: var(--text);
+      }
+
+      .mega-group-heading:focus-visible,
+      .mega-list a:focus-visible,
+      .mega-menu-all:focus-visible {
+        outline: 3px solid var(--ring);
+        outline-offset: 2px;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .nav-item--mega .nav-link::after,
+        .mega-menu,
+        .nav-item--mega:hover .mega-menu,
+        .nav-item--mega:focus-within .mega-menu {
+          transition: none;
+          transform: translate(-50%, 0) scale(1);
+        }
       }
 
       .header-actions {
@@ -1647,6 +1877,14 @@
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
+        .mega-menu {
+          width: calc(100vw - 24px);
+        }
+
+        .mega-menu-groups {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
         .footer-grid {
           grid-template-columns: minmax(0, 1fr);
         }
@@ -1686,6 +1924,10 @@
       @media (max-width: 560px) {
         .container {
           padding: 0 14px;
+        }
+
+        .mega-menu-groups {
+          grid-template-columns: minmax(0, 1fr);
         }
 
         .services-grid {
@@ -1730,14 +1972,88 @@
           </a>
 
           <nav class="nav" aria-label="Site">
-            <a href="/services/" class="nav-link is-active">Services</a>
+            <div class="nav-item nav-item--mega">
+              <a href="/services/" class="nav-link is-active">Services</a>
+              <div class="mega-menu" role="group" aria-label="Services menu">
+                <div class="mega-menu-head">
+                  <div>
+                    <p class="mega-menu-title">Services Overview</p>
+                    <p class="mega-menu-subtitle">Choose a category or go directly to a specific service.</p>
+                  </div>
+                  <a class="mega-menu-all" href="/services/">View all services <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
+                </div>
+                <div class="mega-menu-groups">
+                  <section class="mega-group" aria-label="AI Solutions Development links">
+                    <a class="mega-group-heading" href="/services/ai-solutions-development/">
+                      <span class="mega-group-title">AI Solutions Development</span>
+                      <span class="mega-group-kicker">LLM apps, RAG, chatbots, and integrations</span>
+                    </a>
+                    <ul class="mega-list">
+                      <li><a href="/services/llm-powered-applications/">LLM-powered applications</a></li>
+                      <li><a href="/services/rag-systems/">RAG systems (AI over company data)</a></li>
+                      <li><a href="/services/ai-copilots-chatbots/">AI copilots and chatbots</a></li>
+                      <li><a href="/services/ai-business-process-automation/">AI-powered business process automation</a></li>
+                      <li><a href="/services/ai-integrations-crm-erp-apis/">AI integrations with CRM, ERP, and APIs</a></li>
+                    </ul>
+                  </section>
+
+                  <section class="mega-group" aria-label="Autonomous AI Agents links">
+                    <a class="mega-group-heading" href="/services/ai-agents/">
+                      <span class="mega-group-title">Autonomous AI Agents</span>
+                      <span class="mega-group-kicker">Task, workflow, and research agents</span>
+                    </a>
+                    <ul class="mega-list">
+                      <li><a href="/services/autonomous-ai-agent-design-development/">Design and development of autonomous AI agents</a></li>
+                      <li><a href="/services/multi-agent-systems/">Multi-agent systems</a></li>
+                      <li><a href="/services/task-automation-agents/">Task automation agents</a></li>
+                      <li><a href="/services/internal-workflow-agents/">Internal workflow agents</a></li>
+                      <li><a href="/services/ai-research-analysis-agents/">AI research and analysis agents</a></li>
+                      <li><a href="/services/custom-business-agents/">Custom business agents</a></li>
+                    </ul>
+                  </section>
+
+                  <section class="mega-group" aria-label="AI Consulting and Strategy links">
+                    <a class="mega-group-heading" href="/services/ai-consulting-strategy/">
+                      <span class="mega-group-title">AI Consulting &amp; Strategy</span>
+                      <span class="mega-group-kicker">Workshops, roadmap, architecture, and tool decisions</span>
+                    </a>
+                    <ul class="mega-list">
+                      <li><a href="/services/ai-discovery-workshops/">AI discovery workshops</a></li>
+                      <li><a href="/services/ai-use-case-identification/">AI use case identification</a></li>
+                      <li><a href="/services/ai-roadmap-development/">AI roadmap development</a></li>
+                      <li><a href="/services/ai-architecture-design/">AI architecture design</a></li>
+                      <li><a href="/services/ai-tools-model-selection/">AI tools and model selection</a></li>
+                    </ul>
+                  </section>
+
+                  <section class="mega-group" aria-label="HubSpot Development and AI Automation links">
+                    <a class="mega-group-heading" href="/services/hubspot/">
+                      <span class="mega-group-title">HubSpot Development &amp; AI Automation</span>
+                      <span class="mega-group-kicker">Sales and marketing automation in HubSpot</span>
+                    </a>
+                    <ul class="mega-list">
+                      <li><a href="/services/hubspot-implementation-custom-development/">HubSpot implementation and custom development</a></li>
+                      <li><a href="/services/marketing-sales-automation/">Marketing and sales automation</a></li>
+                      <li><a href="/services/hubspot-integrations/">HubSpot integrations with other systems</a></li>
+                      <li><a href="/services/ai-powered-lead-qualification/">AI-powered lead qualification</a></li>
+                      <li><a href="/services/ai-powered-sales-automation/">AI-powered sales automation</a></li>
+                      <li><a href="/services/ai-sdr-outreach-automation/">AI SDR and outreach automation</a></li>
+                    </ul>
+                  </section>
+                </div>
+                <p class="mega-menu-note">
+                  Need help choosing? Start with one workflow and we will recommend the fastest path to measurable results.
+                  <a href="mailto:krystian@easytechpartners.com?subject=Intro%20call%20-%20AI%20services">Book a short call</a>.
+                </p>
+              </div>
+            </div>
             <a href="/about-us/" class="nav-link">About</a>
             <a href="/blog/" class="nav-link">Blog</a>
           </nav>
 
           <div class="header-actions">
             <a href="/contact-us/" class="btn btn-ghost">Contact</a>
-            <a href="mailto:krystian@easytechpartners.com?subject=Intro%20call%20-%20Autonomous%20AI%20agents" class="btn btn-primary"><span class="material-symbols-rounded" aria-hidden="true">calendar_month</span><span>Book a meeting</span></a>
+            <a href="mailto:krystian@easytechpartners.com?subject=Intro%20call%20-%20AI%20services" class="btn btn-primary"><span class="material-symbols-rounded" aria-hidden="true">calendar_month</span><span>Book a meeting</span></a>
           </div>
 
           <details class="mobile-nav">
@@ -1756,7 +2072,7 @@
               <a href="/about-us/">About <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
               <a href="/blog/">Blog <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
               <a href="/contact-us/">Contact</a>
-              <a class="mobile-nav-cta" href="mailto:krystian@easytechpartners.com?subject=Intro%20call%20-%20Autonomous%20AI%20agents"><span class="material-symbols-rounded" aria-hidden="true">calendar_month</span><span>Book a meeting</span></a>
+              <a class="mobile-nav-cta" href="mailto:krystian@easytechpartners.com?subject=Intro%20call%20-%20AI%20services"><span class="material-symbols-rounded" aria-hidden="true">calendar_month</span><span>Book a meeting</span></a>
             </div>
           </details>
         </div>
@@ -1823,7 +2139,7 @@ Build custom APIs to integrate HubSpot with even the most niche or complex syste
             <div>© 2025, Easy Tech Partners.</div>
             <div class="footer-build">
               Updated:
-              <time datetime="2026-03-06T20:37:54.069Z">2026-03-06 20:37 UTC</time>
+              <time datetime="2026-03-06T21:32:44.573Z">2026-03-06 21:32 UTC</time>
             </div>
           </div>
           <div class="footer-links" aria-label="Footer links">

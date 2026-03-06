@@ -1,36 +1,50 @@
 ---
 layout: base
-title: HubSpot support for agency teams
-description: Technical delivery support for HubSpot agencies — available when needed, often as part of an agent system’s data layer and tooling.
+title: "HubSpot Development & AI Automation"
+description: "HubSpot development and AI automation services: implementation, custom development, lead qualification, sales automation, and AI outreach workflows."
 ---
 
-Easy Tech Partners offers technical HubSpot solutions designed for marketing agencies. We focus on efficiency, simplicity, and results, ensuring your HubSpot setup supports your business needs seamlessly.
+HubSpot Development & AI Automation helps your marketing and sales teams move faster with less manual work.
 
-This is not our main focus anymore. Our primary direction is autonomous AI agents, but we still support agency teams when HubSpot work is required to make the system run reliably.
+We make HubSpot easier to run, easier to scale, and better connected to your real sales process.
 
-## Services
+## What is included in this service
 
-**Website and Email Templates**  
-Design and build HubSpot‑friendly templates that are responsive, modern, and easy to use.
+- [**HubSpot implementation and custom development**](/services/hubspot-implementation-custom-development/)
+- [**Marketing and sales automation**](/services/marketing-sales-automation/)
+- [**HubSpot integrations with other systems**](/services/hubspot-integrations/)
+- [**AI-powered lead qualification**](/services/ai-powered-lead-qualification/)
+- [**AI-powered sales automation**](/services/ai-powered-sales-automation/)
+- [**AI SDR and outreach automation**](/services/ai-sdr-outreach-automation/)
 
-**Custom Modules**  
-Build tailored modules that fit your brand and goals.
+## Business outcomes you can expect
 
-**CRM Setup**  
-Implement and optimize HubSpot CRM for smooth client management.
+- Faster lead response time
+- More consistent follow-up
+- Fewer manual admin tasks
+- Better visibility from lead to deal
 
-**Integrations**  
-Connect HubSpot with tools you already use for a streamlined workflow.
+## Typical HubSpot + AI use cases
 
-**Data Migration**  
-Move and clean data for a fresh, accurate start.
+- Automatic lead scoring and routing
+- Follow-up sequences based on deal stage
+- Outreach workflows with clear rules and tracking
+- HubSpot data sync with external tools and systems
 
-**Automation**  
-Simplify your processes with smart workflows.
+## FAQ
 
-**Support**  
-Fast, reliable help whenever you need it.
+### Can you work with our current HubSpot setup?
+Yes. We can improve what you already have without forcing a full rebuild.
 
-## Why us?
+### Is this useful for small sales teams?
+Yes. Smaller teams often see fast gains because manual work drops quickly.
 
-We make HubSpot work for you. With a clear and practical approach, we act as your technical partner, so you can focus on what you do best — marketing.
+### Do we need to change our whole process?
+No. We start with your existing process and improve step by step.
+
+## Related services
+
+- [AI Solutions Development](/services/ai-solutions-development/)
+- [AI Consulting & Strategy](/services/ai-consulting-strategy/)
+
+[Book a meeting about HubSpot Development & AI Automation →](mailto:krystian@easytechpartners.com?subject=HubSpot%20Development%20and%20AI%20Automation)

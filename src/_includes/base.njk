@@ -468,6 +468,12 @@
         gap: 10px;
       }
 
+      .nav-item {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+      }
+
       .nav-link {
         display: inline-flex;
         align-items: center;
@@ -480,6 +486,33 @@
         text-decoration: none;
       }
 
+      .nav-item--mega .nav-link {
+        gap: 6px;
+      }
+
+      .nav-item--mega .nav-link::after {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-right: 1.5px solid currentColor;
+        border-bottom: 1.5px solid currentColor;
+        transform: translateY(1px) rotate(45deg);
+        transform-origin: 50% 50%;
+        opacity: 0.75;
+        transition:
+          transform 240ms cubic-bezier(0.22, 1, 0.36, 1),
+          opacity 200ms ease-in-out;
+      }
+
+      .nav-item--mega::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        height: 12px;
+      }
+
       .nav-link:hover {
         color: var(--text);
         background: rgba(226, 232, 240, 0.65);
@@ -489,6 +522,203 @@
       .nav-link.is-active {
         background: rgba(var(--primary-rgb), 0.12);
         color: var(--primary-dark);
+      }
+
+      .nav-item--mega .nav-link.is-active {
+        background: rgba(226, 232, 240, 0.62);
+        color: var(--text);
+      }
+
+      .nav-item--mega:hover .nav-link::after,
+      .nav-item--mega:focus-within .nav-link::after {
+        transform: translateY(1px) rotate(225deg);
+        opacity: 1;
+      }
+
+      .mega-menu {
+        position: fixed;
+        top: calc(var(--header-height) + 6px);
+        left: 50%;
+        width: calc(100vw - 28px);
+        max-width: 1560px;
+        padding: var(--space-sm);
+        border-radius: var(--radius);
+        border: 1px solid rgba(148, 163, 184, 0.26);
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow:
+          0 18px 36px rgba(2, 6, 23, 0.10),
+          0 2px 6px rgba(2, 6, 23, 0.04);
+        backdrop-filter: blur(6px);
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(-50%, 10px) scale(0.985);
+        pointer-events: none;
+        transition:
+          opacity 240ms ease-in-out,
+          transform 280ms cubic-bezier(0.22, 1, 0.36, 1),
+          visibility 240ms linear;
+        z-index: 80;
+      }
+
+      .nav-item--mega:hover .mega-menu,
+      .nav-item--mega:focus-within .mega-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, 0) scale(1);
+        pointer-events: auto;
+      }
+
+      .mega-menu-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-xs);
+        margin-bottom: var(--space-sm);
+        padding: 0 4px;
+        border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+        padding-bottom: var(--space-xs);
+      }
+
+      .mega-menu-title {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 850;
+        letter-spacing: -0.01em;
+        color: var(--text);
+      }
+
+      .mega-menu-subtitle {
+        margin: 3px 0 0;
+        font-size: 13px;
+        line-height: 1.45;
+        color: var(--muted);
+      }
+
+      .mega-menu-all {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.38);
+        background: rgba(248, 250, 252, 0.92);
+        color: var(--text);
+        font-size: 12px;
+        font-weight: 750;
+      }
+
+      .mega-menu-all:hover {
+        text-decoration: none;
+        background: rgba(241, 245, 249, 0.9);
+      }
+
+      .mega-menu-groups {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-sm);
+      }
+
+      .mega-group {
+        display: grid;
+        gap: 10px;
+        padding: 14px;
+        border-radius: 12px;
+        border: 1px solid rgba(226, 232, 240, 0.92);
+        background: rgba(255, 255, 255, 1);
+        min-height: 100%;
+        box-shadow: 0 2px 8px rgba(2, 6, 23, 0.03);
+      }
+
+      .mega-group-heading {
+        display: grid;
+        gap: 3px;
+        color: var(--text);
+        padding-bottom: 8px;
+        border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+      }
+
+      .mega-group-heading:hover {
+        text-decoration: none;
+      }
+
+      .mega-group-heading::after {
+        content: "";
+        width: 26px;
+        height: 2px;
+        border-radius: 2px;
+        background: rgba(100, 116, 139, 0.45);
+        margin-top: 3px;
+      }
+
+      .mega-group-title {
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+        color: var(--text);
+      }
+
+      .mega-group-kicker {
+        font-size: 12px;
+        font-weight: 650;
+        line-height: 1.45;
+        color: var(--muted);
+      }
+
+      .mega-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 4px;
+      }
+
+      .mega-list a {
+        display: block;
+        padding: 7px 8px;
+        border-radius: 8px;
+        font-size: 13px;
+        line-height: 1.4;
+        color: var(--muted);
+        transition: background 140ms ease, color 140ms ease;
+      }
+
+      .mega-list a:hover {
+        text-decoration: none;
+        color: var(--text);
+        background: rgba(241, 245, 249, 0.85);
+      }
+
+      .mega-menu-note {
+        margin-top: var(--space-sm);
+        padding: 11px 12px;
+        border-radius: 10px;
+        border: 1px solid rgba(203, 213, 225, 0.9);
+        background: rgba(248, 250, 252, 0.92);
+        font-size: 13px;
+        line-height: 1.5;
+        color: rgba(15, 23, 42, 0.9);
+      }
+
+      .mega-menu-note a {
+        font-weight: 800;
+        color: var(--text);
+      }
+
+      .mega-group-heading:focus-visible,
+      .mega-list a:focus-visible,
+      .mega-menu-all:focus-visible {
+        outline: 3px solid var(--ring);
+        outline-offset: 2px;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .nav-item--mega .nav-link::after,
+        .mega-menu,
+        .nav-item--mega:hover .mega-menu,
+        .nav-item--mega:focus-within .mega-menu {
+          transition: none;
+          transform: translate(-50%, 0) scale(1);
+        }
       }
 
       .header-actions {
@@ -1665,6 +1895,14 @@
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
+        .mega-menu {
+          width: calc(100vw - 24px);
+        }
+
+        .mega-menu-groups {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
         .footer-grid {
           grid-template-columns: minmax(0, 1fr);
         }
@@ -1704,6 +1942,10 @@
       @media (max-width: 560px) {
         .container {
           padding: 0 14px;
+        }
+
+        .mega-menu-groups {
+          grid-template-columns: minmax(0, 1fr);
         }
 
         .services-grid {
@@ -1748,14 +1990,88 @@
           </a>
 
           <nav class="nav" aria-label="Site">
-            <a href="/services/" class="nav-link{% if isServices %} is-active{% endif %}">Services</a>
+            <div class="nav-item nav-item--mega">
+              <a href="/services/" class="nav-link{% if isServices %} is-active{% endif %}">Services</a>
+              <div class="mega-menu" role="group" aria-label="Services menu">
+                <div class="mega-menu-head">
+                  <div>
+                    <p class="mega-menu-title">Services Overview</p>
+                    <p class="mega-menu-subtitle">Choose a category or go directly to a specific service.</p>
+                  </div>
+                  <a class="mega-menu-all" href="/services/">View all services {% ms "arrow_forward" %}</a>
+                </div>
+                <div class="mega-menu-groups">
+                  <section class="mega-group" aria-label="AI Solutions Development links">
+                    <a class="mega-group-heading" href="/services/ai-solutions-development/">
+                      <span class="mega-group-title">AI Solutions Development</span>
+                      <span class="mega-group-kicker">LLM apps, RAG, chatbots, and integrations</span>
+                    </a>
+                    <ul class="mega-list">
+                      <li><a href="/services/llm-powered-applications/">LLM-powered applications</a></li>
+                      <li><a href="/services/rag-systems/">RAG systems (AI over company data)</a></li>
+                      <li><a href="/services/ai-copilots-chatbots/">AI copilots and chatbots</a></li>
+                      <li><a href="/services/ai-business-process-automation/">AI-powered business process automation</a></li>
+                      <li><a href="/services/ai-integrations-crm-erp-apis/">AI integrations with CRM, ERP, and APIs</a></li>
+                    </ul>
+                  </section>
+
+                  <section class="mega-group" aria-label="Autonomous AI Agents links">
+                    <a class="mega-group-heading" href="/services/ai-agents/">
+                      <span class="mega-group-title">Autonomous AI Agents</span>
+                      <span class="mega-group-kicker">Task, workflow, and research agents</span>
+                    </a>
+                    <ul class="mega-list">
+                      <li><a href="/services/autonomous-ai-agent-design-development/">Design and development of autonomous AI agents</a></li>
+                      <li><a href="/services/multi-agent-systems/">Multi-agent systems</a></li>
+                      <li><a href="/services/task-automation-agents/">Task automation agents</a></li>
+                      <li><a href="/services/internal-workflow-agents/">Internal workflow agents</a></li>
+                      <li><a href="/services/ai-research-analysis-agents/">AI research and analysis agents</a></li>
+                      <li><a href="/services/custom-business-agents/">Custom business agents</a></li>
+                    </ul>
+                  </section>
+
+                  <section class="mega-group" aria-label="AI Consulting and Strategy links">
+                    <a class="mega-group-heading" href="/services/ai-consulting-strategy/">
+                      <span class="mega-group-title">AI Consulting &amp; Strategy</span>
+                      <span class="mega-group-kicker">Workshops, roadmap, architecture, and tool decisions</span>
+                    </a>
+                    <ul class="mega-list">
+                      <li><a href="/services/ai-discovery-workshops/">AI discovery workshops</a></li>
+                      <li><a href="/services/ai-use-case-identification/">AI use case identification</a></li>
+                      <li><a href="/services/ai-roadmap-development/">AI roadmap development</a></li>
+                      <li><a href="/services/ai-architecture-design/">AI architecture design</a></li>
+                      <li><a href="/services/ai-tools-model-selection/">AI tools and model selection</a></li>
+                    </ul>
+                  </section>
+
+                  <section class="mega-group" aria-label="HubSpot Development and AI Automation links">
+                    <a class="mega-group-heading" href="/services/hubspot/">
+                      <span class="mega-group-title">HubSpot Development &amp; AI Automation</span>
+                      <span class="mega-group-kicker">Sales and marketing automation in HubSpot</span>
+                    </a>
+                    <ul class="mega-list">
+                      <li><a href="/services/hubspot-implementation-custom-development/">HubSpot implementation and custom development</a></li>
+                      <li><a href="/services/marketing-sales-automation/">Marketing and sales automation</a></li>
+                      <li><a href="/services/hubspot-integrations/">HubSpot integrations with other systems</a></li>
+                      <li><a href="/services/ai-powered-lead-qualification/">AI-powered lead qualification</a></li>
+                      <li><a href="/services/ai-powered-sales-automation/">AI-powered sales automation</a></li>
+                      <li><a href="/services/ai-sdr-outreach-automation/">AI SDR and outreach automation</a></li>
+                    </ul>
+                  </section>
+                </div>
+                <p class="mega-menu-note">
+                  Need help choosing? Start with one workflow and we will recommend the fastest path to measurable results.
+                  <a href="mailto:krystian@easytechpartners.com?subject=Intro%20call%20-%20AI%20services">Book a short call</a>.
+                </p>
+              </div>
+            </div>
             <a href="/about-us/" class="nav-link{% if page.url == '/about-us/' %} is-active{% endif %}">About</a>
             <a href="/blog/" class="nav-link{% if page.url and page.url.indexOf('/blog/') == 0 %} is-active{% endif %}">Blog</a>
           </nav>
 
           <div class="header-actions">
             <a href="/contact-us/" class="btn btn-ghost">Contact</a>
-            <a href="mailto:krystian@easytechpartners.com?subject=Intro%20call%20-%20Autonomous%20AI%20agents" class="btn btn-primary">{% ms "calendar_month" %}<span>Book a meeting</span></a>
+            <a href="mailto:krystian@easytechpartners.com?subject=Intro%20call%20-%20AI%20services" class="btn btn-primary">{% ms "calendar_month" %}<span>Book a meeting</span></a>
           </div>
 
           <details class="mobile-nav">
@@ -1774,7 +2090,7 @@
               <a href="/about-us/">About {% ms "arrow_forward" %}</a>
               <a href="/blog/">Blog {% ms "arrow_forward" %}</a>
               <a href="/contact-us/">Contact</a>
-              <a class="mobile-nav-cta" href="mailto:krystian@easytechpartners.com?subject=Intro%20call%20-%20Autonomous%20AI%20agents">{% ms "calendar_month" %}<span>Book a meeting</span></a>
+              <a class="mobile-nav-cta" href="mailto:krystian@easytechpartners.com?subject=Intro%20call%20-%20AI%20services">{% ms "calendar_month" %}<span>Book a meeting</span></a>
             </div>
           </details>
         </div>
@@ -1798,18 +2114,18 @@
               <div class="home-hero-grid">
                 <div>
                   <h1>
-                    AI automation that
-                    <span>gets work done</span>
+                    Practical AI services
+                    <span>for business teams</span>
                   </h1>
                   <p class="home-lead">
-                    We help you figure out where AI can help, prove it in one workflow, and turn it into a production system.
-                    Clear scope, trained team, safe automation, measurable results — built around your tools and data.
+                    We help non-technical teams use AI in a practical way.
+                    Clear plan, clear scope, and clear results across your real workflows.
                   </p>
                   <div class="home-cta">
-                    <a class="btn btn-primary" href="mailto:krystian@easytechpartners.com?subject=Intro%20call%20-%20Autonomous%20AI%20agents">{% ms "calendar_month" %}<span>Book a meeting</span></a>
-                    <a class="btn btn-ghost" href="#pilot">{% ms "rocket_launch" %}<span>Apply for the pilot</span></a>
+                    <a class="btn btn-primary" href="mailto:krystian@easytechpartners.com?subject=Intro%20call%20-%20AI%20services">{% ms "calendar_month" %}<span>Book a meeting</span></a>
+                    <a class="btn btn-ghost" href="/services/">{% ms "arrow_forward" %}<span>See services</span></a>
                   </div>
-                  <div class="home-note">Straight to the point. Measurable. Production‑minded.</div>
+                  <div class="home-note">Simple language. Practical delivery. Measurable outcomes.</div>
                 </div>
               </div>
             </div>
@@ -1819,8 +2135,8 @@
             <div class="container">
               <div class="ai-loop-wrap">
                 <div class="section-header">
-                  <h2 class="section-title" id="ai-loop-title">How automation runs</h2>
-                  <p class="section-lead">A simple loop: data → plan → execution → results → better next inputs.</p>
+                  <h2 class="section-title" id="ai-loop-title">How we deliver AI projects</h2>
+                  <p class="section-lead">Simple process: understand your workflow, build, launch, measure, improve.</p>
                 </div>
 
                 <div class="ai-loop-grid">
@@ -1831,7 +2147,7 @@
                           <span class="ai-loop-step-dot" aria-hidden="true"></span>
                           <span>
                             <span class="ai-loop-step-title">Analyze Data</span>
-                            <span class="ai-loop-step-desc">Look at your data, context, and constraints.</span>
+                            <span class="ai-loop-step-desc">Understand your workflow, goals, and current tools.</span>
                           </span>
                         </button>
                       </li>
@@ -1840,7 +2156,7 @@
                           <span class="ai-loop-step-dot" aria-hidden="true"></span>
                           <span>
                             <span class="ai-loop-step-title">Plan the work</span>
-                            <span class="ai-loop-step-desc">Decide the next actions and the checks to run.</span>
+                            <span class="ai-loop-step-desc">Define scope, timeline, and success metrics.</span>
                           </span>
                         </button>
                       </li>
@@ -1849,7 +2165,7 @@
                           <span class="ai-loop-step-dot" aria-hidden="true"></span>
                           <span>
                             <span class="ai-loop-step-title">Execute</span>
-                            <span class="ai-loop-step-desc">Run the tasks across your tools with guardrails.</span>
+                            <span class="ai-loop-step-desc">Build and connect the solution to your systems.</span>
                           </span>
                         </button>
                       </li>
@@ -1858,7 +2174,7 @@
                           <span class="ai-loop-step-dot" aria-hidden="true"></span>
                           <span>
                             <span class="ai-loop-step-title">Evaluate results</span>
-                            <span class="ai-loop-step-desc">Verify quality and measure the impact.</span>
+                            <span class="ai-loop-step-desc">Track what works and what needs adjustment.</span>
                           </span>
                         </button>
                       </li>
@@ -1867,7 +2183,7 @@
                           <span class="ai-loop-step-dot" aria-hidden="true"></span>
                           <span>
                             <span class="ai-loop-step-title">Report + improve</span>
-                            <span class="ai-loop-step-desc">Send a report and upgrade the next run.</span>
+                            <span class="ai-loop-step-desc">Improve the setup and scale what performs.</span>
                           </span>
                         </button>
                       </li>
@@ -1882,7 +2198,7 @@
                       </svg>
                       <div class="ai-loop-center" aria-hidden="true">
                         <div class="ai-loop-center-label">Step 1</div>
-                        <div class="ai-loop-center-step" id="ai-loop-current-step">Analyze Data</div>
+                        <div class="ai-loop-center-step" id="ai-loop-current-step">Understand Workflow</div>
                       </div>
                     </div>
                   </div>
@@ -1895,14 +2211,14 @@
             <div class="container">
               <div class="partner">
                 <div>
-                  <p class="partner-kicker">AI rollout</p>
-                  <h2 class="partner-title">If you don’t know where to start, we’ll make it clear.</h2>
+                  <p class="partner-kicker">Where to start</p>
+                  <h2 class="partner-title">Not sure where AI should start in your company?</h2>
                   <p class="partner-body">
-                    We review your workflows, data, and constraints, then propose practical automations that fit your business.
-                    We train your team, ship the first workflows, and stay involved as your technical partner as you scale AI across the company.
+                    We review your current process and show where AI can bring the biggest business value first.
+                    Then we build it with your team and make sure it works in daily operations.
                   </p>
                   <p class="partner-body">
-                    The fastest way to begin is a focused pilot: one workflow end‑to‑end, measurable outcomes, and a repeatable pattern for what’s next.
+                    You get a clear next step, realistic scope, and practical implementation plan.
                   </p>
                 </div>
               </div>
@@ -1912,22 +2228,30 @@
           <section class="section compact">
             <div class="container">
               <div class="section-header">
-                <h2 class="section-title">What we build</h2>
-                <p class="section-lead">Systems that connect to your tools, do the work, and report results — with safety checks.</p>
+                <h2 class="section-title">Our services</h2>
+                <p class="section-lead">Four clear services focused on practical AI outcomes for business teams.</p>
               </div>
-              <div class="info-grid">
-                <div class="info-card">
-                  <h3 class="info-title">Workflow automation</h3>
-                  <p class="info-body">A reliable workflow that knows what to do next and how to recover when something fails.</p>
-                </div>
-                <div class="info-card">
-                  <h3 class="info-title">AI agents (the workers)</h3>
-                  <p class="info-body">Purpose‑built agents that execute specific tasks across your systems — with clear boundaries.</p>
-                </div>
-                <div class="info-card">
-                  <h3 class="info-title">Data + safety checks</h3>
-                  <p class="info-body">Checks, logging, and reporting so you can trust what runs — and improve it over time.</p>
-                </div>
+              <div class="services-grid">
+                <a class="service-card" href="/services/ai-solutions-development/">
+                  <h3 class="service-title">AI Solutions Development</h3>
+                  <p class="service-desc">LLM apps, chatbots, RAG, automation, and integrations with your current systems.</p>
+                  <div class="service-meta">Explore {% ms "arrow_forward" %}</div>
+                </a>
+                <a class="service-card" href="/services/ai-agents/">
+                  <h3 class="service-title">Autonomous AI Agents</h3>
+                  <p class="service-desc">Custom AI agents that automate tasks and internal workflows end to end.</p>
+                  <div class="service-meta">Explore {% ms "arrow_forward" %}</div>
+                </a>
+                <a class="service-card" href="/services/ai-consulting-strategy/">
+                  <h3 class="service-title">AI Consulting &amp; Strategy</h3>
+                  <p class="service-desc">Workshops, roadmap, architecture, and tool selection for the right AI start.</p>
+                  <div class="service-meta">Explore {% ms "arrow_forward" %}</div>
+                </a>
+                <a class="service-card" href="/services/hubspot/">
+                  <h3 class="service-title">HubSpot Development &amp; AI Automation</h3>
+                  <p class="service-desc">HubSpot setup, custom development, and AI-powered sales and marketing automation.</p>
+                  <div class="service-meta">Explore {% ms "arrow_forward" %}</div>
+                </a>
               </div>
             </div>
           </section>
@@ -1936,18 +2260,19 @@
             <div class="container">
               <div class="pilot">
                 <p class="pilot-meta">Pilot program</p>
-                <h2 class="pilot-title">Start with one workflow</h2>
+                <h2 class="pilot-title">Start with one focused AI project</h2>
                 <p class="pilot-body">
-                  We onboard up to three companies at a time to keep delivery hands‑on. The pilot delivers one high‑value workflow end‑to‑end — with clear success metrics, safety checks, and weekly iterations.
+                  If you want to start small, we run one focused project first.
+                  You get a working implementation, clear success metrics, and a practical path for what to scale next.
                 </p>
                 <ul class="pilot-list">
-                  <li>You have one workflow worth automating first.</li>
-                  <li>You can provide access to the right tools and data.</li>
-                  <li>You can assign an owner on your side.</li>
-                  <li>You want a clear, measurable outcome in weeks.</li>
+                  <li>You have one workflow worth improving now.</li>
+                  <li>You can provide access to tools and data.</li>
+                  <li>You can assign one internal owner.</li>
+                  <li>You want measurable business results in weeks, not months.</li>
                 </ul>
                 <div class="home-cta">
-                  <a class="btn btn-primary" href="mailto:krystian@easytechpartners.com?subject=Pilot%20application%20-%20Autonomous%20AI%20agents&body=Hi%20Krystian%2C%0A%0AWe%20want%20to%20apply%20for%20the%20pilot.%0A%0ACompany%3A%0AWebsite%3A%0APrimary%20goal%20(1%20sentence)%3A%0AWorkflow%20to%20automate%3A%0AKey%20systems%20and%20data%20sources%3A%0AConstraints%20(security%2Fcompliance)%3A%0ATeam%20size%3A%0ATimeline%3A%0A%0AThanks%2C">{% ms "rocket_launch" %}<span>Apply for the pilot</span></a>
+                  <a class="btn btn-primary" href="mailto:krystian@easytechpartners.com?subject=Pilot%20application%20-%20AI%20project&body=Hi%20Krystian%2C%0A%0AWe%20want%20to%20start%20a%20focused%20AI%20project.%0A%0ACompany%3A%0AWebsite%3A%0APrimary%20goal%20(1%20sentence)%3A%0AWorkflow%20to%20improve%3A%0AKey%20systems%20and%20data%20sources%3A%0AConstraints%3A%0ATeam%20size%3A%0ATimeline%3A%0A%0AThanks%2C">{% ms "rocket_launch" %}<span>Apply for a pilot</span></a>
                 </div>
               </div>
             </div>
@@ -1956,23 +2281,23 @@
           <section class="section">
             <div class="container">
               <div class="section-header">
-                <h2 class="section-title">If you run on HubSpot</h2>
+                <h2 class="section-title">HubSpot + AI automation</h2>
                 <p class="section-lead">
-                  We can also handle HubSpot delivery: integrations, CMS work, and the technical edge cases that show up after launch.
+                  We help marketing and sales teams automate work in HubSpot and connect it with the rest of your systems.
                 </p>
               </div>
               <div class="info-grid">
                 <div class="info-card">
-                  <h3 class="info-title">HubSpot integrations</h3>
-                  <p class="info-body">Reliable API work and data sync between HubSpot and your systems.</p>
+                  <h3 class="info-title">Lead qualification</h3>
+                  <p class="info-body">AI helps score and prioritize leads so your team focuses on the right opportunities.</p>
                 </div>
                 <div class="info-card">
-                  <h3 class="info-title">HubSpot agency support</h3>
-                  <p class="info-body">Technical delivery help for agency teams when needed.</p>
+                  <h3 class="info-title">Sales automation</h3>
+                  <p class="info-body">Automate repetitive sales steps, follow-ups, and handoffs between teams.</p>
                 </div>
                 <div class="info-card">
-                  <h3 class="info-title">HubSpot CMS websites</h3>
-                  <p class="info-body">Custom HubSpot CMS websites: templates, modules, performance, and clean implementation.</p>
+                  <h3 class="info-title">Outreach workflows</h3>
+                  <p class="info-body">Set up consistent outreach processes with clear tracking and better response handling.</p>
                 </div>
               </div>
             </div>
@@ -1988,11 +2313,11 @@
                   <p class="partner-kicker">Trusted partner</p>
                   <h2 class="partner-title">HubSpot Solutions Partner</h2>
                   <p class="partner-body">
-                    We deliver HubSpot work in production: CMS websites, integrations, automation, and the edge cases that show up after launch.
-                    If you need a reliable delivery partner, book a quick meeting.
+                    We deliver practical HubSpot work in production: setup, integrations, automation, and ongoing improvement.
+                    If you need a reliable delivery partner, book a short call.
                   </p>
                   <div class="home-cta">
-                    <a class="btn btn-primary" href="mailto:krystian@easytechpartners.com?subject=Meeting%20-%20HubSpot%20delivery">{% ms "calendar_month" %}<span>Book a meeting</span></a>
+                    <a class="btn btn-primary" href="mailto:krystian@easytechpartners.com?subject=Meeting%20-%20HubSpot%20and%20AI%20automation">{% ms "calendar_month" %}<span>Book a meeting</span></a>
                     <a class="btn btn-ghost" href="/contact-us/">Contact</a>
                   </div>
                 </div>
@@ -2074,30 +2399,30 @@
                   <div class="section-header">
                     <h2 class="section-title">Services</h2>
                     <p class="section-lead">
-                      Our main focus is autonomous AI agents. We also support HubSpot integrations and HubSpot agency teams.
+                      We offer four practical AI services designed for business teams that need clear results, not technical complexity.
                     </p>
                   </div>
                   <div class="services-grid">
+                    <a class="service-card" href="/services/ai-solutions-development/">
+                      <h3 class="service-title">AI Solutions Development</h3>
+                      <p class="service-desc">LLM apps, chatbots, RAG, automation, and integrations with your current systems.</p>
+                      <div class="service-meta">Explore {% ms "arrow_forward" %}</div>
+                    </a>
                     <a class="service-card" href="/services/ai-agents/">
-                      <h3 class="service-title">Autonomous AI agents</h3>
-                      <p class="service-desc">Agent systems that plan, execute, and improve growth work in a loop.</p>
-                    <div class="service-meta">Explore {% ms "arrow_forward" %}</div>
-                  </a>
-                  <a class="service-card" href="/services/integrations/">
-                    <h3 class="service-title">HubSpot integrations</h3>
-                    <p class="service-desc">APIs, reliable sync, and integrations across your stack.</p>
-                    <div class="service-meta">Explore {% ms "arrow_forward" %}</div>
-                  </a>
-                  <a class="service-card" href="/services/hubspot/">
-                    <h3 class="service-title">HubSpot support</h3>
-                    <p class="service-desc">Technical delivery support for HubSpot agencies (available when needed).</p>
-                    <div class="service-meta">Explore {% ms "arrow_forward" %}</div>
-                  </a>
-                  <a class="service-card" href="/contact-us/">
-                    <h3 class="service-title">Pilot application</h3>
-                    <p class="service-desc">Applying for the pilot is the fastest way to get started.</p>
-                    <div class="service-meta">Contact us {% ms "arrow_forward" %}</div>
-                  </a>
+                      <h3 class="service-title">Autonomous AI Agents</h3>
+                      <p class="service-desc">Custom AI agents that automate tasks and internal workflows end to end.</p>
+                      <div class="service-meta">Explore {% ms "arrow_forward" %}</div>
+                    </a>
+                    <a class="service-card" href="/services/ai-consulting-strategy/">
+                      <h3 class="service-title">AI Consulting &amp; Strategy</h3>
+                      <p class="service-desc">Workshops, roadmap, architecture, and tool selection for the right AI start.</p>
+                      <div class="service-meta">Explore {% ms "arrow_forward" %}</div>
+                    </a>
+                    <a class="service-card" href="/services/hubspot/">
+                      <h3 class="service-title">HubSpot Development &amp; AI Automation</h3>
+                      <p class="service-desc">HubSpot setup, custom development, and AI-powered sales and marketing automation.</p>
+                      <div class="service-meta">Explore {% ms "arrow_forward" %}</div>
+                    </a>
                   </div>
                 </div>
               </section>

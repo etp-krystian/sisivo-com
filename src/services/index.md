@@ -1,25 +1,57 @@
 ---
 layout: base
 title: Services
-description: Autonomous AI agents for growth teams — plus HubSpot integrations and delivery support when needed.
+description: "Clear AI services for business teams: AI solutions, autonomous agents, AI consulting, and HubSpot AI automation."
 ---
 
-Our main focus is building autonomous AI agents that run growth work in a loop: planning, execution, and continuous improvement — grounded in your data.
+We help non-technical teams use AI in a practical way. We keep things simple: clear plan, clear scope, and clear results.
 
-## Autonomous AI agents (main focus)
+## 1) AI Solutions Development
 
-We design and implement multi‑agent systems with an orchestrator (e.g. LangGraph / CrewAI) and specialized agents (strategy, SEO, content, distribution, campaigns, analytics).
+We build practical AI solutions that work with your current tools.
 
-[Read more about AI agents →](/services/ai-agents/)
+- LLM-powered applications
+- RAG systems (AI that can use your company knowledge)
+- AI copilots and chatbots
+- AI-powered business process automation
+- AI integrations with CRM, ERP, and API-based tools
 
-## HubSpot integrations
+[Read more about AI Solutions Development →](/services/ai-solutions-development/)
 
-We still deliver integrations across the HubSpot ecosystem and your wider stack: APIs, data sync, automation, and reliable operational flows.
+## 2) Autonomous AI Agents
 
-[Read more about HubSpot integrations →](/services/integrations/)
+We design AI agents that can run tasks with less manual work from your team.
 
-## HubSpot support (secondary)
+- Design and development of autonomous AI agents
+- Multi-agent systems
+- Task automation agents
+- Internal workflow agents
+- AI research and analysis agents
+- Custom business agents
 
-We support HubSpot agency teams with technical delivery when needed — especially where it intersects with the data layer for autonomous agents.
+[Read more about Autonomous AI Agents →](/services/ai-agents/)
 
-[Read more about HubSpot support →](/services/hubspot/)
+## 3) AI Consulting & Strategy
+
+We help you decide where AI should start and what to build first.
+
+- AI discovery workshops
+- AI use case identification
+- AI roadmap development
+- AI architecture design
+- AI tools and model selection
+
+[Read more about AI Consulting & Strategy →](/services/ai-consulting-strategy/)
+
+## 4) HubSpot Development & AI Automation
+
+We build and automate HubSpot setups so sales and marketing teams can move faster.
+
+- HubSpot implementation and custom development
+- Marketing and sales automation
+- HubSpot integrations with other systems
+- AI-powered lead qualification
+- AI-powered sales automation
+- AI SDR and outreach automation
+
+[Read more about HubSpot Development & AI Automation →](/services/hubspot/)
