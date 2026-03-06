@@ -918,6 +918,17 @@
         font-size: 12px;
       }
 
+      .footer-build {
+        margin-top: 6px;
+        font-size: 11px;
+        color: rgba(100, 116, 139, 0.9);
+        letter-spacing: 0.01em;
+      }
+
+      .footer-build time {
+        font-variant-numeric: tabular-nums;
+      }
+
       .footer-grid {
         display: grid;
         grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
@@ -2094,6 +2105,10 @@
         <div class="container footer-grid">
           <div>
             <div>© 2025, Easy Tech Partners.</div>
+            <div class="footer-build">
+              Updated:
+              <time datetime="{{ build.iso }}">{{ build.display }}</time>
+            </div>
           </div>
           <div class="footer-links" aria-label="Footer links">
             <a href="/services/">Services</a>

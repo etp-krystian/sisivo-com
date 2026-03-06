@@ -1,4 +1,13 @@
 module.exports = function (eleventyConfig) {
+  const buildDate = new Date();
+  const iso = buildDate.toISOString();
+  const display = `${iso.slice(0, 10)} ${iso.slice(11, 16)} UTC`;
+
+  eleventyConfig.addGlobalData("build", {
+    iso,
+    display,
+  });
+
   eleventyConfig.addShortcode("ms", (name, options = {}) => {
     const iconName = (name || "").toString().trim();
     if (!iconName.length) return "";
