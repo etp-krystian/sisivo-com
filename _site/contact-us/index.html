@@ -9,20 +9,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <!-- Google Tag Manager -->
     <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-NGX225S4");
+      window.__gtmContainerId = "GTM-NGX225S4";
+      window.dataLayer = window.dataLayer || [];
+      window.__loadGtmOnce = function () {
+        if (window.__gtmLoaded) return;
+        window.__gtmLoaded = true;
+        window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtm.js?id=" + window.__gtmContainerId;
+        document.head.appendChild(s);
+      };
     </script>
-    <!-- End Google Tag Manager -->
     
     
     <title>Contact Easy Tech Partners</title>
@@ -129,6 +128,195 @@
 
       .skip-link:focus {
         transform: translateY(0);
+      }
+
+      .cookie-banner {
+        position: fixed;
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+        z-index: 200;
+        border-radius: var(--radius);
+        border: 1px solid rgba(226, 232, 240, 0.95);
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 18px 40px rgba(2, 6, 23, 0.12);
+      }
+
+      .cookie-banner[hidden] {
+        display: none;
+      }
+
+      .cookie-fab {
+        position: fixed;
+        left: 16px;
+        bottom: 16px;
+        z-index: 190;
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        border: 1px solid rgba(226, 232, 240, 0.95);
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 18px 40px rgba(2, 6, 23, 0.12);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: var(--text);
+      }
+
+      .cookie-fab:hover {
+        background: rgba(255, 255, 255, 0.98);
+      }
+
+      .cookie-fab:focus-visible {
+        outline: 3px solid var(--ring);
+        outline-offset: 2px;
+      }
+
+      .cookie-fab .material-symbols-rounded {
+        font-size: 22px;
+        vertical-align: 0;
+      }
+
+      .cookie-fab[hidden] {
+        display: none;
+      }
+
+      .cookie-inner {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+        padding: 14px 14px;
+      }
+
+      .cookie-title {
+        margin: 0 0 6px;
+        font-size: 13px;
+        font-weight: 850;
+        letter-spacing: -0.01em;
+        color: var(--text);
+      }
+
+      .cookie-text {
+        margin: 0;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.7;
+        max-width: 92ch;
+      }
+
+      .cookie-settings {
+        margin-top: 12px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .cookie-settings[hidden] {
+        display: none;
+      }
+
+      .cookie-setting {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 10px 12px;
+        border-radius: 14px;
+        border: 1px solid rgba(226, 232, 240, 0.95);
+        background: rgba(248, 250, 252, 0.72);
+      }
+
+      .cookie-setting-title {
+        margin: 0;
+        color: var(--text);
+        font-size: 12px;
+        font-weight: 850;
+        letter-spacing: -0.01em;
+      }
+
+      .cookie-setting-desc {
+        margin: 2px 0 0;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.55;
+      }
+
+      .cookie-switch {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 26px;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.75);
+        background: rgba(226, 232, 240, 0.75);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+        flex: 0 0 auto;
+      }
+
+      .cookie-switch input {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        cursor: pointer;
+      }
+
+      .cookie-switch-thumb {
+        width: 20px;
+        height: 20px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.95);
+        border: 1px solid rgba(148, 163, 184, 0.45);
+        transform: translateX(-9px);
+        transition: transform 160ms ease, border-color 160ms ease;
+        box-shadow: 0 10px 20px rgba(2, 6, 23, 0.14);
+      }
+
+      .cookie-switch.is-on .cookie-switch-thumb,
+      .cookie-switch input:checked + .cookie-switch-thumb {
+        transform: translateX(9px);
+        border-color: rgba(15, 23, 42, 0.85);
+      }
+
+      .cookie-switch.is-on {
+        border-color: rgba(15, 23, 42, 0.85);
+        background: rgba(15, 23, 42, 0.92);
+      }
+
+      .cookie-switch input:focus-visible + .cookie-switch-thumb {
+        outline: 3px solid var(--ring);
+        outline-offset: 2px;
+      }
+
+      .cookie-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .cookie-link {
+        color: var(--muted);
+        font-weight: 700;
+        font-size: 12px;
+      }
+
+      .cookie-link:hover {
+        color: var(--text);
+      }
+
+      @media (min-width: 860px) {
+        .cookie-inner {
+          grid-template-columns: minmax(0, 1fr) auto;
+          align-items: center;
+        }
+
+        .cookie-actions {
+          justify-content: flex-end;
+        }
       }
 
       .container {
@@ -963,6 +1151,22 @@
         line-height: 1.25;
       }
 
+      .ai-loop-center.is-animating .ai-loop-center-label,
+      .ai-loop-center.is-animating .ai-loop-center-step {
+        animation: aiLoopCenterPop 260ms ease-out;
+      }
+
+      @keyframes aiLoopCenterPop {
+        from {
+          transform: translateY(6px);
+          opacity: 0.55;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
       .ai-loop-track {
         stroke: rgba(148, 163, 184, 0.35);
         stroke-width: 8;
@@ -1007,6 +1211,8 @@
 
       @media (prefers-reduced-motion: reduce) {
         .ai-loop-progress { animation: none; }
+        .ai-loop-center.is-animating .ai-loop-center-label,
+        .ai-loop-center.is-animating .ai-loop-center-step { animation: none; }
       }
 
       .info-grid {
@@ -1433,16 +1639,6 @@
     </style>
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-NGX225S4"
-        height="0"
-        width="0"
-        style="display:none;visibility:hidden"
-      ></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="site">
       <header class="site-header" aria-label="Primary navigation">
@@ -1543,6 +1739,61 @@ LinkedIn: <a href="https://www.linkedin.com/in/krystiansulek/">linkedin.com/in/k
         </div>
       </footer>
     </div>
+    <button
+      class="cookie-fab"
+      id="cookie-fab"
+      type="button"
+      aria-label="Cookie settings"
+      hidden
+    >
+      <span class="material-symbols-rounded" aria-hidden="true">cookie</span>
+    </button>
+    <div
+      class="cookie-banner"
+      id="cookie-banner"
+      role="dialog"
+      aria-label="Cookie preferences"
+      aria-live="polite"
+      hidden
+    >
+      <div class="cookie-inner">
+          <div>
+            <p class="cookie-title">Cookies</p>
+            <p class="cookie-text">
+              We use essential cookies to make this site work. With your permission, we also use analytics cookies to understand how the site is used and improve it.
+              You can change your choice any time in Cookie settings.
+            </p>
+            <a class="cookie-link" href="/cookie-policy/">Read our cookie policy</a>
+            <div class="cookie-settings" id="cookie-settings" hidden>
+              <div class="cookie-setting">
+                <div>
+                  <p class="cookie-setting-title">Necessary</p>
+                  <p class="cookie-setting-desc">Required for the site to function.</p>
+                </div>
+                <div class="cookie-switch is-on" aria-hidden="true" title="Necessary cookies are always on">
+                  <span class="cookie-switch-thumb" aria-hidden="true"></span>
+                </div>
+              </div>
+              <div class="cookie-setting">
+                <div>
+                  <p class="cookie-setting-title">Analytics</p>
+                  <p class="cookie-setting-desc">Helps us understand usage and improve the site (GA4).</p>
+                </div>
+              <label class="cookie-switch" for="cookie-analytics-toggle">
+                <input type="checkbox" id="cookie-analytics-toggle" aria-label="Enable analytics cookies" />
+                <span class="cookie-switch-thumb" aria-hidden="true"></span>
+              </label>
+              </div>
+            </div>
+          </div>
+        <div class="cookie-actions">
+          <button class="btn btn-ghost" type="button" data-cookie-reject>Reject</button>
+          <button class="btn btn-ghost" type="button" data-cookie-customize>Customize</button>
+          <button class="btn btn-primary" type="button" data-cookie-accept>Accept cookies</button>
+        </div>
+      </div>
+    </div>
   
+    <script src="/js/cookie-consent.js" defer></script>
   </body>
 </html>
