@@ -10,6 +10,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <script>
+      document.documentElement.classList.add("js");
       window.__gtmContainerId = "GTM-NGX225S4";
       window.dataLayer = window.dataLayer || [];
       window.__loadGtmOnce = function () {
@@ -41,9 +42,48 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,300..700,0..1,-50..200"
+      id="ms-font-css"
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,300..700,0..1,-50..200&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,300..700,0..1,-50..200&display=swap"
+      />
+    </noscript>
+    <script>
+      (() => {
+        const root = document.documentElement;
+        const timeout = window.setTimeout(() => root.classList.add("ms-timeout"), 2000);
+
+        const afterCssLoaded = () => {
+          if (root.classList.contains("ms-loaded")) return;
+          try {
+            if (!document.fonts?.load) return;
+            document.fonts
+              .load('1em "Material Symbols Rounded"', "calendar_month")
+              .then(() => {
+                window.clearTimeout(timeout);
+                root.classList.add("ms-loaded");
+              })
+              .catch(() => {});
+          } catch {
+            // ignore
+          }
+        };
+
+        const css = document.getElementById("ms-font-css");
+        if (css) {
+          css.addEventListener("load", afterCssLoaded, { once: true });
+          if (css.rel === "stylesheet") afterCssLoaded();
+        } else {
+          afterCssLoaded();
+        }
+      })();
+    </script>
     
       <link rel="preload" as="image" href="/images/hero.jpg" type="image/jpeg" fetchpriority="high" />
     
@@ -97,6 +137,7 @@
       }
 
       .material-symbols-rounded {
+        opacity: 1;
         font-variation-settings:
           "FILL" var(--ms-fill, 0),
           "wght" var(--ms-wght, 500),
@@ -106,6 +147,16 @@
         line-height: 1;
         vertical-align: -0.18em;
         user-select: none;
+      }
+
+      .js .material-symbols-rounded {
+        opacity: 0;
+      }
+
+      .js.ms-loaded .material-symbols-rounded,
+      .js.ms-timeout .material-symbols-rounded {
+        opacity: 1;
+        transition: opacity 140ms ease;
       }
 
       .btn .material-symbols-rounded,
