@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Contact Easy Tech Partners
+title: Contact
 description: Book a meeting to learn more about autonomous AI agents.
 ---
 
