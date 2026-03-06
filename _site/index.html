@@ -1183,11 +1183,16 @@
         stroke-linecap: round;
         transform: rotate(-90deg);
         transform-origin: 50% 50%;
+        transition: stroke-dashoffset 420ms ease;
         filter:
           drop-shadow(0 0 6px rgba(6, 182, 212, 0.26))
           drop-shadow(0 0 16px rgba(6, 182, 212, 0.14))
           drop-shadow(0 14px 18px rgba(6, 182, 212, 0.08));
         animation: aiLoopLineGlow 2.4s ease-in-out infinite;
+      }
+
+      .ai-loop-progress.is-resetting {
+        transition: none;
       }
 
       @keyframes aiLoopLineGlow {

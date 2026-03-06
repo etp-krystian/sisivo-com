@@ -17,17 +17,28 @@
   let resumeTimer = null;
   let hasAnimatedCenterOnce = false;
 
-  const setProgress = (index) => {
+  const setProgress = (index, previousIndex) => {
     if (!progress) return;
     const r = progress.r?.baseVal?.value;
     if (!r) return;
     const circumference = 2 * Math.PI * r;
     progress.style.strokeDasharray = `${circumference}`;
+
+    const last = buttons.length - 1;
+    if (previousIndex === last && index === 0) {
+      progress.classList.add("is-resetting");
+      progress.style.strokeDashoffset = `${circumference}`;
+      void progress.offsetWidth;
+      progress.classList.remove("is-resetting");
+      return;
+    }
+
     const t = buttons.length <= 1 ? 1 : index / (buttons.length - 1);
     progress.style.strokeDashoffset = `${circumference * (1 - t)}`;
   };
 
   const setActive = (index, { userInitiated = false } = {}) => {
+    const previousActive = active;
     active = ((index % buttons.length) + buttons.length) % buttons.length;
 
     for (const button of buttons) {
@@ -40,7 +51,7 @@
       }
     }
 
-    setProgress(active);
+    setProgress(active, previousActive);
     if (currentStep) {
       const activeButton = buttons.find((b) => Number(b.dataset.step) === active) || buttons[active];
       const title = activeButton?.querySelector(".ai-loop-step-title")?.textContent?.trim();
