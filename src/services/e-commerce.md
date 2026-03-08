@@ -1,33 +1,47 @@
 ---
 layout: base
-title: Shopify e‑commerce solutions for agencies
-description: Shopify delivery support — available on request (not our main focus).
+title: E-commerce Automation Support
+description: Practical technical support for e-commerce workflows connected with AI, HubSpot, and operations.
 ---
 
-This is not our main focus. Our primary direction is autonomous AI agents. We still support Shopify projects when it’s part of a broader delivery need.
+E-commerce Automation Support helps growing stores improve execution speed, data flow, and operational consistency.
 
-At Easy Tech Partners, we support marketing agencies with the technical side of Shopify‑based webshops. Our expertise ensures your online store runs smoothly, offering a seamless experience for your customers while empowering your team to focus on driving sales.
+This is not a standalone store-building offer. We support e-commerce workflows when they are part of a larger automation or AI implementation scope.
 
-## Shopify services
+## What you get
 
-**Custom Shopify Development**  
-Tailor your webshop with unique features, custom themes, and functionality that match your brand’s vision.
+- technical support for key e-commerce workflows
+- integrations between store, CRM, and marketing systems
+- process automation for recurring operational tasks
+- cleaner reporting and visibility across sales activity
 
-**Shopify Integrations**  
-Connect your Shopify store with third‑party tools like payment gateways, accounting systems, or marketing platforms for a unified workflow.
+## Business outcomes
 
-**Performance Optimization**  
-Speed up your Shopify store to improve user experience and boost conversions.
+- fewer manual handoffs between store, sales, and marketing
+- faster response to customer and order events
+- clearer reporting for growth and operations decisions
+- more consistent execution across teams
 
-**Shopify Setup and Launch**  
-Get your webshop up and running quickly and efficiently, whether you’re migrating from another platform or starting from scratch.
+## Good fit if
 
-**Ongoing Support and Maintenance**  
-Ensure your webshop stays updated, secure, and free from technical issues with our reliable support services.
+- your e-commerce team works across many disconnected tools
+- you want to reduce repetitive operational work
+- you need technical support tied to business outcomes, not only development hours
 
-**Analytics and Reporting**  
-Integrate Shopify with analytics tools like Google Analytics or our Data Insight Dashboard to track performance and make data‑driven decisions.
+## FAQ
 
-## Why us
+### Do you build full stores from scratch?
+Not as a core standalone offer. We focus on automation, integrations, and workflow improvements.
 
-We understand the challenges marketing agencies face when managing e‑commerce projects. Our technical expertise in Shopify helps you deliver outstanding webshops for your clients, with a focus on reliability, scalability, and results.
+### Can you work with our current setup?
+Yes. We work with your existing tools and improve what already works.
+
+### Is this only for large stores?
+No. Many improvements are most valuable for small and mid-size teams with limited capacity.
+
+## Related services
+
+- [HubSpot Integrations with Other Systems](/services/hubspot-integrations/)
+- [AI-Powered Business Process Automation](/services/ai-business-process-automation/)
+
+[Book a meeting about E-commerce Automation Support ->](https://calendar.app.google/R21jua9szDGa7T7c9)

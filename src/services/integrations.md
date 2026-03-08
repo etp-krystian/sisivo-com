@@ -1,31 +1,47 @@
 ---
 layout: base
-title: HubSpot integration services
-description: Reliable API integrations and data sync between HubSpot and the tools your business relies on.
+title: Business System Integrations
+description: Connect HubSpot, CRM, marketing, and operations tools so data and workflows run smoothly.
 ---
 
-At Easy Tech Partners, we specialize in seamless integrations between HubSpot and other systems. Whether you need to connect your CRM with accounting software, e‑commerce platforms, or custom applications, we ensure smooth data flow and efficient workflows tailored to your business needs.
+Business System Integrations connects your core tools so data moves reliably and teams stop doing manual copy-paste work.
 
-## Integration services
+We focus on practical integrations that reduce friction in daily operations.
 
-**Accounting Systems**  
-Synchronize HubSpot with accounting tools like Tripletex, QuickBooks, or Xero for streamlined invoicing, reporting, and financial management.
+## What you get
 
-**E‑commerce Platforms**  
-Integrate your online store with HubSpot to track customer interactions, manage orders, and enhance the customer journey.
+- mapping of systems, data flow, and integration priorities
+- implementation of key API or middleware connections
+- sync rules to reduce duplicates and data mismatch
+- monitoring and support for reliability after launch
 
-**Custom Applications**  
-Connect HubSpot with bespoke tools to create a fully customized solution for your unique processes.
+## Business outcomes
 
-**Data Sync**  
-Ensure data accuracy across systems with real‑time synchronization and error‑free workflows.
+- less manual data entry and fewer cross-tool errors
+- faster handoffs between sales, marketing, and operations
+- better reporting quality from connected systems
+- more stable day-to-day execution
 
-**Marketing Tools**  
-Link HubSpot with platforms like Google Analytics, Google Ads, or email marketing tools to centralize your marketing efforts.
+## Good fit if
 
-**API Development**  
-Build custom APIs to integrate HubSpot with even the most niche or complex systems.
+- your team works in multiple systems that do not sync well
+- data quality issues slow down operations and reporting
+- you want to automate flows before scaling AI initiatives
 
-## Why us?
+## FAQ
 
-We bring technical expertise and a deep understanding of HubSpot’s ecosystem to every project. With a focus on precision and simplicity, we create integrations that save time, reduce manual effort, and improve efficiency.
+### Which systems can you connect?
+HubSpot, CRM, marketing platforms, e-commerce systems, and custom internal tools.
+
+### Can you improve an existing integration setup?
+Yes. We often audit and stabilize existing integrations before adding new ones.
+
+### Is this relevant if we plan AI projects later?
+Yes. Clean integration foundations make AI workflows more reliable.
+
+## Related services
+
+- [HubSpot Development & AI Automation](/services/hubspot/)
+- [AI Integrations with CRM, ERP, and APIs](/services/ai-integrations-crm-erp-apis/)
+
+[Book a meeting about Business System Integrations ->](https://calendar.app.google/R21jua9szDGa7T7c9)

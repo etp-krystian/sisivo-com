@@ -7,6 +7,9 @@
 {% set isLegal = page.url == "/privacy-policy/" or page.url == "/cookie-policy/" %}
 {% set isStart = page.url == "/start-with-ai/" or page.url == "/ai-discovery-sprint/" or page.url == "/implementation-process/" or page.url == "/ai-security-data/" or page.url == "/business-ai-faq/" or page.url == "/ai-use-case-examples/" %}
 {% set isContact = page.url == "/contact-us/" %}
+{% set isUseCases = page.url == "/ai-use-case-examples/" %}
+{% set isWhyUs = page.url == "/why-us/" %}
+{% set isContent = not isHome %}
 {% set calendarUrl = "https://calendar.app.google/R21jua9szDGa7T7c9" %}
 <html lang="{{ site.locale or 'en' }}">
   <head>
@@ -1261,6 +1264,63 @@
         line-height: 1.6;
       }
 
+      .prose .visual-break {
+        margin: var(--space-md) 0;
+      }
+
+      .prose .visual-break img {
+        width: 100%;
+        max-height: 420px;
+        object-fit: cover;
+      }
+
+      .prose .visual-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-sm);
+        margin: var(--space-md) 0;
+      }
+
+      .prose .visual-grid figure {
+        margin: 0;
+      }
+
+      .is-content .prose {
+        max-width: 90ch;
+      }
+
+      .is-content .prose > p,
+      .is-content .prose > ul,
+      .is-content .prose > ol,
+      .is-content .prose > blockquote {
+        max-width: 68ch;
+      }
+
+      .is-content .prose > p {
+        margin-bottom: var(--space-sm);
+      }
+
+      .is-content .prose h2 {
+        margin-top: clamp(42px, 6vw, 64px);
+        margin-bottom: var(--space-xs);
+        padding-top: 14px;
+        border-top: 1px solid rgba(226, 232, 240, 0.9);
+      }
+
+      .is-content .prose h2:first-of-type {
+        margin-top: var(--space-sm);
+        padding-top: 0;
+        border-top: 0;
+      }
+
+      .is-content .prose h3 {
+        margin-top: var(--space-md);
+      }
+
+      .is-content .prose .content-page-cta {
+        margin-top: clamp(44px, 6vw, 68px);
+      }
+
       .about-split {
         display: grid;
         grid-template-columns: minmax(0, 1fr);
@@ -1375,6 +1435,85 @@
       .prose .content-page-cta p {
         margin: 0 0 var(--space-sm);
         max-width: 64ch;
+      }
+
+      .prose .table-scroll {
+        margin: var(--space-sm) 0;
+        overflow-x: visible;
+        border-radius: 12px;
+        border: 1px solid rgba(226, 232, 240, 0.92);
+        background: rgba(255, 255, 255, 0.94);
+      }
+
+      .prose .usecase-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .prose .usecase-table th,
+      .prose .usecase-table td {
+        padding: 11px 12px;
+        border-bottom: 1px solid rgba(226, 232, 240, 0.86);
+        text-align: left;
+        vertical-align: top;
+      }
+
+      .prose .usecase-table th {
+        background: rgba(248, 250, 252, 0.9);
+        color: var(--text);
+        font-size: 12px;
+        font-weight: 780;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+      }
+
+      .prose .usecase-table td {
+        color: var(--muted);
+      }
+
+      .prose .usecase-table tr:last-child td {
+        border-bottom: 0;
+      }
+
+      .prose .usecase-kpi-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        margin: var(--space-sm) 0;
+      }
+
+      .prose .usecase-kpi-card {
+        padding: 14px;
+        border-radius: 12px;
+        border: 1px solid rgba(226, 232, 240, 0.92);
+        background:
+          linear-gradient(165deg, rgba(var(--accent-tech-rgb), 0.06), rgba(255, 255, 255, 0.96) 58%),
+          rgba(255, 255, 255, 0.96);
+      }
+
+      .prose .usecase-kpi-label {
+        margin: 0 0 4px;
+        font-size: 11px;
+        font-weight: 780;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--accent-tech-dark);
+      }
+
+      .prose .usecase-kpi-value {
+        margin: 0;
+        font-size: 24px;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        color: var(--text);
+      }
+
+      .prose .usecase-kpi-note {
+        margin: 6px 0 0;
+        font-size: 13px;
+        color: var(--muted);
       }
 
       .prose .hubspot-form-wrap {
@@ -1516,6 +1655,104 @@
 
       .is-contact .prose .contact-steps li::before {
         display: none;
+      }
+
+      .is-why-us .page-hero::before {
+        background:
+          radial-gradient(circle at 14% 22%, rgba(var(--accent-tech-rgb), 0.18), transparent 54%),
+          radial-gradient(circle at 82% 18%, rgba(var(--primary-rgb), 0.14), transparent 56%);
+      }
+
+      .is-why-us .prose {
+        max-width: 96ch;
+      }
+
+      .is-why-us .prose .whyus-intro {
+        display: grid;
+        grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.95fr);
+        gap: var(--space-sm);
+        margin: var(--space-sm) 0;
+      }
+
+      .is-why-us .prose .whyus-intro-main,
+      .is-why-us .prose .whyus-intro-side {
+        padding: var(--space-sm);
+        border-radius: var(--radius-sm);
+        border: 1px solid rgba(226, 232, 240, 0.92);
+        box-shadow: 0 10px 24px rgba(2, 6, 23, 0.05);
+      }
+
+      .is-why-us .prose .whyus-intro-main {
+        background:
+          radial-gradient(circle at 82% 12%, rgba(var(--accent-tech-rgb), 0.13), transparent 44%),
+          linear-gradient(158deg, rgba(var(--accent-tech-rgb), 0.08), rgba(255, 255, 255, 0.95) 55%),
+          rgba(255, 255, 255, 0.95);
+      }
+
+      .is-why-us .prose .whyus-intro-side {
+        background: rgba(255, 255, 255, 0.96);
+      }
+
+      .is-why-us .prose .whyus-kicker {
+        margin: 0 0 8px;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--accent-tech-dark);
+      }
+
+      .is-why-us .prose .whyus-intro h2 {
+        margin-top: 0;
+      }
+
+      .is-why-us .prose .whyus-proof {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 8px;
+      }
+
+      .is-why-us .prose .whyus-proof li {
+        margin: 0;
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid rgba(226, 232, 240, 0.9);
+        background: rgba(248, 250, 252, 0.88);
+      }
+
+      .is-why-us .prose .whyus-proof li::before {
+        display: none;
+      }
+
+      .is-why-us .prose .whyus-pillars {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        margin: var(--space-sm) 0;
+      }
+
+      .is-why-us .prose .whyus-pillar {
+        padding: 14px;
+        border-radius: 12px;
+        border: 1px solid rgba(226, 232, 240, 0.9);
+        background: rgba(255, 255, 255, 0.95);
+      }
+
+      .is-why-us .prose .whyus-pillar h3 {
+        margin-top: 0;
+      }
+
+      .is-why-us .prose .whyus-quote {
+        margin: var(--space-sm) 0;
+        padding: 14px 16px;
+        border-left: 3px solid rgba(var(--accent-tech-rgb), 0.5);
+        border-radius: 0 10px 10px 0;
+        background: rgba(248, 250, 252, 0.9);
+        color: var(--text);
+        font-size: 15px;
+        line-height: 1.7;
       }
 
       .is-services .page-hero {
@@ -2689,6 +2926,22 @@
           align-items: start;
         }
 
+        .is-why-us .prose .whyus-intro {
+          grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.95fr);
+        }
+
+        .is-why-us .prose .whyus-pillars {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .prose .usecase-table {
+          table-layout: fixed;
+        }
+
+        .prose .usecase-kpi-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
         .about-photo img {
           aspect-ratio: 4 / 3;
           object-fit: cover;
@@ -2783,6 +3036,19 @@
           grid-template-columns: minmax(0, 1fr);
         }
 
+        .prose .table-scroll {
+          overflow-x: auto;
+        }
+
+        .prose .usecase-kpi-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .is-why-us .prose .whyus-intro,
+        .is-why-us .prose .whyus-pillars {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
         .stats {
           grid-template-columns: minmax(0, 1fr);
         }
@@ -2792,6 +3058,10 @@
         }
 
         .blog-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .prose .visual-grid {
           grid-template-columns: minmax(0, 1fr);
         }
       }
@@ -2809,7 +3079,7 @@
       }
     </style>
   </head>
-  <body class="{% if isServices %}is-services{% endif %}{% if isServicesIndex %}{% if isServices %} {% endif %}is-services-index{% endif %}{% if isBlog %}{% if isServices or isServicesIndex %} {% endif %}is-blog{% endif %}{% if isContact %}{% if isServices or isServicesIndex or isBlog %} {% endif %}is-contact{% endif %}">
+  <body class="{% if isServices %}is-services{% endif %}{% if isServicesIndex %}{% if isServices %} {% endif %}is-services-index{% endif %}{% if isBlog %}{% if isServices or isServicesIndex %} {% endif %}is-blog{% endif %}{% if isContact %}{% if isServices or isServicesIndex or isBlog %} {% endif %}is-contact{% endif %}{% if isWhyUs %}{% if isServices or isServicesIndex or isBlog or isContact %} {% endif %}is-why-us{% endif %}{% if isContent %}{% if isServices or isServicesIndex or isBlog or isContact or isWhyUs %} {% endif %}is-content{% endif %}">
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="site">
       <header class="site-header{% if isHome %} site-header--overlay{% endif %}" aria-label="Primary navigation">
@@ -2952,6 +3222,8 @@
                 </p>
               </div>
             </div>
+            <a href="/ai-use-case-examples/" class="nav-link{% if isUseCases %} is-active{% endif %}">Use Cases</a>
+            <a href="/why-us/" class="nav-link{% if isWhyUs %} is-active{% endif %}">Why Us</a>
             <a href="/about-us/" class="nav-link{% if page.url == '/about-us/' %} is-active{% endif %}">About</a>
             <a href="/blog/" class="nav-link{% if page.url and page.url.indexOf('/blog/') == 0 %} is-active{% endif %}">Blog</a>
           </nav>
@@ -2975,6 +3247,8 @@
             <div class="mobile-nav-panel" role="dialog" aria-label="Mobile navigation">
               <a href="/start-with-ai/">Start with AI {% ms "arrow_forward" %}</a>
               <a href="/services/">Services {% ms "arrow_forward" %}</a>
+              <a href="/ai-use-case-examples/">Use Cases {% ms "arrow_forward" %}</a>
+              <a href="/why-us/">Why Us {% ms "arrow_forward" %}</a>
               <a href="/about-us/">About {% ms "arrow_forward" %}</a>
               <a href="/blog/">Blog {% ms "arrow_forward" %}</a>
               <a href="/contact-us/">Contact</a>
@@ -3384,6 +3658,8 @@
           <div class="footer-links" aria-label="Footer links">
             <a href="/services/">Services</a>
             <a href="/start-with-ai/">Start with AI</a>
+            <a href="/ai-use-case-examples/">Use Cases</a>
+            <a href="/why-us/">Why Us</a>
             <a href="/about-us/">About</a>
             <a href="/blog/">Blog</a>
             <a href="/contact-us/">Contact</a>

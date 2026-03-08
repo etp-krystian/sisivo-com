@@ -1,30 +1,47 @@
 ---
 layout: base
-title: Data insights dashboards
-description: Data layer and reporting — used to ground autonomous AI agents in measurable outcomes.
+title: Data Insights and Reporting
+description: Simple reporting setups that turn business data into clear weekly decisions.
 ---
 
-This is not our main focus as a standalone service. Today, we primarily build autonomous AI agents — and a clean data layer is what makes autonomy reliable.
+Data Insights and Reporting helps your team make faster, clearer decisions based on one trusted view of performance.
 
-At Easy Tech Partners, we make data simple and actionable with our real‑time dashboard solutions. We combine data from all your essential tools — Google Analytics, Google Ads, HubSpot, webshops, sales platforms and custom sources — into a single, easy‑to‑read dashboard. Updated continuously, our dashboards ensure you always have the most accurate and up‑to‑date reports at your fingertips.
+This service is usually delivered as part of AI implementation, HubSpot automation, or operations optimization.
 
-## What we offer
+## What you get
 
-**Custom Dashboard Creation**  
-Get a tailored one‑page dashboard that displays all the critical data you need, exactly how you need it.
+- one practical reporting structure for leadership and teams
+- connected data from key systems (CRM, marketing, sales, operations)
+- clear weekly or monthly summaries focused on decisions
+- dashboard updates and adjustments as your business evolves
 
-**Data Integration**  
-Combine data from diverse sources, including marketing tools, sales platforms and bespoke systems, for a holistic view of performance.
+## Business outcomes
 
-**Real‑Time Sync and Updates**  
-Our dashboards sync with your data sources in real time, ensuring you always see the latest metrics and insights.
+- less time spent preparing reports manually
+- better visibility across teams and workflows
+- faster decisions based on current data
+- fewer reporting gaps and inconsistent numbers
 
-**Collaborative Insights**  
-Work with us to identify key metrics and ensure the insights align with your goals.
+## Good fit if
 
-**Ongoing Support**  
-Need adjustments or new metrics? Our team is always available to adapt your dashboard as your needs evolve.
+- your team uses multiple tools and reporting is fragmented
+- weekly reporting takes too much manual effort
+- decision makers need one clear source of truth
 
-## Schedule a demo
+## FAQ
 
-Experience the power of real‑time insights for yourself. Schedule a demo to see how our dashboards can simplify your data and help you make smarter, faster decisions.
+### Do we need a complex BI stack to start?
+No. Most teams start with a focused reporting scope and expand only when needed.
+
+### Can this work with our current systems?
+Yes. We map your current setup and connect what matters first.
+
+### Is this a standalone service or part of AI delivery?
+Usually part of broader implementation, but it can also start as a focused reporting project.
+
+## Related services
+
+- [AI Solutions Development](/services/ai-solutions-development/)
+- [HubSpot Development & AI Automation](/services/hubspot/)
+
+[Book a meeting about Data Insights and Reporting ->](https://calendar.app.google/R21jua9szDGa7T7c9)

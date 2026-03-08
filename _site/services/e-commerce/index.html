@@ -8,6 +8,9 @@
 
 
 
+
+
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -28,15 +31,15 @@
     </script>
     
     
-    <title>Shopify e‑commerce solutions for agencies</title>
-    <meta name="description" content="Shopify delivery support — available on request (not our main focus)." />
+    <title>E-commerce Automation Support</title>
+    <meta name="description" content="Practical technical support for e-commerce workflows connected with AI, HubSpot, and operations." />
     
       <link rel="canonical" href="https://easytechpartners-com.pages.dev/services/e-commerce/" />
       <meta property="og:url" content="https://easytechpartners-com.pages.dev/services/e-commerce/" />
     
     <meta property="og:site_name" content="Easy Tech Partners" />
-    <meta property="og:title" content="Shopify e‑commerce solutions for agencies" />
-    <meta property="og:description" content="Shopify delivery support — available on request (not our main focus)." />
+    <meta property="og:title" content="E-commerce Automation Support" />
+    <meta property="og:description" content="Practical technical support for e-commerce workflows connected with AI, HubSpot, and operations." />
     <meta property="og:type" content="website" />
     
     
@@ -1243,6 +1246,63 @@
         line-height: 1.6;
       }
 
+      .prose .visual-break {
+        margin: var(--space-md) 0;
+      }
+
+      .prose .visual-break img {
+        width: 100%;
+        max-height: 420px;
+        object-fit: cover;
+      }
+
+      .prose .visual-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-sm);
+        margin: var(--space-md) 0;
+      }
+
+      .prose .visual-grid figure {
+        margin: 0;
+      }
+
+      .is-content .prose {
+        max-width: 90ch;
+      }
+
+      .is-content .prose > p,
+      .is-content .prose > ul,
+      .is-content .prose > ol,
+      .is-content .prose > blockquote {
+        max-width: 68ch;
+      }
+
+      .is-content .prose > p {
+        margin-bottom: var(--space-sm);
+      }
+
+      .is-content .prose h2 {
+        margin-top: clamp(42px, 6vw, 64px);
+        margin-bottom: var(--space-xs);
+        padding-top: 14px;
+        border-top: 1px solid rgba(226, 232, 240, 0.9);
+      }
+
+      .is-content .prose h2:first-of-type {
+        margin-top: var(--space-sm);
+        padding-top: 0;
+        border-top: 0;
+      }
+
+      .is-content .prose h3 {
+        margin-top: var(--space-md);
+      }
+
+      .is-content .prose .content-page-cta {
+        margin-top: clamp(44px, 6vw, 68px);
+      }
+
       .about-split {
         display: grid;
         grid-template-columns: minmax(0, 1fr);
@@ -1357,6 +1417,85 @@
       .prose .content-page-cta p {
         margin: 0 0 var(--space-sm);
         max-width: 64ch;
+      }
+
+      .prose .table-scroll {
+        margin: var(--space-sm) 0;
+        overflow-x: visible;
+        border-radius: 12px;
+        border: 1px solid rgba(226, 232, 240, 0.92);
+        background: rgba(255, 255, 255, 0.94);
+      }
+
+      .prose .usecase-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .prose .usecase-table th,
+      .prose .usecase-table td {
+        padding: 11px 12px;
+        border-bottom: 1px solid rgba(226, 232, 240, 0.86);
+        text-align: left;
+        vertical-align: top;
+      }
+
+      .prose .usecase-table th {
+        background: rgba(248, 250, 252, 0.9);
+        color: var(--text);
+        font-size: 12px;
+        font-weight: 780;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+      }
+
+      .prose .usecase-table td {
+        color: var(--muted);
+      }
+
+      .prose .usecase-table tr:last-child td {
+        border-bottom: 0;
+      }
+
+      .prose .usecase-kpi-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        margin: var(--space-sm) 0;
+      }
+
+      .prose .usecase-kpi-card {
+        padding: 14px;
+        border-radius: 12px;
+        border: 1px solid rgba(226, 232, 240, 0.92);
+        background:
+          linear-gradient(165deg, rgba(var(--accent-tech-rgb), 0.06), rgba(255, 255, 255, 0.96) 58%),
+          rgba(255, 255, 255, 0.96);
+      }
+
+      .prose .usecase-kpi-label {
+        margin: 0 0 4px;
+        font-size: 11px;
+        font-weight: 780;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--accent-tech-dark);
+      }
+
+      .prose .usecase-kpi-value {
+        margin: 0;
+        font-size: 24px;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        color: var(--text);
+      }
+
+      .prose .usecase-kpi-note {
+        margin: 6px 0 0;
+        font-size: 13px;
+        color: var(--muted);
       }
 
       .prose .hubspot-form-wrap {
@@ -1498,6 +1637,104 @@
 
       .is-contact .prose .contact-steps li::before {
         display: none;
+      }
+
+      .is-why-us .page-hero::before {
+        background:
+          radial-gradient(circle at 14% 22%, rgba(var(--accent-tech-rgb), 0.18), transparent 54%),
+          radial-gradient(circle at 82% 18%, rgba(var(--primary-rgb), 0.14), transparent 56%);
+      }
+
+      .is-why-us .prose {
+        max-width: 96ch;
+      }
+
+      .is-why-us .prose .whyus-intro {
+        display: grid;
+        grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.95fr);
+        gap: var(--space-sm);
+        margin: var(--space-sm) 0;
+      }
+
+      .is-why-us .prose .whyus-intro-main,
+      .is-why-us .prose .whyus-intro-side {
+        padding: var(--space-sm);
+        border-radius: var(--radius-sm);
+        border: 1px solid rgba(226, 232, 240, 0.92);
+        box-shadow: 0 10px 24px rgba(2, 6, 23, 0.05);
+      }
+
+      .is-why-us .prose .whyus-intro-main {
+        background:
+          radial-gradient(circle at 82% 12%, rgba(var(--accent-tech-rgb), 0.13), transparent 44%),
+          linear-gradient(158deg, rgba(var(--accent-tech-rgb), 0.08), rgba(255, 255, 255, 0.95) 55%),
+          rgba(255, 255, 255, 0.95);
+      }
+
+      .is-why-us .prose .whyus-intro-side {
+        background: rgba(255, 255, 255, 0.96);
+      }
+
+      .is-why-us .prose .whyus-kicker {
+        margin: 0 0 8px;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--accent-tech-dark);
+      }
+
+      .is-why-us .prose .whyus-intro h2 {
+        margin-top: 0;
+      }
+
+      .is-why-us .prose .whyus-proof {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 8px;
+      }
+
+      .is-why-us .prose .whyus-proof li {
+        margin: 0;
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid rgba(226, 232, 240, 0.9);
+        background: rgba(248, 250, 252, 0.88);
+      }
+
+      .is-why-us .prose .whyus-proof li::before {
+        display: none;
+      }
+
+      .is-why-us .prose .whyus-pillars {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        margin: var(--space-sm) 0;
+      }
+
+      .is-why-us .prose .whyus-pillar {
+        padding: 14px;
+        border-radius: 12px;
+        border: 1px solid rgba(226, 232, 240, 0.9);
+        background: rgba(255, 255, 255, 0.95);
+      }
+
+      .is-why-us .prose .whyus-pillar h3 {
+        margin-top: 0;
+      }
+
+      .is-why-us .prose .whyus-quote {
+        margin: var(--space-sm) 0;
+        padding: 14px 16px;
+        border-left: 3px solid rgba(var(--accent-tech-rgb), 0.5);
+        border-radius: 0 10px 10px 0;
+        background: rgba(248, 250, 252, 0.9);
+        color: var(--text);
+        font-size: 15px;
+        line-height: 1.7;
       }
 
       .is-services .page-hero {
@@ -2671,6 +2908,22 @@
           align-items: start;
         }
 
+        .is-why-us .prose .whyus-intro {
+          grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.95fr);
+        }
+
+        .is-why-us .prose .whyus-pillars {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .prose .usecase-table {
+          table-layout: fixed;
+        }
+
+        .prose .usecase-kpi-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
         .about-photo img {
           aspect-ratio: 4 / 3;
           object-fit: cover;
@@ -2765,6 +3018,19 @@
           grid-template-columns: minmax(0, 1fr);
         }
 
+        .prose .table-scroll {
+          overflow-x: auto;
+        }
+
+        .prose .usecase-kpi-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .is-why-us .prose .whyus-intro,
+        .is-why-us .prose .whyus-pillars {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
         .stats {
           grid-template-columns: minmax(0, 1fr);
         }
@@ -2774,6 +3040,10 @@
         }
 
         .blog-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .prose .visual-grid {
           grid-template-columns: minmax(0, 1fr);
         }
       }
@@ -2791,7 +3061,7 @@
       }
     </style>
   </head>
-  <body class="is-services">
+  <body class="is-services is-content">
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="site">
       <header class="site-header" aria-label="Primary navigation">
@@ -2934,6 +3204,8 @@
                 </p>
               </div>
             </div>
+            <a href="/ai-use-case-examples/" class="nav-link">Use Cases</a>
+            <a href="/why-us/" class="nav-link">Why Us</a>
             <a href="/about-us/" class="nav-link">About</a>
             <a href="/blog/" class="nav-link">Blog</a>
           </nav>
@@ -2957,6 +3229,8 @@
             <div class="mobile-nav-panel" role="dialog" aria-label="Mobile navigation">
               <a href="/start-with-ai/">Start with AI <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
               <a href="/services/">Services <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
+              <a href="/ai-use-case-examples/">Use Cases <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
+              <a href="/why-us/">Why Us <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
               <a href="/about-us/">About <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
               <a href="/blog/">Blog <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
               <a href="/contact-us/">Contact</a>
@@ -2978,14 +3252,14 @@
                     <a href="/services/">Services</a>
                     <span class="crumb-sep" aria-hidden="true">/</span>
                   
-                  <span aria-current="page">Shopify e‑commerce solutions for agencies</span>
+                  <span aria-current="page">E-commerce Automation Support</span>
                 </nav>
 
                 <div class="page-hero-inner">
                   <div class="page-header">
-                    <h1>Shopify e‑commerce solutions for agencies</h1>
+                    <h1>E-commerce Automation Support</h1>
                     
-                      <p class="page-lead">Shopify delivery support — available on request (not our main focus).</p>
+                      <p class="page-lead">Practical technical support for e-commerce workflows connected with AI, HubSpot, and operations.</p>
                     
                   </div>
                 </div>
@@ -2997,23 +3271,41 @@
             <section class="section">
               <div class="container">
                 <article class="prose">
-                  <p>This is not our main focus. Our primary direction is autonomous AI agents. We still support Shopify projects when it’s part of a broader delivery need.</p>
-<p>At Easy Tech Partners, we support marketing agencies with the technical side of Shopify‑based webshops. Our expertise ensures your online store runs smoothly, offering a seamless experience for your customers while empowering your team to focus on driving sales.</p>
-<h2>Shopify services</h2>
-<p><strong>Custom Shopify Development</strong><br>
-Tailor your webshop with unique features, custom themes, and functionality that match your brand’s vision.</p>
-<p><strong>Shopify Integrations</strong><br>
-Connect your Shopify store with third‑party tools like payment gateways, accounting systems, or marketing platforms for a unified workflow.</p>
-<p><strong>Performance Optimization</strong><br>
-Speed up your Shopify store to improve user experience and boost conversions.</p>
-<p><strong>Shopify Setup and Launch</strong><br>
-Get your webshop up and running quickly and efficiently, whether you’re migrating from another platform or starting from scratch.</p>
-<p><strong>Ongoing Support and Maintenance</strong><br>
-Ensure your webshop stays updated, secure, and free from technical issues with our reliable support services.</p>
-<p><strong>Analytics and Reporting</strong><br>
-Integrate Shopify with analytics tools like Google Analytics or our Data Insight Dashboard to track performance and make data‑driven decisions.</p>
-<h2>Why us</h2>
-<p>We understand the challenges marketing agencies face when managing e‑commerce projects. Our technical expertise in Shopify helps you deliver outstanding webshops for your clients, with a focus on reliability, scalability, and results.</p>
+                  <p>E-commerce Automation Support helps growing stores improve execution speed, data flow, and operational consistency.</p>
+<p>This is not a standalone store-building offer. We support e-commerce workflows when they are part of a larger automation or AI implementation scope.</p>
+<h2>What you get</h2>
+<ul>
+<li>technical support for key e-commerce workflows</li>
+<li>integrations between store, CRM, and marketing systems</li>
+<li>process automation for recurring operational tasks</li>
+<li>cleaner reporting and visibility across sales activity</li>
+</ul>
+<h2>Business outcomes</h2>
+<ul>
+<li>fewer manual handoffs between store, sales, and marketing</li>
+<li>faster response to customer and order events</li>
+<li>clearer reporting for growth and operations decisions</li>
+<li>more consistent execution across teams</li>
+</ul>
+<h2>Good fit if</h2>
+<ul>
+<li>your e-commerce team works across many disconnected tools</li>
+<li>you want to reduce repetitive operational work</li>
+<li>you need technical support tied to business outcomes, not only development hours</li>
+</ul>
+<h2>FAQ</h2>
+<h3>Do you build full stores from scratch?</h3>
+<p>Not as a core standalone offer. We focus on automation, integrations, and workflow improvements.</p>
+<h3>Can you work with our current setup?</h3>
+<p>Yes. We work with your existing tools and improve what already works.</p>
+<h3>Is this only for large stores?</h3>
+<p>No. Many improvements are most valuable for small and mid-size teams with limited capacity.</p>
+<h2>Related services</h2>
+<ul>
+<li><a href="/services/hubspot-integrations/">HubSpot Integrations with Other Systems</a></li>
+<li><a href="/services/ai-business-process-automation/">AI-Powered Business Process Automation</a></li>
+</ul>
+<p><a href="https://calendar.app.google/R21jua9szDGa7T7c9">Book a meeting about E-commerce Automation Support -&gt;</a></p>
 
                 </article>
                 
@@ -3047,12 +3339,14 @@ Integrate Shopify with analytics tools like Google Analytics or our Data Insight
             <div>© 2025, Easy Tech Partners.</div>
             <div class="footer-build">
               Updated:
-              <time datetime="2026-03-08T20:59:36.839Z">2026-03-08 20:59 UTC</time>
+              <time datetime="2026-03-08T21:29:25.048Z">2026-03-08 21:29 UTC</time>
             </div>
           </div>
           <div class="footer-links" aria-label="Footer links">
             <a href="/services/">Services</a>
             <a href="/start-with-ai/">Start with AI</a>
+            <a href="/ai-use-case-examples/">Use Cases</a>
+            <a href="/why-us/">Why Us</a>
             <a href="/about-us/">About</a>
             <a href="/blog/">Blog</a>
             <a href="/contact-us/">Contact</a>

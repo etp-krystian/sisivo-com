@@ -1,112 +1,69 @@
 ---
 layout: base
 title: About Easy Tech Partners
-description: We build production‑minded autonomous AI agent systems — with clear communication and measurable outcomes.
+description: We help small and mid-size companies implement practical AI with clear scope, clear communication, and measurable results.
 ---
 
 <div class="about-split">
   <figure class="about-photo">
     <img
       src="/images/krystian-mariusz.webp"
-      alt="Krystian Sułek and Mariusz Wróbel"
+      alt="Krystian Sulek and Mariusz Wrobel"
       width="1200"
       height="800"
       loading="eager"
       decoding="async"
       fetchpriority="high"
     />
-    <figcaption>Krystian & Mariusz — building systems that ship.</figcaption>
+    <figcaption>Krystian Sulek and Mariusz Wrobel</figcaption>
   </figure>
   <div class="about-intro">
     <p>
-      Easy Tech Partners is a small team with a startup mindset: move fast, measure what matters, and build things that survive contact with reality.
+      Easy Tech Partners helps business teams adopt AI in a practical way. We focus on workflows that can be improved quickly and measured clearly.
     </p>
     <p>
-      We design autonomous AI agent systems that don’t just “generate content” — they plan, execute, verify, and improve in a loop, grounded in your data.
+      Most of our clients are not technical. That is why we keep communication simple, decisions transparent, and delivery grounded in business outcomes.
     </p>
   </div>
 </div>
 
-## The story (why we started)
+## What we do
 
-In 2017, we worked together at Chimera Prime building startups for Norwegian companies. It was the kind of environment where you learn the hard lessons quickly:
+We design and implement AI solutions that improve real day-to-day operations:
 
-- shipping beats polishing,
-- reliability beats cleverness,
-- and “it worked on my machine” doesn’t count.
+- AI solutions connected to your existing systems
+- AI agents for repetitive internal workflows
+- AI consulting and implementation planning
+- HubSpot + AI automation for sales and marketing teams
 
-By 2024, we kept seeing the same pattern across marketing and growth teams: the ideas were strong, but execution got stuck. Too many handoffs. Too many tools. Too many tasks that “should happen every week” — and then didn’t.
+## How we work
 
-So we founded Easy Tech Partners with a simple thesis:
+<ul class="step-flow">
+  <li><strong>1. Start with one workflow:</strong> We choose one business area where improvement is measurable.</li>
+  <li><strong>2. Define clear success metrics:</strong> Before implementation, we agree what result matters most.</li>
+  <li><strong>3. Deliver a focused first version:</strong> We launch a practical scope quickly and test it in real operations.</li>
+  <li><strong>4. Improve and scale:</strong> We expand only after the first scope proves value.</li>
+</ul>
 
-**If the work is repeatable, it can be systematized. If it can be systematized, it can be automated — with guardrails.**
+## Why clients choose us
 
-Today we focus on autonomous AI agents: production‑minded systems that can plan, execute, and improve growth work in a loop — measured with real outcomes, not vibes.
-
-## The moment it clicked
-
-The breakthrough wasn’t “AI can write a blog post”.
-
-It was realizing that most growth work already has a loop:
-
-- decide what to do next,
-- execute it,
-- measure results,
-- adjust,
-- repeat.
-
-The problem is that humans don’t get to stay in that loop. Teams get interrupted, priorities change, dashboards go stale, and “we’ll do it next week” becomes a monthly ritual.
-
-So we build agents that *stay* in the loop — not as a replacement for a team, but as a reliable system that keeps momentum between meetings.
-
-## How we work (what it feels like to partner with us)
-
-Think of us as your technical co‑founders for a very specific mission: turning recurring growth work into a dependable system.
-
-- **We start with outcomes.** What should change in 30–60 days? What’s measurable?
-- **We map the loop.** Inputs → steps → checks → outputs → measurement.
-- **We add guardrails.** Human approval where it matters, audit trails, and “stop” conditions.
-- **We ship small, then compound.** First working version fast; then we iterate weekly.
-
-## What we believe (startup rules that keep us honest)
-
-- **Clarity wins** — if we can’t explain it simply, it’s not ready.
-- **Guardrails over heroics** — production is about systems, not late nights.
-- **Measure → learn → iterate** — we ship, instrument, and improve.
-- **Own the outcome** — we don’t disappear after delivery.
+- clear communication in plain language
+- practical scope, not over-engineered projects
+- strong focus on adoption by non-technical teams
+- measurable outcomes tied to business goals
 
 ## Founders
 
-Easy Tech Partners was founded by Mariusz Wróbel and Krystian Sułek — builders who care as much about execution as they do about ideas.
+Easy Tech Partners was founded by:
 
-Krystian (CEO) leads product direction and client success with a focus on clarity, speed, and measurable impact. Mariusz (COO) drives operational excellence: the calm, systematic force that turns prototypes into production systems.
+- **Krystian Sulek (CEO)** — client strategy, solution direction, and delivery alignment with business outcomes
+- **Mariusz Wrobel (COO)** — operations, implementation quality, and scalable execution
 
-Our commitment to collaboration and technology is the foundation of our success.
-
-## Our mission
-
-Our mission is to empower marketing agencies with technical expertise and development support. By leveraging innovative technology, software, and services, we strive to simplify complexities, enhance efficiency, and help our partners achieve their goals with confidence.
-
-## Core values
-
-**Trust**  
-Trust is the cornerstone of our culture. It’s demonstrated by setting clear expectations, keeping promises and being honest to the core.
-
-**Dedication**  
-We put a lot of effort in everything we do. Our goal is to be surrounded by people who are willing to go beyond what is expected.
-
-**Perseverance**  
-We value people who have the ability to achieve goals despite difficulties.
-
-**Curiosity**  
-We look for people who eagerly learn new things and solve problems in a creative way.
-
-**Self‑management**  
-We look for people who are able to produce meaningful results with their own guidance.
-
-## Why work with us?
-
-**Partners, not vendors** – We integrate into your team and deliver with shared ownership.  
-**Clear communication** – Straight to the point, no fluff.  
-**Production‑minded** – Reliability, observability, and guardrails come first.  
-**Measurable outcomes** – Grounded in data, not opinions.
+<section class="content-page-cta" aria-label="About page call to action">
+  <h2>Want to see if we are the right fit?</h2>
+  <p>Book a short call and tell us what your team wants to improve. We will recommend a practical first step.</p>
+  <div class="home-cta">
+    <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9">{% ms "calendar_month" %}<span>Book a short call</span></a>
+    <a class="btn btn-ghost btn-see-services" href="/services/"><span>See services</span><span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" /><path d="M8.8 4.3L12.5 8L8.8 11.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></span></a>
+  </div>
+</section>

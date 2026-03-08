@@ -8,6 +8,9 @@
 
 
 
+
+
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -29,14 +32,14 @@
     
     
     <title>About Easy Tech Partners</title>
-    <meta name="description" content="We build production‑minded autonomous AI agent systems — with clear communication and measurable outcomes." />
+    <meta name="description" content="We help small and mid-size companies implement practical AI with clear scope, clear communication, and measurable results." />
     
       <link rel="canonical" href="https://easytechpartners-com.pages.dev/about-us/" />
       <meta property="og:url" content="https://easytechpartners-com.pages.dev/about-us/" />
     
     <meta property="og:site_name" content="Easy Tech Partners" />
     <meta property="og:title" content="About Easy Tech Partners" />
-    <meta property="og:description" content="We build production‑minded autonomous AI agent systems — with clear communication and measurable outcomes." />
+    <meta property="og:description" content="We help small and mid-size companies implement practical AI with clear scope, clear communication, and measurable results." />
     <meta property="og:type" content="website" />
     
     
@@ -1243,6 +1246,63 @@
         line-height: 1.6;
       }
 
+      .prose .visual-break {
+        margin: var(--space-md) 0;
+      }
+
+      .prose .visual-break img {
+        width: 100%;
+        max-height: 420px;
+        object-fit: cover;
+      }
+
+      .prose .visual-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-sm);
+        margin: var(--space-md) 0;
+      }
+
+      .prose .visual-grid figure {
+        margin: 0;
+      }
+
+      .is-content .prose {
+        max-width: 90ch;
+      }
+
+      .is-content .prose > p,
+      .is-content .prose > ul,
+      .is-content .prose > ol,
+      .is-content .prose > blockquote {
+        max-width: 68ch;
+      }
+
+      .is-content .prose > p {
+        margin-bottom: var(--space-sm);
+      }
+
+      .is-content .prose h2 {
+        margin-top: clamp(42px, 6vw, 64px);
+        margin-bottom: var(--space-xs);
+        padding-top: 14px;
+        border-top: 1px solid rgba(226, 232, 240, 0.9);
+      }
+
+      .is-content .prose h2:first-of-type {
+        margin-top: var(--space-sm);
+        padding-top: 0;
+        border-top: 0;
+      }
+
+      .is-content .prose h3 {
+        margin-top: var(--space-md);
+      }
+
+      .is-content .prose .content-page-cta {
+        margin-top: clamp(44px, 6vw, 68px);
+      }
+
       .about-split {
         display: grid;
         grid-template-columns: minmax(0, 1fr);
@@ -1357,6 +1417,85 @@
       .prose .content-page-cta p {
         margin: 0 0 var(--space-sm);
         max-width: 64ch;
+      }
+
+      .prose .table-scroll {
+        margin: var(--space-sm) 0;
+        overflow-x: visible;
+        border-radius: 12px;
+        border: 1px solid rgba(226, 232, 240, 0.92);
+        background: rgba(255, 255, 255, 0.94);
+      }
+
+      .prose .usecase-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .prose .usecase-table th,
+      .prose .usecase-table td {
+        padding: 11px 12px;
+        border-bottom: 1px solid rgba(226, 232, 240, 0.86);
+        text-align: left;
+        vertical-align: top;
+      }
+
+      .prose .usecase-table th {
+        background: rgba(248, 250, 252, 0.9);
+        color: var(--text);
+        font-size: 12px;
+        font-weight: 780;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+      }
+
+      .prose .usecase-table td {
+        color: var(--muted);
+      }
+
+      .prose .usecase-table tr:last-child td {
+        border-bottom: 0;
+      }
+
+      .prose .usecase-kpi-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        margin: var(--space-sm) 0;
+      }
+
+      .prose .usecase-kpi-card {
+        padding: 14px;
+        border-radius: 12px;
+        border: 1px solid rgba(226, 232, 240, 0.92);
+        background:
+          linear-gradient(165deg, rgba(var(--accent-tech-rgb), 0.06), rgba(255, 255, 255, 0.96) 58%),
+          rgba(255, 255, 255, 0.96);
+      }
+
+      .prose .usecase-kpi-label {
+        margin: 0 0 4px;
+        font-size: 11px;
+        font-weight: 780;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--accent-tech-dark);
+      }
+
+      .prose .usecase-kpi-value {
+        margin: 0;
+        font-size: 24px;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        color: var(--text);
+      }
+
+      .prose .usecase-kpi-note {
+        margin: 6px 0 0;
+        font-size: 13px;
+        color: var(--muted);
       }
 
       .prose .hubspot-form-wrap {
@@ -1498,6 +1637,104 @@
 
       .is-contact .prose .contact-steps li::before {
         display: none;
+      }
+
+      .is-why-us .page-hero::before {
+        background:
+          radial-gradient(circle at 14% 22%, rgba(var(--accent-tech-rgb), 0.18), transparent 54%),
+          radial-gradient(circle at 82% 18%, rgba(var(--primary-rgb), 0.14), transparent 56%);
+      }
+
+      .is-why-us .prose {
+        max-width: 96ch;
+      }
+
+      .is-why-us .prose .whyus-intro {
+        display: grid;
+        grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.95fr);
+        gap: var(--space-sm);
+        margin: var(--space-sm) 0;
+      }
+
+      .is-why-us .prose .whyus-intro-main,
+      .is-why-us .prose .whyus-intro-side {
+        padding: var(--space-sm);
+        border-radius: var(--radius-sm);
+        border: 1px solid rgba(226, 232, 240, 0.92);
+        box-shadow: 0 10px 24px rgba(2, 6, 23, 0.05);
+      }
+
+      .is-why-us .prose .whyus-intro-main {
+        background:
+          radial-gradient(circle at 82% 12%, rgba(var(--accent-tech-rgb), 0.13), transparent 44%),
+          linear-gradient(158deg, rgba(var(--accent-tech-rgb), 0.08), rgba(255, 255, 255, 0.95) 55%),
+          rgba(255, 255, 255, 0.95);
+      }
+
+      .is-why-us .prose .whyus-intro-side {
+        background: rgba(255, 255, 255, 0.96);
+      }
+
+      .is-why-us .prose .whyus-kicker {
+        margin: 0 0 8px;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--accent-tech-dark);
+      }
+
+      .is-why-us .prose .whyus-intro h2 {
+        margin-top: 0;
+      }
+
+      .is-why-us .prose .whyus-proof {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 8px;
+      }
+
+      .is-why-us .prose .whyus-proof li {
+        margin: 0;
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid rgba(226, 232, 240, 0.9);
+        background: rgba(248, 250, 252, 0.88);
+      }
+
+      .is-why-us .prose .whyus-proof li::before {
+        display: none;
+      }
+
+      .is-why-us .prose .whyus-pillars {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        margin: var(--space-sm) 0;
+      }
+
+      .is-why-us .prose .whyus-pillar {
+        padding: 14px;
+        border-radius: 12px;
+        border: 1px solid rgba(226, 232, 240, 0.9);
+        background: rgba(255, 255, 255, 0.95);
+      }
+
+      .is-why-us .prose .whyus-pillar h3 {
+        margin-top: 0;
+      }
+
+      .is-why-us .prose .whyus-quote {
+        margin: var(--space-sm) 0;
+        padding: 14px 16px;
+        border-left: 3px solid rgba(var(--accent-tech-rgb), 0.5);
+        border-radius: 0 10px 10px 0;
+        background: rgba(248, 250, 252, 0.9);
+        color: var(--text);
+        font-size: 15px;
+        line-height: 1.7;
       }
 
       .is-services .page-hero {
@@ -2671,6 +2908,22 @@
           align-items: start;
         }
 
+        .is-why-us .prose .whyus-intro {
+          grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.95fr);
+        }
+
+        .is-why-us .prose .whyus-pillars {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .prose .usecase-table {
+          table-layout: fixed;
+        }
+
+        .prose .usecase-kpi-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
         .about-photo img {
           aspect-ratio: 4 / 3;
           object-fit: cover;
@@ -2765,6 +3018,19 @@
           grid-template-columns: minmax(0, 1fr);
         }
 
+        .prose .table-scroll {
+          overflow-x: auto;
+        }
+
+        .prose .usecase-kpi-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .is-why-us .prose .whyus-intro,
+        .is-why-us .prose .whyus-pillars {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
         .stats {
           grid-template-columns: minmax(0, 1fr);
         }
@@ -2774,6 +3040,10 @@
         }
 
         .blog-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .prose .visual-grid {
           grid-template-columns: minmax(0, 1fr);
         }
       }
@@ -2791,7 +3061,7 @@
       }
     </style>
   </head>
-  <body class="">
+  <body class="is-content">
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="site">
       <header class="site-header" aria-label="Primary navigation">
@@ -2934,6 +3204,8 @@
                 </p>
               </div>
             </div>
+            <a href="/ai-use-case-examples/" class="nav-link">Use Cases</a>
+            <a href="/why-us/" class="nav-link">Why Us</a>
             <a href="/about-us/" class="nav-link is-active">About</a>
             <a href="/blog/" class="nav-link">Blog</a>
           </nav>
@@ -2957,6 +3229,8 @@
             <div class="mobile-nav-panel" role="dialog" aria-label="Mobile navigation">
               <a href="/start-with-ai/">Start with AI <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
               <a href="/services/">Services <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
+              <a href="/ai-use-case-examples/">Use Cases <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
+              <a href="/why-us/">Why Us <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
               <a href="/about-us/">About <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
               <a href="/blog/">Blog <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
               <a href="/contact-us/">Contact</a>
@@ -2982,7 +3256,7 @@
                   <div class="page-header">
                     <h1>About Easy Tech Partners</h1>
                     
-                      <p class="page-lead">We build production‑minded autonomous AI agent systems — with clear communication and measurable outcomes.</p>
+                      <p class="page-lead">We help small and mid-size companies implement practical AI with clear scope, clear communication, and measurable results.</p>
                     
                   </div>
                 </div>
@@ -2998,84 +3272,60 @@
   <figure class="about-photo">
     <img
       src="/images/krystian-mariusz.webp"
-      alt="Krystian Sułek and Mariusz Wróbel"
+      alt="Krystian Sulek and Mariusz Wrobel"
       width="1200"
       height="800"
       loading="eager"
       decoding="async"
       fetchpriority="high"
     />
-    <figcaption>Krystian & Mariusz — building systems that ship.</figcaption>
+    <figcaption>Krystian Sulek and Mariusz Wrobel</figcaption>
   </figure>
   <div class="about-intro">
     <p>
-      Easy Tech Partners is a small team with a startup mindset: move fast, measure what matters, and build things that survive contact with reality.
+      Easy Tech Partners helps business teams adopt AI in a practical way. We focus on workflows that can be improved quickly and measured clearly.
     </p>
     <p>
-      We design autonomous AI agent systems that don’t just “generate content” — they plan, execute, verify, and improve in a loop, grounded in your data.
+      Most of our clients are not technical. That is why we keep communication simple, decisions transparent, and delivery grounded in business outcomes.
     </p>
   </div>
 </div>
-<h2>The story (why we started)</h2>
-<p>In 2017, we worked together at Chimera Prime building startups for Norwegian companies. It was the kind of environment where you learn the hard lessons quickly:</p>
+<h2>What we do</h2>
+<p>We design and implement AI solutions that improve real day-to-day operations:</p>
 <ul>
-<li>shipping beats polishing,</li>
-<li>reliability beats cleverness,</li>
-<li>and “it worked on my machine” doesn’t count.</li>
+<li>AI solutions connected to your existing systems</li>
+<li>AI agents for repetitive internal workflows</li>
+<li>AI consulting and implementation planning</li>
+<li>HubSpot + AI automation for sales and marketing teams</li>
 </ul>
-<p>By 2024, we kept seeing the same pattern across marketing and growth teams: the ideas were strong, but execution got stuck. Too many handoffs. Too many tools. Too many tasks that “should happen every week” — and then didn’t.</p>
-<p>So we founded Easy Tech Partners with a simple thesis:</p>
-<p><strong>If the work is repeatable, it can be systematized. If it can be systematized, it can be automated — with guardrails.</strong></p>
-<p>Today we focus on autonomous AI agents: production‑minded systems that can plan, execute, and improve growth work in a loop — measured with real outcomes, not vibes.</p>
-<h2>The moment it clicked</h2>
-<p>The breakthrough wasn’t “AI can write a blog post”.</p>
-<p>It was realizing that most growth work already has a loop:</p>
-<ul>
-<li>decide what to do next,</li>
-<li>execute it,</li>
-<li>measure results,</li>
-<li>adjust,</li>
-<li>repeat.</li>
+<h2>How we work</h2>
+<ul class="step-flow">
+  <li><strong>1. Start with one workflow:</strong> We choose one business area where improvement is measurable.</li>
+  <li><strong>2. Define clear success metrics:</strong> Before implementation, we agree what result matters most.</li>
+  <li><strong>3. Deliver a focused first version:</strong> We launch a practical scope quickly and test it in real operations.</li>
+  <li><strong>4. Improve and scale:</strong> We expand only after the first scope proves value.</li>
 </ul>
-<p>The problem is that humans don’t get to stay in that loop. Teams get interrupted, priorities change, dashboards go stale, and “we’ll do it next week” becomes a monthly ritual.</p>
-<p>So we build agents that <em>stay</em> in the loop — not as a replacement for a team, but as a reliable system that keeps momentum between meetings.</p>
-<h2>How we work (what it feels like to partner with us)</h2>
-<p>Think of us as your technical co‑founders for a very specific mission: turning recurring growth work into a dependable system.</p>
+<h2>Why clients choose us</h2>
 <ul>
-<li><strong>We start with outcomes.</strong> What should change in 30–60 days? What’s measurable?</li>
-<li><strong>We map the loop.</strong> Inputs → steps → checks → outputs → measurement.</li>
-<li><strong>We add guardrails.</strong> Human approval where it matters, audit trails, and “stop” conditions.</li>
-<li><strong>We ship small, then compound.</strong> First working version fast; then we iterate weekly.</li>
-</ul>
-<h2>What we believe (startup rules that keep us honest)</h2>
-<ul>
-<li><strong>Clarity wins</strong> — if we can’t explain it simply, it’s not ready.</li>
-<li><strong>Guardrails over heroics</strong> — production is about systems, not late nights.</li>
-<li><strong>Measure → learn → iterate</strong> — we ship, instrument, and improve.</li>
-<li><strong>Own the outcome</strong> — we don’t disappear after delivery.</li>
+<li>clear communication in plain language</li>
+<li>practical scope, not over-engineered projects</li>
+<li>strong focus on adoption by non-technical teams</li>
+<li>measurable outcomes tied to business goals</li>
 </ul>
 <h2>Founders</h2>
-<p>Easy Tech Partners was founded by Mariusz Wróbel and Krystian Sułek — builders who care as much about execution as they do about ideas.</p>
-<p>Krystian (CEO) leads product direction and client success with a focus on clarity, speed, and measurable impact. Mariusz (COO) drives operational excellence: the calm, systematic force that turns prototypes into production systems.</p>
-<p>Our commitment to collaboration and technology is the foundation of our success.</p>
-<h2>Our mission</h2>
-<p>Our mission is to empower marketing agencies with technical expertise and development support. By leveraging innovative technology, software, and services, we strive to simplify complexities, enhance efficiency, and help our partners achieve their goals with confidence.</p>
-<h2>Core values</h2>
-<p><strong>Trust</strong><br>
-Trust is the cornerstone of our culture. It’s demonstrated by setting clear expectations, keeping promises and being honest to the core.</p>
-<p><strong>Dedication</strong><br>
-We put a lot of effort in everything we do. Our goal is to be surrounded by people who are willing to go beyond what is expected.</p>
-<p><strong>Perseverance</strong><br>
-We value people who have the ability to achieve goals despite difficulties.</p>
-<p><strong>Curiosity</strong><br>
-We look for people who eagerly learn new things and solve problems in a creative way.</p>
-<p><strong>Self‑management</strong><br>
-We look for people who are able to produce meaningful results with their own guidance.</p>
-<h2>Why work with us?</h2>
-<p><strong>Partners, not vendors</strong> – We integrate into your team and deliver with shared ownership.<br>
-<strong>Clear communication</strong> – Straight to the point, no fluff.<br>
-<strong>Production‑minded</strong> – Reliability, observability, and guardrails come first.<br>
-<strong>Measurable outcomes</strong> – Grounded in data, not opinions.</p>
+<p>Easy Tech Partners was founded by:</p>
+<ul>
+<li><strong>Krystian Sulek (CEO)</strong> — client strategy, solution direction, and delivery alignment with business outcomes</li>
+<li><strong>Mariusz Wrobel (COO)</strong> — operations, implementation quality, and scalable execution</li>
+</ul>
+<section class="content-page-cta" aria-label="About page call to action">
+  <h2>Want to see if we are the right fit?</h2>
+  <p>Book a short call and tell us what your team wants to improve. We will recommend a practical first step.</p>
+  <div class="home-cta">
+    <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9"><span class="material-symbols-rounded" aria-hidden="true">calendar_month</span><span>Book a short call</span></a>
+    <a class="btn btn-ghost btn-see-services" href="/services/"><span>See services</span><span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" /><path d="M8.8 4.3L12.5 8L8.8 11.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></span></a>
+  </div>
+</section>
 
                 </article>
                 
@@ -3091,12 +3341,14 @@ We look for people who are able to produce meaningful results with their own gui
             <div>© 2025, Easy Tech Partners.</div>
             <div class="footer-build">
               Updated:
-              <time datetime="2026-03-08T20:59:36.839Z">2026-03-08 20:59 UTC</time>
+              <time datetime="2026-03-08T21:29:25.048Z">2026-03-08 21:29 UTC</time>
             </div>
           </div>
           <div class="footer-links" aria-label="Footer links">
             <a href="/services/">Services</a>
             <a href="/start-with-ai/">Start with AI</a>
+            <a href="/ai-use-case-examples/">Use Cases</a>
+            <a href="/why-us/">Why Us</a>
             <a href="/about-us/">About</a>
             <a href="/blog/">Blog</a>
             <a href="/contact-us/">Contact</a>
