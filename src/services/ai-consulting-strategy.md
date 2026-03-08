@@ -47,4 +47,4 @@ It is business-first. We explain technical decisions in plain language.
 - [Autonomous AI Agents](/services/ai-agents/)
 - [HubSpot Development & AI Automation](/services/hubspot/)
 
-[Book a meeting about AI Consulting & Strategy →](mailto:krystian@easytechpartners.com?subject=AI%20Consulting%20and%20Strategy%20-%20Intro%20call)
+[Book a meeting about AI Consulting & Strategy →](https://calendar.app.google/R21jua9szDGa7T7c9)

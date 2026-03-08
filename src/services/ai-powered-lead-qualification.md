@@ -44,4 +44,4 @@ We define clear success metrics at the start and review outcomes regularly.
 - [Back to category](/services/hubspot/)
 - [All services](/services/)
 
-[Book a meeting about AI-Powered Lead Qualification →](mailto:krystian@easytechpartners.com?subject=AI-Powered%20Lead%20Qualification%20-%20Intro%20call)
+[Book a meeting about AI-Powered Lead Qualification →](https://calendar.app.google/R21jua9szDGa7T7c9)

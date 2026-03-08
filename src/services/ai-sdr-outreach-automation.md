@@ -44,4 +44,4 @@ We define clear success metrics at the start and review outcomes regularly.
 - [Back to category](/services/hubspot/)
 - [All services](/services/)
 
-[Book a meeting about AI SDR and Outreach Automation →](mailto:krystian@easytechpartners.com?subject=AI%20SDR%20and%20Outreach%20Automation%20-%20Intro%20call)
+[Book a meeting about AI SDR and Outreach Automation →](https://calendar.app.google/R21jua9szDGa7T7c9)

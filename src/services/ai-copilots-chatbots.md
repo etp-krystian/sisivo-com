@@ -44,4 +44,4 @@ We define clear success metrics at the start and review outcomes regularly.
 - [Back to category](/services/ai-solutions-development/)
 - [All services](/services/)
 
-[Book a meeting about AI Copilots and Chatbots →](mailto:krystian@easytechpartners.com?subject=AI%20Copilots%20and%20Chatbots%20-%20Intro%20call)
+[Book a meeting about AI Copilots and Chatbots →](https://calendar.app.google/R21jua9szDGa7T7c9)

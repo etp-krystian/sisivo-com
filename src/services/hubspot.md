@@ -47,4 +47,4 @@ No. We start with your existing process and improve step by step.
 - [AI Solutions Development](/services/ai-solutions-development/)
 - [AI Consulting & Strategy](/services/ai-consulting-strategy/)
 
-[Book a meeting about HubSpot Development & AI Automation →](mailto:krystian@easytechpartners.com?subject=HubSpot%20Development%20and%20AI%20Automation)
+[Book a meeting about HubSpot Development & AI Automation →](https://calendar.app.google/R21jua9szDGa7T7c9)

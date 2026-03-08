@@ -44,4 +44,4 @@ We define clear success metrics at the start and review outcomes regularly.
 - [Back to category](/services/ai-solutions-development/)
 - [All services](/services/)
 
-[Book a meeting about LLM-Powered Applications →](mailto:krystian@easytechpartners.com?subject=LLM-Powered%20Applications%20-%20Intro%20call)
+[Book a meeting about LLM-Powered Applications →](https://calendar.app.google/R21jua9szDGa7T7c9)

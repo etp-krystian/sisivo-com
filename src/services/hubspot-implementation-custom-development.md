@@ -44,4 +44,4 @@ We define clear success metrics at the start and review outcomes regularly.
 - [Back to category](/services/hubspot/)
 - [All services](/services/)
 
-[Book a meeting about HubSpot Implementation and Custom Development →](mailto:krystian@easytechpartners.com?subject=HubSpot%20Implementation%20and%20Custom%20Development%20-%20Intro%20call)
+[Book a meeting about HubSpot Implementation and Custom Development →](https://calendar.app.google/R21jua9szDGa7T7c9)

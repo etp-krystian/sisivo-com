@@ -44,4 +44,4 @@ We define clear success metrics at the start and review outcomes regularly.
 - [Back to category](/services/ai-consulting-strategy/)
 - [All services](/services/)
 
-[Book a meeting about AI Use Case Identification →](mailto:krystian@easytechpartners.com?subject=AI%20Use%20Case%20Identification%20-%20Intro%20call)
+[Book a meeting about AI Use Case Identification →](https://calendar.app.google/R21jua9szDGa7T7c9)

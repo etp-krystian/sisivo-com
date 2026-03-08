@@ -44,4 +44,4 @@ We define clear success metrics at the start and review outcomes regularly.
 - [Back to category](/services/hubspot/)
 - [All services](/services/)
 
-[Book a meeting about HubSpot Integrations with Other Systems →](mailto:krystian@easytechpartners.com?subject=HubSpot%20Integrations%20with%20Other%20Systems%20-%20Intro%20call)
+[Book a meeting about HubSpot Integrations with Other Systems →](https://calendar.app.google/R21jua9szDGa7T7c9)

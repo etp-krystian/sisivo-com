@@ -44,4 +44,4 @@ We define clear success metrics at the start and review outcomes regularly.
 - [Back to category](/services/ai-solutions-development/)
 - [All services](/services/)
 
-[Book a meeting about RAG Systems (AI Over Company Data) →](mailto:krystian@easytechpartners.com?subject=RAG%20Systems%20(AI%20Over%20Company%20Data)%20-%20Intro%20call)
+[Book a meeting about RAG Systems (AI Over Company Data) →](https://calendar.app.google/R21jua9szDGa7T7c9)

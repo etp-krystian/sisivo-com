@@ -54,4 +54,4 @@ No. We keep the setup and operating model simple for non-technical teams.
 - [AI Solutions Development](/services/ai-solutions-development/)
 - [AI Consulting & Strategy](/services/ai-consulting-strategy/)
 
-[Book a meeting about Autonomous AI Agents →](mailto:krystian@easytechpartners.com?subject=Autonomous%20AI%20Agents%20-%20Intro%20call)
+[Book a meeting about Autonomous AI Agents →](https://calendar.app.google/R21jua9szDGa7T7c9)

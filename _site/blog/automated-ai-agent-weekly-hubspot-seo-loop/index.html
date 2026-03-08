@@ -5,6 +5,9 @@
 
 
 
+
+
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -627,6 +630,44 @@
         padding: 0 4px;
         border-bottom: 1px solid rgba(226, 232, 240, 0.9);
         padding-bottom: var(--space-xs);
+      }
+
+      .mega-menu-quickstart {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        margin-bottom: var(--space-sm);
+      }
+
+      .mega-quick-link {
+        display: grid;
+        gap: 4px;
+        padding: 11px 12px;
+        border-radius: 10px;
+        border: 1px solid rgba(226, 232, 240, 0.92);
+        background: rgba(248, 250, 252, 0.84);
+        color: var(--text);
+        transition: border-color 170ms ease, background 170ms ease, transform 170ms ease;
+      }
+
+      .mega-quick-link:hover {
+        text-decoration: none;
+        border-color: rgba(var(--accent-tech-rgb), 0.3);
+        background: rgba(241, 245, 249, 0.95);
+        transform: translateY(-1px);
+      }
+
+      .mega-quick-title {
+        font-size: 12px;
+        font-weight: 780;
+        letter-spacing: -0.01em;
+        color: var(--text);
+      }
+
+      .mega-quick-desc {
+        font-size: 11px;
+        line-height: 1.45;
+        color: var(--muted);
       }
 
       .mega-menu-title {
@@ -1259,6 +1300,220 @@
       .prose code {
         font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
         font-size: 0.95em;
+      }
+
+      .prose .trust-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-sm);
+        margin: var(--space-sm) 0;
+      }
+
+      .prose .trust-card {
+        padding: var(--space-sm);
+        border-radius: var(--radius-sm);
+        border: 1px solid rgba(226, 232, 240, 0.9);
+        background: rgba(255, 255, 255, 0.92);
+        box-shadow: 0 8px 22px rgba(2, 6, 23, 0.05);
+      }
+
+      .prose .trust-card h3 {
+        margin-top: 0;
+      }
+
+      .prose .step-flow {
+        list-style: none;
+        margin: var(--space-sm) 0;
+        padding: 0;
+        display: grid;
+        gap: 10px;
+      }
+
+      .prose .step-flow li {
+        margin: 0;
+        padding: 12px 14px;
+        border-radius: 10px;
+        border: 1px solid rgba(226, 232, 240, 0.9);
+        background: rgba(248, 250, 252, 0.86);
+      }
+
+      .prose .step-flow li::before {
+        display: none;
+      }
+
+      .prose .highlight-note {
+        margin: var(--space-sm) 0;
+        padding: 12px 14px;
+        border-radius: 10px;
+        border: 1px solid rgba(var(--accent-tech-rgb), 0.22);
+        background: linear-gradient(95deg, rgba(var(--accent-tech-rgb), 0.07), rgba(248, 250, 252, 0.94));
+        color: rgba(15, 23, 42, 0.92);
+      }
+
+      .prose .content-page-cta {
+        margin-top: var(--space-md);
+        padding: var(--space-sm);
+        border-radius: var(--radius-sm);
+        border: 1px solid rgba(var(--accent-tech-rgb), 0.28);
+        background:
+          radial-gradient(circle at 86% 10%, rgba(var(--accent-tech-rgb), 0.14), transparent 46%),
+          linear-gradient(160deg, rgba(var(--accent-tech-rgb), 0.1), rgba(255, 255, 255, 0.94) 56%),
+          rgba(255, 255, 255, 0.94);
+        box-shadow:
+          0 12px 28px rgba(2, 6, 23, 0.08),
+          0 1px 0 rgba(255, 255, 255, 0.75) inset;
+      }
+
+      .prose .content-page-cta h2 {
+        margin: 0 0 var(--space-2xs);
+        font-size: 19px;
+        letter-spacing: -0.02em;
+      }
+
+      .prose .content-page-cta p {
+        margin: 0 0 var(--space-sm);
+        max-width: 64ch;
+      }
+
+      .prose .hubspot-form-wrap {
+        margin-top: var(--space-xs);
+        padding: var(--space-sm);
+        border-radius: var(--radius-sm);
+        border: 1px solid rgba(226, 232, 240, 0.92);
+        background: rgba(255, 255, 255, 0.94);
+      }
+
+      .prose .hubspot-form-wrap .hs-form-field {
+        margin-bottom: 12px;
+      }
+
+      .prose .hubspot-form-wrap .hs-form-field > label {
+        margin-bottom: 6px;
+        display: inline-block;
+        color: var(--text);
+        font-weight: 650;
+        font-size: 12px;
+      }
+
+      .prose .hubspot-form-wrap .hs-input,
+      .prose .hubspot-form-wrap textarea,
+      .prose .hubspot-form-wrap select {
+        width: 100% !important;
+        min-height: 42px;
+        border-radius: 10px;
+        border: 1px solid rgba(148, 163, 184, 0.5);
+        background: rgba(255, 255, 255, 0.96);
+        color: var(--text);
+        font: inherit;
+        padding: 9px 11px;
+        box-sizing: border-box;
+      }
+
+      .prose .hubspot-form-wrap textarea {
+        min-height: 108px;
+      }
+
+      .prose .hubspot-form-wrap .hs-input:focus,
+      .prose .hubspot-form-wrap textarea:focus,
+      .prose .hubspot-form-wrap select:focus {
+        outline: 3px solid var(--ring);
+        outline-offset: 0;
+        border-color: rgba(var(--accent-tech-rgb), 0.5);
+      }
+
+      .prose .hubspot-form-wrap .hs-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: var(--btn-height);
+        padding: 10px 15px;
+        border-radius: var(--btn-radius);
+        border: 1px solid rgba(var(--primary-rgb), 0.08);
+        background: linear-gradient(180deg, var(--primary) 0%, var(--primary-soft) 100%);
+        color: #04110a;
+        font-size: 13px;
+        font-weight: 760;
+        letter-spacing: -0.008em;
+        box-shadow:
+          0 0 0 1px rgba(255, 255, 255, 0.22) inset,
+          0 0 18px rgba(var(--primary-rgb), 0.24),
+          0 4px 10px rgba(var(--primary-rgb), 0.15),
+          0 1px 2px rgba(2, 6, 23, 0.06);
+        cursor: pointer;
+      }
+
+      .prose .hubspot-form-wrap .hs-button:hover {
+        filter: brightness(1.015);
+      }
+
+      .is-contact .prose {
+        max-width: 100%;
+      }
+
+      .is-contact .prose .contact-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: var(--space-sm);
+        margin: 0 0 var(--space-sm);
+      }
+
+      .is-contact .prose .contact-intro,
+      .is-contact .prose .contact-form-card {
+        padding: var(--space-sm);
+        border-radius: var(--radius-sm);
+        border: 1px solid rgba(226, 232, 240, 0.92);
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 10px 24px rgba(2, 6, 23, 0.05);
+      }
+
+      .is-contact .prose .contact-intro {
+        background:
+          radial-gradient(circle at 82% 14%, rgba(var(--accent-tech-rgb), 0.12), transparent 44%),
+          linear-gradient(150deg, rgba(var(--accent-tech-rgb), 0.08), rgba(255, 255, 255, 0.95) 56%),
+          rgba(255, 255, 255, 0.95);
+      }
+
+      .is-contact .prose .contact-kicker {
+        margin: 0 0 7px;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--accent-tech-dark);
+      }
+
+      .is-contact .prose .contact-intro h2,
+      .is-contact .prose .contact-form-card h2 {
+        margin-top: 0;
+      }
+
+      .is-contact .prose .contact-points {
+        margin: var(--space-xs) 0 0;
+        padding-left: 18px;
+      }
+
+      .is-contact .prose .contact-points li {
+        margin-bottom: 8px;
+      }
+
+      .is-contact .prose .contact-steps {
+        list-style: none;
+        margin: var(--space-xs) 0 0;
+        padding: 0;
+        display: grid;
+        gap: 8px;
+      }
+
+      .is-contact .prose .contact-steps li {
+        margin: 0;
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid rgba(226, 232, 240, 0.92);
+        background: rgba(248, 250, 252, 0.88);
+      }
+
+      .is-contact .prose .contact-steps li::before {
+        display: none;
       }
 
       .is-services .page-hero {
@@ -2427,6 +2682,11 @@
           align-items: center;
         }
 
+        .is-contact .prose .contact-layout {
+          grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+          align-items: start;
+        }
+
         .about-photo img {
           aspect-ratio: 4 / 3;
           object-fit: cover;
@@ -2443,6 +2703,10 @@
         }
 
         .mega-menu-groups {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .mega-menu-quickstart {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
@@ -2508,6 +2772,11 @@
           grid-template-columns: minmax(0, 1fr);
         }
 
+        .mega-menu-quickstart,
+        .prose .trust-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
         .services-grid {
           grid-template-columns: minmax(0, 1fr);
         }
@@ -2550,6 +2819,55 @@
           </a>
 
           <nav class="nav" aria-label="Site">
+            <div class="nav-item nav-item--mega">
+              <a href="/start-with-ai/" class="nav-link">
+                <span>Start Here</span>
+                <span class="nav-chevron" aria-hidden="true">
+                  <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.25 4.5L6 8.25L9.75 4.5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </a>
+              <div class="mega-menu" role="group" aria-label="Start Here menu">
+                <div class="mega-menu-head">
+                  <div>
+                    <p class="mega-menu-title">Start Here</p>
+                    <p class="mega-menu-subtitle">A clear path for non-technical teams that want to start with AI.</p>
+                  </div>
+                  <a class="mega-menu-all" href="/start-with-ai/">View start guide <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
+                </div>
+                <div class="mega-menu-quickstart">
+                  <a class="mega-quick-link" href="/start-with-ai/">
+                    <span class="mega-quick-title">Start with AI</span>
+                    <span class="mega-quick-desc">A simple first-step framework for business teams.</span>
+                  </a>
+                  <a class="mega-quick-link" href="/ai-discovery-sprint/">
+                    <span class="mega-quick-title">AI Discovery Sprint</span>
+                    <span class="mega-quick-desc">Two-week sprint to choose and scope the right first use case.</span>
+                  </a>
+                  <a class="mega-quick-link" href="/implementation-process/">
+                    <span class="mega-quick-title">Implementation Process</span>
+                    <span class="mega-quick-desc">How delivery works from kickoff to rollout.</span>
+                  </a>
+                  <a class="mega-quick-link" href="/ai-security-data/">
+                    <span class="mega-quick-title">Security and Data</span>
+                    <span class="mega-quick-desc">Practical controls for permissions, data handling, and risk.</span>
+                  </a>
+                  <a class="mega-quick-link" href="/business-ai-faq/">
+                    <span class="mega-quick-title">Business AI FAQ</span>
+                    <span class="mega-quick-desc">Answers for non-technical leaders evaluating AI.</span>
+                  </a>
+                  <a class="mega-quick-link" href="/ai-use-case-examples/">
+                    <span class="mega-quick-title">Use Case Examples</span>
+                    <span class="mega-quick-desc">Practical AI opportunities across sales, support, and operations.</span>
+                  </a>
+                </div>
+                <p class="mega-menu-note">
+                  Need a recommendation? We can help you choose one realistic first project and define clear success metrics.
+                  <a href="https://calendar.app.google/R21jua9szDGa7T7c9">Book a short call</a>.
+                </p>
+              </div>
+            </div>
             <div class="nav-item nav-item--mega">
               <a href="/services/" class="nav-link">
                 <span>Services</span>
@@ -2628,7 +2946,7 @@
                 </div>
                 <p class="mega-menu-note">
                   Need help choosing? Start with one workflow and we will recommend the fastest path to measurable results.
-                  <a href="mailto:krystian@easytechpartners.com?subject=Intro%20call%20-%20AI%20services">Book a short call</a>.
+                  <a href="https://calendar.app.google/R21jua9szDGa7T7c9">Book a short call</a>.
                 </p>
               </div>
             </div>
@@ -2638,7 +2956,7 @@
 
           <div class="header-actions">
             <a href="/contact-us/" class="btn btn-ghost">Contact</a>
-            <a href="mailto:krystian@easytechpartners.com?subject=Intro%20call%20-%20AI%20services" class="btn btn-primary"><span class="material-symbols-rounded" aria-hidden="true">calendar_month</span><span>Book a meeting</span></a>
+            <a href="https://calendar.app.google/R21jua9szDGa7T7c9" class="btn btn-primary"><span class="material-symbols-rounded" aria-hidden="true">calendar_month</span><span>Book a meeting</span></a>
           </div>
 
           <details class="mobile-nav">
@@ -2653,11 +2971,12 @@
               <span>Menu</span>
             </summary>
             <div class="mobile-nav-panel" role="dialog" aria-label="Mobile navigation">
+              <a href="/start-with-ai/">Start with AI <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
               <a href="/services/">Services <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
               <a href="/about-us/">About <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
               <a href="/blog/">Blog <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
               <a href="/contact-us/">Contact</a>
-              <a class="mobile-nav-cta" href="mailto:krystian@easytechpartners.com?subject=Intro%20call%20-%20AI%20services"><span class="material-symbols-rounded" aria-hidden="true">calendar_month</span><span>Book a meeting</span></a>
+              <a class="mobile-nav-cta" href="https://calendar.app.google/R21jua9szDGa7T7c9"><span class="material-symbols-rounded" aria-hidden="true">calendar_month</span><span>Book a meeting</span></a>
             </div>
           </details>
         </div>
@@ -2872,11 +3191,12 @@
             <div>© 2025, Easy Tech Partners.</div>
             <div class="footer-build">
               Updated:
-              <time datetime="2026-03-06T22:19:39.603Z">2026-03-06 22:19 UTC</time>
+              <time datetime="2026-03-08T20:59:36.839Z">2026-03-08 20:59 UTC</time>
             </div>
           </div>
           <div class="footer-links" aria-label="Footer links">
             <a href="/services/">Services</a>
+            <a href="/start-with-ai/">Start with AI</a>
             <a href="/about-us/">About</a>
             <a href="/blog/">Blog</a>
             <a href="/contact-us/">Contact</a>

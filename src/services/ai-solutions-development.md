@@ -54,4 +54,4 @@ Usually quickly, once we align on scope and access.
 - [AI Consulting & Strategy](/services/ai-consulting-strategy/)
 - [HubSpot Development & AI Automation](/services/hubspot/)
 
-[Book a meeting about AI Solutions Development →](mailto:krystian@easytechpartners.com?subject=AI%20Solutions%20Development%20-%20Intro%20call)
+[Book a meeting about AI Solutions Development →](https://calendar.app.google/R21jua9szDGa7T7c9)

@@ -44,4 +44,4 @@ We define clear success metrics at the start and review outcomes regularly.
 - [Back to category](/services/ai-agents/)
 - [All services](/services/)
 
-[Book a meeting about Multi-Agent Systems →](mailto:krystian@easytechpartners.com?subject=Multi-Agent%20Systems%20-%20Intro%20call)
+[Book a meeting about Multi-Agent Systems →](https://calendar.app.google/R21jua9szDGa7T7c9)
