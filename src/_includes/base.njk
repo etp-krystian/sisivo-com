@@ -31,6 +31,17 @@
     </script>
     {% set metaTitle = title or "Easy Tech Partners" %}
     {% set metaDescription = description or "Easy Tech Partners — autonomous AI agents that plan, execute, and improve growth work end‑to‑end." %}
+    {% set defaultFeaturedImage = "/images/et-featured.jpg" %}
+    {% set effectiveImage = image %}
+    {% set effectiveImageAlt = imageAlt %}
+    {% set effectiveImageWidth = imageWidth %}
+    {% set effectiveImageHeight = imageHeight %}
+    {% if not effectiveImage and pageType != "article" %}
+      {% set effectiveImage = defaultFeaturedImage %}
+      {% set effectiveImageAlt = "Easy Tech Partners" %}
+      {% set effectiveImageWidth = 1200 %}
+      {% set effectiveImageHeight = 628 %}
+    {% endif %}
     <title>{{ metaTitle | escape }}</title>
     <meta name="description" content="{{ metaDescription | escape }}" />
     {% if site and site.url and site.url.length %}
@@ -44,22 +55,22 @@
     {% if pageType == 'article' and date %}
       <meta property="article:published_time" content="{{ date.toISOString() }}" />
     {% endif %}
-    {% if image %}
-      {% set ogImageUrl = (site.url + image) if site and site.url else image %}
+    {% if effectiveImage %}
+      {% set ogImageUrl = (site.url + effectiveImage) if site and site.url else effectiveImage %}
       <meta property="og:image" content="{{ ogImageUrl | escape }}" />
       <meta name="twitter:image" content="{{ ogImageUrl | escape }}" />
-      {% if imageAlt %}
-        <meta property="og:image:alt" content="{{ imageAlt | escape }}" />
-        <meta name="twitter:image:alt" content="{{ imageAlt | escape }}" />
+      {% if effectiveImageAlt %}
+        <meta property="og:image:alt" content="{{ effectiveImageAlt | escape }}" />
+        <meta name="twitter:image:alt" content="{{ effectiveImageAlt | escape }}" />
       {% endif %}
-      {% if imageWidth %}
-        <meta property="og:image:width" content="{{ imageWidth }}" />
+      {% if effectiveImageWidth %}
+        <meta property="og:image:width" content="{{ effectiveImageWidth }}" />
       {% endif %}
-      {% if imageHeight %}
-        <meta property="og:image:height" content="{{ imageHeight }}" />
+      {% if effectiveImageHeight %}
+        <meta property="og:image:height" content="{{ effectiveImageHeight }}" />
       {% endif %}
     {% endif %}
-    <meta name="twitter:card" content="{% if image %}summary_large_image{% else %}summary{% endif %}" />
+    <meta name="twitter:card" content="{% if effectiveImage %}summary_large_image{% else %}summary{% endif %}" />
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -107,7 +118,7 @@
       })();
     </script>
     {% if isHome %}
-      <link rel="preload" as="image" href="/images/hero.jpg" type="image/jpeg" fetchpriority="high" />
+      <link rel="preload" as="image" href="/images/company-data.jpg" type="image/jpeg" fetchpriority="high" />
     {% endif %}
     <style>
       :root {
@@ -2275,7 +2286,9 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center;
+        object-position: center 35%;
+        transform: none;
+        filter: none;
         z-index: 0;
       }
 
@@ -2285,23 +2298,18 @@
         inset: 0;
         background: linear-gradient(
           180deg,
-          rgba(2, 6, 23, 0.62) 0%,
-          rgba(2, 6, 23, 0.28) 45%,
-          rgba(2, 6, 23, 0.68) 100%
+          rgba(2, 6, 23, 0.3) 0%,
+          rgba(2, 6, 23, 0.22) 48%,
+          rgba(2, 6, 23, 0.38) 100%
         );
         z-index: 1;
         pointer-events: none;
       }
 
       .home-hero::after {
-        content: "";
+        content: none;
         position: absolute;
         inset: 0;
-        background:
-          radial-gradient(circle at 30% 20%, rgba(var(--accent-tech-rgb), 0.18), transparent 55%),
-          radial-gradient(circle at 70% 55%, rgba(var(--accent-tech-rgb), 0.10), transparent 60%);
-        z-index: 2;
-        pointer-events: none;
       }
 
       .home-hero .container {
@@ -2322,6 +2330,7 @@
         line-height: 1.03;
         letter-spacing: -0.05em;
         color: #ffffff;
+        text-shadow: 0 2px 8px rgba(2, 6, 23, 0.2);
       }
 
       .home-hero h1 span {
@@ -2334,6 +2343,7 @@
         color: rgba(255, 255, 255, 0.86);
         font-size: 16px;
         line-height: 1.75;
+        text-shadow: 0 1px 5px rgba(2, 6, 23, 0.18);
       }
 
       .home-cta {
@@ -3285,25 +3295,25 @@
           <section class="home-hero">
             <img
               class="home-hero-bg"
-              src="/images/hero.jpg"
+              src="/images/company-data.jpg"
               alt=""
               aria-hidden="true"
               loading="eager"
               decoding="async"
               fetchpriority="high"
-              width="2160"
-              height="2700"
+              width="1536"
+              height="1024"
             />
             <div class="container">
               <div class="home-hero-grid">
                 <div>
                   <h1>
-                    Practical AI services
-                    <span>for business teams</span>
+                    We help companies move
+                    <span>from traditional workflows to AI-supported operations</span>
                   </h1>
                   <p class="home-lead">
-                    We help non-technical teams use AI in a practical way.
-                    Clear plan, clear scope, and clear results across your real workflows.
+                    We guide non-technical teams step by step, so AI becomes part of daily work,
+                    improves execution speed, and supports better business decisions.
                   </p>
                   <div class="home-cta">
                     <a class="btn btn-primary" href="{{ calendarUrl }}">{% ms "calendar_month" %}<span>Book a meeting</span></a>

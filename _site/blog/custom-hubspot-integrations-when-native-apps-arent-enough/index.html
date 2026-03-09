@@ -31,6 +31,12 @@
     </script>
     
     
+    
+    
+    
+    
+    
+    
     <title>Custom HubSpot integrations: when native apps aren’t enough</title>
     <meta name="description" content="A practical guide to deciding when to build a custom integration for HubSpot, what to automate, and how to ship it safely." />
     
@@ -2273,7 +2279,9 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center;
+        object-position: center 35%;
+        transform: none;
+        filter: none;
         z-index: 0;
       }
 
@@ -2283,23 +2291,18 @@
         inset: 0;
         background: linear-gradient(
           180deg,
-          rgba(2, 6, 23, 0.62) 0%,
-          rgba(2, 6, 23, 0.28) 45%,
-          rgba(2, 6, 23, 0.68) 100%
+          rgba(2, 6, 23, 0.3) 0%,
+          rgba(2, 6, 23, 0.22) 48%,
+          rgba(2, 6, 23, 0.38) 100%
         );
         z-index: 1;
         pointer-events: none;
       }
 
       .home-hero::after {
-        content: "";
+        content: none;
         position: absolute;
         inset: 0;
-        background:
-          radial-gradient(circle at 30% 20%, rgba(var(--accent-tech-rgb), 0.18), transparent 55%),
-          radial-gradient(circle at 70% 55%, rgba(var(--accent-tech-rgb), 0.10), transparent 60%);
-        z-index: 2;
-        pointer-events: none;
       }
 
       .home-hero .container {
@@ -2320,6 +2323,7 @@
         line-height: 1.03;
         letter-spacing: -0.05em;
         color: #ffffff;
+        text-shadow: 0 2px 8px rgba(2, 6, 23, 0.2);
       }
 
       .home-hero h1 span {
@@ -2332,6 +2336,7 @@
         color: rgba(255, 255, 255, 0.86);
         font-size: 16px;
         line-height: 1.75;
+        text-shadow: 0 1px 5px rgba(2, 6, 23, 0.18);
       }
 
       .home-cta {
@@ -3453,7 +3458,7 @@
             <div>© 2026, Easy Tech Partners.</div>
             <div class="footer-build">
               Updated:
-              <time datetime="2026-03-09T16:29:25.839Z">2026-03-09 16:29 UTC</time>
+              <time datetime="2026-03-09T17:04:57.470Z">2026-03-09 17:04 UTC</time>
             </div>
           </div>
           <div class="footer-links" aria-label="Footer links">
