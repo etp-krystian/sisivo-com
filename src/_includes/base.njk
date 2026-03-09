@@ -2270,8 +2270,8 @@
 
       .home-hero {
         margin-top: calc(var(--header-height) * -1);
-        padding: calc(var(--space-xl) + var(--header-height)) 0 var(--space-lg);
-        min-height: min(520px, 92vh);
+        padding: calc(var(--space-xl) + var(--header-height)) 0 calc(var(--space-lg) * 1.3);
+        min-height: min(676px, 92vh);
         display: flex;
         align-items: flex-end;
         position: relative;
@@ -2286,7 +2286,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center 35%;
+        object-position: center top;
         transform: none;
         filter: none;
         z-index: 0;
@@ -2298,9 +2298,10 @@
         inset: 0;
         background: linear-gradient(
           180deg,
-          rgba(2, 6, 23, 0.3) 0%,
-          rgba(2, 6, 23, 0.22) 48%,
-          rgba(2, 6, 23, 0.38) 100%
+          rgba(2, 6, 23, 0) 0%,
+          rgba(2, 6, 23, 0) 56%,
+          rgba(2, 6, 23, 0.22) 78%,
+          rgba(2, 6, 23, 0.4) 100%
         );
         z-index: 1;
         pointer-events: none;
@@ -3109,6 +3110,20 @@
           align-self: center;
         }
       }
+
+      @media (min-width: 1200px) {
+        .home-hero {
+          min-height: min(879px, 96vh);
+          padding-bottom: calc(var(--space-lg) * 1.6);
+        }
+      }
+
+      @media (min-width: 1500px) {
+        .home-hero {
+          min-height: min(1143px, 98vh);
+          padding-bottom: calc(var(--space-lg) * 2);
+        }
+      }
     </style>
   </head>
   <body class="{% if isServices %}is-services{% endif %}{% if isServicesIndex %}{% if isServices %} {% endif %}is-services-index{% endif %}{% if isBlog %}{% if isServices or isServicesIndex %} {% endif %}is-blog{% endif %}{% if isContact %}{% if isServices or isServicesIndex or isBlog %} {% endif %}is-contact{% endif %}{% if isWhyUs %}{% if isServices or isServicesIndex or isBlog or isContact %} {% endif %}is-why-us{% endif %}{% if isContent %}{% if isServices or isServicesIndex or isBlog or isContact or isWhyUs %} {% endif %}is-content{% endif %}">
@@ -3308,12 +3323,11 @@
               <div class="home-hero-grid">
                 <div>
                   <h1>
-                    We help companies move
-                    <span>from traditional workflows to AI-supported operations</span>
+                    Work smarter
+                    <span>with AI</span>
                   </h1>
                   <p class="home-lead">
-                    We guide non-technical teams step by step, so AI becomes part of daily work,
-                    improves execution speed, and supports better business decisions.
+                    We help non-technical teams use AI in daily operations.
                   </p>
                   <div class="home-cta">
                     <a class="btn btn-primary" href="{{ calendarUrl }}">{% ms "calendar_month" %}<span>Book a meeting</span></a>
