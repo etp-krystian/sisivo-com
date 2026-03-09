@@ -6,6 +6,16 @@ description: Why business teams choose Easy Tech Partners as a practical AI impl
 
 <div class="whyus-intro">
   <section class="whyus-intro-main" aria-labelledby="whyus-intro-title">
+    <figure class="whyus-photo">
+      <img
+        src="/images/why-us.jpg"
+        alt="Krystian Sulek and Mariusz Wrobel"
+        width="1200"
+        height="800"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
     <p class="whyus-kicker">Why clients choose us</p>
     <h2 id="whyus-intro-title">We make AI practical for non-technical teams</h2>
     <p>

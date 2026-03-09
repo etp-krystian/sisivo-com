@@ -6,6 +6,16 @@ description: Tell us your business goal and get a practical AI recommendation in
 
 <div class="contact-layout">
   <section class="contact-intro" aria-labelledby="contact-intro-title">
+    <figure class="contact-photo">
+      <img
+        src="/images/contact-us-krystian.jpg"
+        alt="Krystian Sulek"
+        width="1200"
+        height="800"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
     <p class="contact-kicker">Practical first step</p>
     <h2 id="contact-intro-title">Tell us where you want better results</h2>
     <p>
