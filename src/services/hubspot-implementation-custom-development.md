@@ -1,7 +1,7 @@
 ---
 layout: base
-title: "HubSpot Implementation and Custom Development"
-description: "Supporting capability for implementing HubSpot foundations required for AI revenue workflows."
+title: "HubSpot Revenue Workflow Setup (Supporting Capability)"
+description: "Supporting capability for HubSpot cleanup and setup required before launching AI revenue workflows."
 ---
 
 This capability supports teams that need HubSpot cleanup or structure work before automation.
@@ -14,7 +14,7 @@ This capability supports teams that need HubSpot cleanup or structure work befor
 
 ## Main solutions
 
-- [HubSpot and Revenue Stack Integrations](/services/hubspot/)
+- [HubSpot Implementation Support (Supporting Capability)](/services/hubspot/)
 - [AI Inbound Lead Qualification Agent](/services/ai-powered-lead-qualification/)
 - [Revenue Workflow Automation](/services/ai-business-process-automation/)
 

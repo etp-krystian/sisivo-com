@@ -37,7 +37,7 @@ This solution prepares sales-ready account and contact context automatically.
 ## Related capabilities
 
 - [Revenue Workflow Automation](/services/ai-business-process-automation/)
-- [Data Insights](/services/data-insights/)
+- [Revenue Signal Enrichment (Supporting Capability)](/services/data-insights/)
 - [Custom Business Agents](/services/custom-business-agents/)
 
 [Book a discovery call about sales research automation →](https://calendar.app.google/R21jua9szDGa7T7c9)

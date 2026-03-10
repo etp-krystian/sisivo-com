@@ -1,7 +1,7 @@
 ---
 layout: base
-title: "HubSpot Integrations"
-description: "Supporting capability for connecting HubSpot with forms, email, and operational tools used in revenue workflows."
+title: "HubSpot Revenue Workflow Integrations (Supporting Capability)"
+description: "Supporting capability for connecting HubSpot with forms, email, and operational tools used by revenue teams."
 ---
 
 HubSpot integrations are used to keep qualification and handoff data in sync.

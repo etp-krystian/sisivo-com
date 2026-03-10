@@ -1,10 +1,10 @@
 ---
 layout: base
-title: "HubSpot and Revenue Stack Integrations"
-description: "HubSpot implementation and integration support for AI-driven revenue workflows."
+title: "HubSpot Implementation Support (Supporting Capability)"
+description: "Supporting implementation layer for teams running AI qualification and revenue workflow automation in HubSpot."
 ---
 
-HubSpot is a supporting layer in many of our implementations.
+HubSpot is a supporting implementation layer, not the core offer.
 
 ## How we use HubSpot
 
@@ -13,10 +13,10 @@ HubSpot is a supporting layer in many of our implementations.
 - sales and marketing handoff automation
 - integration with forms, email, and internal tools
 
-## Typical HubSpot support work
+## Typical support work in HubSpot
 
 - [HubSpot Implementation and Custom Development](/services/hubspot-implementation-custom-development/)
 - [HubSpot Integrations](/services/hubspot-integrations/)
 - [Marketing and Sales Automation](/services/marketing-sales-automation/)
 
-[Book a discovery call about your HubSpot workflow →](https://calendar.app.google/R21jua9szDGa7T7c9)
+[Book a discovery call about your revenue workflow →](https://calendar.app.google/R21jua9szDGa7T7c9)

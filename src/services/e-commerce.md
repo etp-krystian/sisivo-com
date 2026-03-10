@@ -1,10 +1,10 @@
 ---
 layout: base
-title: "Revenue Workflow Automation for E-commerce B2B Flows"
-description: "Supporting capability for e-commerce teams with inbound qualification and sales workflow automation needs."
+title: "B2B E-commerce Revenue Workflows (Supporting Capability)"
+description: "Supporting capability for B2B e-commerce teams that need inbound qualification and revenue workflow automation."
 ---
 
-For e-commerce teams with B2B sales motion, we apply the same automation model:
+For B2B e-commerce teams, we apply the same three-solution model:
 
 - faster lead qualification
 - cleaner routing and handoffs
@@ -13,6 +13,7 @@ For e-commerce teams with B2B sales motion, we apply the same automation model:
 ## Main solutions
 
 - [AI Inbound Lead Qualification Agent](/services/ai-powered-lead-qualification/)
+- [AI Sales Research Agent](/services/ai-research-analysis-agents/)
 - [Revenue Workflow Automation](/services/ai-business-process-automation/)
 
 [Book a discovery call →](https://calendar.app.google/R21jua9szDGa7T7c9)

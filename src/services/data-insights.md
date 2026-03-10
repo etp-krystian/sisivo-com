@@ -1,12 +1,12 @@
 ---
 layout: base
-title: "Data Insights"
-description: "Supporting capability for turning CRM and workflow data into actionable sales and marketing context."
+title: "Revenue Signal Enrichment (Supporting Capability)"
+description: "Supporting capability for turning CRM and workflow data into context used by qualification and sales research agents."
 ---
 
-Data insights supports better qualification and sales decisions.
+This capability improves how your agents use data in day-to-day revenue workflows.
 
-## Focus
+## What this supports
 
 - extract account and lead signals
 - surface context for faster sales action
