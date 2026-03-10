@@ -16,6 +16,9 @@
   let timer = null;
   let resumeTimer = null;
   let hasAnimatedCenterOnce = false;
+  let progressResetFrame = null;
+  let centerAnimFrameA = null;
+  let centerAnimFrameB = null;
 
   const setProgress = (index, previousIndex) => {
     if (!progress) return;
@@ -28,8 +31,11 @@
     if (previousIndex === last && index === 0) {
       progress.classList.add("is-resetting");
       progress.style.strokeDashoffset = `${circumference}`;
-      void progress.offsetWidth;
-      progress.classList.remove("is-resetting");
+      if (progressResetFrame) cancelAnimationFrame(progressResetFrame);
+      progressResetFrame = requestAnimationFrame(() => {
+        progress.classList.remove("is-resetting");
+        progressResetFrame = null;
+      });
       return;
     }
 
@@ -64,9 +70,15 @@
       // Avoid a pop-in animation on initial load.
       if (hasAnimatedCenterOnce) {
         center.classList.remove("is-animating");
-        // Force reflow so the animation re-triggers.
-        void center.offsetWidth;
-        center.classList.add("is-animating");
+        if (centerAnimFrameA) cancelAnimationFrame(centerAnimFrameA);
+        if (centerAnimFrameB) cancelAnimationFrame(centerAnimFrameB);
+        centerAnimFrameA = requestAnimationFrame(() => {
+          centerAnimFrameB = requestAnimationFrame(() => {
+            center.classList.add("is-animating");
+            centerAnimFrameA = null;
+            centerAnimFrameB = null;
+          });
+        });
       } else {
         hasAnimatedCenterOnce = true;
       }
