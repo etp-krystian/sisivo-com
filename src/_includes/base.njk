@@ -3460,17 +3460,15 @@
             </div>
           </section>
 
-          <section class="section compact" aria-label="HubSpot partner">
+          <section class="section compact" aria-label="Implementation credibility">
             <div class="container">
               <div class="partner">
-                <div class="partner-badge">
-                  <img src="/images/partner-badge.webp" alt="HubSpot Solutions Partner badge." loading="lazy" />
-                </div>
                 <div>
                   <p class="partner-kicker">Technical credibility</p>
                   <h2 class="partner-title">Strong implementation background</h2>
                   <p class="partner-body">
-                    We bring automation, integrations, and HubSpot delivery experience. HubSpot is a supporting layer, not the strategy. The strategy is better revenue workflows with AI agents.
+                    We bring hands-on delivery experience in automation, integrations, and production workflow operations.
+                    The focus is always the same: better revenue workflows with AI agents.
                   </p>
                   <div class="home-cta">
                     <a class="btn btn-primary" href="{{ calendarUrl }}">{% ms "calendar_month" %}<span>Book a discovery call</span></a>
@@ -3490,7 +3488,9 @@
 	                </div>
 	                <div class="blog-grid">
 	                  {% for post in collections.posts %}
-	                    {% if loop.index0 < 3 %}
+                      {% set tags = post.data.tags or [] %}
+                      {% set isPriority = ("ai" in tags) or ("automation" in tags) or ("workflows" in tags) or ("sales" in tags) or ("inbound" in tags) or ("seo" in tags) %}
+	                    {% if isPriority %}
 	                      <article class="post-card post-card--compact">
 	                        {% if post.data.image %}
 	                          <div class="post-card-thumb" aria-hidden="true">
