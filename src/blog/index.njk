@@ -70,7 +70,7 @@ permalink: /blog/
                 {% if post.data.description %}
                   <p class="post-card-desc">{{ post.data.description | escape }}</p>
                 {% endif %}
-                <a class="post-card-more" href="{{ post.url }}">Read more {% ms "arrow_forward" %}</a>
+                <a class="post-card-more" href="{{ post.url }}">Read: {{ post.data.title | escape }} {% ms "arrow_forward" %}</a>
               </div>
             </article>
           </div>
