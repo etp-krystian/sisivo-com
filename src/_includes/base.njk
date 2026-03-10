@@ -118,7 +118,7 @@
       })();
     </script>
     {% if isHome %}
-      <link rel="preload" as="image" href="/images/company-data.jpg" type="image/jpeg" fetchpriority="high" />
+      <link rel="preload" as="image" href="/images/hero-image.jpg" type="image/jpeg" fetchpriority="high" />
     {% endif %}
     <style>
       :root {
@@ -165,6 +165,10 @@
       body {
         margin: 0;
         padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
       }
 
       body {
@@ -2271,12 +2275,12 @@
       .home-hero {
         margin-top: calc(var(--header-height) * -1);
         padding: calc(var(--space-xl) + var(--header-height)) 0 calc(var(--space-lg) * 1.3);
-        min-height: min(676px, 92vh);
+        min-height: min(744px, 92vh);
         display: flex;
         align-items: flex-end;
         position: relative;
         background: rgba(2, 6, 23, 1);
-        overflow: hidden;
+        overflow: visible;
         border-bottom: 1px solid rgba(226, 232, 240, 0.9);
       }
 
@@ -2359,6 +2363,82 @@
         margin-top: var(--space-xs);
         color: rgba(255, 255, 255, 0.72);
         font-size: 12px;
+      }
+
+      .hero-scroll {
+        position: absolute;
+        left: 50%;
+        bottom: -26px;
+        transform: translateX(-50%);
+        z-index: 6;
+      }
+
+      .hero-scroll-link {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        color: rgba(15, 23, 42, 0.9);
+        text-decoration: none;
+      }
+
+      .hero-scroll-text {
+        font-size: 10px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgba(15, 23, 42, 0.62);
+      }
+
+      .hero-scroll-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        border: 1px solid rgba(226, 232, 240, 0.92);
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow:
+          0 10px 24px rgba(2, 6, 23, 0.12),
+          0 1px 0 rgba(255, 255, 255, 0.86) inset;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        animation: hero-scroll-bob 1.6s ease-in-out infinite;
+      }
+
+      .hero-scroll-icon svg {
+        width: 18px;
+        height: 18px;
+        stroke: currentColor;
+      }
+
+      .hero-scroll-link:hover {
+        text-decoration: none;
+        color: #020617;
+      }
+
+      .hero-scroll-link:focus-visible {
+        outline: 3px solid rgba(255, 255, 255, 0.74);
+        outline-offset: 4px;
+        border-radius: 999px;
+      }
+
+      @keyframes hero-scroll-bob {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(4px);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        .hero-scroll-icon {
+          animation: none;
+        }
       }
 
       .home-hero .btn-ghost {
@@ -3097,6 +3177,14 @@
         .prose .visual-grid {
           grid-template-columns: minmax(0, 1fr);
         }
+
+        .hero-scroll {
+          bottom: -22px;
+        }
+
+        .hero-scroll-text {
+          display: none;
+        }
       }
 
       @media (min-width: 920px) {
@@ -3113,14 +3201,14 @@
 
       @media (min-width: 1200px) {
         .home-hero {
-          min-height: min(879px, 96vh);
+          min-height: min(967px, 96vh);
           padding-bottom: calc(var(--space-lg) * 1.6);
         }
       }
 
       @media (min-width: 1500px) {
         .home-hero {
-          min-height: min(1143px, 98vh);
+          min-height: min(1257px, 98vh);
           padding-bottom: calc(var(--space-lg) * 2);
         }
       }
@@ -3310,7 +3398,7 @@
           <section class="home-hero">
             <img
               class="home-hero-bg"
-              src="/images/company-data.jpg"
+              src="/images/hero-image.jpg"
               alt=""
               aria-hidden="true"
               loading="eager"
@@ -3344,6 +3432,17 @@
                   <div class="home-note">Simple language. Practical delivery. Measurable outcomes.</div>
                 </div>
               </div>
+            </div>
+            <div class="hero-scroll">
+              <a class="hero-scroll-link" href="#ai-loop" aria-label="Scroll down">
+                <span class="hero-scroll-text">Scroll</span>
+                <span class="hero-scroll-icon" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 3.5V12.5" stroke-width="1.7" stroke-linecap="round" />
+                    <path d="M4.6 9.4L8 12.8L11.4 9.4" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </a>
             </div>
           </section>
 
