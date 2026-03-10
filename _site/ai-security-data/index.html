@@ -70,51 +70,6 @@
     
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/png" href="/images/favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      id="ms-font-css"
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,0,0;24,500,1,0&text=arrow_forward%20calendar_month%20cookie%20rocket_launch%20search&display=swap"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,0,0;24,500,1,0&text=arrow_forward%20calendar_month%20cookie%20rocket_launch%20search&display=swap"
-      />
-    </noscript>
-    <script>
-      (() => {
-        const root = document.documentElement;
-        const timeout = window.setTimeout(() => root.classList.add("ms-timeout"), 2000);
-
-        const afterCssLoaded = () => {
-          if (root.classList.contains("ms-loaded")) return;
-          try {
-            if (!document.fonts?.load) return;
-            document.fonts
-              .load('1em "Material Symbols Rounded"', "calendar_month")
-              .then(() => {
-                window.clearTimeout(timeout);
-                root.classList.add("ms-loaded");
-              })
-              .catch(() => {});
-          } catch {
-            // ignore
-          }
-        };
-
-        const css = document.getElementById("ms-font-css");
-        if (css) {
-          css.addEventListener("load", afterCssLoaded, { once: true });
-          if (css.rel === "stylesheet") afterCssLoaded();
-        } else {
-          afterCssLoaded();
-        }
-      })();
-    </script>
     
     <style>
       :root {
@@ -186,27 +141,13 @@
       }
 
       .material-symbols-rounded {
-        opacity: 1;
-        font-variation-settings:
-          "FILL" var(--ms-fill, 0),
-          "wght" var(--ms-wght, 500),
-          "GRAD" var(--ms-grad, 0),
-          "opsz" var(--ms-opsz, 24);
-        font-size: 1.05em;
-        line-height: 1;
-        vertical-align: -0.18em;
+        width: 1.05em;
+        height: 1.05em;
+        vertical-align: -0.16em;
+        stroke: currentColor;
+        fill: none;
         user-select: none;
         color: currentColor;
-      }
-
-      .js .material-symbols-rounded {
-        opacity: 0;
-      }
-
-      .js.ms-loaded .material-symbols-rounded,
-      .js.ms-timeout .material-symbols-rounded {
-        opacity: 1;
-        transition: opacity 140ms ease;
       }
 
       .btn .material-symbols-rounded,
@@ -3241,7 +3182,7 @@
                     <p class="mega-menu-title">Start Here</p>
                     <p class="mega-menu-subtitle">A clear path for non-technical teams that want to start with AI.</p>
                   </div>
-                  <a class="mega-menu-all" href="/start-with-ai/">View start guide <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
+                  <a class="mega-menu-all" href="/start-with-ai/">View start guide <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
                 </div>
                 <div class="mega-menu-quickstart">
                   <a class="mega-quick-link" href="/start-with-ai/">
@@ -3290,7 +3231,7 @@
                     <p class="mega-menu-title">Services Overview</p>
                     <p class="mega-menu-subtitle">Choose a category or go directly to a specific service.</p>
                   </div>
-                  <a class="mega-menu-all" href="/services/">View all services <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
+                  <a class="mega-menu-all" href="/services/">View all services <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
                 </div>
                 <div class="mega-menu-groups">
                   <section class="mega-group" aria-label="AI Solutions Development links">
@@ -3365,7 +3306,7 @@
 
           <div class="header-actions">
             <a href="/contact-us/" class="btn btn-ghost">Contact</a>
-            <a href="https://calendar.app.google/R21jua9szDGa7T7c9" class="btn btn-primary"><span class="material-symbols-rounded" aria-hidden="true">calendar_month</span><span>Book a meeting</span></a>
+            <a href="https://calendar.app.google/R21jua9szDGa7T7c9" class="btn btn-primary"><svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" /><path d="M7.5 3.5v3" /><path d="M16.5 3.5v3" /><path d="M3.5 9.5h17" /></svg><span>Book a meeting</span></a>
           </div>
 
           <details class="mobile-nav">
@@ -3380,14 +3321,14 @@
               <span>Menu</span>
             </summary>
             <div class="mobile-nav-panel" role="dialog" aria-label="Mobile navigation">
-              <a href="/start-with-ai/">Start with AI <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
-              <a href="/services/">Services <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
-              <a href="/ai-use-case-examples/">Use Cases <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
-              <a href="/why-us/">Why Us <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
-              <a href="/about-us/">About <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
-              <a href="/blog/">Blog <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
+              <a href="/start-with-ai/">Start with AI <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
+              <a href="/services/">Services <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
+              <a href="/ai-use-case-examples/">Use Cases <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
+              <a href="/why-us/">Why Us <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
+              <a href="/about-us/">About <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
+              <a href="/blog/">Blog <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
               <a href="/contact-us/">Contact</a>
-              <a class="mobile-nav-cta" href="https://calendar.app.google/R21jua9szDGa7T7c9"><span class="material-symbols-rounded" aria-hidden="true">calendar_month</span><span>Book a meeting</span></a>
+              <a class="mobile-nav-cta" href="https://calendar.app.google/R21jua9szDGa7T7c9"><svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" /><path d="M7.5 3.5v3" /><path d="M16.5 3.5v3" /><path d="M3.5 9.5h17" /></svg><span>Book a meeting</span></a>
             </div>
           </details>
         </div>
@@ -3460,7 +3401,7 @@
   <h2>Need to assess risk before you start?</h2>
   <p>We can review your workflow and define practical security controls that match your business reality.</p>
   <div class="home-cta">
-    <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9"><span class="material-symbols-rounded" aria-hidden="true">calendar_month</span><span>Discuss security and data</span></a>
+    <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9"><svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" /><path d="M7.5 3.5v3" /><path d="M16.5 3.5v3" /><path d="M3.5 9.5h17" /></svg><span>Discuss security and data</span></a>
     <a class="btn btn-ghost btn-see-services" href="/contact-us/"><span>Send us a message</span><span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" /><path d="M8.8 4.3L12.5 8L8.8 11.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></span></a>
   </div>
 </section>
@@ -3479,7 +3420,7 @@
             <div>© 2026, Easy Tech Partners.</div>
             <div class="footer-build">
               Updated:
-              <time datetime="2026-03-10T11:59:02.862Z">2026-03-10 11:59 UTC</time>
+              <time datetime="2026-03-10T14:56:39.133Z">2026-03-10 14:56 UTC</time>
             </div>
           </div>
           <div class="footer-links" aria-label="Footer links">
@@ -3503,7 +3444,7 @@
       aria-label="Cookie settings"
       hidden
     >
-      <span class="material-symbols-rounded" aria-hidden="true">cookie</span>
+      <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 1 0 8.5 8.5A5.5 5.5 0 0 1 15 6.5 3 3 0 0 1 12 3.5Z" /><circle cx="8.9" cy="12" r="1.1" fill="currentColor" stroke="none" /><circle cx="12.8" cy="14.9" r="1" fill="currentColor" stroke="none" /><circle cx="10.8" cy="9.3" r="0.9" fill="currentColor" stroke="none" /></svg>
     </button>
     <div
       class="cookie-banner"
