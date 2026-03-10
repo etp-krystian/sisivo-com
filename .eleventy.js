@@ -32,7 +32,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({
     "src/images": "images",
-    "src/js": "js"
+    "src/js": "js",
+    "src/_redirects": "_redirects"
   });
 
   // Draft support:

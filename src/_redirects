@@ -1,0 +1,3 @@
+# Cloudflare Pages redirects
+# Format: /from /to 301
+/insights/custom-hubspot-integrations-when-native-apps-arent-enough /blog/custom-hubspot-integrations-when-native-apps-arent-enough/ 301
