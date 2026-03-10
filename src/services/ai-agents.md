@@ -18,4 +18,4 @@ We build AI agents for practical sales and marketing workflows.
 - less repetitive manual work
 - more consistent execution quality
 
-[Book a discovery call about AI agents →](https://calendar.app.google/R21jua9szDGa7T7c9)
+[Book a discovery call →](https://calendar.app.google/R21jua9szDGa7T7c9)

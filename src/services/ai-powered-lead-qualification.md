@@ -40,4 +40,4 @@ This solution automates inbound lead triage for B2B revenue teams.
 - [HubSpot Integrations](/services/hubspot-integrations/)
 - [AI SDR and Outreach Automation](/services/ai-sdr-outreach-automation/)
 
-[Book a discovery call about inbound qualification →](https://calendar.app.google/R21jua9szDGa7T7c9)
+[Book a discovery call →](https://calendar.app.google/R21jua9szDGa7T7c9)

@@ -19,4 +19,4 @@ HubSpot is a supporting implementation layer, not the core offer.
 - [HubSpot Integrations](/services/hubspot-integrations/)
 - [Marketing and Sales Automation](/services/marketing-sales-automation/)
 
-[Book a discovery call about your revenue workflow →](https://calendar.app.google/R21jua9szDGa7T7c9)
+[Book a discovery call →](https://calendar.app.google/R21jua9szDGa7T7c9)

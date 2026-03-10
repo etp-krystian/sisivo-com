@@ -18,4 +18,4 @@ This is a focused scoping service for teams that need to choose the right first 
 - teams with multiple ideas and unclear priority
 - teams that want to avoid over-scoping
 
-[Book a discovery call to scope your first workflow →](https://calendar.app.google/R21jua9szDGa7T7c9)
+[Book a discovery call →](https://calendar.app.google/R21jua9szDGa7T7c9)

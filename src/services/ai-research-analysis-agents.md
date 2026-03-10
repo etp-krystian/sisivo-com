@@ -40,4 +40,4 @@ This solution prepares sales-ready account and contact context automatically.
 - [Revenue Signal Enrichment (Supporting Capability)](/services/data-insights/)
 - [Custom Business Agents](/services/custom-business-agents/)
 
-[Book a discovery call about sales research automation →](https://calendar.app.google/R21jua9szDGa7T7c9)
+[Book a discovery call →](https://calendar.app.google/R21jua9szDGa7T7c9)

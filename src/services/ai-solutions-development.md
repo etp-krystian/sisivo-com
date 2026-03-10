@@ -19,4 +19,4 @@ This page covers our implementation layer across the three core solutions.
 - production deployment and optimization
 - practical team handover
 
-[Book a discovery call about your workflow →](https://calendar.app.google/R21jua9szDGa7T7c9)
+[Book a discovery call →](https://calendar.app.google/R21jua9szDGa7T7c9)

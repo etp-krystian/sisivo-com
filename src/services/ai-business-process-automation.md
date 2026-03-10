@@ -40,4 +40,4 @@ This solution removes repetitive manual work from revenue-team workflows.
 - [AI Integrations with CRM, ERP, and APIs](/services/ai-integrations-crm-erp-apis/)
 - [Internal Workflow Agents](/services/internal-workflow-agents/)
 
-[Book a discovery call about workflow automation →](https://calendar.app.google/R21jua9szDGa7T7c9)
+[Book a discovery call →](https://calendar.app.google/R21jua9szDGa7T7c9)
