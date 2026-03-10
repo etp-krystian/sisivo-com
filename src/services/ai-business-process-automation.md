@@ -1,47 +1,43 @@
 ---
 layout: base
-title: "AI-Powered Business Process Automation"
-description: "AI-powered business process automation to reduce manual work and speed up repeatable workflows."
+title: "Revenue Workflow Automation"
+description: "Automate repetitive revenue-team workflows by connecting CRM, forms, email, and internal tools with AI logic."
 ---
 
-AI-Powered Business Process Automation is a practical service for teams that want clear results without technical complexity.
+This solution removes repetitive manual work from revenue-team workflows.
 
-Automate recurring tasks across departments so your team can focus on high-value work.
+## What it does
 
-## What you get
+- connects CRM, forms, email, and internal systems
+- automates handoffs between marketing, sales, and RevOps
+- applies workflow rules and AI-assisted decisions
+- updates records and statuses automatically
+- triggers follow-up actions in the right sequence
 
-- A clear scope and implementation plan
-- Delivery aligned with your existing tools and workflows
-- Measurable outcomes tied to business goals
-- Training and handover so your team can use the solution with confidence
+## Who it is for
+
+- B2B teams with frequent handoffs
+- RevOps teams managing multi-tool workflows
+- sales and marketing teams losing time on admin
 
 ## Business outcomes
 
-- Less manual work in day-to-day operations
-- Faster execution and better consistency
-- Better visibility into performance and bottlenecks
-- A practical setup you can scale over time
+- fewer manual steps in pipeline operations
+- faster cross-team handoffs
+- improved data consistency across tools
+- lower operational friction for revenue teams
 
-## Good fit if
+## How implementation works
 
-- Your team handles repeatable tasks every week
-- You want AI to support real business work, not just experiments
-- You need a solution your non-technical team can understand and use
+1. Map current workflow and bottlenecks.
+2. Define automation rules and exception handling.
+3. Integrate systems and deploy workflow logic.
+4. Monitor throughput, errors, and adoption.
 
-## FAQ
+## Related capabilities
 
-### Is this too technical for our team?
-No. We design and explain everything in plain business language.
+- [AI Inbound Lead Qualification Agent](/services/ai-powered-lead-qualification/)
+- [AI Integrations with CRM, ERP, and APIs](/services/ai-integrations-crm-erp-apis/)
+- [Internal Workflow Agents](/services/internal-workflow-agents/)
 
-### Can we start small?
-Yes. Most projects start with one focused workflow and expand after results.
-
-### How do we know if it works?
-We define clear success metrics at the start and review outcomes regularly.
-
-## Related services
-
-- [Back to category](/services/ai-solutions-development/)
-- [All services](/services/)
-
-[Book a meeting about AI-Powered Business Process Automation →](https://calendar.app.google/R21jua9szDGa7T7c9)
+[Book a discovery call about workflow automation →](https://calendar.app.google/R21jua9szDGa7T7c9)

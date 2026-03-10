@@ -1,47 +1,43 @@
 ---
 layout: base
-title: "AI-Powered Lead Qualification"
-description: "AI-powered lead qualification to prioritize high-value opportunities and reduce manual triage."
+title: "AI Inbound Lead Qualification Agent"
+description: "AI agent that analyzes inbound leads, enriches context, qualifies, and routes leads faster for B2B sales teams."
 ---
 
-AI-Powered Lead Qualification is a practical service for teams that want clear results without technical complexity.
+This solution automates inbound lead triage for B2B revenue teams.
 
-Use AI to score and qualify leads so sales teams can focus on the right accounts.
+## What it does
 
-## What you get
+- reads inbound lead data from forms and CRM
+- enriches company and account context
+- applies qualification logic to prioritize leads
+- routes leads to the right owner
+- writes structured notes to your CRM
 
-- A clear scope and implementation plan
-- Delivery aligned with your existing tools and workflows
-- Measurable outcomes tied to business goals
-- Training and handover so your team can use the solution with confidence
+## Who it is for
+
+- B2B teams with recurring inbound lead volume
+- sales teams that need faster response
+- RevOps teams that want cleaner qualification flow
 
 ## Business outcomes
 
-- Less manual work in day-to-day operations
-- Faster execution and better consistency
-- Better visibility into performance and bottlenecks
-- A practical setup you can scale over time
+- faster qualification and routing
+- less manual triage work
+- better lead context for first response
+- more consistent handoff quality
 
-## Good fit if
+## How implementation works
 
-- Your team handles repeatable tasks every week
-- You want AI to support real business work, not just experiments
-- You need a solution your non-technical team can understand and use
+1. Align qualification criteria and routing rules.
+2. Connect forms, CRM, and enrichment sources.
+3. Deploy and validate on live inbound flow.
+4. Optimize scoring and routing logic.
 
-## FAQ
+## Related capabilities
 
-### Is this too technical for our team?
-No. We design and explain everything in plain business language.
+- [Revenue Workflow Automation](/services/ai-business-process-automation/)
+- [HubSpot Integrations](/services/hubspot-integrations/)
+- [AI SDR and Outreach Automation](/services/ai-sdr-outreach-automation/)
 
-### Can we start small?
-Yes. Most projects start with one focused workflow and expand after results.
-
-### How do we know if it works?
-We define clear success metrics at the start and review outcomes regularly.
-
-## Related services
-
-- [Back to category](/services/hubspot/)
-- [All services](/services/)
-
-[Book a meeting about AI-Powered Lead Qualification →](https://calendar.app.google/R21jua9szDGa7T7c9)
+[Book a discovery call about inbound qualification →](https://calendar.app.google/R21jua9szDGa7T7c9)

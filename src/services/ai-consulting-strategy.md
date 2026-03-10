@@ -1,50 +1,21 @@
 ---
 layout: base
-title: "AI Consulting & Strategy"
-description: "AI consulting and strategy for non-technical companies: discovery workshops, use case prioritization, AI roadmap, architecture planning, and tool selection."
+title: "Workflow Discovery and AI Scope"
+description: "Focused discovery to choose the right revenue workflow for your first AI implementation."
 ---
 
-AI Consulting & Strategy helps you decide where AI should start and what to build first.
+This is a focused scoping service for teams that need to choose the right first implementation.
 
-If you have many ideas but need a clear direction, this service gives you a practical plan your team can execute.
+## What we define
 
-## What is included in AI Consulting & Strategy
+- which workflow to automate first
+- what systems and data are required
+- what success metrics to track
+- what can be delivered in the first phase
 
-- [**AI discovery workshops**](/services/ai-discovery-workshops/) with business and team stakeholders
-- [**AI use case identification**](/services/ai-use-case-identification/) focused on measurable value
-- [**AI roadmap development**](/services/ai-roadmap-development/) with practical phases
-- [**AI architecture design**](/services/ai-architecture-design/) aligned with your systems and constraints
-- [**AI tools and model selection**](/services/ai-tools-model-selection/) based on business fit, not hype
+## Best fit
 
-## Business outcomes you can expect
+- teams with multiple ideas and unclear priority
+- teams that want to avoid over-scoping
 
-- Clear priorities and less guesswork
-- Better budget decisions
-- Faster path from idea to implementation
-- Lower risk of choosing the wrong stack
-
-## What you get at the end
-
-- Prioritized use case list
-- Recommended first implementation scope
-- Delivery roadmap by phase
-- Decision framework for tools and vendors
-
-## FAQ
-
-### Is this only for companies already using AI?
-No. This is often the best starting point for teams new to AI.
-
-### Can we do strategy and implementation with the same partner?
-Yes. We can continue into delivery after strategy.
-
-### How technical is this process?
-It is business-first. We explain technical decisions in plain language.
-
-## Related services
-
-- [AI Solutions Development](/services/ai-solutions-development/)
-- [Autonomous AI Agents](/services/ai-agents/)
-- [HubSpot Development & AI Automation](/services/hubspot/)
-
-[Book a meeting about AI Consulting & Strategy →](https://calendar.app.google/R21jua9szDGa7T7c9)
+[Book a discovery call to scope your first workflow →](https://calendar.app.google/R21jua9szDGa7T7c9)

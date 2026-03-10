@@ -1,47 +1,20 @@
 ---
 layout: base
 title: "Marketing and Sales Automation"
-description: "Marketing and sales automation to improve follow-up speed and process consistency."
+description: "Supporting capability for automating handoffs and repetitive steps across marketing and sales."
 ---
 
-Marketing and Sales Automation is a practical service for teams that want clear results without technical complexity.
+We automate recurring marketing-to-sales and sales-to-RevOps workflow steps.
 
-Automate core marketing and sales steps so leads move faster and handoffs are smoother.
+## Typical automation
 
-## What you get
+- lead routing and ownership updates
+- stage transitions and follow-up tasks
+- workflow notifications and summaries
 
-- A clear scope and implementation plan
-- Delivery aligned with your existing tools and workflows
-- Measurable outcomes tied to business goals
-- Training and handover so your team can use the solution with confidence
+## Main solutions
 
-## Business outcomes
+- [AI Inbound Lead Qualification Agent](/services/ai-powered-lead-qualification/)
+- [Revenue Workflow Automation](/services/ai-business-process-automation/)
 
-- Less manual work in day-to-day operations
-- Faster execution and better consistency
-- Better visibility into performance and bottlenecks
-- A practical setup you can scale over time
-
-## Good fit if
-
-- Your team handles repeatable tasks every week
-- You want AI to support real business work, not just experiments
-- You need a solution your non-technical team can understand and use
-
-## FAQ
-
-### Is this too technical for our team?
-No. We design and explain everything in plain business language.
-
-### Can we start small?
-Yes. Most projects start with one focused workflow and expand after results.
-
-### How do we know if it works?
-We define clear success metrics at the start and review outcomes regularly.
-
-## Related services
-
-- [Back to category](/services/hubspot/)
-- [All services](/services/)
-
-[Book a meeting about Marketing and Sales Automation →](https://calendar.app.google/R21jua9szDGa7T7c9)
+[Book a discovery call →](https://calendar.app.google/R21jua9szDGa7T7c9)

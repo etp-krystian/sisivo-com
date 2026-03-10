@@ -1,47 +1,21 @@
 ---
 layout: base
 title: "Multi-Agent Systems"
-description: "Multi-agent systems where specialized AI agents collaborate on complex business processes."
+description: "Supporting capability for workflows where multiple AI agents handle specialized revenue tasks."
 ---
 
-Multi-Agent Systems is a practical service for teams that want clear results without technical complexity.
+We use multi-agent setup only when it improves reliability or speed in revenue workflows.
 
-Design multiple agents that divide work, coordinate steps, and deliver faster outcomes in complex workflows.
+## Typical split
 
-## What you get
+- qualification agent
+- research agent
+- workflow orchestration agent
 
-- A clear scope and implementation plan
-- Delivery aligned with your existing tools and workflows
-- Measurable outcomes tied to business goals
-- Training and handover so your team can use the solution with confidence
+## Main solutions
 
-## Business outcomes
+- [AI Inbound Lead Qualification Agent](/services/ai-powered-lead-qualification/)
+- [AI Sales Research Agent](/services/ai-research-analysis-agents/)
+- [Revenue Workflow Automation](/services/ai-business-process-automation/)
 
-- Less manual work in day-to-day operations
-- Faster execution and better consistency
-- Better visibility into performance and bottlenecks
-- A practical setup you can scale over time
-
-## Good fit if
-
-- Your team handles repeatable tasks every week
-- You want AI to support real business work, not just experiments
-- You need a solution your non-technical team can understand and use
-
-## FAQ
-
-### Is this too technical for our team?
-No. We design and explain everything in plain business language.
-
-### Can we start small?
-Yes. Most projects start with one focused workflow and expand after results.
-
-### How do we know if it works?
-We define clear success metrics at the start and review outcomes regularly.
-
-## Related services
-
-- [Back to category](/services/ai-agents/)
-- [All services](/services/)
-
-[Book a meeting about Multi-Agent Systems →](https://calendar.app.google/R21jua9szDGa7T7c9)
+[Book a discovery call →](https://calendar.app.google/R21jua9szDGa7T7c9)

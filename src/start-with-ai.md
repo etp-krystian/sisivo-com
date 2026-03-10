@@ -1,73 +1,54 @@
 ---
 layout: base
-title: Start with AI
-description: "A practical starting point for small and mid-size companies that want to use AI with clear business outcomes."
+title: Start With AI
+description: "A practical starting path for B2B teams that want to automate lead qualification and revenue workflows."
 ---
 
-If your team wants to use AI but is unsure where to begin, start here.
+If you are early in AI adoption, start with one revenue workflow.
 
-You do not need a technical department, perfect data, or a large budget to begin. You need one business problem worth solving first.
+Do not begin with a broad transformation project.
 
-<div class="highlight-note">
-The safest way to adopt AI is to start with one high-impact workflow, measure results, and scale in phases.
-</div>
+## Best first workflows
 
-## Who this is for
+- inbound lead qualification and routing
+- sales research and account prep
+- repetitive CRM and pipeline admin steps
 
-This page is for business owners, directors, and operations teams who want to:
-
-- reduce manual work and repetitive coordination
-- improve speed and consistency in key workflows
-- make AI decisions based on business value, not hype
-
-## Choose your first workflow
-
-Good first projects usually happen in areas with frequent, repeatable work:
-
-- weekly reporting and internal analysis
-- sales follow-up and lead qualification
-- marketing execution and content operations
-- internal support and knowledge retrieval
-
-## Recommended first-step path
+## Simple first-step plan
 
 <ul class="step-flow">
-  <li><strong>1. Intro call:</strong> We align on your business goal, current process, and constraints.</li>
-  <li><strong>2. Opportunity shortlist:</strong> We identify the best AI use cases for your team and rank them by value and implementation effort.</li>
-  <li><strong>3. Priority decision:</strong> We choose one workflow to start with and define clear success metrics.</li>
-  <li><strong>4. Pilot plan:</strong> You get scope, timeline, ownership, and a realistic rollout plan.</li>
+  <li><strong>1. Pick one workflow:</strong> choose the process that creates the most friction today.</li>
+  <li><strong>2. Define one metric:</strong> response speed, qualification quality, conversion support, or manual time saved.</li>
+  <li><strong>3. Implement a focused first version:</strong> launch in production with your real tools.</li>
+  <li><strong>4. Improve and scale:</strong> expand only after the first implementation proves value.</li>
 </ul>
 
-## Explore the next decision pages
+## Supporting pages
 
 <div class="trust-grid">
   <article class="trust-card">
-    <h3><a href="/ai-discovery-sprint/">AI Discovery Sprint</a></h3>
-    <p>Use a focused two-week engagement to choose the best first implementation with confidence.</p>
-  </article>
-  <article class="trust-card">
-    <h3><a href="/implementation-process/">Implementation Process</a></h3>
-    <p>See how we deliver projects step by step, with clear ownership and measurable checkpoints.</p>
+    <h3><a href="/implementation-process/">How It Works</a></h3>
+    <p>See our delivery model from workflow audit to launch and optimization.</p>
   </article>
   <article class="trust-card">
     <h3><a href="/ai-security-data/">Security and Data</a></h3>
-    <p>Understand how we approach permissions, controls, and data protection from day one.</p>
+    <p>How we handle permissions, data boundaries, and operational risk.</p>
   </article>
   <article class="trust-card">
     <h3><a href="/business-ai-faq/">Business AI FAQ</a></h3>
-    <p>Get practical answers to common non-technical questions about cost, risk, and timeline.</p>
+    <p>Direct answers for founders, sales leaders, and RevOps teams.</p>
+  </article>
+  <article class="trust-card">
+    <h3><a href="/ai-use-case-examples/">Use Cases</a></h3>
+    <p>Concrete examples for qualification, sales research, and revenue ops.</p>
   </article>
 </div>
 
-## Not technical? That is normal
-
-Most decision makers we support are not AI specialists. We keep communication clear, business-focused, and practical at every step.
-
 <section class="content-page-cta" aria-label="Start with AI call to action">
-  <h2>Want help choosing your first AI project?</h2>
-  <p>Tell us what your team is trying to improve. We will recommend a practical first step and explain the options in plain business language.</p>
+  <h2>Need help choosing the first workflow?</h2>
+  <p>Tell us where your team loses time today. We will recommend the best first implementation.</p>
   <div class="home-cta">
-    <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9">{% ms "calendar_month" %}<span>Book a short intro call</span></a>
+    <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9">{% ms "calendar_month" %}<span>Book a discovery call</span></a>
     <a class="btn btn-ghost btn-see-services" href="/contact-us/"><span>Send us a message</span><span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" /><path d="M8.8 4.3L12.5 8L8.8 11.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></span></a>
   </div>
 </section>

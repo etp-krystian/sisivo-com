@@ -1,47 +1,21 @@
 ---
 layout: base
-title: "AI Use Case Identification"
-description: "AI use case identification focused on business value, feasibility, and clear outcomes."
+title: "Use Case Identification"
+description: "Identify and prioritize AI use cases in sales, inbound qualification, and revenue operations."
 ---
 
-AI Use Case Identification is a practical service for teams that want clear results without technical complexity.
+We help teams choose practical use cases with clear business outcomes.
 
-Identify and prioritize the AI use cases that can create measurable business impact first.
+## Selection criteria
 
-## What you get
+- workflow frequency
+- manual effort reduction potential
+- impact on speed, quality, or conversion
+- implementation complexity
 
-- A clear scope and implementation plan
-- Delivery aligned with your existing tools and workflows
-- Measurable outcomes tied to business goals
-- Training and handover so your team can use the solution with confidence
+## Next step
 
-## Business outcomes
+- [Use Cases](/ai-use-case-examples/)
+- [How It Works](/implementation-process/)
 
-- Less manual work in day-to-day operations
-- Faster execution and better consistency
-- Better visibility into performance and bottlenecks
-- A practical setup you can scale over time
-
-## Good fit if
-
-- Your team handles repeatable tasks every week
-- You want AI to support real business work, not just experiments
-- You need a solution your non-technical team can understand and use
-
-## FAQ
-
-### Is this too technical for our team?
-No. We design and explain everything in plain business language.
-
-### Can we start small?
-Yes. Most projects start with one focused workflow and expand after results.
-
-### How do we know if it works?
-We define clear success metrics at the start and review outcomes regularly.
-
-## Related services
-
-- [Back to category](/services/ai-consulting-strategy/)
-- [All services](/services/)
-
-[Book a meeting about AI Use Case Identification →](https://calendar.app.google/R21jua9szDGa7T7c9)
+[Book a discovery call →](https://calendar.app.google/R21jua9szDGa7T7c9)

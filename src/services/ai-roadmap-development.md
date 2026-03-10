@@ -1,47 +1,22 @@
 ---
 layout: base
 title: "AI Roadmap Development"
-description: "AI roadmap development with practical delivery phases and clear implementation priorities."
+description: "Practical rollout roadmap for B2B revenue-team AI implementations."
 ---
 
-AI Roadmap Development is a practical service for teams that want clear results without technical complexity.
+A practical roadmap for teams planning multiple automation phases.
 
-Create a realistic AI roadmap with clear phases, owners, and timelines.
+## Includes
 
-## What you get
+- first implementation scope
+- phase sequencing
+- risk and dependency visibility
+- ownership and success metrics
 
-- A clear scope and implementation plan
-- Delivery aligned with your existing tools and workflows
-- Measurable outcomes tied to business goals
-- Training and handover so your team can use the solution with confidence
+## Main solutions
 
-## Business outcomes
+- [AI Inbound Lead Qualification Agent](/services/ai-powered-lead-qualification/)
+- [AI Sales Research Agent](/services/ai-research-analysis-agents/)
+- [Revenue Workflow Automation](/services/ai-business-process-automation/)
 
-- Less manual work in day-to-day operations
-- Faster execution and better consistency
-- Better visibility into performance and bottlenecks
-- A practical setup you can scale over time
-
-## Good fit if
-
-- Your team handles repeatable tasks every week
-- You want AI to support real business work, not just experiments
-- You need a solution your non-technical team can understand and use
-
-## FAQ
-
-### Is this too technical for our team?
-No. We design and explain everything in plain business language.
-
-### Can we start small?
-Yes. Most projects start with one focused workflow and expand after results.
-
-### How do we know if it works?
-We define clear success metrics at the start and review outcomes regularly.
-
-## Related services
-
-- [Back to category](/services/ai-consulting-strategy/)
-- [All services](/services/)
-
-[Book a meeting about AI Roadmap Development →](https://calendar.app.google/R21jua9szDGa7T7c9)
+[Book a roadmap call →](https://calendar.app.google/R21jua9szDGa7T7c9)

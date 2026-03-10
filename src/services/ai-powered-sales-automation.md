@@ -1,47 +1,20 @@
 ---
 layout: base
 title: "AI-Powered Sales Automation"
-description: "AI-powered sales automation for follow-ups, reminders, and repeatable deal workflows."
+description: "Supporting capability for automating repetitive sales workflow steps using AI and workflow logic."
 ---
 
-AI-Powered Sales Automation is a practical service for teams that want clear results without technical complexity.
+This capability helps sales teams execute repetitive tasks with less manual effort.
 
-Automate repetitive sales tasks to improve consistency and reduce admin load.
+## Common automations
 
-## What you get
+- follow-up task generation
+- CRM update automation
+- qualification-based workflow triggers
 
-- A clear scope and implementation plan
-- Delivery aligned with your existing tools and workflows
-- Measurable outcomes tied to business goals
-- Training and handover so your team can use the solution with confidence
+## Main solutions
 
-## Business outcomes
+- [AI Inbound Lead Qualification Agent](/services/ai-powered-lead-qualification/)
+- [Revenue Workflow Automation](/services/ai-business-process-automation/)
 
-- Less manual work in day-to-day operations
-- Faster execution and better consistency
-- Better visibility into performance and bottlenecks
-- A practical setup you can scale over time
-
-## Good fit if
-
-- Your team handles repeatable tasks every week
-- You want AI to support real business work, not just experiments
-- You need a solution your non-technical team can understand and use
-
-## FAQ
-
-### Is this too technical for our team?
-No. We design and explain everything in plain business language.
-
-### Can we start small?
-Yes. Most projects start with one focused workflow and expand after results.
-
-### How do we know if it works?
-We define clear success metrics at the start and review outcomes regularly.
-
-## Related services
-
-- [Back to category](/services/hubspot/)
-- [All services](/services/)
-
-[Book a meeting about AI-Powered Sales Automation →](https://calendar.app.google/R21jua9szDGa7T7c9)
+[Book a discovery call →](https://calendar.app.google/R21jua9szDGa7T7c9)

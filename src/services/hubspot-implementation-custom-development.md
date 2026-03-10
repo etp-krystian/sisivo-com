@@ -1,47 +1,21 @@
 ---
 layout: base
 title: "HubSpot Implementation and Custom Development"
-description: "HubSpot implementation and custom development to improve marketing and sales operations."
+description: "Supporting capability for implementing HubSpot foundations required for AI revenue workflows."
 ---
 
-HubSpot Implementation and Custom Development is a practical service for teams that want clear results without technical complexity.
+This capability supports teams that need HubSpot cleanup or structure work before automation.
 
-Set up and tailor HubSpot so your team can work faster with cleaner, more reliable processes.
+## Typical implementation work
 
-## What you get
+- lifecycle and pipeline architecture
+- object/property setup for qualification workflows
+- custom logic to support revenue-team operations
 
-- A clear scope and implementation plan
-- Delivery aligned with your existing tools and workflows
-- Measurable outcomes tied to business goals
-- Training and handover so your team can use the solution with confidence
+## Main solutions
 
-## Business outcomes
+- [HubSpot and Revenue Stack Integrations](/services/hubspot/)
+- [AI Inbound Lead Qualification Agent](/services/ai-powered-lead-qualification/)
+- [Revenue Workflow Automation](/services/ai-business-process-automation/)
 
-- Less manual work in day-to-day operations
-- Faster execution and better consistency
-- Better visibility into performance and bottlenecks
-- A practical setup you can scale over time
-
-## Good fit if
-
-- Your team handles repeatable tasks every week
-- You want AI to support real business work, not just experiments
-- You need a solution your non-technical team can understand and use
-
-## FAQ
-
-### Is this too technical for our team?
-No. We design and explain everything in plain business language.
-
-### Can we start small?
-Yes. Most projects start with one focused workflow and expand after results.
-
-### How do we know if it works?
-We define clear success metrics at the start and review outcomes regularly.
-
-## Related services
-
-- [Back to category](/services/hubspot/)
-- [All services](/services/)
-
-[Book a meeting about HubSpot Implementation and Custom Development →](https://calendar.app.google/R21jua9szDGa7T7c9)
+[Book a discovery call →](https://calendar.app.google/R21jua9szDGa7T7c9)

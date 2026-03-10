@@ -1,47 +1,21 @@
 ---
 layout: base
 title: "Custom Business Agents"
-description: "Custom business agents tailored to your company process, systems, and goals."
+description: "Supporting capability for custom agent logic tailored to your sales and marketing motion."
 ---
 
-Custom Business Agents is a practical service for teams that want clear results without technical complexity.
+Custom business agents are used when your workflow needs specific logic beyond standard patterns.
 
-Build agents specifically for your business model, processes, and priorities.
+## Typical customization
 
-## What you get
+- qualification rules by segment
+- custom scoring logic
+- specific output formats for CRM and team workflows
 
-- A clear scope and implementation plan
-- Delivery aligned with your existing tools and workflows
-- Measurable outcomes tied to business goals
-- Training and handover so your team can use the solution with confidence
+## Main solutions
 
-## Business outcomes
+- [AI Inbound Lead Qualification Agent](/services/ai-powered-lead-qualification/)
+- [AI Sales Research Agent](/services/ai-research-analysis-agents/)
+- [Revenue Workflow Automation](/services/ai-business-process-automation/)
 
-- Less manual work in day-to-day operations
-- Faster execution and better consistency
-- Better visibility into performance and bottlenecks
-- A practical setup you can scale over time
-
-## Good fit if
-
-- Your team handles repeatable tasks every week
-- You want AI to support real business work, not just experiments
-- You need a solution your non-technical team can understand and use
-
-## FAQ
-
-### Is this too technical for our team?
-No. We design and explain everything in plain business language.
-
-### Can we start small?
-Yes. Most projects start with one focused workflow and expand after results.
-
-### How do we know if it works?
-We define clear success metrics at the start and review outcomes regularly.
-
-## Related services
-
-- [Back to category](/services/ai-agents/)
-- [All services](/services/)
-
-[Book a meeting about Custom Business Agents →](https://calendar.app.google/R21jua9szDGa7T7c9)
+[Book a discovery call →](https://calendar.app.google/R21jua9szDGa7T7c9)
