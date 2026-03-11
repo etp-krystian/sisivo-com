@@ -1035,6 +1035,23 @@
         content: none;
       }
 
+      .is-lead-plan .leadplan-hero-image {
+        margin: 16px 0 0;
+      }
+
+      .is-lead-plan .leadplan-hero-image img {
+        width: 100%;
+        max-width: 512px;
+        height: 600px;
+        display: block;
+        border-radius: 14px;
+        border: 0;
+        box-shadow: 0 14px 28px rgba(2, 6, 23, 0.12);
+        opacity: 0.88;
+        object-fit: cover;
+        object-position: center top;
+      }
+
       .is-lead-plan .leadplan-form-card {
         margin: 0;
         padding: clamp(16px, 2.2vw, 22px);
@@ -3323,6 +3340,10 @@
       }
 
       @media (max-width: 980px) {
+        .is-lead-plan .leadplan-hero-image {
+          display: none;
+        }
+
         .is-lead-plan .leadplan-hero {
           grid-template-columns: 1fr;
           gap: var(--space-sm);

@@ -12,11 +12,14 @@ description: "Share your current workflow and get a practical first AI use case 
       Tell us how your team handles leads today and we will recommend the best first AI workflow to implement.
     </p>
     <p class="leadplan-reassure">Takes about 3 minutes.</p>
-    <ul class="leadplan-points">
-      <li>Built for B2B teams with inbound leads or active outbound sales</li>
-      <li>Focused recommendation, not a generic audit</li>
-      <li>Useful before booking a call</li>
-    </ul>
+    <figure class="leadplan-hero-image">
+      <img
+        src="/images/contact-us-krystian.jpg"
+        alt="Krystian Sulek"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
   </div>
 
   <div id="get-your-plan" class="leadplan-form-card">

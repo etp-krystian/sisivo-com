@@ -1031,6 +1031,23 @@
         content: none;
       }
 
+      .is-lead-plan .leadplan-hero-image {
+        margin: 16px 0 0;
+      }
+
+      .is-lead-plan .leadplan-hero-image img {
+        width: 100%;
+        max-width: 512px;
+        height: 600px;
+        display: block;
+        border-radius: 14px;
+        border: 0;
+        box-shadow: 0 14px 28px rgba(2, 6, 23, 0.12);
+        opacity: 0.88;
+        object-fit: cover;
+        object-position: center top;
+      }
+
       .is-lead-plan .leadplan-form-card {
         margin: 0;
         padding: clamp(16px, 2.2vw, 22px);
@@ -3319,6 +3336,10 @@
       }
 
       @media (max-width: 980px) {
+        .is-lead-plan .leadplan-hero-image {
+          display: none;
+        }
+
         .is-lead-plan .leadplan-hero {
           grid-template-columns: 1fr;
           gap: var(--space-sm);
@@ -3605,11 +3626,14 @@
       Tell us how your team handles leads today and we will recommend the best first AI workflow to implement.
     </p>
     <p class="leadplan-reassure">Takes about 3 minutes.</p>
-    <ul class="leadplan-points">
-      <li>Built for B2B teams with inbound leads or active outbound sales</li>
-      <li>Focused recommendation, not a generic audit</li>
-      <li>Useful before booking a call</li>
-    </ul>
+    <figure class="leadplan-hero-image">
+      <img
+        src="/images/contact-us-krystian.jpg"
+        alt="Krystian Sulek"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
   </div>
   <div id="get-your-plan" class="leadplan-form-card">
     <h2>Get your AI lead qualification plan</h2>
@@ -3726,7 +3750,7 @@
             <div>© 2026, Easy Tech Partners.</div>
             <div class="footer-build">
               Updated:
-              <time datetime="2026-03-11T12:26:33.142Z">2026-03-11 12:26 UTC</time>
+              <time datetime="2026-03-10T14:55:29.576Z">2026-03-10 14:55 UTC</time>
             </div>
           </div>
           <div class="footer-links" aria-label="Footer links">
