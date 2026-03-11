@@ -48,6 +48,20 @@ Research quality varies and personalization speed drops.
 3. Generate structured research briefs in your workflow.
 4. Improve quality based on team feedback.
 
+## Example use case
+
+<article class="example-scenario">
+  <p><strong>Typical example:</strong> B2B software company with a lean outbound sales team.</p>
+  <p><strong>Problem:</strong> Reps spend too much time researching target accounts before writing personalized outreach.</p>
+  <p><strong>Solution:</strong> The AI Sales Research Agent prepares account briefs, ICP-fit signals, and suggested outreach angles.</p>
+  <p><strong>Result:</strong> More outreach capacity per rep and stronger personalization quality.</p>
+</article>
+
+<div class="home-cta">
+  <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9">{% ms "calendar_month" %}<span>Book a discovery call</span></a>
+  <a class="btn btn-ghost" href="/contact-us/">Talk about your sales process</a>
+</div>
+
 ## Related capabilities
 
 - [Revenue Workflow Automation](/services/ai-business-process-automation/)

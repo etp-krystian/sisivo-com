@@ -48,6 +48,72 @@ Sales teams lose time on manual triage and inconsistent routing.
 3. Deploy and validate on live inbound flow.
 4. Optimize scoring and routing logic.
 
+## Before and after AI lead qualification
+
+<div class="table-scroll">
+  <table class="usecase-table compare-table">
+    <thead>
+      <tr>
+        <th>Metric</th>
+        <th>Before</th>
+        <th>After</th>
+        <th>Gain</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Manual work per lead</strong></td>
+        <td>10-20 min</td>
+        <td>1-2 min</td>
+        <td>80-90% less manual work</td>
+      </tr>
+      <tr>
+        <td><strong>Time to first qualification</strong></td>
+        <td>30-120 min</td>
+        <td>2-10 min</td>
+        <td>5-12x faster qualification</td>
+      </tr>
+      <tr>
+        <td><strong>CRM context completeness</strong></td>
+        <td>40-60%</td>
+        <td>85-95%</td>
+        <td>+30 to +50 pp</td>
+      </tr>
+      <tr>
+        <td><strong>Qualified response SLA hit rate</strong></td>
+        <td>50-70%</td>
+        <td>80-95%</td>
+        <td>+20 to +30 pp</td>
+      </tr>
+      <tr>
+        <td><strong>Rep focus on high-fit leads</strong></td>
+        <td>Low / inconsistent</td>
+        <td>High / prioritized</td>
+        <td>More time on real opportunities</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="home-cta">
+  <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9">{% ms "calendar_month" %}<span>Book a discovery call</span></a>
+  <a class="btn btn-ghost" href="/contact-us/">See how this could work for your team</a>
+</div>
+
+## Example use case
+
+<article class="example-scenario">
+  <p><strong>Typical example:</strong> B2B SaaS company, 50 employees, 300 inbound leads per month.</p>
+  <p><strong>Problem:</strong> The sales team spends too much time researching inbound leads before deciding who to prioritize.</p>
+  <p><strong>Solution:</strong> The AI agent researches each company, checks ICP fit, enriches CRM context, and prepares the next step.</p>
+  <p><strong>Result:</strong> Faster response times, more consistent qualification, and more time for real sales conversations.</p>
+</article>
+
+<div class="home-cta">
+  <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9">{% ms "calendar_month" %}<span>Book a discovery call</span></a>
+  <a class="btn btn-ghost" href="/contact-us/">Discuss your inbound workflow</a>
+</div>
+
 ## Related capabilities
 
 - [Revenue Workflow Automation](/services/ai-business-process-automation/)

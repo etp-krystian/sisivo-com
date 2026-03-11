@@ -1389,30 +1389,32 @@
         max-width: 64ch;
       }
 
-      .prose .table-scroll {
+      .table-scroll {
         margin: var(--space-sm) 0;
-        overflow-x: visible;
+        overflow-x: auto;
         border-radius: 12px;
         border: 1px solid rgba(226, 232, 240, 0.92);
-        background: rgba(255, 255, 255, 0.94);
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: 0 10px 24px rgba(2, 6, 23, 0.05);
       }
 
-      .prose .usecase-table {
+      .usecase-table {
         width: 100%;
         border-collapse: collapse;
         font-size: 14px;
         line-height: 1.5;
+        min-width: 640px;
       }
 
-      .prose .usecase-table th,
-      .prose .usecase-table td {
+      .usecase-table th,
+      .usecase-table td {
         padding: 11px 12px;
         border-bottom: 1px solid rgba(226, 232, 240, 0.86);
         text-align: left;
         vertical-align: top;
       }
 
-      .prose .usecase-table th {
+      .usecase-table th {
         background: rgba(248, 250, 252, 0.9);
         color: var(--text);
         font-size: 12px;
@@ -1421,12 +1423,39 @@
         text-transform: uppercase;
       }
 
-      .prose .usecase-table td {
+      .usecase-table td {
         color: var(--muted);
       }
 
-      .prose .usecase-table tr:last-child td {
+      .usecase-table tr:last-child td {
         border-bottom: 0;
+      }
+
+      .usecase-table tbody tr:nth-child(even) {
+        background: rgba(248, 250, 252, 0.62);
+      }
+
+      .usecase-table td strong {
+        color: var(--text);
+      }
+
+      .compare-table th {
+        background:
+          linear-gradient(165deg, rgba(var(--accent-tech-rgb), 0.12), rgba(248, 250, 252, 0.95) 62%),
+          rgba(248, 250, 252, 0.95);
+      }
+
+      .compare-table td:nth-child(2),
+      .compare-table td:nth-child(3),
+      .compare-table td:nth-child(4) {
+        font-variant-numeric: tabular-nums;
+      }
+
+      .compare-table th:nth-child(4),
+      .compare-table td:nth-child(4) {
+        background: rgba(var(--accent-tech-rgb), 0.12);
+        color: var(--text);
+        font-weight: 700;
       }
 
       .prose .usecase-kpi-grid {
@@ -1466,6 +1495,78 @@
         margin: 6px 0 0;
         font-size: 13px;
         color: var(--muted);
+      }
+
+      .conversion-compare {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-sm);
+        margin: var(--space-sm) 0;
+      }
+
+      .compare-card {
+        padding: var(--space-sm);
+        border-radius: var(--radius-sm);
+        border: 1px solid rgba(226, 232, 240, 0.94);
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 10px 24px rgba(2, 6, 23, 0.05);
+      }
+
+      .compare-card--after {
+        border-color: rgba(var(--accent-tech-rgb), 0.32);
+        background:
+          linear-gradient(165deg, rgba(var(--accent-tech-rgb), 0.1), rgba(255, 255, 255, 0.96) 58%),
+          rgba(255, 255, 255, 0.96);
+      }
+
+      .compare-label {
+        margin: 0 0 6px;
+        font-size: 11px;
+        font-weight: 780;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--accent-tech-dark);
+      }
+
+      .compare-title {
+        margin: 0 0 8px;
+        font-size: 19px;
+        letter-spacing: -0.02em;
+      }
+
+      .compare-points {
+        margin: 0;
+        padding-left: 18px;
+      }
+
+      .compare-points li {
+        margin: 0 0 6px;
+      }
+
+      .compare-result {
+        margin: 10px 0 0;
+        font-size: 13px;
+        font-weight: 650;
+        color: rgba(15, 23, 42, 0.92);
+      }
+
+      .example-scenario {
+        margin: var(--space-sm) 0;
+        padding: var(--space-sm);
+        border-radius: var(--radius-sm);
+        border: 1px solid rgba(var(--accent-tech-rgb), 0.3);
+        background:
+          radial-gradient(circle at 100% 4%, rgba(var(--accent-tech-rgb), 0.14), transparent 50%),
+          linear-gradient(165deg, rgba(var(--accent-tech-rgb), 0.08), rgba(255, 255, 255, 0.95) 60%),
+          rgba(255, 255, 255, 0.95);
+      }
+
+      .example-scenario p {
+        margin: 0 0 8px;
+      }
+
+      .example-scenario p:last-child {
+        margin-bottom: 0;
       }
 
       .prose .hubspot-form-wrap {
@@ -3090,11 +3191,15 @@
           grid-template-columns: minmax(0, 1fr);
         }
 
-        .prose .table-scroll {
+        .table-scroll {
           overflow-x: auto;
         }
 
         .prose .usecase-kpi-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .conversion-compare {
           grid-template-columns: minmax(0, 1fr);
         }
 
@@ -3308,6 +3413,17 @@ Manual workflow steps create delays and inconsistent execution.</p>
 <li>Integrate systems and deploy workflow logic.</li>
 <li>Monitor throughput, errors, and adoption.</li>
 </ol>
+<h2>Example use case</h2>
+<article class="example-scenario">
+  <p><strong>Typical example:</strong> B2B services company with marketing, SDR, and account executive handoffs.</p>
+  <p><strong>Problem:</strong> Pipeline updates and task routing are handled manually across multiple tools.</p>
+  <p><strong>Solution:</strong> AI-driven workflow automation enriches records, triggers actions, and routes tasks based on qualification context.</p>
+  <p><strong>Result:</strong> Faster handoffs, cleaner CRM data, and less operational drag for revenue teams.</p>
+</article>
+<div class="home-cta">
+  <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9"><svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" /><path d="M7.5 3.5v3" /><path d="M16.5 3.5v3" /><path d="M3.5 9.5h17" /></svg><span>Book a discovery call</span></a>
+  <a class="btn btn-ghost" href="/contact-us/">See how this could work for your team</a>
+</div>
 <h2>Related capabilities</h2>
 <ul>
 <li><a href="/services/ai-powered-lead-qualification/">AI Inbound Lead Qualification Agent</a></li>

@@ -48,6 +48,20 @@ Manual workflow steps create delays and inconsistent execution.
 3. Integrate systems and deploy workflow logic.
 4. Monitor throughput, errors, and adoption.
 
+## Example use case
+
+<article class="example-scenario">
+  <p><strong>Typical example:</strong> B2B services company with marketing, SDR, and account executive handoffs.</p>
+  <p><strong>Problem:</strong> Pipeline updates and task routing are handled manually across multiple tools.</p>
+  <p><strong>Solution:</strong> AI-driven workflow automation enriches records, triggers actions, and routes tasks based on qualification context.</p>
+  <p><strong>Result:</strong> Faster handoffs, cleaner CRM data, and less operational drag for revenue teams.</p>
+</article>
+
+<div class="home-cta">
+  <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9">{% ms "calendar_month" %}<span>Book a discovery call</span></a>
+  <a class="btn btn-ghost" href="/contact-us/">See how this could work for your team</a>
+</div>
+
 ## Related capabilities
 
 - [AI Inbound Lead Qualification Agent](/services/ai-powered-lead-qualification/)
