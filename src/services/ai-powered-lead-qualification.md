@@ -6,6 +6,11 @@ description: "AI agent that analyzes inbound leads, enriches context, qualifies,
 
 This solution automates inbound lead triage for B2B revenue teams.
 
+## Problem
+
+Inbound leads often wait too long for qualification.
+Sales teams lose time on manual triage and inconsistent routing.
+
 ## What it does
 
 - reads inbound lead data from forms and CRM
@@ -20,14 +25,23 @@ This solution automates inbound lead triage for B2B revenue teams.
 - sales teams that need faster response
 - RevOps teams that want cleaner qualification flow
 
-## Business outcomes
+## Expected outcomes
 
 - faster qualification and routing
 - less manual triage work
 - better lead context for first response
 - more consistent handoff quality
 
-## How implementation works
+## How the AI agent works
+
+1. A lead submits a form or enters the CRM.
+2. The AI agent researches company context.
+3. The AI checks ICP fit and qualification criteria.
+4. The AI enriches CRM fields and lead notes.
+5. The AI suggests the next best action and routing.
+6. Sales receives a qualified opportunity with context.
+
+## Example workflow
 
 1. Align qualification criteria and routing rules.
 2. Connect forms, CRM, and enrichment sources.

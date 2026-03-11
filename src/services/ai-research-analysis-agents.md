@@ -6,6 +6,11 @@ description: "AI agent for researching accounts and contacts, enriching context,
 
 This solution prepares sales-ready account and contact context automatically.
 
+## Problem
+
+Sales reps spend too much time researching accounts before outreach.
+Research quality varies and personalization speed drops.
+
 ## What it does
 
 - researches target accounts and buying context
@@ -20,14 +25,23 @@ This solution prepares sales-ready account and contact context automatically.
 - account-based teams that need faster prep
 - RevOps leaders improving research consistency
 
-## Business outcomes
+## Expected outcomes
 
 - less manual research time per account
 - faster personalization at scale
 - cleaner prep quality across reps
 - more consistent context before outreach
 
-## How implementation works
+## How the AI agent works
+
+1. A target account enters your sales workflow.
+2. The AI agent researches company and buying context.
+3. The AI checks ICP fit and relevance signals.
+4. The AI enriches CRM and contact context.
+5. The AI suggests key outreach angles.
+6. Sales receives a ready-to-use research brief.
+
+## Example workflow
 
 1. Define your target profile and required output format.
 2. Connect data sources and enrichment steps.

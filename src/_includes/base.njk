@@ -3217,7 +3217,7 @@
           </nav>
 
           <div class="header-actions">
-            <a href="/contact-us/" class="btn btn-ghost">Contact</a>
+            <a href="/contact-us/" class="btn btn-ghost">See how AI could qualify your leads</a>
             <a href="{{ calendarUrl }}" class="btn btn-primary">{% ms "calendar_month" %}<span>Book a discovery call</span></a>
           </div>
 
@@ -3269,7 +3269,7 @@
                   <div class="home-cta">
                     <a class="btn btn-primary" href="{{ calendarUrl }}">{% ms "calendar_month" %}<span>Book a discovery call</span></a>
                     <a class="btn btn-ghost btn-see-services" href="/services/">
-                      <span>See solutions</span>
+                      <span>See how AI could qualify your leads</span>
                       <span class="btn-icon" aria-hidden="true">
                         <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" />
@@ -3299,8 +3299,8 @@
             <div class="container">
               <div class="ai-loop-wrap">
                 <div class="section-header">
-                  <h2 class="section-title" id="ai-loop-title">How it works</h2>
-                  <p class="section-lead">We scope one revenue workflow, build fast, and optimize based on real usage.</p>
+                  <h2 class="section-title" id="ai-loop-title">How the AI agent works</h2>
+                  <p class="section-lead">A practical flow from new lead to sales-ready opportunity.</p>
                 </div>
 
                 <div class="ai-loop-grid">
@@ -3310,8 +3310,8 @@
                         <button class="ai-loop-step is-active" type="button" data-step="0" aria-current="step">
                           <span class="ai-loop-step-dot" aria-hidden="true"></span>
                           <span>
-                            <span class="ai-loop-step-title">Workflow audit</span>
-                            <span class="ai-loop-step-desc">Map your inbound, qualification, or sales research workflow.</span>
+                            <span class="ai-loop-step-title">Lead enters your flow</span>
+                            <span class="ai-loop-step-desc">A lead submits a form or appears in your CRM.</span>
                           </span>
                         </button>
                       </li>
@@ -3319,8 +3319,8 @@
                         <button class="ai-loop-step" type="button" data-step="1">
                           <span class="ai-loop-step-dot" aria-hidden="true"></span>
                           <span>
-                            <span class="ai-loop-step-title">Implementation plan</span>
-                            <span class="ai-loop-step-desc">Define data sources, routing logic, and success metrics.</span>
+                            <span class="ai-loop-step-title">Company research runs automatically</span>
+                            <span class="ai-loop-step-desc">The AI agent collects company and account context.</span>
                           </span>
                         </button>
                       </li>
@@ -3328,8 +3328,8 @@
                         <button class="ai-loop-step" type="button" data-step="2">
                           <span class="ai-loop-step-dot" aria-hidden="true"></span>
                           <span>
-                            <span class="ai-loop-step-title">Build and connect</span>
-                            <span class="ai-loop-step-desc">Deploy agent logic and connect CRM, forms, email, and internal tools.</span>
+                            <span class="ai-loop-step-title">ICP fit is checked</span>
+                            <span class="ai-loop-step-desc">The AI evaluates qualification rules and lead fit.</span>
                           </span>
                         </button>
                       </li>
@@ -3337,8 +3337,8 @@
                         <button class="ai-loop-step" type="button" data-step="3">
                           <span class="ai-loop-step-dot" aria-hidden="true"></span>
                           <span>
-                            <span class="ai-loop-step-title">Launch and monitor</span>
-                            <span class="ai-loop-step-desc">Track qualification speed, routing quality, and team adoption.</span>
+                            <span class="ai-loop-step-title">CRM context is enriched</span>
+                            <span class="ai-loop-step-desc">Key fields and lead notes are prepared for your team.</span>
                           </span>
                         </button>
                       </li>
@@ -3346,8 +3346,17 @@
                         <button class="ai-loop-step" type="button" data-step="4">
                           <span class="ai-loop-step-dot" aria-hidden="true"></span>
                           <span>
-                            <span class="ai-loop-step-title">Improve and scale</span>
-                            <span class="ai-loop-step-desc">Refine prompts, rules, and automations to increase revenue impact.</span>
+                            <span class="ai-loop-step-title">Next best action is suggested</span>
+                            <span class="ai-loop-step-desc">The AI recommends routing, response priority, and follow-up.</span>
+                          </span>
+                        </button>
+                      </li>
+                      <li>
+                        <button class="ai-loop-step" type="button" data-step="5">
+                          <span class="ai-loop-step-dot" aria-hidden="true"></span>
+                          <span>
+                            <span class="ai-loop-step-title">Sales receives a qualified opportunity</span>
+                            <span class="ai-loop-step-desc">Your team focuses on high-fit opportunities, not manual triage.</span>
                           </span>
                         </button>
                       </li>
@@ -3423,13 +3432,19 @@
                   We are the right fit if your team handles inbound leads, runs outbound sales, and wants faster qualification with less manual handoff.
                 </p>
                 <ul class="pilot-list">
-                  <li>You have recurring lead qualification or sales prep work.</li>
-                  <li>You need CRM context to be cleaner and more complete.</li>
-                  <li>You want faster response time from inbound to sales action.</li>
-                  <li>You prefer practical rollout over long transformation programs.</li>
+                  <li>B2B companies with active sales teams.</li>
+                  <li>Teams receiving inbound leads.</li>
+                  <li>Companies using a CRM (HubSpot, Salesforce, and similar).</li>
+                  <li>Sales teams spending time on manual lead research.</li>
+                </ul>
+                <p class="pilot-meta">Not ideal for</p>
+                <ul class="pilot-list">
+                  <li>Companies without a sales team.</li>
+                  <li>Companies without inbound or outbound lead flow.</li>
+                  <li>Very early-stage startups without a structured sales process.</li>
                 </ul>
                 <div class="home-cta">
-                  <a class="btn btn-primary" href="{{ calendarUrl }}">{% ms "calendar_month" %}<span>See if this fits your team</span></a>
+                  <a class="btn btn-primary" href="{{ calendarUrl }}">{% ms "calendar_month" %}<span>Book a discovery call</span></a>
                 </div>
               </div>
             </div>
@@ -3438,23 +3453,44 @@
           <section class="section">
             <div class="container">
               <div class="section-header">
-                <h2 class="section-title">Why teams buy this</h2>
+                <h2 class="section-title">What companies get</h2>
                 <p class="section-lead">
-                  Revenue teams choose AI automation when they need speed, consistency, and cleaner pipeline data.
+                  Clear business outcomes from practical AI workflow automation.
                 </p>
               </div>
               <div class="info-grid">
                 <div class="info-card">
-                  <h3 class="info-title">Faster lead response</h3>
-                  <p class="info-body">Inbound leads are qualified and routed quickly, before intent drops.</p>
+                  <h3 class="info-title">Less manual lead research</h3>
+                  <p class="info-body">AI gathers account context automatically before sales outreach.</p>
                 </div>
                 <div class="info-card">
-                  <h3 class="info-title">Lower manual admin</h3>
-                  <p class="info-body">Less repetitive qualification and CRM cleanup for sales and RevOps teams.</p>
+                  <h3 class="info-title">Faster inbound response</h3>
+                  <p class="info-body">Leads are qualified and routed quickly while intent is still high.</p>
                 </div>
                 <div class="info-card">
-                  <h3 class="info-title">Better pipeline quality</h3>
-                  <p class="info-body">More complete context and standardized handoffs improve conversion decisions.</p>
+                  <h3 class="info-title">Better qualified pipeline</h3>
+                  <p class="info-body">Sales teams focus on real opportunities instead of low-fit leads.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section compact" aria-label="Free workflow review">
+            <div class="container">
+              <div class="partner">
+                <div>
+                  <p class="partner-kicker">Free diagnostic</p>
+                  <h2 class="partner-title">Free AI Revenue Workflow Review</h2>
+                  <p class="partner-body">
+                    We review your inbound or sales workflow and show where AI can automate qualification, research, and repetitive tasks.
+                  </p>
+                  <p class="partner-body">
+                    Helpful context to prepare before the call: company name, website, CRM used, inbound leads per month.
+                  </p>
+                  <div class="home-cta">
+                    <a class="btn btn-primary" href="{{ calendarUrl }}">{% ms "calendar_month" %}<span>Book a discovery call</span></a>
+                    <a class="btn btn-ghost" href="/contact-us/">See how AI could qualify your leads</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -3472,7 +3508,7 @@
                   </p>
                   <div class="home-cta">
                     <a class="btn btn-primary" href="{{ calendarUrl }}">{% ms "calendar_month" %}<span>Book a discovery call</span></a>
-                    <a class="btn btn-ghost" href="/contact-us/">Talk about your workflow</a>
+                    <a class="btn btn-ghost" href="/contact-us/">See how AI could qualify your leads</a>
                   </div>
                 </div>
               </div>
@@ -3566,7 +3602,7 @@
                     <p>{{ ctaBody }}</p>
                     <div class="home-cta">
                       <a class="btn btn-primary" href="{{ calendarUrl }}">{% ms "calendar_month" %}<span>{{ ctaButton }}</span></a>
-                      <a class="btn btn-ghost btn-see-services" href="/contact-us/"><span>Talk about your workflow</span><span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" /><path d="M8.8 4.3L12.5 8L8.8 11.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></span></a>
+                      <a class="btn btn-ghost btn-see-services" href="/contact-us/"><span>See how AI could qualify your leads</span><span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" /><path d="M8.8 4.3L12.5 8L8.8 11.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></span></a>
                     </div>
                   </section>
                 {% endif %}

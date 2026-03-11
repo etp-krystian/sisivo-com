@@ -6,6 +6,11 @@ description: "Automate repetitive revenue-team workflows by connecting CRM, form
 
 This solution removes repetitive manual work from revenue-team workflows.
 
+## Problem
+
+Revenue teams lose time on repetitive handoffs, status updates, and tool switching.
+Manual workflow steps create delays and inconsistent execution.
+
 ## What it does
 
 - connects CRM, forms, email, and internal systems
@@ -20,14 +25,23 @@ This solution removes repetitive manual work from revenue-team workflows.
 - RevOps teams managing multi-tool workflows
 - sales and marketing teams losing time on admin
 
-## Business outcomes
+## Expected outcomes
 
 - fewer manual steps in pipeline operations
 - faster cross-team handoffs
 - improved data consistency across tools
 - lower operational friction for revenue teams
 
-## How implementation works
+## How the AI agent works
+
+1. A workflow event is triggered from form, CRM, or email.
+2. The AI agent reads the context and process stage.
+3. The AI checks rule conditions and lead/account fit.
+4. The AI enriches records and prepares task context.
+5. The AI suggests or triggers the next action.
+6. Teams receive clean handoffs and qualified next steps.
+
+## Example workflow
 
 1. Map current workflow and bottlenecks.
 2. Define automation rules and exception handling.
