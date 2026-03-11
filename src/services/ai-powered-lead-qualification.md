@@ -97,7 +97,7 @@ Sales teams lose time on manual triage and inconsistent routing.
 
 <div class="home-cta">
   <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9">{% ms "calendar_month" %}<span>Book a discovery call</span></a>
-  <a class="btn btn-ghost" href="/contact-us/">See how this could work for your team</a>
+  <a class="btn btn-ghost" href="/ai-lead-qualification-plan/">Get your AI lead qualification plan</a>
 </div>
 
 ## Example use case
@@ -111,7 +111,7 @@ Sales teams lose time on manual triage and inconsistent routing.
 
 <div class="home-cta">
   <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9">{% ms "calendar_month" %}<span>Book a discovery call</span></a>
-  <a class="btn btn-ghost" href="/contact-us/">Discuss your inbound workflow</a>
+  <a class="btn btn-ghost" href="/ai-lead-qualification-plan/">Get your AI lead qualification plan</a>
 </div>
 
 ## Related capabilities

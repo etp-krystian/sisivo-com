@@ -1569,6 +1569,81 @@
         margin-bottom: 0;
       }
 
+      .lead-plan-panel {
+        margin: var(--space-sm) 0;
+        padding: var(--space-sm);
+        border-radius: var(--radius-sm);
+        border: 1px solid rgba(var(--accent-tech-rgb), 0.3);
+        background:
+          radial-gradient(circle at 96% 4%, rgba(var(--accent-tech-rgb), 0.15), transparent 52%),
+          linear-gradient(165deg, rgba(var(--accent-tech-rgb), 0.08), rgba(255, 255, 255, 0.96) 60%),
+          rgba(255, 255, 255, 0.96);
+      }
+
+      .lead-plan-list {
+        margin: var(--space-xs) 0 0;
+        padding-left: 18px;
+      }
+
+      .lead-plan-list li {
+        margin-bottom: 6px;
+      }
+
+      .lead-plan-form {
+        margin-top: var(--space-sm);
+        display: grid;
+        gap: 10px;
+      }
+
+      .lead-plan-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      @media (max-width: 760px) {
+        .lead-plan-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .lead-plan-field {
+        display: grid;
+        gap: 6px;
+      }
+
+      .lead-plan-field label {
+        font-size: 12px;
+        font-weight: 650;
+        color: var(--text);
+      }
+
+      .lead-plan-field input,
+      .lead-plan-field select,
+      .lead-plan-field textarea {
+        width: 100%;
+        min-height: 42px;
+        border-radius: 10px;
+        border: 1px solid rgba(148, 163, 184, 0.5);
+        background: rgba(255, 255, 255, 0.96);
+        color: var(--text);
+        font: inherit;
+        padding: 9px 11px;
+        box-sizing: border-box;
+      }
+
+      .lead-plan-field textarea {
+        min-height: 104px;
+        resize: vertical;
+      }
+
+      .lead-plan-field input:focus,
+      .lead-plan-field select:focus,
+      .lead-plan-field textarea:focus {
+        outline: 3px solid var(--ring);
+        border-color: rgba(var(--accent-tech-rgb), 0.5);
+      }
+
       .prose .hubspot-form-wrap {
         margin-top: var(--space-xs);
         padding: var(--space-sm);
@@ -3398,29 +3473,85 @@
 <li>We align on timeline, systems, and success metrics.</li>
 </ul></p>
   </section>
-  <section class="contact-form-card" aria-labelledby="contact-form-title">
+<section class="contact-form-card" aria-labelledby="contact-form-title">
     <h2 id="contact-form-title">Contact form</h2>
     <p>
       Best for teams that want a concrete recommendation on what to automate first.
     </p>
+    <div id="lead-plan-context"></div>
     <div class="hubspot-form-wrap" id="hubspot-contact-form"></div>
   </section>
 </div>
 <script charset="utf-8" type="text/javascript" src="https://js-eu1.hsforms.net/forms/embed/v2.js"></script>
 <script>
+  (function () {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("intent") !== "lead-plan") return;
+
+    const labels = [
+      ["company", "Company"],
+      ["website", "Website"],
+      ["role", "Role"],
+      ["team_type", "Team type"],
+      ["workflow_to_improve", "Main workflow"],
+      ["crm_system", "CRM / system"],
+      ["monthly_lead_volume", "Monthly lead volume"],
+      ["bottleneck", "Main bottleneck"],
+      ["email", "Email"]
+    ];
+
+    const lines = [];
+    labels.forEach(function (pair) {
+      const key = pair[0];
+      const label = pair[1];
+      const value = (params.get(key) || "").trim();
+      if (value) lines.push(label + ": " + value);
+    });
+
+    if (!lines.length) return;
+
+    const summary = "AI lead qualification plan request\n" + lines.join("\n");
+    window.__leadPlanSummary = summary;
+
+    const context = document.getElementById("lead-plan-context");
+    if (!context) return;
+
+    const panel = document.createElement("section");
+    panel.className = "lead-plan-panel";
+    panel.innerHTML = [
+      "<p><strong>Plan request detected.</strong> We pre-filled your context below so we can recommend the best first AI workflow for your team.</p>",
+      "<ul class=\"lead-plan-list\">" + lines.map(function (line) { return "<li>" + line + "</li>"; }).join("") + "</ul>"
+    ].join("");
+    context.appendChild(panel);
+  })();
+
   hbspt.forms.create({
     portalId: "144979550",
     formId: "642de580-8f23-4f25-909b-639fa30fcbe4",
     region: "eu1",
-    target: "#hubspot-contact-form"
+    target: "#hubspot-contact-form",
+    onFormReady: function ($form) {
+      try {
+        const summary = window.__leadPlanSummary;
+        if (!summary) return;
+        const formEl = $form && $form[0] ? $form[0] : null;
+        if (!formEl) return;
+        const messageField = formEl.querySelector("textarea");
+        if (!messageField || messageField.value) return;
+        messageField.value = summary;
+        messageField.dispatchEvent(new Event("input", { bubbles: true }));
+        messageField.dispatchEvent(new Event("change", { bubbles: true }));
+      } catch (e) {
+      }
+    }
   });
 </script>
 <section class="content-page-cta" aria-label="Contact page call to action">
-  <h2>Prefer a direct conversation?</h2>
-  <p>Book a discovery call and we will map your workflow live with you.</p>
+  <h2>Choose your next step</h2>
+  <p>Book a discovery call if you want to discuss your workflow live, or get your AI lead qualification plan first.</p>
   <div class="home-cta">
     <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9"><svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" /><path d="M7.5 3.5v3" /><path d="M16.5 3.5v3" /><path d="M3.5 9.5h17" /></svg><span>Book a discovery call</span></a>
-    <a class="btn btn-ghost btn-see-services" href="/services/"><span>See how AI could qualify your leads</span><span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" /><path d="M8.8 4.3L12.5 8L8.8 11.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></span></a>
+    <a class="btn btn-ghost btn-see-services" href="/ai-lead-qualification-plan/"><span>Get your AI lead qualification plan</span><span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" /><path d="M8.8 4.3L12.5 8L8.8 11.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></span></a>
   </div>
 </section>
 <h2>Prefer direct contact?</h2>
@@ -3442,7 +3573,7 @@ LinkedIn: <a href="https://www.linkedin.com/in/krystiansulek/">linkedin.com/in/k
             <div>© 2026, Easy Tech Partners.</div>
             <div class="footer-build">
               Updated:
-              <time datetime="2026-03-10T14:55:29.576Z">2026-03-10 14:55 UTC</time>
+              <time datetime="2026-03-11T12:04:45.173Z">2026-03-11 12:04 UTC</time>
             </div>
           </div>
           <div class="footer-links" aria-label="Footer links">
@@ -3450,6 +3581,7 @@ LinkedIn: <a href="https://www.linkedin.com/in/krystiansulek/">linkedin.com/in/k
             <a href="/implementation-process/">How It Works</a>
             <a href="/about-us/">About</a>
             <a href="/contact-us/">Contact</a>
+            <a href="/ai-lead-qualification-plan/">Get your AI plan</a>
             <a href="/ai-use-case-examples/">Use Cases</a>
             <a href="/blog/">Blog</a>
             <a href="/privacy-policy/">Privacy policy</a>

@@ -1569,6 +1569,81 @@
         margin-bottom: 0;
       }
 
+      .lead-plan-panel {
+        margin: var(--space-sm) 0;
+        padding: var(--space-sm);
+        border-radius: var(--radius-sm);
+        border: 1px solid rgba(var(--accent-tech-rgb), 0.3);
+        background:
+          radial-gradient(circle at 96% 4%, rgba(var(--accent-tech-rgb), 0.15), transparent 52%),
+          linear-gradient(165deg, rgba(var(--accent-tech-rgb), 0.08), rgba(255, 255, 255, 0.96) 60%),
+          rgba(255, 255, 255, 0.96);
+      }
+
+      .lead-plan-list {
+        margin: var(--space-xs) 0 0;
+        padding-left: 18px;
+      }
+
+      .lead-plan-list li {
+        margin-bottom: 6px;
+      }
+
+      .lead-plan-form {
+        margin-top: var(--space-sm);
+        display: grid;
+        gap: 10px;
+      }
+
+      .lead-plan-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      @media (max-width: 760px) {
+        .lead-plan-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .lead-plan-field {
+        display: grid;
+        gap: 6px;
+      }
+
+      .lead-plan-field label {
+        font-size: 12px;
+        font-weight: 650;
+        color: var(--text);
+      }
+
+      .lead-plan-field input,
+      .lead-plan-field select,
+      .lead-plan-field textarea {
+        width: 100%;
+        min-height: 42px;
+        border-radius: 10px;
+        border: 1px solid rgba(148, 163, 184, 0.5);
+        background: rgba(255, 255, 255, 0.96);
+        color: var(--text);
+        font: inherit;
+        padding: 9px 11px;
+        box-sizing: border-box;
+      }
+
+      .lead-plan-field textarea {
+        min-height: 104px;
+        resize: vertical;
+      }
+
+      .lead-plan-field input:focus,
+      .lead-plan-field select:focus,
+      .lead-plan-field textarea:focus {
+        outline: 3px solid var(--ring);
+        border-color: rgba(var(--accent-tech-rgb), 0.5);
+      }
+
       .prose .hubspot-form-wrap {
         margin-top: var(--space-xs);
         padding: var(--space-sm);
@@ -3435,7 +3510,7 @@
   <p>Book a discovery call. We will pick the best first workflow based on your current pipeline process.</p>
   <div class="home-cta">
     <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9"><svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" /><path d="M7.5 3.5v3" /><path d="M16.5 3.5v3" /><path d="M3.5 9.5h17" /></svg><span>Book a discovery call</span></a>
-    <a class="btn btn-ghost btn-see-services" href="/contact-us/"><span>See how AI could qualify your leads</span><span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" /><path d="M8.8 4.3L12.5 8L8.8 11.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></span></a>
+    <a class="btn btn-ghost btn-see-services" href="/ai-lead-qualification-plan/"><span>Get your AI lead qualification plan</span><span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" /><path d="M8.8 4.3L12.5 8L8.8 11.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></span></a>
   </div>
 </section>
 
@@ -3453,7 +3528,7 @@
             <div>© 2026, Easy Tech Partners.</div>
             <div class="footer-build">
               Updated:
-              <time datetime="2026-03-10T14:55:29.576Z">2026-03-10 14:55 UTC</time>
+              <time datetime="2026-03-11T12:04:45.173Z">2026-03-11 12:04 UTC</time>
             </div>
           </div>
           <div class="footer-links" aria-label="Footer links">
@@ -3461,6 +3536,7 @@
             <a href="/implementation-process/">How It Works</a>
             <a href="/about-us/">About</a>
             <a href="/contact-us/">Contact</a>
+            <a href="/ai-lead-qualification-plan/">Get your AI plan</a>
             <a href="/ai-use-case-examples/">Use Cases</a>
             <a href="/blog/">Blog</a>
             <a href="/privacy-policy/">Privacy policy</a>

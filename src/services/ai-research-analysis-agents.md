@@ -59,7 +59,7 @@ Research quality varies and personalization speed drops.
 
 <div class="home-cta">
   <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9">{% ms "calendar_month" %}<span>Book a discovery call</span></a>
-  <a class="btn btn-ghost" href="/contact-us/">Talk about your sales process</a>
+  <a class="btn btn-ghost" href="/ai-lead-qualification-plan/">Get your AI lead qualification plan</a>
 </div>
 
 ## Related capabilities
