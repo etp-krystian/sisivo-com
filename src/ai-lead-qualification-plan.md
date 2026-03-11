@@ -5,9 +5,13 @@ description: "Share your current workflow and get a practical first AI use case 
 ---
 
 <div class="content-page-cta">
-  <h2>A practical first step before implementation</h2>
+  <h2>Get a practical AI plan for your sales workflow</h2>
   <p>
-    Share your current workflow in a few minutes. We will recommend the best first AI use case for your team and the fastest path to measurable impact.
+    Tell us how your team handles inbound leads, sales research, or repetitive revenue tasks.
+    We will recommend the best first AI workflow to implement.
+  </p>
+  <p class="highlight-note">
+    Built for B2B teams with inbound leads or active outbound sales. Takes about 3 minutes to complete.
   </p>
   <div class="home-cta">
     <a class="btn btn-primary" href="#get-your-plan">{% ms "rocket_launch" %}<span>Get your AI lead qualification plan</span></a>
@@ -15,53 +19,91 @@ description: "Share your current workflow and get a practical first AI use case 
   </div>
 </div>
 
+<div class="trust-grid">
+  <article class="trust-card">
+    <h3>For B2B revenue teams</h3>
+    <p>Designed for sales, marketing, and RevOps teams working in live pipeline workflows.</p>
+  </article>
+  <article class="trust-card">
+    <h3>Practical recommendation</h3>
+    <p>You get a concrete first implementation direction, not a generic AI consultation.</p>
+  </article>
+</div>
+
+<div id="get-your-plan" class="lead-plan-panel">
+  <h2>Get your AI plan</h2>
+  <p>Complete the form and get a practical first recommendation for your team.</p>
+  <ul class="lead-plan-list">
+    <li>Focused recommendation, not a broad audit</li>
+    <li>Clear first use case with implementation direction</li>
+    <li>Useful before booking a full discovery call</li>
+  </ul>
+  <div class="hubspot-form-wrap">
+    <div class="hs-form-frame" data-region="eu1" data-form-id="f3455939-7f6b-481a-aaa4-f06d34e3f8e3" data-portal-id="144979550"></div>
+  </div>
+</div>
+
 ## What you get
 
 <div class="trust-grid">
   <article class="trust-card">
-    <h3>Best first use case</h3>
-    <p>A clear recommendation for the first workflow worth automating.</p>
+    <h3>Clear first AI use case</h3>
+    <p>The highest-impact workflow to automate first.</p>
   </article>
   <article class="trust-card">
-    <h3>Implementation scope</h3>
-    <p>What to connect first and what can wait for phase two.</p>
+    <h3>What to automate first</h3>
+    <p>A practical recommendation on scope and starting point.</p>
   </article>
   <article class="trust-card">
-    <h3>Expected business outcome</h3>
-    <p>What should improve first: response speed, quality, or rep focus.</p>
+    <h3>Implementation direction</h3>
+    <p>How to connect AI into your current revenue stack.</p>
   </article>
   <article class="trust-card">
-    <h3>System direction</h3>
-    <p>How AI should fit into your CRM, forms, email, and team workflow.</p>
+    <h3>Faster business impact</h3>
+    <p>A shorter path to measurable workflow improvement.</p>
   </article>
 </div>
 
-## How this works
-
-<ol class="step-flow">
-  <li>You submit your current workflow and bottleneck.</li>
-  <li>We review your inbound, sales research, or handoff process.</li>
-  <li>We define the best first AI implementation for your team.</li>
-  <li>You get a practical recommendation you can execute.</li>
-</ol>
-
 ## Who this is for
 
-<div class="trust-grid">
-  <article class="trust-card">
+<div class="conversion-compare">
+  <article class="compare-card">
     <h3>Ideal for</h3>
-    <ul>
+    <ul class="compare-points">
       <li>B2B teams with inbound leads or active outbound sales</li>
-      <li>Sales, marketing, and RevOps teams using a CRM</li>
-      <li>Founders who want a clear first AI move</li>
+      <li>Teams using a CRM and handling qualification manually</li>
+      <li>Sales, marketing, and RevOps teams needing a clear first AI move</li>
     </ul>
   </article>
-  <article class="trust-card">
+  <article class="compare-card">
     <h3>Not ideal for</h3>
-    <ul>
-      <li>Teams without lead flow or a sales process</li>
-      <li>Very early-stage setups without defined workflow</li>
-      <li>Teams looking only for generic AI ideas</li>
+    <ul class="compare-points">
+      <li>Teams without lead flow</li>
+      <li>Very early-stage companies without a sales process</li>
+      <li>Visitors looking only for broad AI inspiration</li>
+    </ul>
+  </article>
+</div>
+
+## Before and after AI lead qualification
+
+<div class="conversion-compare">
+  <article class="compare-card">
+    <h3>Before</h3>
+    <ul class="compare-points">
+      <li>Reps research each lead manually</li>
+      <li>Lead context is incomplete</li>
+      <li>Response time is slower</li>
+      <li>Qualification quality varies</li>
+    </ul>
+  </article>
+  <article class="compare-card compare-card--after">
+    <h3>After</h3>
+    <ul class="compare-points">
+      <li>AI researches the company automatically</li>
+      <li>CRM context is prepared before handoff</li>
+      <li>Reps respond faster</li>
+      <li>Qualification is more consistent</li>
     </ul>
   </article>
 </div>
@@ -69,58 +111,30 @@ description: "Share your current workflow and get a practical first AI use case 
 ## Example recommendation
 
 <article class="example-scenario">
-  <p><strong>Team:</strong> B2B SaaS sales team with inbound demo requests.</p>
-  <p><strong>Problem:</strong> Too much manual lead research before reps respond.</p>
+  <p><strong>Company:</strong> B2B SaaS team with inbound demo requests.</p>
+  <p><strong>Problem:</strong> Sales reps spend too much time researching inbound leads before deciding who to prioritize.</p>
   <p><strong>Recommended first implementation:</strong> AI Inbound Lead Qualification Agent.</p>
-  <p><strong>Expected outcome:</strong> Faster follow-up, cleaner CRM context, and less manual qualification work.</p>
+  <p><strong>Expected outcome:</strong> Faster follow-up, better CRM context, and less manual qualification work for sales.</p>
 </article>
 
-## Typical first outcomes
+## Why teams use this before booking a call
 
-<div class="usecase-kpi-grid">
-  <article class="usecase-kpi-card">
-    <p class="usecase-kpi-label">Qualification speed</p>
-    <p class="usecase-kpi-value">5-12x</p>
-    <p class="usecase-kpi-note">Faster first qualification for inbound leads.</p>
-  </article>
-  <article class="usecase-kpi-card">
-    <p class="usecase-kpi-label">Manual research time</p>
-    <p class="usecase-kpi-value">-80%</p>
-    <p class="usecase-kpi-note">Less repetitive prep work for sales reps.</p>
-  </article>
-  <article class="usecase-kpi-card">
-    <p class="usecase-kpi-label">CRM context quality</p>
-    <p class="usecase-kpi-value">+30pp</p>
-    <p class="usecase-kpi-note">More complete lead context before handoff.</p>
-  </article>
-</div>
+<ul class="step-flow">
+  <li>It identifies the best first AI use case for your team.</li>
+  <li>It gives you a practical recommendation, not vague ideas.</li>
+  <li>It makes first implementation easier to scope and prioritize.</li>
+  <li>It helps even if you are still early in your AI rollout.</li>
+</ul>
 
-## Get your plan
+<p class="highlight-note">You do not need a full AI strategy to start. You need the right first workflow.</p>
 
-<div id="get-your-plan" class="lead-plan-panel">
-  <p class="highlight-note"><strong>Fast to complete:</strong> most teams submit this in under 3 minutes.</p>
-  <p>
-    Tell us how your team handles inbound leads or sales research.
-    We will recommend the best first AI workflow to implement.
-  </p>
-  <ul class="lead-plan-list">
-    <li>Focused recommendation, not a generic audit</li>
-    <li>Clear first implementation direction</li>
-    <li>Practical next step for your current stack</li>
-  </ul>
-  <div class="hubspot-form-wrap">
-    <div class="hs-form-frame" data-region="eu1" data-form-id="f3455939-7f6b-481a-aaa4-f06d34e3f8e3" data-portal-id="144979550"></div>
+<section class="content-page-cta" aria-label="Final lead plan call to action">
+  <h2>Get your AI lead qualification plan</h2>
+  <p>Tell us how your team works today, and we will recommend the best first AI workflow to implement.</p>
+  <div class="home-cta">
+    <a class="btn btn-primary" href="#get-your-plan">{% ms "rocket_launch" %}<span>Get your AI lead qualification plan</span></a>
+    <a class="btn btn-ghost" href="https://calendar.app.google/R21jua9szDGa7T7c9">Book a discovery call</a>
   </div>
-</div>
+</section>
 
 <script src="https://js-eu1.hsforms.net/forms/embed/144979550.js" defer></script>
-
-## Want to discuss it live?
-
-<div class="content-page-cta">
-  <h2>Prefer a live conversation?</h2>
-  <p>Book a discovery call and we will map your workflow together in real time.</p>
-  <div class="home-cta">
-    <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9">{% ms "calendar_month" %}<span>Book a discovery call</span></a>
-  </div>
-</div>

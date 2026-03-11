@@ -9,6 +9,7 @@
 {% set isContact = page.url == "/contact-us/" %}
 {% set isUseCases = page.url == "/ai-use-case-examples/" %}
 {% set isWhyUs = page.url == "/why-us/" %}
+{% set isLeadPlan = page.url == "/ai-lead-qualification-plan/" %}
 {% set isContent = not isHome %}
 {% set calendarUrl = "https://calendar.app.google/R21jua9szDGa7T7c9" %}
 <html lang="{{ site.locale or 'en' }}">
@@ -962,6 +963,10 @@
 
       .section {
         padding: var(--space-section) 0;
+      }
+
+      .is-lead-plan .prose > .content-page-cta:first-child {
+        margin-top: 0;
       }
 
       .section.compact {
@@ -3339,7 +3344,7 @@
       }
     </style>
   </head>
-  <body class="{% if isServices %}is-services{% endif %}{% if isServicesIndex %}{% if isServices %} {% endif %}is-services-index{% endif %}{% if isBlog %}{% if isServices or isServicesIndex %} {% endif %}is-blog{% endif %}{% if isContact %}{% if isServices or isServicesIndex or isBlog %} {% endif %}is-contact{% endif %}{% if isWhyUs %}{% if isServices or isServicesIndex or isBlog or isContact %} {% endif %}is-why-us{% endif %}{% if isContent %}{% if isServices or isServicesIndex or isBlog or isContact or isWhyUs %} {% endif %}is-content{% endif %}">
+  <body class="{% if isServices %}is-services{% endif %}{% if isServicesIndex %}{% if isServices %} {% endif %}is-services-index{% endif %}{% if isBlog %}{% if isServices or isServicesIndex %} {% endif %}is-blog{% endif %}{% if isContact %}{% if isServices or isServicesIndex or isBlog %} {% endif %}is-contact{% endif %}{% if isWhyUs %}{% if isServices or isServicesIndex or isBlog or isContact %} {% endif %}is-why-us{% endif %}{% if isLeadPlan %}{% if isServices or isServicesIndex or isBlog or isContact or isWhyUs %} {% endif %}is-lead-plan{% endif %}{% if isContent %}{% if isServices or isServicesIndex or isBlog or isContact or isWhyUs or isLeadPlan %} {% endif %}is-content{% endif %}">
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="site">
       <header class="site-header{% if isHome %} site-header--overlay{% endif %}" aria-label="Primary navigation">
