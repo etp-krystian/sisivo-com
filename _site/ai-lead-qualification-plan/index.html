@@ -965,6 +965,141 @@
         margin-top: 0;
       }
 
+      .is-lead-plan .prose,
+      .is-lead-plan.is-content .prose {
+        max-width: 100%;
+      }
+
+      .is-lead-plan .prose h2 {
+        margin-top: clamp(34px, 5vw, 52px);
+      }
+
+      .is-lead-plan .leadplan-hero {
+        margin: 0 0 clamp(26px, 4vw, 42px);
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+        gap: var(--space-md);
+        align-items: start;
+      }
+
+      .is-lead-plan .leadplan-kicker {
+        margin: 0 0 8px;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--accent-tech-dark);
+      }
+
+      .is-lead-plan .leadplan-title {
+        margin: 0 0 10px;
+        color: var(--text);
+        font-size: clamp(26px, 3.2vw, 38px);
+        line-height: 1.08;
+        letter-spacing: -0.035em;
+      }
+
+      .is-lead-plan .leadplan-subtitle {
+        margin: 0 0 12px;
+        color: rgba(30, 41, 59, 0.86);
+        max-width: 58ch;
+      }
+
+      .is-lead-plan .leadplan-reassure {
+        margin: 0;
+        font-size: 13px;
+        font-weight: 650;
+        color: rgba(51, 65, 85, 0.95);
+      }
+
+      .is-lead-plan .leadplan-points {
+        list-style: none;
+        margin: 14px 0 0;
+        padding: 0;
+        display: grid;
+        gap: 7px;
+      }
+
+      .is-lead-plan .leadplan-points li {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        color: rgba(30, 41, 59, 0.92);
+      }
+
+      .is-lead-plan .leadplan-points li::before {
+        content: none;
+      }
+
+      .is-lead-plan .leadplan-form-card {
+        margin: 0;
+        padding: clamp(16px, 2.2vw, 22px);
+        border-radius: 14px;
+        border: 1px solid rgba(var(--accent-tech-rgb), 0.32);
+        background:
+          radial-gradient(circle at 96% 4%, rgba(var(--accent-tech-rgb), 0.14), transparent 52%),
+          linear-gradient(165deg, rgba(var(--accent-tech-rgb), 0.08), rgba(255, 255, 255, 0.97) 60%),
+          rgba(255, 255, 255, 0.97);
+        box-shadow: 0 16px 30px rgba(2, 6, 23, 0.07);
+      }
+
+      .is-lead-plan .leadplan-form-card h2 {
+        margin: 0 0 6px;
+        padding-top: 0;
+        border-top: 0;
+        font-size: 21px;
+      }
+
+      .is-lead-plan .leadplan-form-card p {
+        margin: 0 0 10px;
+        max-width: 52ch;
+      }
+
+      .is-lead-plan .leadplan-form-card .hubspot-form-wrap {
+        margin-top: 10px;
+      }
+
+      .is-lead-plan .leadplan-flow {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 10px;
+        margin: var(--space-sm) 0 0;
+      }
+
+      .is-lead-plan .leadplan-step {
+        margin: 0;
+        padding: 12px 12px;
+        border-radius: 12px;
+        border: 1px solid rgba(226, 232, 240, 0.95);
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: 0 8px 20px rgba(2, 6, 23, 0.05);
+      }
+
+      .is-lead-plan .leadplan-step-index {
+        margin: 0 0 8px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 999px;
+        background: rgba(var(--accent-tech-rgb), 0.16);
+        color: var(--accent-tech-dark);
+        font-size: 12px;
+        font-weight: 780;
+      }
+
+      .is-lead-plan .leadplan-step-title {
+        margin: 0;
+        color: var(--text);
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      .is-lead-plan .leadplan-final-cta {
+        margin-top: clamp(36px, 5vw, 56px);
+      }
+
       .section.compact {
         padding: var(--space-section-compact) 0;
       }
@@ -3184,6 +3319,15 @@
       }
 
       @media (max-width: 980px) {
+        .is-lead-plan .leadplan-hero {
+          grid-template-columns: 1fr;
+          gap: var(--space-sm);
+        }
+
+        .is-lead-plan .leadplan-flow {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
         .services-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
@@ -3226,6 +3370,10 @@
       }
 
       @media (max-width: 760px) {
+        .is-lead-plan .leadplan-flow {
+          grid-template-columns: 1fr;
+        }
+
         .is-services-index .services-grid-showcase {
           grid-template-columns: minmax(0, 1fr);
         }
@@ -3449,119 +3597,114 @@
             <section class="section">
               <div class="container">
                 <article class="prose">
-                  <div class="content-page-cta">
-  <h2>Get a practical AI plan for your sales workflow</h2>
-  <p>
-    Tell us how your team handles inbound leads, sales research, or repetitive revenue tasks.
-    We will recommend the best first AI workflow to implement.
-  </p>
-  <p class="highlight-note">
-    Built for B2B teams with inbound leads or active outbound sales. Takes about 3 minutes to complete.
-  </p>
-  <div class="home-cta">
-    <a class="btn btn-primary" href="#get-your-plan"><svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.3 15.7c-1.7 1.3-2.8 3.4-2.8 5.8 2.4 0 4.5-1.1 5.8-2.8m0 0 4.2-4.2m-4.2 4.2-3-3m7.2-7.2c2.6-2.6 5.8-3.7 7.8-4-.3 2-1.4 5.2-4 7.8m-3.8-3.8 3.8 3.8M14.8 6.2l2.9 2.9" /></svg><span>Get your AI lead qualification plan</span></a>
-    <a class="btn btn-ghost" href="https://calendar.app.google/R21jua9szDGa7T7c9">Book a discovery call</a>
-  </div>
-</div>
-<div class="trust-grid">
-  <article class="trust-card">
-    <h3>For B2B revenue teams</h3>
-    <p>Designed for sales, marketing, and RevOps teams working in live pipeline workflows.</p>
-  </article>
-  <article class="trust-card">
-    <h3>Practical recommendation</h3>
-    <p>You get a concrete first implementation direction, not a generic AI consultation.</p>
-  </article>
-</div>
-<div id="get-your-plan" class="lead-plan-panel">
-  <h2>Get your AI plan</h2>
-  <p>Complete the form and get a practical first recommendation for your team.</p>
-  <ul class="lead-plan-list">
-    <li>Focused recommendation, not a broad audit</li>
-    <li>Clear first use case with implementation direction</li>
-    <li>Useful before booking a full discovery call</li>
-  </ul>
-  <div class="hubspot-form-wrap">
-    <div class="hs-form-frame" data-region="eu1" data-form-id="f3455939-7f6b-481a-aaa4-f06d34e3f8e3" data-portal-id="144979550"></div>
-  </div>
-</div>
-<h2>What you get</h2>
-<div class="trust-grid">
-  <article class="trust-card">
-    <h3>Clear first AI use case</h3>
-    <p>The highest-impact workflow to automate first.</p>
-  </article>
-  <article class="trust-card">
-    <h3>What to automate first</h3>
-    <p>A practical recommendation on scope and starting point.</p>
-  </article>
-  <article class="trust-card">
-    <h3>Implementation direction</h3>
-    <p>How to connect AI into your current revenue stack.</p>
-  </article>
-  <article class="trust-card">
-    <h3>Faster business impact</h3>
-    <p>A shorter path to measurable workflow improvement.</p>
-  </article>
-</div>
-<h2>Who this is for</h2>
-<div class="conversion-compare">
-  <article class="compare-card">
-    <h3>Ideal for</h3>
-    <ul class="compare-points">
-      <li>B2B teams with inbound leads or active outbound sales</li>
-      <li>Teams using a CRM and handling qualification manually</li>
-      <li>Sales, marketing, and RevOps teams needing a clear first AI move</li>
+                  <section class="leadplan-hero" aria-label="AI plan hero and form">
+  <div>
+    <p class="leadplan-kicker">Practical first step</p>
+    <h2 class="leadplan-title">Find the first AI workflow your sales team should automate</h2>
+    <p class="leadplan-subtitle">
+      Tell us how your team handles leads today and we will recommend the best first AI workflow to implement.
+    </p>
+    <p class="leadplan-reassure">Takes about 3 minutes.</p>
+    <ul class="leadplan-points">
+      <li>Built for B2B teams with inbound leads or active outbound sales</li>
+      <li>Focused recommendation, not a generic audit</li>
+      <li>Useful before booking a call</li>
     </ul>
+  </div>
+  <div id="get-your-plan" class="leadplan-form-card">
+    <h2>Get your AI lead qualification plan</h2>
+    <p>Complete the form and get a practical recommendation for your first implementation.</p>
+    <div class="hubspot-form-wrap">
+      <div class="hs-form-frame" data-region="eu1" data-form-id="f3455939-7f6b-481a-aaa4-f06d34e3f8e3" data-portal-id="144979550"></div>
+    </div>
+  </div>
+</section>
+<h2>How AI lead qualification works</h2>
+<div class="leadplan-flow">
+  <article class="leadplan-step">
+    <p class="leadplan-step-index">1</p>
+    <p class="leadplan-step-title">Lead enters CRM</p>
   </article>
-  <article class="compare-card">
-    <h3>Not ideal for</h3>
-    <ul class="compare-points">
-      <li>Teams without lead flow</li>
-      <li>Very early-stage companies without a sales process</li>
-      <li>Visitors looking only for broad AI inspiration</li>
-    </ul>
+  <article class="leadplan-step">
+    <p class="leadplan-step-index">2</p>
+    <p class="leadplan-step-title">AI researches the company</p>
+  </article>
+  <article class="leadplan-step">
+    <p class="leadplan-step-index">3</p>
+    <p class="leadplan-step-title">AI checks ICP fit</p>
+  </article>
+  <article class="leadplan-step">
+    <p class="leadplan-step-index">4</p>
+    <p class="leadplan-step-title">AI enriches CRM context</p>
+  </article>
+  <article class="leadplan-step">
+    <p class="leadplan-step-index">5</p>
+    <p class="leadplan-step-title">Sales receives qualified opportunity</p>
   </article>
 </div>
 <h2>Before and after AI lead qualification</h2>
 <div class="conversion-compare">
   <article class="compare-card">
-    <h3>Before</h3>
+    <h3>Before AI</h3>
     <ul class="compare-points">
-      <li>Reps research each lead manually</li>
-      <li>Lead context is incomplete</li>
-      <li>Response time is slower</li>
-      <li>Qualification quality varies</li>
+      <li>manual lead research</li>
+      <li>inconsistent qualification</li>
+      <li>slow response</li>
     </ul>
   </article>
   <article class="compare-card compare-card--after">
-    <h3>After</h3>
+    <h3>After AI</h3>
     <ul class="compare-points">
-      <li>AI researches the company automatically</li>
-      <li>CRM context is prepared before handoff</li>
-      <li>Reps respond faster</li>
-      <li>Qualification is more consistent</li>
+      <li>automated company research</li>
+      <li>consistent lead qualification</li>
+      <li>faster response</li>
     </ul>
   </article>
 </div>
 <h2>Example recommendation</h2>
 <article class="example-scenario">
-  <p><strong>Company:</strong> B2B SaaS team with inbound demo requests.</p>
-  <p><strong>Problem:</strong> Sales reps spend too much time researching inbound leads before deciding who to prioritize.</p>
-  <p><strong>Recommended first implementation:</strong> AI Inbound Lead Qualification Agent.</p>
-  <p><strong>Expected outcome:</strong> Faster follow-up, better CRM context, and less manual qualification work for sales.</p>
+  <p><strong>Company</strong><br />B2B SaaS team with inbound demo requests</p>
+  <p><strong>Problem</strong><br />Sales spends too much time researching leads.</p>
+  <p><strong>Recommendation</strong><br />AI Lead Qualification Agent</p>
+  <p><strong>Result</strong><br />Faster follow-up and better CRM context.</p>
 </article>
-<h2>Why teams use this before booking a call</h2>
-<ul class="step-flow">
-  <li>It identifies the best first AI use case for your team.</li>
-  <li>It gives you a practical recommendation, not vague ideas.</li>
-  <li>It makes first implementation easier to scope and prioritize.</li>
-  <li>It helps even if you are still early in your AI rollout.</li>
-</ul>
-<p class="highlight-note">You do not need a full AI strategy to start. You need the right first workflow.</p>
-<section class="content-page-cta" aria-label="Final lead plan call to action">
+<h2>What you get</h2>
+<div class="trust-grid">
+  <article class="trust-card">
+    <h3>Clear first AI use case</h3>
+    <p>You know exactly what to implement first.</p>
+  </article>
+  <article class="trust-card">
+    <h3>What to automate first</h3>
+    <p>A focused recommendation for initial scope.</p>
+  </article>
+  <article class="trust-card">
+    <h3>Practical implementation direction</h3>
+    <p>How to connect AI with your current stack.</p>
+  </article>
+  <article class="trust-card">
+    <h3>Faster path to ROI</h3>
+    <p>Less trial and error in your first rollout.</p>
+  </article>
+</div>
+<h2>Who this is for</h2>
+<div class="conversion-compare">
+  <article class="compare-card">
+    <ul class="compare-points">
+      <li>B2B companies with inbound leads</li>
+      <li>Sales or RevOps teams</li>
+      <li>Companies using a CRM</li>
+      <li>Teams doing manual lead research</li>
+    </ul>
+  </article>
+  <article class="compare-card">
+    <h3>Not for</h3>
+    <p>Companies without a sales process.</p>
+  </article>
+</div>
+<section class="content-page-cta leadplan-final-cta" aria-label="Final lead plan call to action">
   <h2>Get your AI lead qualification plan</h2>
-  <p>Tell us how your team works today, and we will recommend the best first AI workflow to implement.</p>
+  <p>Tell us how your team works today and get a practical recommendation for your first AI workflow.</p>
   <div class="home-cta">
     <a class="btn btn-primary" href="#get-your-plan"><svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.3 15.7c-1.7 1.3-2.8 3.4-2.8 5.8 2.4 0 4.5-1.1 5.8-2.8m0 0 4.2-4.2m-4.2 4.2-3-3m7.2-7.2c2.6-2.6 5.8-3.7 7.8-4-.3 2-1.4 5.2-4 7.8m-3.8-3.8 3.8 3.8M14.8 6.2l2.9 2.9" /></svg><span>Get your AI lead qualification plan</span></a>
     <a class="btn btn-ghost" href="https://calendar.app.google/R21jua9szDGa7T7c9">Book a discovery call</a>
@@ -3583,7 +3726,7 @@
             <div>© 2026, Easy Tech Partners.</div>
             <div class="footer-build">
               Updated:
-              <time datetime="2026-03-11T12:13:36.339Z">2026-03-11 12:13 UTC</time>
+              <time datetime="2026-03-11T12:26:33.142Z">2026-03-11 12:26 UTC</time>
             </div>
           </div>
           <div class="footer-links" aria-label="Footer links">

@@ -965,6 +965,141 @@
         margin-top: 0;
       }
 
+      .is-lead-plan .prose,
+      .is-lead-plan.is-content .prose {
+        max-width: 100%;
+      }
+
+      .is-lead-plan .prose h2 {
+        margin-top: clamp(34px, 5vw, 52px);
+      }
+
+      .is-lead-plan .leadplan-hero {
+        margin: 0 0 clamp(26px, 4vw, 42px);
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+        gap: var(--space-md);
+        align-items: start;
+      }
+
+      .is-lead-plan .leadplan-kicker {
+        margin: 0 0 8px;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--accent-tech-dark);
+      }
+
+      .is-lead-plan .leadplan-title {
+        margin: 0 0 10px;
+        color: var(--text);
+        font-size: clamp(26px, 3.2vw, 38px);
+        line-height: 1.08;
+        letter-spacing: -0.035em;
+      }
+
+      .is-lead-plan .leadplan-subtitle {
+        margin: 0 0 12px;
+        color: rgba(30, 41, 59, 0.86);
+        max-width: 58ch;
+      }
+
+      .is-lead-plan .leadplan-reassure {
+        margin: 0;
+        font-size: 13px;
+        font-weight: 650;
+        color: rgba(51, 65, 85, 0.95);
+      }
+
+      .is-lead-plan .leadplan-points {
+        list-style: none;
+        margin: 14px 0 0;
+        padding: 0;
+        display: grid;
+        gap: 7px;
+      }
+
+      .is-lead-plan .leadplan-points li {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        color: rgba(30, 41, 59, 0.92);
+      }
+
+      .is-lead-plan .leadplan-points li::before {
+        content: none;
+      }
+
+      .is-lead-plan .leadplan-form-card {
+        margin: 0;
+        padding: clamp(16px, 2.2vw, 22px);
+        border-radius: 14px;
+        border: 1px solid rgba(var(--accent-tech-rgb), 0.32);
+        background:
+          radial-gradient(circle at 96% 4%, rgba(var(--accent-tech-rgb), 0.14), transparent 52%),
+          linear-gradient(165deg, rgba(var(--accent-tech-rgb), 0.08), rgba(255, 255, 255, 0.97) 60%),
+          rgba(255, 255, 255, 0.97);
+        box-shadow: 0 16px 30px rgba(2, 6, 23, 0.07);
+      }
+
+      .is-lead-plan .leadplan-form-card h2 {
+        margin: 0 0 6px;
+        padding-top: 0;
+        border-top: 0;
+        font-size: 21px;
+      }
+
+      .is-lead-plan .leadplan-form-card p {
+        margin: 0 0 10px;
+        max-width: 52ch;
+      }
+
+      .is-lead-plan .leadplan-form-card .hubspot-form-wrap {
+        margin-top: 10px;
+      }
+
+      .is-lead-plan .leadplan-flow {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 10px;
+        margin: var(--space-sm) 0 0;
+      }
+
+      .is-lead-plan .leadplan-step {
+        margin: 0;
+        padding: 12px 12px;
+        border-radius: 12px;
+        border: 1px solid rgba(226, 232, 240, 0.95);
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: 0 8px 20px rgba(2, 6, 23, 0.05);
+      }
+
+      .is-lead-plan .leadplan-step-index {
+        margin: 0 0 8px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 999px;
+        background: rgba(var(--accent-tech-rgb), 0.16);
+        color: var(--accent-tech-dark);
+        font-size: 12px;
+        font-weight: 780;
+      }
+
+      .is-lead-plan .leadplan-step-title {
+        margin: 0;
+        color: var(--text);
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      .is-lead-plan .leadplan-final-cta {
+        margin-top: clamp(36px, 5vw, 56px);
+      }
+
       .section.compact {
         padding: var(--space-section-compact) 0;
       }
@@ -3184,6 +3319,15 @@
       }
 
       @media (max-width: 980px) {
+        .is-lead-plan .leadplan-hero {
+          grid-template-columns: 1fr;
+          gap: var(--space-sm);
+        }
+
+        .is-lead-plan .leadplan-flow {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
         .services-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
@@ -3226,6 +3370,10 @@
       }
 
       @media (max-width: 760px) {
+        .is-lead-plan .leadplan-flow {
+          grid-template-columns: 1fr;
+        }
+
         .is-services-index .services-grid-showcase {
           grid-template-columns: minmax(0, 1fr);
         }
@@ -3485,7 +3633,7 @@
             <div>© 2026, Easy Tech Partners.</div>
             <div class="footer-build">
               Updated:
-              <time datetime="2026-03-11T12:13:36.339Z">2026-03-11 12:13 UTC</time>
+              <time datetime="2026-03-11T12:26:33.142Z">2026-03-11 12:26 UTC</time>
             </div>
           </div>
           <div class="footer-links" aria-label="Footer links">
