@@ -45,9 +45,10 @@ alternateLangs:
       <div class="blog-search-meta" aria-live="polite" id="blog-search-meta"></div>
     </div>
 
-    {% if collections.postPl and collections.postPl.length %}
+    {% set blogPosts = collections.postPl | reverse %}
+    {% if blogPosts and blogPosts.length %}
       <div class="blog-grid" id="blog-posts-list">
-        {% for post in collections.postPl %}
+        {% for post in blogPosts %}
           <div
             class="blog-item"
             data-search="{{ (post.data.title or '') ~ ' ' ~ (post.data.description or '') }}"

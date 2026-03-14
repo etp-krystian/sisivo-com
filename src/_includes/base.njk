@@ -4259,7 +4259,7 @@
             </div>
           </section>
 
-	          {% set featuredPosts = collections.postPl if isPolish else collections.posts %}
+	          {% set featuredPosts = (collections.postPl if isPolish else collections.posts) | reverse %}
 	          {% if featuredPosts and featuredPosts.length %}
 	            <section class="section compact" aria-label="Latest blog posts">
 	              <div class="container">
