@@ -8,6 +8,15 @@ permalink: /pl/konsulting-ai/
 alternateLangs:
   en: /services/ai-consulting-strategy/
   pl: /pl/konsulting-ai/
+faqSchema:
+  - question: "Czy konsulting AI kończy się prezentacją?"
+    answer: "Nie. Dobrze poprowadzony konsulting powinien kończyć się rekomendacją działań, zakresem pierwszego projektu i jasnym planem dalszych kroków."
+  - question: "Czy warsztat discovery wystarczy do startu?"
+    answer: "W wielu firmach tak, jeśli celem jest wybór pierwszego use case'u i przygotowanie wdrożenia. W bardziej złożonych organizacjach może być potrzebny szerszy etap planowania."
+  - question: "Czy pomagacie później we wdrożeniu?"
+    answer: "Tak. Konsulting może być pierwszym krokiem do dalszego projektu wdrożeniowego."
+  - question: "Jakie osoby powinny brać udział?"
+    answer: "Najlepiej właściciel procesu, osoba biznesowa odpowiedzialna za wynik, przedstawiciel IT lub danych oraz ktoś, kto zna codzienny przebieg pracy."
 ---
 
 Konsulting AI dla firm ma sens wtedy, gdy organizacja chce podejmować decyzje wdrożeniowe na podstawie procesu, danych i efektu biznesowego, a nie modnych haseł. To usługa dla firm, które chcą uporządkować temat AI, wybrać właściwy pierwszy projekt i uniknąć kosztownych błędów.

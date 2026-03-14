@@ -8,6 +8,15 @@ permalink: /pl/wdrozenia-ai-dla-firm/
 alternateLangs:
   en: /services/ai-solutions-development/
   pl: /pl/wdrozenia-ai-dla-firm/
+faqSchema:
+  - question: "Ile trwa wdrożenie AI dla firmy?"
+    answer: "To zależy od procesu, danych i integracji, ale pierwszy zakres powinien być na tyle ograniczony, aby dało się go uruchomić i ocenić bez wielomiesięcznego projektu."
+  - question: "Czy trzeba najpierw uporządkować wszystkie dane?"
+    answer: "Nie zawsze. Często wystarczy przygotować minimalny, sensowny zakres danych potrzebny dla pierwszego use case'u i rozwijać rozwiązanie etapami."
+  - question: "Czy wdrożenie AI wymaga zmiany wszystkich systemów?"
+    answer: "Nie. Najczęściej celem jest integracja z obecnymi systemami, a nie ich wymiana."
+  - question: "Jak mierzyć efekt biznesowy?"
+    answer: "Najczęściej mierzymy oszczędność czasu, skrócenie czasu obsługi, liczbę zautomatyzowanych kroków, jakość odpowiedzi i obciążenie zespołu przed i po wdrożeniu."
 ---
 
 Wdrożenia AI dla firm to nie zakup kolejnego narzędzia, ale zmiana sposobu działania konkretnego procesu. Dobrze zaprojektowane wdrożenie skraca czas pracy, ogranicza ręczne operacje, poprawia jakość obsługi i pozwala zespołowi działać szybciej bez zwiększania obciążenia operacyjnego.

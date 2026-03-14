@@ -7,6 +7,15 @@ description: "Wdrażamy AI dla firm z Warszawy i całej Polski: agenci AI, RAG, 
 alternateLangs:
   en: /
   pl: /pl/
+faqSchema:
+  - question: "Czy wdrożenia AI dla firm mają sens tylko w dużych organizacjach?"
+    answer: "Najlepsze projekty często zaczynają się od jednego procesu, jednego działu i jednego mierzalnego celu. Ważniejsza od skali firmy jest powtarzalność problemu i gotowość do wdrożenia."
+  - question: "Jak szybko można zobaczyć efekty?"
+    answer: "Pierwsze efekty zwykle widać szybciej niż w klasycznych projektach transformacyjnych, bo zaczynamy od ograniczonego i praktycznego zakresu wdrożenia."
+  - question: "Czy AI musi zastąpić pracowników?"
+    answer: "Nie. W większości projektów AI wspiera ludzi w pracy, usuwa ręczne kroki i skraca czas realizacji, ale decyzje krytyczne pozostają po stronie zespołu."
+  - question: "Czy pracujecie tylko z firmami z Warszawy?"
+    answer: "Nie. Obsługujemy firmy z całej Polski i klientów międzynarodowych, ale dla wielu firm z Warszawy wartością jest łatwiejsza współpraca z partnerem działającym lokalnie."
 ---
 
 Easy Tech Partners to partner wdrożeniowy dla firm, które chcą wykorzystać AI w konkretnych procesach biznesowych, a nie tylko testować kolejne narzędzia. Pracujemy z zespołami zarządczymi, operacyjnymi, sprzedażowymi i obsługi klienta, które oczekują krótszego czasu pracy nad zadaniami, lepszego dostępu do wiedzy i integracji z obecnymi systemami.

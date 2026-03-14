@@ -6,6 +6,8 @@ renderPageHeader: false
 {% set canonical = (site.url + page.url) if site and site.url else page.url %}
 {% set postLocale = locale or site.locale or 'en' %}
 {% set isPolishPost = postLocale == 'pl' %}
+{% set organizationId = (site.url + '#organization') if site and site.url else '#organization' %}
+{% set postImageUrl = (site.url + image) if site and site.url and image else image %}
 
 <section class="section">
   <div class="container">
@@ -49,16 +51,20 @@ renderPageHeader: false
   "headline": {{ title | json | safe }},
   {% if description %}"description": {{ description | json | safe }},{% endif %}
   {% if date %}"datePublished": {{ date.toISOString() | json | safe }},{% endif %}
+  "inLanguage": {{ postLocale | json | safe }},
+  {% if postImageUrl %}"image": {{ postImageUrl | json | safe }},{% endif %}
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": {{ canonical | json | safe }}
   },
   "author": {
     "@type": "Organization",
+    "@id": {{ organizationId | json | safe }},
     "name": {{ site.author.name | json | safe }}
   },
   "publisher": {
     "@type": "Organization",
+    "@id": {{ organizationId | json | safe }},
     "name": {{ site.name | json | safe }}
   }
 }
