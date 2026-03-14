@@ -3367,6 +3367,11 @@
         display: grid;
         gap: 12px;
         grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: stretch;
+      }
+
+      .blog-item {
+        height: 100%;
       }
 
       .blog-more {
@@ -3374,8 +3379,10 @@
       }
 
       .post-card {
-        display: grid;
+        display: flex;
+        flex-direction: column;
         gap: 8px;
+        height: 100%;
         padding: 16px;
         border-radius: var(--radius);
         border: 1px solid rgba(226, 232, 240, 0.95);
@@ -3405,14 +3412,17 @@
 
       .post-card-content {
         min-width: 0;
-        display: grid;
+        display: flex;
+        flex-direction: column;
         gap: 8px;
+        flex: 1 1 auto;
       }
 
       .post-card-meta {
         margin: 0;
         color: var(--muted-soft);
         font-size: 12px;
+        min-height: 1lh;
       }
 
       .post-card-title {
@@ -3442,6 +3452,7 @@
         display: inline-flex;
         align-items: center;
         gap: 6px;
+        margin-top: auto;
         font-size: 13px;
         font-weight: 800;
         color: var(--accent-tech-dark);
@@ -3866,14 +3877,14 @@
         
           <div
             class="blog-item"
-            data-search="Wdrożenia AI dla firm w Warszawie: od czego zacząć i co automatyzować najpierw Praktyczny przewodnik dla firm z Warszawy planujących wdrożenie AI. Jak wybrać pierwszy proces, kiedy postawić na agentów AI lub RAG i jak podejść do wdrożenia bez chaosu."
+            data-search="Jak ustawiać właściwości kontaktu HubSpot na podstawie danych z zewnętrznego API Instrukcja krok po kroku pokazująca, jak w HubSpot Workflows ustawić właściwość kontaktu na podstawie odpowiedzi z zewnętrznego API."
           >
             <article class="post-card post-card--compact">
               
-                <a class="post-card-thumb" href="/pl/blog/wdrozenia-ai-dla-firm-w-warszawie-od-czego-zaczac-i-co-automatyzowac-najpierw/">
+                <a class="post-card-thumb" href="/pl/blog/ustawianie-wlasciwosci-kontaktu-hubspot-na-podstawie-danych-z-zewnetrznego-api/">
                   <img
-                    src="/images/blog/ai-implementation-start.jpg"
-                    alt="Zespół biznesowy omawia plan wdrożenia przy laptopie"
+                    src="/images/blog/external-api-data-workflows.jpg"
+                    alt="Wykorzystanie danych z zewnętrznego API w HubSpot Workflows"
                     loading="lazy"
                     decoding="async"
                   />
@@ -3882,144 +3893,16 @@
               <div class="post-card-content">
                 <p class="post-card-meta">
                   
-                    <time datetime="2026-03-14T00:00:00.000Z">14 marca 2026</time>
+                    <time datetime="2025-03-20T00:00:00.000Z">20 marca 2025</time>
                   
                 </p>
                 <h2 class="post-card-title">
-                  <a href="/pl/blog/wdrozenia-ai-dla-firm-w-warszawie-od-czego-zaczac-i-co-automatyzowac-najpierw/">Wdrożenia AI dla firm w Warszawie: od czego zacząć i co automatyzować najpierw</a>
+                  <a href="/pl/blog/ustawianie-wlasciwosci-kontaktu-hubspot-na-podstawie-danych-z-zewnetrznego-api/">Jak ustawiać właściwości kontaktu HubSpot na podstawie danych z zewnętrznego API</a>
                 </h2>
                 
-                  <p class="post-card-desc">Praktyczny przewodnik dla firm z Warszawy planujących wdrożenie AI. Jak wybrać pierwszy proces, kiedy postawić na agentów AI lub RAG i jak podejść do wdrożenia bez chaosu.</p>
+                  <p class="post-card-desc">Instrukcja krok po kroku pokazująca, jak w HubSpot Workflows ustawić właściwość kontaktu na podstawie odpowiedzi z zewnętrznego API.</p>
                 
-                <a class="post-card-more" href="/pl/blog/wdrozenia-ai-dla-firm-w-warszawie-od-czego-zaczac-i-co-automatyzowac-najpierw/">Czytaj dalej <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
-              </div>
-            </article>
-          </div>
-        
-          <div
-            class="blog-item"
-            data-search="Tygodniowa pętla SEO: agent AI, który pisze, publikuje, mierzy i poprawia Praktyczny model agenta AI, który co tydzień tworzy wpis, publikuje go do HubSpot, sprawdza wyniki w GA4 i Search Console, a potem optymalizuje kolejne treści."
-          >
-            <article class="post-card post-card--compact">
-              
-                <a class="post-card-thumb" href="/pl/blog/tygodniowa-petla-seo-agent-ai-pisze-publikuje-mierzy-i-poprawia/">
-                  <img
-                    src="/images/blog/weekly-blog-post.jpg"
-                    alt="Dashboard analityczny z wykresami i metrykami"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </a>
-              
-              <div class="post-card-content">
-                <p class="post-card-meta">
-                  
-                    <time datetime="2026-03-05T00:00:00.000Z">05 marca 2026</time>
-                  
-                </p>
-                <h2 class="post-card-title">
-                  <a href="/pl/blog/tygodniowa-petla-seo-agent-ai-pisze-publikuje-mierzy-i-poprawia/">Tygodniowa pętla SEO: agent AI, który pisze, publikuje, mierzy i poprawia</a>
-                </h2>
-                
-                  <p class="post-card-desc">Praktyczny model agenta AI, który co tydzień tworzy wpis, publikuje go do HubSpot, sprawdza wyniki w GA4 i Search Console, a potem optymalizuje kolejne treści.</p>
-                
-                <a class="post-card-more" href="/pl/blog/tygodniowa-petla-seo-agent-ai-pisze-publikuje-mierzy-i-poprawia/">Czytaj dalej <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
-              </div>
-            </article>
-          </div>
-        
-          <div
-            class="blog-item"
-            data-search="Customowe integracje HubSpot: limity API i duże wolumeny danych Jak projektować customowe integracje HubSpot przy dużych wolumenach danych i limitach API. Stabilne podejście do synchronizacji, batchingu i monitoringu."
-          >
-            <article class="post-card post-card--compact">
-              
-                <a class="post-card-thumb" href="/pl/blog/integracje-hubspot-api-limity-duze-wolumeny-danych/">
-                  <img
-                    src="/images/blog/hubspot-integrations.jpg"
-                    alt="Dashboard analityczny integracji HubSpot"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </a>
-              
-              <div class="post-card-content">
-                <p class="post-card-meta">
-                  
-                    <time datetime="2025-10-09T00:00:00.000Z">09 października 2025</time>
-                  
-                </p>
-                <h2 class="post-card-title">
-                  <a href="/pl/blog/integracje-hubspot-api-limity-duze-wolumeny-danych/">Customowe integracje HubSpot: limity API i duże wolumeny danych</a>
-                </h2>
-                
-                  <p class="post-card-desc">Jak projektować customowe integracje HubSpot przy dużych wolumenach danych i limitach API. Stabilne podejście do synchronizacji, batchingu i monitoringu.</p>
-                
-                <a class="post-card-more" href="/pl/blog/integracje-hubspot-api-limity-duze-wolumeny-danych/">Czytaj dalej <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
-              </div>
-            </article>
-          </div>
-        
-          <div
-            class="blog-item"
-            data-search="Customowe integracje HubSpot: kiedy natywne aplikacje nie wystarczają Natywne integracje HubSpot są dobre dla prostych scenariuszy. Przy złożonych procesach, dużych wolumenach danych i custom objects potrzebna jest customowa integracja."
-          >
-            <article class="post-card post-card--compact">
-              
-                <a class="post-card-thumb" href="/pl/blog/customowe-integracje-hubspot-kiedy-natywne-aplikacje-nie-wystarczaja/">
-                  <img
-                    src="/images/blog/custom-integration.jpg"
-                    alt="Wizualizacja customowej integracji HubSpot"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </a>
-              
-              <div class="post-card-content">
-                <p class="post-card-meta">
-                  
-                    <time datetime="2025-10-02T00:00:00.000Z">02 października 2025</time>
-                  
-                </p>
-                <h2 class="post-card-title">
-                  <a href="/pl/blog/customowe-integracje-hubspot-kiedy-natywne-aplikacje-nie-wystarczaja/">Customowe integracje HubSpot: kiedy natywne aplikacje nie wystarczają</a>
-                </h2>
-                
-                  <p class="post-card-desc">Natywne integracje HubSpot są dobre dla prostych scenariuszy. Przy złożonych procesach, dużych wolumenach danych i custom objects potrzebna jest customowa integracja.</p>
-                
-                <a class="post-card-more" href="/pl/blog/customowe-integracje-hubspot-kiedy-natywne-aplikacje-nie-wystarczaja/">Czytaj dalej <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
-              </div>
-            </article>
-          </div>
-        
-          <div
-            class="blog-item"
-            data-search="Jak zabezpieczyć hasłem stronę HubSpot przy użyciu Cloudflare Workers Jak dodać ochronę hasłem do strony HubSpot przy użyciu Cloudflare Workers i Basic Auth. Prosty sposób na zabezpieczenie preview lub stagingu."
-          >
-            <article class="post-card post-card--compact">
-              
-                <a class="post-card-thumb" href="/pl/blog/jak-zabezpieczyc-haslem-strone-hubspot-cloudflare-workers/">
-                  <img
-                    src="/images/blog/how-to-password-protect-a-hubspot-website.jpg"
-                    alt="Jak zabezpieczyć hasłem stronę HubSpot przy użyciu Cloudflare Workers"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </a>
-              
-              <div class="post-card-content">
-                <p class="post-card-meta">
-                  
-                    <time datetime="2025-04-11T00:00:00.000Z">11 kwietnia 2025</time>
-                  
-                </p>
-                <h2 class="post-card-title">
-                  <a href="/pl/blog/jak-zabezpieczyc-haslem-strone-hubspot-cloudflare-workers/">Jak zabezpieczyć hasłem stronę HubSpot przy użyciu Cloudflare Workers</a>
-                </h2>
-                
-                  <p class="post-card-desc">Jak dodać ochronę hasłem do strony HubSpot przy użyciu Cloudflare Workers i Basic Auth. Prosty sposób na zabezpieczenie preview lub stagingu.</p>
-                
-                <a class="post-card-more" href="/pl/blog/jak-zabezpieczyc-haslem-strone-hubspot-cloudflare-workers/">Czytaj dalej <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
+                <a class="post-card-more" href="/pl/blog/ustawianie-wlasciwosci-kontaktu-hubspot-na-podstawie-danych-z-zewnetrznego-api/">Czytaj dalej <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
               </div>
             </article>
           </div>
@@ -4058,14 +3941,14 @@
         
           <div
             class="blog-item"
-            data-search="Jak ustawiać właściwości kontaktu HubSpot na podstawie danych z zewnętrznego API Instrukcja krok po kroku pokazująca, jak w HubSpot Workflows ustawić właściwość kontaktu na podstawie odpowiedzi z zewnętrznego API."
+            data-search="Jak zabezpieczyć hasłem stronę HubSpot przy użyciu Cloudflare Workers Jak dodać ochronę hasłem do strony HubSpot przy użyciu Cloudflare Workers i Basic Auth. Prosty sposób na zabezpieczenie preview lub stagingu."
           >
             <article class="post-card post-card--compact">
               
-                <a class="post-card-thumb" href="/pl/blog/ustawianie-wlasciwosci-kontaktu-hubspot-na-podstawie-danych-z-zewnetrznego-api/">
+                <a class="post-card-thumb" href="/pl/blog/jak-zabezpieczyc-haslem-strone-hubspot-cloudflare-workers/">
                   <img
-                    src="/images/blog/external-api-data-workflows.jpg"
-                    alt="Wykorzystanie danych z zewnętrznego API w HubSpot Workflows"
+                    src="/images/blog/how-to-password-protect-a-hubspot-website.jpg"
+                    alt="Jak zabezpieczyć hasłem stronę HubSpot przy użyciu Cloudflare Workers"
                     loading="lazy"
                     decoding="async"
                   />
@@ -4074,16 +3957,144 @@
               <div class="post-card-content">
                 <p class="post-card-meta">
                   
-                    <time datetime="2025-03-20T00:00:00.000Z">20 marca 2025</time>
+                    <time datetime="2025-04-11T00:00:00.000Z">11 kwietnia 2025</time>
                   
                 </p>
                 <h2 class="post-card-title">
-                  <a href="/pl/blog/ustawianie-wlasciwosci-kontaktu-hubspot-na-podstawie-danych-z-zewnetrznego-api/">Jak ustawiać właściwości kontaktu HubSpot na podstawie danych z zewnętrznego API</a>
+                  <a href="/pl/blog/jak-zabezpieczyc-haslem-strone-hubspot-cloudflare-workers/">Jak zabezpieczyć hasłem stronę HubSpot przy użyciu Cloudflare Workers</a>
                 </h2>
                 
-                  <p class="post-card-desc">Instrukcja krok po kroku pokazująca, jak w HubSpot Workflows ustawić właściwość kontaktu na podstawie odpowiedzi z zewnętrznego API.</p>
+                  <p class="post-card-desc">Jak dodać ochronę hasłem do strony HubSpot przy użyciu Cloudflare Workers i Basic Auth. Prosty sposób na zabezpieczenie preview lub stagingu.</p>
                 
-                <a class="post-card-more" href="/pl/blog/ustawianie-wlasciwosci-kontaktu-hubspot-na-podstawie-danych-z-zewnetrznego-api/">Czytaj dalej <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
+                <a class="post-card-more" href="/pl/blog/jak-zabezpieczyc-haslem-strone-hubspot-cloudflare-workers/">Czytaj dalej <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
+              </div>
+            </article>
+          </div>
+        
+          <div
+            class="blog-item"
+            data-search="Customowe integracje HubSpot: kiedy natywne aplikacje nie wystarczają Natywne integracje HubSpot są dobre dla prostych scenariuszy. Przy złożonych procesach, dużych wolumenach danych i custom objects potrzebna jest customowa integracja."
+          >
+            <article class="post-card post-card--compact">
+              
+                <a class="post-card-thumb" href="/pl/blog/customowe-integracje-hubspot-kiedy-natywne-aplikacje-nie-wystarczaja/">
+                  <img
+                    src="/images/blog/custom-integration.jpg"
+                    alt="Wizualizacja customowej integracji HubSpot"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              
+              <div class="post-card-content">
+                <p class="post-card-meta">
+                  
+                    <time datetime="2025-10-02T00:00:00.000Z">02 października 2025</time>
+                  
+                </p>
+                <h2 class="post-card-title">
+                  <a href="/pl/blog/customowe-integracje-hubspot-kiedy-natywne-aplikacje-nie-wystarczaja/">Customowe integracje HubSpot: kiedy natywne aplikacje nie wystarczają</a>
+                </h2>
+                
+                  <p class="post-card-desc">Natywne integracje HubSpot są dobre dla prostych scenariuszy. Przy złożonych procesach, dużych wolumenach danych i custom objects potrzebna jest customowa integracja.</p>
+                
+                <a class="post-card-more" href="/pl/blog/customowe-integracje-hubspot-kiedy-natywne-aplikacje-nie-wystarczaja/">Czytaj dalej <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
+              </div>
+            </article>
+          </div>
+        
+          <div
+            class="blog-item"
+            data-search="Customowe integracje HubSpot: limity API i duże wolumeny danych Jak projektować customowe integracje HubSpot przy dużych wolumenach danych i limitach API. Stabilne podejście do synchronizacji, batchingu i monitoringu."
+          >
+            <article class="post-card post-card--compact">
+              
+                <a class="post-card-thumb" href="/pl/blog/integracje-hubspot-api-limity-duze-wolumeny-danych/">
+                  <img
+                    src="/images/blog/hubspot-integrations.jpg"
+                    alt="Dashboard analityczny integracji HubSpot"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              
+              <div class="post-card-content">
+                <p class="post-card-meta">
+                  
+                    <time datetime="2025-10-09T00:00:00.000Z">09 października 2025</time>
+                  
+                </p>
+                <h2 class="post-card-title">
+                  <a href="/pl/blog/integracje-hubspot-api-limity-duze-wolumeny-danych/">Customowe integracje HubSpot: limity API i duże wolumeny danych</a>
+                </h2>
+                
+                  <p class="post-card-desc">Jak projektować customowe integracje HubSpot przy dużych wolumenach danych i limitach API. Stabilne podejście do synchronizacji, batchingu i monitoringu.</p>
+                
+                <a class="post-card-more" href="/pl/blog/integracje-hubspot-api-limity-duze-wolumeny-danych/">Czytaj dalej <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
+              </div>
+            </article>
+          </div>
+        
+          <div
+            class="blog-item"
+            data-search="Tygodniowa pętla SEO: agent AI, który pisze, publikuje, mierzy i poprawia Praktyczny model agenta AI, który co tydzień tworzy wpis, publikuje go do HubSpot, sprawdza wyniki w GA4 i Search Console, a potem optymalizuje kolejne treści."
+          >
+            <article class="post-card post-card--compact">
+              
+                <a class="post-card-thumb" href="/pl/blog/tygodniowa-petla-seo-agent-ai-pisze-publikuje-mierzy-i-poprawia/">
+                  <img
+                    src="/images/blog/weekly-blog-post.jpg"
+                    alt="Dashboard analityczny z wykresami i metrykami"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              
+              <div class="post-card-content">
+                <p class="post-card-meta">
+                  
+                    <time datetime="2026-03-05T00:00:00.000Z">05 marca 2026</time>
+                  
+                </p>
+                <h2 class="post-card-title">
+                  <a href="/pl/blog/tygodniowa-petla-seo-agent-ai-pisze-publikuje-mierzy-i-poprawia/">Tygodniowa pętla SEO: agent AI, który pisze, publikuje, mierzy i poprawia</a>
+                </h2>
+                
+                  <p class="post-card-desc">Praktyczny model agenta AI, który co tydzień tworzy wpis, publikuje go do HubSpot, sprawdza wyniki w GA4 i Search Console, a potem optymalizuje kolejne treści.</p>
+                
+                <a class="post-card-more" href="/pl/blog/tygodniowa-petla-seo-agent-ai-pisze-publikuje-mierzy-i-poprawia/">Czytaj dalej <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
+              </div>
+            </article>
+          </div>
+        
+          <div
+            class="blog-item"
+            data-search="Wdrożenia AI dla firm w Warszawie: od czego zacząć i co automatyzować najpierw Praktyczny przewodnik dla firm z Warszawy planujących wdrożenie AI. Jak wybrać pierwszy proces, kiedy postawić na agentów AI lub RAG i jak podejść do wdrożenia bez chaosu."
+          >
+            <article class="post-card post-card--compact">
+              
+                <a class="post-card-thumb" href="/pl/blog/wdrozenia-ai-dla-firm-w-warszawie-od-czego-zaczac-i-co-automatyzowac-najpierw/">
+                  <img
+                    src="/images/blog/ai-implementation-start.jpg"
+                    alt="Zespół biznesowy omawia plan wdrożenia przy laptopie"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              
+              <div class="post-card-content">
+                <p class="post-card-meta">
+                  
+                    <time datetime="2026-03-14T00:00:00.000Z">14 marca 2026</time>
+                  
+                </p>
+                <h2 class="post-card-title">
+                  <a href="/pl/blog/wdrozenia-ai-dla-firm-w-warszawie-od-czego-zaczac-i-co-automatyzowac-najpierw/">Wdrożenia AI dla firm w Warszawie: od czego zacząć i co automatyzować najpierw</a>
+                </h2>
+                
+                  <p class="post-card-desc">Praktyczny przewodnik dla firm z Warszawy planujących wdrożenie AI. Jak wybrać pierwszy proces, kiedy postawić na agentów AI lub RAG i jak podejść do wdrożenia bez chaosu.</p>
+                
+                <a class="post-card-more" href="/pl/blog/wdrozenia-ai-dla-firm-w-warszawie-od-czego-zaczac-i-co-automatyzowac-najpierw/">Czytaj dalej <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
               </div>
             </article>
           </div>
@@ -4106,7 +4117,7 @@
             <div>© 2026, Easy Tech Partners.</div>
             <div class="footer-build">
               Updated:
-              <time datetime="2026-03-14T22:03:43.554Z">2026-03-14 22:03 UTC</time>
+              <time datetime="2026-03-14T22:08:12.286Z">2026-03-14 22:08 UTC</time>
             </div>
           </div>
           <div class="footer-links" aria-label="Footer links">

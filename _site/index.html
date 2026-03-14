@@ -3306,6 +3306,11 @@
         display: grid;
         gap: 12px;
         grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: stretch;
+      }
+
+      .blog-item {
+        height: 100%;
       }
 
       .blog-more {
@@ -3313,8 +3318,10 @@
       }
 
       .post-card {
-        display: grid;
+        display: flex;
+        flex-direction: column;
         gap: 8px;
+        height: 100%;
         padding: 16px;
         border-radius: var(--radius);
         border: 1px solid rgba(226, 232, 240, 0.95);
@@ -3344,14 +3351,17 @@
 
       .post-card-content {
         min-width: 0;
-        display: grid;
+        display: flex;
+        flex-direction: column;
         gap: 8px;
+        flex: 1 1 auto;
       }
 
       .post-card-meta {
         margin: 0;
         color: var(--muted-soft);
         font-size: 12px;
+        min-height: 1lh;
       }
 
       .post-card-title {
@@ -3381,6 +3391,7 @@
         display: inline-flex;
         align-items: center;
         gap: 6px;
+        margin-top: auto;
         font-size: 13px;
         font-weight: 800;
         color: var(--accent-tech-dark);
@@ -4125,38 +4136,22 @@
 	                      <article class="post-card post-card--compact">
 	                        
 	                          <div class="post-card-thumb" aria-hidden="true">
-	                            <img src="/images/blog/external-api-data-workflows.jpg" alt="" loading="lazy" decoding="async" />
+	                            <img src="/images/blog/ai-implementation-start.jpg" alt="" loading="lazy" decoding="async" />
 	                          </div>
 	                        
 	                        <div class="post-card-content">
 	                          <p class="post-card-meta">
 	                            
-	                              <time datetime="2025-03-20T00:00:00.000Z">March 20, 2025</time>
+	                              <time datetime="2026-03-14T00:00:00.000Z">March 14, 2026</time>
 	                            
 	                          </p>
-	                          <h3 class="post-card-title"><a href="/blog/setting-hubspot-crm-contact-properties-based-on-external-api-data-in-workflows/">Using External API Data to Set HubSpot CRM Contact Properties in Workflows</a></h3>
+	                          <h3 class="post-card-title"><a href="/blog/ai-implementation-for-companies-where-to-start-and-what-to-automate-first/">AI Implementation for Companies: Where to Start and What to Automate First</a></h3>
 	                          
-	                            <p class="post-card-desc">Step-by-step tutorial showing how to set HubSpot contact properties based on external API data in workflows.</p>
+	                            <p class="post-card-desc">A practical guide for companies planning AI implementation: how to choose the first workflow, where AI creates value fastest, and how to avoid over-scoping.</p>
 	                          
-	                          <a class="post-card-more" href="/blog/setting-hubspot-crm-contact-properties-based-on-external-api-data-in-workflows/">Read more <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
+	                          <a class="post-card-more" href="/blog/ai-implementation-for-companies-where-to-start-and-what-to-automate-first/">Read more <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
 	                        </div>
 	                      </article>
-	                    
-	                  
-                      
-                      
-	                    
-	                  
-                      
-                      
-	                    
-	                  
-                      
-                      
-	                    
-	                  
-                      
-                      
 	                    
 	                  
                       
@@ -4186,23 +4181,39 @@
                       
                       
 	                    
+	                  
+                      
+                      
+	                    
+	                  
+                      
+                      
+	                    
+	                  
+                      
+                      
+	                    
+	                  
+                      
+                      
+	                    
 	                      <article class="post-card post-card--compact">
 	                        
 	                          <div class="post-card-thumb" aria-hidden="true">
-	                            <img src="/images/blog/ai-implementation-start.jpg" alt="" loading="lazy" decoding="async" />
+	                            <img src="/images/blog/external-api-data-workflows.jpg" alt="" loading="lazy" decoding="async" />
 	                          </div>
 	                        
 	                        <div class="post-card-content">
 	                          <p class="post-card-meta">
 	                            
-	                              <time datetime="2026-03-14T00:00:00.000Z">March 14, 2026</time>
+	                              <time datetime="2025-03-20T00:00:00.000Z">March 20, 2025</time>
 	                            
 	                          </p>
-	                          <h3 class="post-card-title"><a href="/blog/ai-implementation-for-companies-where-to-start-and-what-to-automate-first/">AI Implementation for Companies: Where to Start and What to Automate First</a></h3>
+	                          <h3 class="post-card-title"><a href="/blog/setting-hubspot-crm-contact-properties-based-on-external-api-data-in-workflows/">Using External API Data to Set HubSpot CRM Contact Properties in Workflows</a></h3>
 	                          
-	                            <p class="post-card-desc">A practical guide for companies planning AI implementation: how to choose the first workflow, where AI creates value fastest, and how to avoid over-scoping.</p>
+	                            <p class="post-card-desc">Step-by-step tutorial showing how to set HubSpot contact properties based on external API data in workflows.</p>
 	                          
-	                          <a class="post-card-more" href="/blog/ai-implementation-for-companies-where-to-start-and-what-to-automate-first/">Read more <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
+	                          <a class="post-card-more" href="/blog/setting-hubspot-crm-contact-properties-based-on-external-api-data-in-workflows/">Read more <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
 	                        </div>
 	                      </article>
 	                    
@@ -4223,7 +4234,7 @@
             <div>© 2026, Easy Tech Partners.</div>
             <div class="footer-build">
               Updated:
-              <time datetime="2026-03-14T22:03:43.554Z">2026-03-14 22:03 UTC</time>
+              <time datetime="2026-03-14T22:08:12.286Z">2026-03-14 22:08 UTC</time>
             </div>
           </div>
           <div class="footer-links" aria-label="Footer links">

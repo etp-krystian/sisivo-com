@@ -45,7 +45,7 @@ alternateLangs:
       <div class="blog-search-meta" aria-live="polite" id="blog-search-meta"></div>
     </div>
 
-    {% set blogPosts = collections.postPl | reverse %}
+    {% set blogPosts = collections.postPl %}
     {% if blogPosts and blogPosts.length %}
       <div class="blog-grid" id="blog-posts-list">
         {% for post in blogPosts %}

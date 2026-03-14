@@ -3367,6 +3367,11 @@
         display: grid;
         gap: 12px;
         grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: stretch;
+      }
+
+      .blog-item {
+        height: 100%;
       }
 
       .blog-more {
@@ -3374,8 +3379,10 @@
       }
 
       .post-card {
-        display: grid;
+        display: flex;
+        flex-direction: column;
         gap: 8px;
+        height: 100%;
         padding: 16px;
         border-radius: var(--radius);
         border: 1px solid rgba(226, 232, 240, 0.95);
@@ -3405,14 +3412,17 @@
 
       .post-card-content {
         min-width: 0;
-        display: grid;
+        display: flex;
+        flex-direction: column;
         gap: 8px;
+        flex: 1 1 auto;
       }
 
       .post-card-meta {
         margin: 0;
         color: var(--muted-soft);
         font-size: 12px;
+        min-height: 1lh;
       }
 
       .post-card-title {
@@ -3442,6 +3452,7 @@
         display: inline-flex;
         align-items: center;
         gap: 6px;
+        margin-top: auto;
         font-size: 13px;
         font-weight: 800;
         color: var(--accent-tech-dark);
@@ -3866,14 +3877,14 @@
         
           <div
             class="blog-item"
-            data-search="Using External API Data to Set HubSpot CRM Contact Properties in Workflows Step-by-step tutorial showing how to set HubSpot contact properties based on external API data in workflows."
+            data-search="AI Implementation for Companies: Where to Start and What to Automate First A practical guide for companies planning AI implementation: how to choose the first workflow, where AI creates value fastest, and how to avoid over-scoping."
           >
             <article class="post-card post-card--compact">
               
-                <a class="post-card-thumb" href="/blog/setting-hubspot-crm-contact-properties-based-on-external-api-data-in-workflows/">
+                <a class="post-card-thumb" href="/blog/ai-implementation-for-companies-where-to-start-and-what-to-automate-first/">
                   <img
-                    src="/images/blog/external-api-data-workflows.jpg"
-                    alt="Using External API Data to Set HubSpot CRM Contact Properties in Workflows"
+                    src="/images/blog/ai-implementation-start.jpg"
+                    alt="Business team reviewing implementation plans on a laptop"
                     loading="lazy"
                     decoding="async"
                   />
@@ -3882,144 +3893,16 @@
               <div class="post-card-content">
                 <p class="post-card-meta">
                   
-                    <time datetime="2025-03-20T00:00:00.000Z">March 20, 2025</time>
+                    <time datetime="2026-03-14T00:00:00.000Z">March 14, 2026</time>
                   
                 </p>
                 <h2 class="post-card-title">
-                  <a href="/blog/setting-hubspot-crm-contact-properties-based-on-external-api-data-in-workflows/">Using External API Data to Set HubSpot CRM Contact Properties in Workflows</a>
+                  <a href="/blog/ai-implementation-for-companies-where-to-start-and-what-to-automate-first/">AI Implementation for Companies: Where to Start and What to Automate First</a>
                 </h2>
                 
-                  <p class="post-card-desc">Step-by-step tutorial showing how to set HubSpot contact properties based on external API data in workflows.</p>
+                  <p class="post-card-desc">A practical guide for companies planning AI implementation: how to choose the first workflow, where AI creates value fastest, and how to avoid over-scoping.</p>
                 
-                <a class="post-card-more" href="/blog/setting-hubspot-crm-contact-properties-based-on-external-api-data-in-workflows/">Read more <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
-              </div>
-            </article>
-          </div>
-        
-          <div
-            class="blog-item"
-            data-search="How to Find Association IDs for Custom Object Relationships in HubSpot Learn how to find Association IDs for Custom Object relationships in HubSpot using the CRM API, step by step."
-          >
-            <article class="post-card post-card--compact">
-              
-                <a class="post-card-thumb" href="/blog/how-to-find-association-ids-for-custom-object-relationships-in-hubspot/">
-                  <img
-                    src="/images/blog/association-ids/simple-hubl-template.png"
-                    alt="Simple HubL template preview"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </a>
-              
-              <div class="post-card-content">
-                <p class="post-card-meta">
-                  
-                    <time datetime="2025-04-03T00:00:00.000Z">April 03, 2025</time>
-                  
-                </p>
-                <h2 class="post-card-title">
-                  <a href="/blog/how-to-find-association-ids-for-custom-object-relationships-in-hubspot/">How to Find Association IDs for Custom Object Relationships in HubSpot</a>
-                </h2>
-                
-                  <p class="post-card-desc">Learn how to find Association IDs for Custom Object relationships in HubSpot using the CRM API, step by step.</p>
-                
-                <a class="post-card-more" href="/blog/how-to-find-association-ids-for-custom-object-relationships-in-hubspot/">Read more <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
-              </div>
-            </article>
-          </div>
-        
-          <div
-            class="blog-item"
-            data-search="How to Password Protect a HubSpot Website Using Cloudflare Workers Add password protection to your HubSpot website using Cloudflare Workers and Basic Auth. A simple way to secure staging or preview pages."
-          >
-            <article class="post-card post-card--compact">
-              
-                <a class="post-card-thumb" href="/blog/how-to-password-protect-a-hubspot-website-using-cloudflare-workers/">
-                  <img
-                    src="/images/blog/how-to-password-protect-a-hubspot-website.jpg"
-                    alt="How to Password Protect a HubSpot Website Using Cloudflare Workers"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </a>
-              
-              <div class="post-card-content">
-                <p class="post-card-meta">
-                  
-                    <time datetime="2025-04-11T00:00:00.000Z">April 11, 2025</time>
-                  
-                </p>
-                <h2 class="post-card-title">
-                  <a href="/blog/how-to-password-protect-a-hubspot-website-using-cloudflare-workers/">How to Password Protect a HubSpot Website Using Cloudflare Workers</a>
-                </h2>
-                
-                  <p class="post-card-desc">Add password protection to your HubSpot website using Cloudflare Workers and Basic Auth. A simple way to secure staging or preview pages.</p>
-                
-                <a class="post-card-more" href="/blog/how-to-password-protect-a-hubspot-website-using-cloudflare-workers/">Read more <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
-              </div>
-            </article>
-          </div>
-        
-          <div
-            class="blog-item"
-            data-search="Custom HubSpot Integrations: When Native Apps Are Not Enough HubSpot native integrations cover simple use cases. For complex processes, large data volumes, and custom objects, you need a custom HubSpot integration."
-          >
-            <article class="post-card post-card--compact">
-              
-                <a class="post-card-thumb" href="/blog/custom-hubspot-integrations-when-native-apps-arent-enough/">
-                  <img
-                    src="/images/blog/custom-integration.jpg"
-                    alt="Custom HubSpot integration visual"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </a>
-              
-              <div class="post-card-content">
-                <p class="post-card-meta">
-                  
-                    <time datetime="2025-10-02T00:00:00.000Z">October 02, 2025</time>
-                  
-                </p>
-                <h2 class="post-card-title">
-                  <a href="/blog/custom-hubspot-integrations-when-native-apps-arent-enough/">Custom HubSpot Integrations: When Native Apps Are Not Enough</a>
-                </h2>
-                
-                  <p class="post-card-desc">HubSpot native integrations cover simple use cases. For complex processes, large data volumes, and custom objects, you need a custom HubSpot integration.</p>
-                
-                <a class="post-card-more" href="/blog/custom-hubspot-integrations-when-native-apps-arent-enough/">Read more <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
-              </div>
-            </article>
-          </div>
-        
-          <div
-            class="blog-item"
-            data-search="Building Custom HubSpot Integrations: Handling API Limits and Large Data Volumes Learn how to handle HubSpot API limits and large data volumes with custom integrations. Scalable, reliable, and built for complex systems."
-          >
-            <article class="post-card post-card--compact">
-              
-                <a class="post-card-thumb" href="/blog/building-custom-hubspot-integrations-api-limits-large-data/">
-                  <img
-                    src="/images/blog/hubspot-integrations.jpg"
-                    alt="Dashboard showing HubSpot integration analytics"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </a>
-              
-              <div class="post-card-content">
-                <p class="post-card-meta">
-                  
-                    <time datetime="2025-10-09T00:00:00.000Z">October 09, 2025</time>
-                  
-                </p>
-                <h2 class="post-card-title">
-                  <a href="/blog/building-custom-hubspot-integrations-api-limits-large-data/">Building Custom HubSpot Integrations: Handling API Limits and Large Data Volumes</a>
-                </h2>
-                
-                  <p class="post-card-desc">Learn how to handle HubSpot API limits and large data volumes with custom integrations. Scalable, reliable, and built for complex systems.</p>
-                
-                <a class="post-card-more" href="/blog/building-custom-hubspot-integrations-api-limits-large-data/">Read more <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
+                <a class="post-card-more" href="/blog/ai-implementation-for-companies-where-to-start-and-what-to-automate-first/">Read more <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
               </div>
             </article>
           </div>
@@ -4058,14 +3941,14 @@
         
           <div
             class="blog-item"
-            data-search="AI Implementation for Companies: Where to Start and What to Automate First A practical guide for companies planning AI implementation: how to choose the first workflow, where AI creates value fastest, and how to avoid over-scoping."
+            data-search="Building Custom HubSpot Integrations: Handling API Limits and Large Data Volumes Learn how to handle HubSpot API limits and large data volumes with custom integrations. Scalable, reliable, and built for complex systems."
           >
             <article class="post-card post-card--compact">
               
-                <a class="post-card-thumb" href="/blog/ai-implementation-for-companies-where-to-start-and-what-to-automate-first/">
+                <a class="post-card-thumb" href="/blog/building-custom-hubspot-integrations-api-limits-large-data/">
                   <img
-                    src="/images/blog/ai-implementation-start.jpg"
-                    alt="Business team reviewing implementation plans on a laptop"
+                    src="/images/blog/hubspot-integrations.jpg"
+                    alt="Dashboard showing HubSpot integration analytics"
                     loading="lazy"
                     decoding="async"
                   />
@@ -4074,16 +3957,144 @@
               <div class="post-card-content">
                 <p class="post-card-meta">
                   
-                    <time datetime="2026-03-14T00:00:00.000Z">March 14, 2026</time>
+                    <time datetime="2025-10-09T00:00:00.000Z">October 09, 2025</time>
                   
                 </p>
                 <h2 class="post-card-title">
-                  <a href="/blog/ai-implementation-for-companies-where-to-start-and-what-to-automate-first/">AI Implementation for Companies: Where to Start and What to Automate First</a>
+                  <a href="/blog/building-custom-hubspot-integrations-api-limits-large-data/">Building Custom HubSpot Integrations: Handling API Limits and Large Data Volumes</a>
                 </h2>
                 
-                  <p class="post-card-desc">A practical guide for companies planning AI implementation: how to choose the first workflow, where AI creates value fastest, and how to avoid over-scoping.</p>
+                  <p class="post-card-desc">Learn how to handle HubSpot API limits and large data volumes with custom integrations. Scalable, reliable, and built for complex systems.</p>
                 
-                <a class="post-card-more" href="/blog/ai-implementation-for-companies-where-to-start-and-what-to-automate-first/">Read more <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
+                <a class="post-card-more" href="/blog/building-custom-hubspot-integrations-api-limits-large-data/">Read more <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
+              </div>
+            </article>
+          </div>
+        
+          <div
+            class="blog-item"
+            data-search="Custom HubSpot Integrations: When Native Apps Are Not Enough HubSpot native integrations cover simple use cases. For complex processes, large data volumes, and custom objects, you need a custom HubSpot integration."
+          >
+            <article class="post-card post-card--compact">
+              
+                <a class="post-card-thumb" href="/blog/custom-hubspot-integrations-when-native-apps-arent-enough/">
+                  <img
+                    src="/images/blog/custom-integration.jpg"
+                    alt="Custom HubSpot integration visual"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              
+              <div class="post-card-content">
+                <p class="post-card-meta">
+                  
+                    <time datetime="2025-10-02T00:00:00.000Z">October 02, 2025</time>
+                  
+                </p>
+                <h2 class="post-card-title">
+                  <a href="/blog/custom-hubspot-integrations-when-native-apps-arent-enough/">Custom HubSpot Integrations: When Native Apps Are Not Enough</a>
+                </h2>
+                
+                  <p class="post-card-desc">HubSpot native integrations cover simple use cases. For complex processes, large data volumes, and custom objects, you need a custom HubSpot integration.</p>
+                
+                <a class="post-card-more" href="/blog/custom-hubspot-integrations-when-native-apps-arent-enough/">Read more <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
+              </div>
+            </article>
+          </div>
+        
+          <div
+            class="blog-item"
+            data-search="How to Password Protect a HubSpot Website Using Cloudflare Workers Add password protection to your HubSpot website using Cloudflare Workers and Basic Auth. A simple way to secure staging or preview pages."
+          >
+            <article class="post-card post-card--compact">
+              
+                <a class="post-card-thumb" href="/blog/how-to-password-protect-a-hubspot-website-using-cloudflare-workers/">
+                  <img
+                    src="/images/blog/how-to-password-protect-a-hubspot-website.jpg"
+                    alt="How to Password Protect a HubSpot Website Using Cloudflare Workers"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              
+              <div class="post-card-content">
+                <p class="post-card-meta">
+                  
+                    <time datetime="2025-04-11T00:00:00.000Z">April 11, 2025</time>
+                  
+                </p>
+                <h2 class="post-card-title">
+                  <a href="/blog/how-to-password-protect-a-hubspot-website-using-cloudflare-workers/">How to Password Protect a HubSpot Website Using Cloudflare Workers</a>
+                </h2>
+                
+                  <p class="post-card-desc">Add password protection to your HubSpot website using Cloudflare Workers and Basic Auth. A simple way to secure staging or preview pages.</p>
+                
+                <a class="post-card-more" href="/blog/how-to-password-protect-a-hubspot-website-using-cloudflare-workers/">Read more <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
+              </div>
+            </article>
+          </div>
+        
+          <div
+            class="blog-item"
+            data-search="How to Find Association IDs for Custom Object Relationships in HubSpot Learn how to find Association IDs for Custom Object relationships in HubSpot using the CRM API, step by step."
+          >
+            <article class="post-card post-card--compact">
+              
+                <a class="post-card-thumb" href="/blog/how-to-find-association-ids-for-custom-object-relationships-in-hubspot/">
+                  <img
+                    src="/images/blog/association-ids/simple-hubl-template.png"
+                    alt="Simple HubL template preview"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              
+              <div class="post-card-content">
+                <p class="post-card-meta">
+                  
+                    <time datetime="2025-04-03T00:00:00.000Z">April 03, 2025</time>
+                  
+                </p>
+                <h2 class="post-card-title">
+                  <a href="/blog/how-to-find-association-ids-for-custom-object-relationships-in-hubspot/">How to Find Association IDs for Custom Object Relationships in HubSpot</a>
+                </h2>
+                
+                  <p class="post-card-desc">Learn how to find Association IDs for Custom Object relationships in HubSpot using the CRM API, step by step.</p>
+                
+                <a class="post-card-more" href="/blog/how-to-find-association-ids-for-custom-object-relationships-in-hubspot/">Read more <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
+              </div>
+            </article>
+          </div>
+        
+          <div
+            class="blog-item"
+            data-search="Using External API Data to Set HubSpot CRM Contact Properties in Workflows Step-by-step tutorial showing how to set HubSpot contact properties based on external API data in workflows."
+          >
+            <article class="post-card post-card--compact">
+              
+                <a class="post-card-thumb" href="/blog/setting-hubspot-crm-contact-properties-based-on-external-api-data-in-workflows/">
+                  <img
+                    src="/images/blog/external-api-data-workflows.jpg"
+                    alt="Using External API Data to Set HubSpot CRM Contact Properties in Workflows"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              
+              <div class="post-card-content">
+                <p class="post-card-meta">
+                  
+                    <time datetime="2025-03-20T00:00:00.000Z">March 20, 2025</time>
+                  
+                </p>
+                <h2 class="post-card-title">
+                  <a href="/blog/setting-hubspot-crm-contact-properties-based-on-external-api-data-in-workflows/">Using External API Data to Set HubSpot CRM Contact Properties in Workflows</a>
+                </h2>
+                
+                  <p class="post-card-desc">Step-by-step tutorial showing how to set HubSpot contact properties based on external API data in workflows.</p>
+                
+                <a class="post-card-more" href="/blog/setting-hubspot-crm-contact-properties-based-on-external-api-data-in-workflows/">Read more <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
               </div>
             </article>
           </div>
@@ -4106,7 +4117,7 @@
             <div>© 2026, Easy Tech Partners.</div>
             <div class="footer-build">
               Updated:
-              <time datetime="2026-03-14T22:03:43.554Z">2026-03-14 22:03 UTC</time>
+              <time datetime="2026-03-14T22:08:12.286Z">2026-03-14 22:08 UTC</time>
             </div>
           </div>
           <div class="footer-links" aria-label="Footer links">

@@ -3421,6 +3421,11 @@
         display: grid;
         gap: 12px;
         grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: stretch;
+      }
+
+      .blog-item {
+        height: 100%;
       }
 
       .blog-more {
@@ -3428,8 +3433,10 @@
       }
 
       .post-card {
-        display: grid;
+        display: flex;
+        flex-direction: column;
         gap: 8px;
+        height: 100%;
         padding: 16px;
         border-radius: var(--radius);
         border: 1px solid rgba(226, 232, 240, 0.95);
@@ -3459,14 +3466,17 @@
 
       .post-card-content {
         min-width: 0;
-        display: grid;
+        display: flex;
+        flex-direction: column;
         gap: 8px;
+        flex: 1 1 auto;
       }
 
       .post-card-meta {
         margin: 0;
         color: var(--muted-soft);
         font-size: 12px;
+        min-height: 1lh;
       }
 
       .post-card-title {
@@ -3496,6 +3506,7 @@
         display: inline-flex;
         align-items: center;
         gap: 6px;
+        margin-top: auto;
         font-size: 13px;
         font-weight: 800;
         color: var(--accent-tech-dark);
@@ -4259,7 +4270,7 @@
             </div>
           </section>
 
-	          {% set featuredPosts = (collections.postPl if isPolish else collections.posts) | reverse %}
+	          {% set featuredPosts = collections.postPl if isPolish else collections.posts %}
 	          {% if featuredPosts and featuredPosts.length %}
 	            <section class="section compact" aria-label="Latest blog posts">
 	              <div class="container">
