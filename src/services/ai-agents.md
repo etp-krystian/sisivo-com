@@ -2,6 +2,9 @@
 layout: base
 title: "AI Agents for Revenue Teams"
 description: "AI agents built for inbound qualification, sales research, and repetitive revenue workflow tasks."
+alternateLangs:
+  en: /services/ai-agents/
+  pl: /pl/agenci-ai-dla-firm/
 ---
 
 We build AI agents for practical sales and marketing workflows.

@@ -12,6 +12,26 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -38,6 +58,7 @@
     
     
     
+    
       
       
       
@@ -48,6 +69,14 @@
     
       <link rel="canonical" href="https://easytechpartners-com.pages.dev/" />
       <meta property="og:url" content="https://easytechpartners-com.pages.dev/" />
+    
+    
+      
+        <link rel="alternate" hreflang="en" href="https://easytechpartners-com.pages.dev/" />
+      
+        <link rel="alternate" hreflang="pl" href="https://easytechpartners-com.pages.dev/pl/" />
+      
+      <link rel="alternate" hreflang="x-default" href="https://easytechpartners-com.pages.dev/" />
     
     <meta property="og:site_name" content="Easy Tech Partners" />
     <meta property="og:title" content="AI Agents for B2B Revenue Teams" />
@@ -810,6 +839,48 @@
         align-items: center;
         gap: 10px;
         margin-left: auto;
+      }
+
+      .language-switch {
+        display: inline-flex;
+        align-items: center;
+        margin-left: 14px;
+        padding-left: 16px;
+        border-left: 1px solid rgba(148, 163, 184, 0.32);
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .language-switch:hover {
+        text-decoration: none;
+      }
+
+      .language-switch:focus-visible {
+        outline: 3px solid var(--ring);
+        outline-offset: 4px;
+        border-radius: 12px;
+      }
+
+      .language-switch-flag {
+        width: 22px;
+        height: 22px;
+        flex: 0 0 22px;
+        transition:
+          transform 180ms ease,
+          filter 180ms ease;
+      }
+
+      .language-switch-flag img,
+      .language-switch-flag svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+      }
+
+      .language-switch:hover .language-switch-flag {
+        transform: translateY(-0.5px);
+        filter: saturate(1.05);
       }
 
       .btn {
@@ -2737,7 +2808,7 @@
       }
 
       .ai-loop.section.compact {
-        padding: var(--space-section-compact) 0 0;
+        padding: var(--space-section-compact) 0;
       }
 
       .ai-loop::before {
@@ -3559,8 +3630,10 @@
                   </a>
                 </div>
                 <p class="mega-menu-note">
-                  Tell us your inbound or sales workflow and we will recommend the fastest first implementation.
-                  <a href="https://calendar.app.google/R21jua9szDGa7T7c9">Book a discovery call</a>.
+                  
+                    Tell us your inbound or sales workflow and we will recommend the fastest first implementation.
+                    <a href="https://calendar.app.google/R21jua9szDGa7T7c9">Book a discovery call</a>.
+                  
                 </p>
               </div>
             </div>
@@ -3571,6 +3644,19 @@
           <div class="header-actions">
             <a href="/contact-us/" class="btn btn-ghost">Contact</a>
             <a href="https://calendar.app.google/R21jua9szDGa7T7c9" class="btn btn-primary"><svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" /><path d="M7.5 3.5v3" /><path d="M16.5 3.5v3" /><path d="M3.5 9.5h17" /></svg><span>Book a discovery call</span></a>
+            
+              <a
+                href="/pl/"
+                class="language-switch"
+                hreflang="pl"
+                lang="pl"
+                aria-label="Language: Polski"
+              >
+                <span class="language-switch-flag" aria-hidden="true">
+                  <img src="/images/flag-pl.svg" alt="" loading="lazy" decoding="async" />
+                </span>
+              </a>
+            
           </div>
 
           <details class="mobile-nav">
@@ -3588,6 +3674,9 @@
               <a href="/services/">Solutions <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
               <a href="/implementation-process/">How It Works <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
               <a href="/about-us/">About <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
+              
+                <a href="/pl/" hreflang="pl" lang="pl">PL <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
+              
               <a class="mobile-nav-cta" href="https://calendar.app.google/R21jua9szDGa7T7c9"><svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" /><path d="M7.5 3.5v3" /><path d="M16.5 3.5v3" /><path d="M3.5 9.5h17" /></svg><span>Book a discovery call</span></a>
             </div>
           </details>
@@ -3612,11 +3701,15 @@
               <div class="home-hero-grid">
                 <div>
                   <h1>
-                    AI agents for
-                    <span>B2B revenue teams</span>
+                    
+                      AI agents for
+                      <span>B2B revenue teams</span>
+                    
                   </h1>
                   <p class="home-lead">
-                    We help sales and marketing teams qualify leads faster, automate inbound workflows, and reduce manual revenue-team admin.
+                    
+                      We help sales and marketing teams qualify leads faster, automate inbound workflows, and reduce manual revenue-team admin.
+                    
                   </p>
                   <div class="home-cta">
                     <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9"><svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" /><path d="M7.5 3.5v3" /><path d="M16.5 3.5v3" /><path d="M3.5 9.5h17" /></svg><span>Book a discovery call</span></a>
@@ -3796,7 +3889,9 @@
                   <p class="partner-kicker">Trust and delivery</p>
                   <h2 class="partner-title">Execution-focused, not advisory-only</h2>
                   <p class="partner-body">
-                    We work with B2B teams that already have inbound flow or active outbound. We design AI agents around real revenue workflows, then implement directly in your stack.
+                    
+                      We work with B2B teams that already have inbound flow or active outbound. We design AI agents around real revenue workflows, then implement directly in your stack.
+                    
                   </p>
                   <p class="partner-body">
                     You get clear scope, fast delivery, and support from discovery to production.
@@ -3828,6 +3923,7 @@
                   <p class="service-desc">Connect CRM, forms, email, and internal tools to remove repetitive manual work.</p>
                   <div class="service-meta">Explore <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></div>
                 </a>
+                
               </div>
             </div>
           </section>
@@ -3839,10 +3935,12 @@
                 <p class="section-lead">How this looks in practice for a typical B2B revenue team.</p>
               </div>
               <article class="example-scenario">
-                <p><strong>Typical example:</strong> B2B SaaS company, 50 employees, 300 inbound leads per month.</p>
-                <p><strong>Problem:</strong> The sales team spends too much time researching inbound leads before deciding who to prioritize.</p>
-                <p><strong>Solution:</strong> An AI Inbound Lead Qualification Agent researches each company, checks ICP fit, enriches CRM context, and prepares the next step.</p>
-                <p><strong>Result:</strong> Sales responds faster, qualification becomes more consistent, and reps spend more time on real opportunities.</p>
+                
+                  <p><strong>Typical example:</strong> B2B SaaS company, 50 employees, 300 inbound leads per month.</p>
+                  <p><strong>Problem:</strong> The sales team spends too much time researching inbound leads before deciding who to prioritize.</p>
+                  <p><strong>Solution:</strong> An AI Inbound Lead Qualification Agent researches each company, checks ICP fit, enriches CRM context, and prepares the next step.</p>
+                  <p><strong>Result:</strong> Sales responds faster, qualification becomes more consistent, and reps spend more time on real opportunities.</p>
+                
               </article>
               <div class="home-cta">
                 <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9"><svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" /><path d="M7.5 3.5v3" /><path d="M16.5 3.5v3" /><path d="M3.5 9.5h17" /></svg><span>Book a discovery call</span></a>
@@ -3860,16 +3958,20 @@
                   We are the right fit if your team handles inbound leads, runs outbound sales, and wants faster qualification with less manual handoff.
                 </p>
                 <ul class="pilot-list">
-                  <li>B2B companies with active sales teams.</li>
-                  <li>Teams receiving inbound leads.</li>
-                  <li>Companies using a CRM (HubSpot, Salesforce, and similar).</li>
-                  <li>Sales teams spending time on manual lead research.</li>
+                  
+                    <li>B2B companies with active sales teams.</li>
+                    <li>Teams receiving inbound leads.</li>
+                    <li>Companies using a CRM (HubSpot, Salesforce, and similar).</li>
+                    <li>Sales teams spending time on manual lead research.</li>
+                  
                 </ul>
                 <p class="pilot-meta">Not ideal for</p>
                 <ul class="pilot-list">
-                  <li>Companies without a sales team.</li>
-                  <li>Companies without inbound or outbound lead flow.</li>
-                  <li>Very early-stage startups without a structured sales process.</li>
+                  
+                    <li>Companies without a sales team.</li>
+                    <li>Companies without inbound or outbound lead flow.</li>
+                    <li>Very early-stage startups without a structured sales process.</li>
+                  
                 </ul>
                 <div class="home-cta">
                   <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9"><svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" /><path d="M7.5 3.5v3" /><path d="M16.5 3.5v3" /><path d="M3.5 9.5h17" /></svg><span>Book a discovery call</span></a>
@@ -3913,10 +4015,12 @@
                     Tell us how your team handles inbound leads or sales research, and we will recommend the best first AI workflow to implement.
                   </p>
                   <ul class="lead-plan-list">
-                    <li>Best first use case for your team</li>
-                    <li>Suggested implementation scope</li>
-                    <li>Likely business outcome</li>
-                    <li>Recommended systems to connect</li>
+                    
+                      <li>Best first use case for your team</li>
+                      <li>Suggested implementation scope</li>
+                      <li>Likely business outcome</li>
+                      <li>Recommended systems to connect</li>
+                    
                   </ul>
                   <div class="home-cta">
                     <a class="btn btn-primary" href="/ai-lead-qualification-plan/"><svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.3 15.7c-1.7 1.3-2.8 3.4-2.8 5.8 2.4 0 4.5-1.1 5.8-2.8m0 0 4.2-4.2m-4.2 4.2-3-3m7.2-7.2c2.6-2.6 5.8-3.7 7.8-4-.3 2-1.4 5.2-4 7.8m-3.8-3.8 3.8 3.8M14.8 6.2l2.9 2.9" /></svg><span>Get your plan</span></a>
@@ -4016,19 +4120,21 @@
             <div>© 2026, Easy Tech Partners.</div>
             <div class="footer-build">
               Updated:
-              <time datetime="2026-03-10T14:55:29.576Z">2026-03-10 14:55 UTC</time>
+              <time datetime="2026-03-14T21:20:10.095Z">2026-03-14 21:20 UTC</time>
             </div>
           </div>
           <div class="footer-links" aria-label="Footer links">
-            <a href="/services/">Solutions</a>
-            <a href="/implementation-process/">How It Works</a>
-            <a href="/about-us/">About</a>
-            <a href="/contact-us/">Contact</a>
-            <a href="/ai-lead-qualification-plan/">Get your AI plan</a>
-            <a href="/ai-use-case-examples/">Use Cases</a>
-            <a href="/blog/">Blog</a>
-            <a href="/privacy-policy/">Privacy policy</a>
-            <a href="/cookie-policy/">Cookies</a>
+            
+              <a href="/services/">Solutions</a>
+              <a href="/implementation-process/">How It Works</a>
+              <a href="/about-us/">About</a>
+              <a href="/contact-us/">Contact</a>
+              <a href="/ai-lead-qualification-plan/">Get your AI plan</a>
+              <a href="/ai-use-case-examples/">Use Cases</a>
+              <a href="/blog/">Blog</a>
+              <a href="/privacy-policy/">Privacy policy</a>
+              <a href="/cookie-policy/">Cookies</a>
+            
           </div>
         </div>
       </footer>
@@ -4054,8 +4160,10 @@
           <div>
             <p class="cookie-title">Cookies</p>
             <p class="cookie-text">
-              We use essential cookies to make this site work. With your permission, we also use analytics cookies to understand how the site is used and improve it.
-              You can change your choice any time in Cookie settings.
+              
+                We use essential cookies to make this site work. With your permission, we also use analytics cookies to understand how the site is used and improve it.
+                You can change your choice any time in Cookie settings.
+              
             </p>
             <a class="cookie-link" href="/cookie-policy/">Read our cookie policy</a>
             <div class="cookie-settings" id="cookie-settings" hidden>

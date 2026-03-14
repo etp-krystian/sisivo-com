@@ -2,6 +2,9 @@
 layout: base
 title: Cookie Policy
 description: How we use cookies and similar technologies on the Easy Tech Partners website.
+alternateLangs:
+  en: /cookie-policy/
+  pl: /pl/polityka-cookies/
 ---
 
 Easy Tech Partners uses cookies and similar technologies to improve browsing experience, analyze website traffic, and assist in our marketing efforts. By using this site, you consent to our use of cookies in accordance with this policy.

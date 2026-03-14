@@ -2,6 +2,9 @@
 layout: base
 title: Privacy Policy
 description: How Easy Tech Partners handles personal data and privacy on this website.
+alternateLangs:
+  en: /privacy-policy/
+  pl: /pl/polityka-prywatnosci/
 ---
 
 This Privacy Policy explains how Easy Tech Partners (“we”, “us”) processes personal data when you use this website and when you contact us.

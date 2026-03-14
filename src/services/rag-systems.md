@@ -2,6 +2,9 @@
 layout: base
 title: "RAG Systems"
 description: "Supporting capability for grounding AI outputs in your CRM and internal revenue data."
+alternateLangs:
+  en: /services/rag-systems/
+  pl: /pl/rag-dla-firm/
 ---
 
 RAG helps agents answer and decide using your own data, not generic public context.

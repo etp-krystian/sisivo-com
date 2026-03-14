@@ -2,6 +2,9 @@
 layout: base
 title: Contact
 description: "Talk to us about lead qualification, inbound automation, and revenue workflow AI."
+alternateLangs:
+  en: /contact-us/
+  pl: /pl/kontakt/
 ---
 
 <div class="contact-layout">

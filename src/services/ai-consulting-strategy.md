@@ -2,6 +2,9 @@
 layout: base
 title: "Workflow Discovery and AI Scope"
 description: "Focused discovery to choose the right revenue workflow for your first AI implementation."
+alternateLangs:
+  en: /services/ai-consulting-strategy/
+  pl: /pl/konsulting-ai/
 ---
 
 This is a focused scoping service for teams that need to choose the right first implementation.

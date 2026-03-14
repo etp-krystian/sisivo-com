@@ -2,6 +2,9 @@
 layout: base
 title: "Revenue Team AI Implementation"
 description: "Implementation support for B2B revenue teams deploying AI lead qualification, sales research, and workflow automation."
+alternateLangs:
+  en: /services/ai-solutions-development/
+  pl: /pl/wdrozenia-ai-dla-firm/
 ---
 
 This page covers our implementation layer across the three core solutions.
