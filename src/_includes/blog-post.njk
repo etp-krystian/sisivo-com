@@ -4,15 +4,17 @@ renderPageHeader: false
 ---
 
 {% set canonical = (site.url + page.url) if site and site.url else page.url %}
+{% set postLocale = locale or site.locale or 'en' %}
+{% set isPolishPost = postLocale == 'pl' %}
 
 <section class="section">
   <div class="container">
     <header class="post-header">
       <p class="post-meta">
-        <a class="post-meta-link" href="/blog/">Blog</a>
+        <a class="post-meta-link" href="{% if isPolishPost %}/pl/blog/{% else %}/blog/{% endif %}">Blog</a>
         {% if date %}
           <span aria-hidden="true">·</span>
-          <time datetime="{{ date.toISOString() }}">{{ date | readableDate(site.locale) }}</time>
+          <time datetime="{{ date.toISOString() }}">{{ date | readableDate(postLocale) }}</time>
         {% endif %}
       </p>
       <h1 class="post-title">{{ title | escape }}</h1>

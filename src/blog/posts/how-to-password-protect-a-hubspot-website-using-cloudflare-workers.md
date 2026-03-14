@@ -11,6 +11,9 @@ tags:
   - hubspot
   - cloudflare
   - security
+alternateLangs:
+  en: /blog/how-to-password-protect-a-hubspot-website-using-cloudflare-workers/
+  pl: /pl/blog/jak-zabezpieczyc-haslem-strone-hubspot-cloudflare-workers/
 ---
 
 # Want to protect your HubSpot website with a password?

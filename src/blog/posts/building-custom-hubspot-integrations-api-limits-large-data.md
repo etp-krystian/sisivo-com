@@ -10,6 +10,9 @@ tags:
   - post
   - hubspot
   - integrations
+alternateLangs:
+  en: /blog/building-custom-hubspot-integrations-api-limits-large-data/
+  pl: /pl/blog/integracje-hubspot-api-limity-duze-wolumeny-danych/
 ---
 
 HubSpot's open API makes it easy to connect with other tools. For small setups, native integrations or simple connectors like Zapier are often enough.

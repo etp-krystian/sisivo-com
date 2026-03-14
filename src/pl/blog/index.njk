@@ -1,0 +1,91 @@
+---
+layout: base
+renderPageHeader: false
+locale: pl
+title: Blog
+heading: Blog
+description: Praktyczne wpisy o wdrożeniach AI, integracjach, HubSpot, RAG i automatyzacji procesów w firmach.
+permalink: /pl/blog/
+alternateLangs:
+  en: /blog/
+  pl: /pl/blog/
+---
+
+<section class="page-hero">
+  <div class="container">
+    <nav class="page-breadcrumbs" aria-label="Breadcrumb">
+      <a href="/pl/">Strona główna</a>
+      <span class="crumb-sep" aria-hidden="true">/</span>
+      <span aria-current="page">{{ title | escape }}</span>
+    </nav>
+
+    <div class="page-hero-inner">
+      <div class="page-header">
+        <h1>{{ heading | escape }}</h1>
+        {% if description %}
+          <p class="page-lead">{{ description | escape }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="blog-search" role="search" aria-label="Szukaj wpisów na blogu">
+      <label class="blog-search-label" for="blog-search-input">Szukaj {% ms "search" %}</label>
+      <input
+        class="blog-search-input"
+        id="blog-search-input"
+        type="search"
+        inputmode="search"
+        placeholder="Szukaj wpisów..."
+        autocomplete="off"
+      />
+      <div class="blog-search-meta" aria-live="polite" id="blog-search-meta"></div>
+    </div>
+
+    {% if collections.postPl and collections.postPl.length %}
+      <div class="blog-grid" id="blog-posts-list">
+        {% for post in collections.postPl %}
+          <div
+            class="blog-item"
+            data-search="{{ (post.data.title or '') ~ ' ' ~ (post.data.description or '') }}"
+          >
+            <article class="post-card post-card--compact">
+              {% if post.data.image %}
+                <a class="post-card-thumb" href="{{ post.url }}">
+                  <img
+                    src="{{ post.data.image }}"
+                    alt="{{ (post.data.imageAlt or post.data.title or '') | escape }}"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              {% endif %}
+              <div class="post-card-content">
+                <p class="post-card-meta">
+                  {% if post.date %}
+                    <time datetime="{{ post.date.toISOString() }}">{{ post.date | readableDate('pl') }}</time>
+                  {% endif %}
+                </p>
+                <h2 class="post-card-title">
+                  <a href="{{ post.url }}">{{ post.data.title | escape }}</a>
+                </h2>
+                {% if post.data.description %}
+                  <p class="post-card-desc">{{ post.data.description | escape }}</p>
+                {% endif %}
+                <a class="post-card-more" href="{{ post.url }}">Czytaj dalej {% ms "arrow_forward" %}</a>
+              </div>
+            </article>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="blog-empty" id="blog-no-results" hidden>Brak wpisów pasujących do wyszukiwania.</div>
+    {% else %}
+      <p class="blog-empty">Brak wpisów.</p>
+    {% endif %}
+  </div>
+</section>
+
+<script src="/js/blog-search.js" defer></script>

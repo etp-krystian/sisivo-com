@@ -10,6 +10,9 @@ tags:
   - post
   - seo
   - hubspot
+alternateLangs:
+  en: /blog/automated-ai-agent-weekly-hubspot-seo-loop/
+  pl: /pl/blog/tygodniowa-petla-seo-agent-ai-pisze-publikuje-mierzy-i-poprawia/
 ---
 
 If you’ve ever said “we should publish weekly” and then… didn’t, you’re not alone. Consistency is the hard part.

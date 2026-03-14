@@ -11,6 +11,9 @@ tags:
   - hubspot
   - workflows
   - integrations
+alternateLangs:
+  en: /blog/setting-hubspot-crm-contact-properties-based-on-external-api-data-in-workflows/
+  pl: /pl/blog/ustawianie-wlasciwosci-kontaktu-hubspot-na-podstawie-danych-z-zewnetrznego-api/
 ---
 
 <p>Imagine you need to create a workflow that updates a Contact property based on information from an external service. In this guide we’ll walk you through the entire process step by step, so by the end, you’ll be able to implement this solution or the similar one on your own.</p>

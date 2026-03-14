@@ -1,0 +1,7 @@
+{
+  "layout": "blog-post",
+  "tags": ["postPl"],
+  "permalink": "/pl/blog/{{ page.fileSlug }}/",
+  "pageType": "article",
+  "locale": "pl"
+}

@@ -11,6 +11,9 @@ tags:
   - hubspot
   - integrations
   - custom-objects
+alternateLangs:
+  en: /blog/how-to-find-association-ids-for-custom-object-relationships-in-hubspot/
+  pl: /pl/blog/jak-znalezc-association-id-dla-relacji-custom-object-w-hubspot/
 ---
 
 For this blog post, I set up two Custom Objects in HubSpot: **Car** and **AutomotiveService**. Car object is linked to Contacts, while AutomotiveService is associated with Cars.
