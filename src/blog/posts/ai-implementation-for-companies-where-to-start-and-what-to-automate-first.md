@@ -4,8 +4,8 @@ description: "A practical guide for companies planning AI implementation: how to
 date: 2026-03-14
 image: /images/blog/ai-implementation-start.jpg
 imageAlt: "Business team reviewing implementation plans on a laptop"
-imageWidth: 6000
-imageHeight: 4000
+imageWidth: 1600
+imageHeight: 1066
 tags:
   - post
   - ai

@@ -4,8 +4,8 @@ description: "Praktyczny przewodnik dla firm z Warszawy planujących wdrożenie 
 date: 2026-03-14
 image: /images/blog/ai-implementation-start.jpg
 imageAlt: "Zespół biznesowy omawia plan wdrożenia przy laptopie"
-imageWidth: 6000
-imageHeight: 4000
+imageWidth: 1600
+imageHeight: 1066
 tags:
   - postPl
   - ai
