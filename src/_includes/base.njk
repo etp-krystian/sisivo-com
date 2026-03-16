@@ -4271,7 +4271,9 @@
           </section>
 
 	          {% set featuredPosts = collections.postPl if isPolish else collections.posts %}
+            {% set featuredPosts = featuredPosts | reverse %}
 	          {% if featuredPosts and featuredPosts.length %}
+              {% set featuredCount = 0 %}
 	            <section class="section compact" aria-label="Latest blog posts">
 	              <div class="container">
 	                <div class="section-header">
@@ -4280,10 +4282,10 @@
 	                </div>
 	                <div class="blog-grid">
 	                  {% for post in featuredPosts %}
-                      {% if loop.index0 < 3 %}
                       {% set tags = post.data.tags or [] %}
                       {% set isPriority = ("ai" in tags) or ("automation" in tags) or ("workflows" in tags) or ("sales" in tags) or ("inbound" in tags) or ("seo" in tags) %}
-	                    {% if isPriority %}
+	                    {% if isPriority and featuredCount < 3 %}
+                          {% set featuredCount = featuredCount + 1 %}
 	                      <article class="post-card post-card--compact">
 	                        {% if post.data.image %}
 	                          <div class="post-card-thumb" aria-hidden="true">
@@ -4304,7 +4306,6 @@
 	                        </div>
 	                      </article>
 	                    {% endif %}
-                      {% endif %}
 	                  {% endfor %}
 	                </div>
 	                <div class="hero-cta blog-more">
