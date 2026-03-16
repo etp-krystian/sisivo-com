@@ -191,6 +191,7 @@
     {% endif %}
     {% if isBlogIndex %}
       {% set blogCollection = collections.postPl if isPolish else collections.posts %}
+      {% set blogCollection = blogCollection | sort(false, false, "date") | reverse %}
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -4271,7 +4272,7 @@
           </section>
 
 	          {% set featuredPosts = collections.postPl if isPolish else collections.posts %}
-            {% set featuredPosts = featuredPosts | reverse %}
+            {% set featuredPosts = featuredPosts | sort(false, false, "date") | reverse %}
 	          {% if featuredPosts and featuredPosts.length %}
               {% set featuredCount = 0 %}
 	            <section class="section compact" aria-label="Latest blog posts">
