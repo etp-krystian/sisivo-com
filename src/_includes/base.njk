@@ -408,6 +408,25 @@
         stroke: currentColor;
       }
 
+      .btn-icon--roadmap {
+        width: 15px;
+        height: 15px;
+        flex: 0 0 15px;
+        background-color: currentColor;
+        -webkit-mask-image: url("/images/icons/material-symbols/ai-roadmap.svg");
+        mask-image: url("/images/icons/material-symbols/ai-roadmap.svg");
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+      }
+
+      .btn .btn-icon--roadmap {
+        margin-right: 2px;
+      }
+
       .btn-see-services {
         gap: 7px;
         padding: 10px 14px 10px 16px;
@@ -3930,7 +3949,7 @@
                     {% endif %}
                   </p>
                   <div class="home-cta">
-                    <a class="btn btn-primary" href="{{ roadmapUrl }}">{% ms "rocket_launch" %}<span>{% if isPolish %}Otrzymaj roadmapę AI{% else %}Get AI Roadmap{% endif %}</span></a>
+                    <a class="btn btn-primary" href="{{ roadmapUrl }}"><span class="btn-icon btn-icon--roadmap" aria-hidden="true"></span><span>{% if isPolish %}Otrzymaj roadmapę AI{% else %}Get AI Roadmap{% endif %}</span></a>
                     <a class="btn btn-ghost btn-see-services" href="{{ calendarUrl }}">
                       <span>{% if isPolish %}Umów konsultację{% else %}Book Strategy Call{% endif %}</span>
                       <span class="btn-icon" aria-hidden="true">
@@ -4009,7 +4028,7 @@
                 </table>
               </div>
               <div class="home-cta">
-                <a class="btn btn-primary" href="{{ roadmapUrl }}">{% ms "rocket_launch" %}<span>{% if isPolish %}Otrzymaj roadmapę AI{% else %}Get AI Roadmap{% endif %}</span></a>
+                <a class="btn btn-primary" href="{{ roadmapUrl }}"><span class="btn-icon btn-icon--roadmap" aria-hidden="true"></span><span>{% if isPolish %}Otrzymaj roadmapę AI{% else %}Get AI Roadmap{% endif %}</span></a>
                 <a class="btn btn-ghost" href="{{ calendarUrl }}">{% if isPolish %}Umów konsultację{% else %}Book Strategy Call{% endif %}</a>
               </div>
             </div>
@@ -4174,7 +4193,7 @@
                 {% endif %}
               </article>
               <div class="home-cta">
-                <a class="btn btn-primary" href="{{ roadmapUrl }}">{% ms "rocket_launch" %}<span>{% if isPolish %}Otrzymaj roadmapę AI{% else %}Get AI Roadmap{% endif %}</span></a>
+                <a class="btn btn-primary" href="{{ roadmapUrl }}"><span class="btn-icon btn-icon--roadmap" aria-hidden="true"></span><span>{% if isPolish %}Otrzymaj roadmapę AI{% else %}Get AI Roadmap{% endif %}</span></a>
                 <a class="btn btn-ghost" href="{{ calendarUrl }}">{% if isPolish %}Umów konsultację{% else %}Book Strategy Call{% endif %}</a>
               </div>
             </div>
@@ -4268,7 +4287,7 @@
                     {% endif %}
                   </ul>
                   <div class="home-cta">
-                    <a class="btn btn-primary" href="{{ roadmapUrl }}">{% ms "rocket_launch" %}<span>{% if isPolish %}Otrzymaj roadmapę AI{% else %}Get AI Roadmap{% endif %}</span></a>
+                    <a class="btn btn-primary" href="{{ roadmapUrl }}"><span class="btn-icon btn-icon--roadmap" aria-hidden="true"></span><span>{% if isPolish %}Otrzymaj roadmapę AI{% else %}Get AI Roadmap{% endif %}</span></a>
                     <a class="btn btn-ghost" href="{{ calendarUrl }}">{{ calendarLabel }}</a>
                   </div>
                 </div>
@@ -4384,7 +4403,7 @@
                     <p>{{ ctaBody }}</p>
                     <div class="home-cta">
                       <a class="btn btn-primary" href="{{ calendarUrl }}">{% ms "calendar_month" %}<span>{{ ctaButton }}</span></a>
-                      <a class="btn btn-ghost btn-see-services" href="{{ roadmapUrl }}"><span>{% if isPolish %}Otrzymaj roadmapę AI{% else %}Get AI Roadmap{% endif %}</span><span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" /><path d="M8.8 4.3L12.5 8L8.8 11.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></span></a>
+                      <a class="btn btn-ghost btn-see-services" href="{{ roadmapUrl }}"><span class="btn-icon btn-icon--roadmap" aria-hidden="true"></span><span>{% if isPolish %}Otrzymaj roadmapę AI{% else %}Get AI Roadmap{% endif %}</span></a>
                     </div>
                   </section>
                 {% endif %}
