@@ -2,7 +2,7 @@
 title: "Konsulting roadmapy AI: jak zaplanować koszty i wybrać właściwego partnera w 2026 roku"
 description: "Praktyczny przewodnik dla CTO, CEO i liderów operacji: czym jest konsulting roadmapy AI, ile kosztuje, jak zbudować plan wdrożenia i jak wybrać partnera do realizacji."
 date: 2026-04-03
-image: /images/blog/ai-roadmap-consulting.jpg
+image: /images/blog/ai-roadmap-consulting-2026.jpg
 imageAlt: "Zespół liderów omawia roadmapę AI podczas sesji planowania"
 imageWidth: 3840
 imageHeight: 2160

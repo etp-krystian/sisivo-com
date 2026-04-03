@@ -2,7 +2,7 @@
 title: "AI Roadmap Consulting: How to Plan, Cost, and Choose the Right Partner in 2026"
 description: "A practical guide to AI roadmap consulting, AI consulting services, pricing, and implementation strategy for CTOs, CEOs, and operations leaders in 2026."
 date: 2026-04-03
-image: /images/blog/ai-roadmap-consulting.jpg
+image: /images/blog/ai-roadmap-consulting-2026.jpg
 imageAlt: "Leadership team reviewing an AI strategy roadmap during a planning session"
 imageWidth: 3840
 imageHeight: 2160
