@@ -11,7 +11,7 @@ tags:
   - hubspot
   - integrations
 alternateLangs:
-  en: /blog/building-custom-hubspot-integrations-api-limits-large-data/
+  en: /en/blog/building-custom-hubspot-integrations-api-limits-large-data/
   pl: /pl/blog/integracje-hubspot-api-limity-duze-wolumeny-danych/
 ---
 

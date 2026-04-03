@@ -2,17 +2,17 @@
 layout: base
 renderPageHeader: false
 title: Blog
-description: Practical notes on AI lead qualification, sales research, and revenue workflow automation.
-permalink: /blog/
+description: Practical notes on AI roadmap consulting, implementation strategy, and high-ROI automation use cases.
+permalink: /en/blog/
 alternateLangs:
-  en: /blog/
+  en: /en/blog/
   pl: /pl/blog/
 ---
 
 <section class="page-hero">
   <div class="container">
     <nav class="page-breadcrumbs" aria-label="Breadcrumb">
-      <a href="/">Home</a>
+      <a href="/en/">Home</a>
       <span class="crumb-sep" aria-hidden="true">/</span>
       <span aria-current="page">{{ title | escape }}</span>
     </nav>
@@ -59,13 +59,15 @@ alternateLangs:
                     alt="{{ (post.data.imageAlt or post.data.title or '') | escape }}"
                     loading="lazy"
                     decoding="async"
+                    {% if post.data.imageWidth %}width="{{ post.data.imageWidth }}"{% endif %}
+                    {% if post.data.imageHeight %}height="{{ post.data.imageHeight }}"{% endif %}
                   />
                 </a>
               {% endif %}
               <div class="post-card-content">
                 <p class="post-card-meta">
                   {% if post.date %}
-                    <time datetime="{{ post.date.toISOString() }}">{{ post.date | readableDate(site.locale) }}</time>
+                    <time datetime="{{ post.date.toISOString() }}">{{ post.date | readableDate('en') }}</time>
                   {% endif %}
                 </p>
                 <h2 class="post-card-title">

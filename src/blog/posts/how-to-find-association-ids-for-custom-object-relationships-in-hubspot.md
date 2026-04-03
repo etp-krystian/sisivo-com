@@ -12,7 +12,7 @@ tags:
   - integrations
   - custom-objects
 alternateLangs:
-  en: /blog/how-to-find-association-ids-for-custom-object-relationships-in-hubspot/
+  en: /en/blog/how-to-find-association-ids-for-custom-object-relationships-in-hubspot/
   pl: /pl/blog/jak-znalezc-association-id-dla-relacji-custom-object-w-hubspot/
 ---
 

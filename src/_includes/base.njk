@@ -1,9 +1,12 @@
 <!doctype html>
 {% set pageLocale = locale or (page.url and page.url.indexOf('/pl') == 0 and 'pl') or site.locale or 'en' %}
 {% set isPolish = pageLocale == 'pl' %}
-{% set homeUrl = '/pl/' if isPolish else '/' %}
+{% set homeUrl = '/pl/' if isPolish else '/en/' %}
+{% set blogUrl = '/pl/blog/' if isPolish else '/en/blog/' %}
+{% set consultingUrl = '/pl/konsulting-ai/' if isPolish else '/services/ai-consulting-strategy/' %}
+{% set roadmapUrl = '/pl/roadmapa-ai/' if isPolish else '/services/ai-roadmap-development/' %}
 {% set homeLabel = 'Strona główna' if isPolish else 'Home' %}
-{% set calendarLabel = 'Umów konsultację' if isPolish else 'Book a discovery call' %}
+{% set calendarLabel = 'Umów konsultację' if isPolish else 'Book Strategy Call' %}
 {% set contactLabel = 'Kontakt' if isPolish else 'Contact' %}
 {% set servicesLabel = 'Usługi AI' if isPolish else 'Solutions' %}
 {% set howItWorksLabel = 'Wdrożenia AI' if isPolish else 'How It Works' %}
@@ -12,11 +15,11 @@
 {% set langSwitchLabel = 'EN' if isPolish else 'PL' %}
 {% set langSwitchText = 'English' if isPolish else 'Polski' %}
 {% set langSwitchHint = 'Wersja językowa' if isPolish else 'Language' %}
-{% set isHome = page.url == "/" or page.url == "/pl/" %}
+{% set isHome = page.url == "/en/" or page.url == "/pl/" %}
 {% set isServicesIndex = page.url == "/services/" %}
 {% set isServices = page.url and page.url.indexOf("/services/") == 0 %}
-{% set isBlog = page.url and (page.url.indexOf("/blog/") == 0 or page.url.indexOf("/pl/blog/") == 0) %}
-{% set isBlogIndex = page.url == "/blog/" or page.url == "/pl/blog/" %}
+{% set isBlog = page.url and (page.url.indexOf("/en/blog/") == 0 or page.url.indexOf("/blog/") == 0 or page.url.indexOf("/pl/blog/") == 0) %}
+{% set isBlogIndex = page.url == "/en/blog/" or page.url == "/blog/" or page.url == "/pl/blog/" %}
 {% set isLegal = page.url == "/privacy-policy/" or page.url == "/cookie-policy/" or page.url == "/pl/polityka-prywatnosci/" or page.url == "/pl/polityka-cookies/" %}
 {% set isStart = page.url == "/start-with-ai/" or page.url == "/ai-discovery-sprint/" or page.url == "/implementation-process/" or page.url == "/ai-security-data/" or page.url == "/business-ai-faq/" or page.url == "/ai-use-case-examples/" %}
 {% set isContact = page.url == "/contact-us/" or page.url == "/pl/kontakt/" %}
@@ -31,7 +34,7 @@
 {% set organization = site.organization or {} %}
 {% set organizationId = (site.url + '#organization') if site and site.url else '#organization' %}
 {% set organizationLogo = (site.url + organization.logo) if site and site.url and organization.logo else organization.logo %}
-{% set isPrimaryServicePage = page.url == '/services/ai-solutions-development/' or page.url == '/services/ai-agents/' or page.url == '/services/rag-systems/' or page.url == '/services/ai-consulting-strategy/' or page.url == '/pl/' or page.url == '/pl/wdrozenia-ai-dla-firm/' or page.url == '/pl/agenci-ai-dla-firm/' or page.url == '/pl/rag-dla-firm/' or page.url == '/pl/konsulting-ai/' or page.url == '/pl/wdrozenia-ai-warszawa/' %}
+{% set isPrimaryServicePage = page.url == '/en/' or page.url == '/services/ai-solutions-development/' or page.url == '/services/ai-agents/' or page.url == '/services/rag-systems/' or page.url == '/services/ai-consulting-strategy/' or page.url == '/services/ai-roadmap-development/' or page.url == '/pl/' or page.url == '/pl/wdrozenia-ai-dla-firm/' or page.url == '/pl/agenci-ai-dla-firm/' or page.url == '/pl/rag-dla-firm/' or page.url == '/pl/konsulting-ai/' or page.url == '/pl/roadmapa-ai/' or page.url == '/pl/wdrozenia-ai-warszawa/' %}
 {% set breadcrumbHomeUrl = homeUrl %}
 {% set breadcrumbHomeLabel = homeLabel %}
 {% set languageSwitchUrl = '' %}
@@ -74,6 +77,8 @@
     {% endif %}
     <title>{{ metaTitle | escape }}</title>
     <meta name="description" content="{{ metaDescription | escape }}" />
+    <meta http-equiv="content-language" content="{{ pageLocale }}" />
+    <meta name="language" content="{{ pageLocale }}" />
     {% if canonicalUrl %}
       <link rel="canonical" href="{{ canonicalUrl }}" />
       <meta property="og:url" content="{{ canonicalUrl }}" />
@@ -261,7 +266,7 @@
           "@type": "ListItem",
           "position": 2,
           "name": "Blog",
-          "item": {{ (site.url + ('/pl/blog/' if isPolish else '/blog/')) | json | safe }}
+          "item": {{ (site.url + blogUrl) | json | safe }}
         }
         ,{
           "@type": "ListItem",
@@ -3811,36 +3816,36 @@
               <div class="mega-menu" role="group" aria-label="Solutions menu">
                 <div class="mega-menu-head">
                   <div>
-                    <p class="mega-menu-title">{% if isPolish %}Wdrożenia AI dla firm{% else %}Revenue Team AI Solutions{% endif %}</p>
-                    <p class="mega-menu-subtitle">{% if isPolish %}Praktyczne wdrożenia AI dla firm z Warszawy i całej Polski: automatyzacje, agenci AI, RAG i doradztwo wdrożeniowe.{% else %}Practical AI systems for inbound qualification, sales research, and revenue workflow automation.{% endif %}</p>
+                    <p class="mega-menu-title">{% if isPolish %}Roadmapa i wdrożenia AI{% else %}AI Roadmap and Delivery{% endif %}</p>
+                    <p class="mega-menu-subtitle">{% if isPolish %}Praktyczne doradztwo i wdrożenia AI dla firm z Polski: roadmapa, discovery, integracje, agenci AI i automatyzacje.{% else %}Practical AI roadmap consulting, implementation planning, and execution for mid-sized companies.{% endif %}</p>
                   </div>
                   <a class="mega-menu-all" href="{% if isPolish %}/pl/{% else %}/services/{% endif %}">{% if isPolish %}Zobacz wszystkie usługi{% else %}View all solutions{% endif %} {% ms "arrow_forward" %}</a>
                 </div>
                 <div class="mega-menu-quickstart">
-                  <a class="mega-quick-link" href="{% if isPolish %}/pl/wdrozenia-ai-dla-firm/{% else %}/services/ai-powered-lead-qualification/{% endif %}">
-                    <span class="mega-quick-title">{% if isPolish %}Wdrożenia AI dla firm{% else %}AI Inbound Lead Qualification Agent{% endif %}</span>
-                    <span class="mega-quick-desc">{% if isPolish %}Automatyzacja procesów, integracje i mierzalne efekty dla zespołów operacyjnych, sprzedaży i obsługi klienta.{% else %}Qualify, route, and enrich inbound leads so sales responds faster.{% endif %}</span>
+                  <a class="mega-quick-link" href="{{ roadmapUrl }}">
+                    <span class="mega-quick-title">{% if isPolish %}Roadmapa AI{% else %}AI Roadmap Consulting{% endif %}</span>
+                    <span class="mega-quick-desc">{% if isPolish %}Priorytetyzacja use case'ów, plan wdrożenia, ROI i pierwszy zakres projektu.{% else %}Prioritize use cases, scope the first phase, and define the rollout path with ROI in mind.{% endif %}</span>
                   </a>
-                  <a class="mega-quick-link" href="{% if isPolish %}/pl/agenci-ai-dla-firm/{% else %}/services/ai-research-analysis-agents/{% endif %}">
-                    <span class="mega-quick-title">{% if isPolish %}Agenci AI dla firm{% else %}AI Sales Research Agent{% endif %}</span>
-                    <span class="mega-quick-desc">{% if isPolish %}Agenci AI do sprzedaży, obsługi, operacji i procesów wewnętrznych z kontrolą człowieka nad krytycznymi decyzjami.{% else %}Prepare account and contact context for faster personalization.{% endif %}</span>
+                  <a class="mega-quick-link" href="{{ consultingUrl }}">
+                    <span class="mega-quick-title">{% if isPolish %}Konsulting AI{% else %}AI Consulting Services{% endif %}</span>
+                    <span class="mega-quick-desc">{% if isPolish %}Warsztaty discovery, ocena gotowości, wybór pierwszego use case'u i plan działania.{% else %}Discovery workshops, implementation planning, and practical decision support before delivery starts.{% endif %}</span>
                   </a>
                   <a class="mega-quick-link" href="{% if isPolish %}/pl/rag-dla-firm/{% else %}/services/ai-business-process-automation/{% endif %}">
-                    <span class="mega-quick-title">{% if isPolish %}RAG dla firm{% else %}Revenue Workflow Automation{% endif %}</span>
-                    <span class="mega-quick-desc">{% if isPolish %}AI pracujące na dokumentach, procedurach i wiedzy firmowej z kontrolą uprawnień i bezpiecznym dostępem do danych.{% else %}Connect CRM, forms, email, and internal tools to reduce manual work.{% endif %}</span>
+                    <span class="mega-quick-title">{% if isPolish %}Wdrożenia AI{% else %}AI Implementation Strategy{% endif %}</span>
+                    <span class="mega-quick-desc">{% if isPolish %}Integracje z CRM, ERP, dokumentami i procesami operacyjnymi dla mierzalnego efektu.{% else %}Connect systems, define controls, and move from roadmap to production without guesswork.{% endif %}</span>
                   </a>
                   <a class="mega-quick-link" href="{% if isPolish %}/pl/konsulting-ai/{% else %}/ai-use-case-examples/{% endif %}">
-                    <span class="mega-quick-title">{% if isPolish %}Konsulting AI{% else %}Use Cases and Outcomes{% endif %}</span>
-                    <span class="mega-quick-desc">{% if isPolish %}Warsztaty discovery, roadmapa AI, priorytetyzacja use case'ów i wybór architektury pod realny efekt biznesowy.{% else %}See practical examples of qualification, research, and workflow automation.{% endif %}</span>
+                    <span class="mega-quick-title">{% if isPolish %}Przykłady i use case'y{% else %}Examples and Outcomes{% endif %}</span>
+                    <span class="mega-quick-desc">{% if isPolish %}Zobacz, jak firmy planują i wdrażają AI w sprzedaży, operacjach i pracy na wiedzy.{% else %}See how companies scope and launch high-ROI AI workflows in operations, sales, and service.{% endif %}</span>
                   </a>
                 </div>
                 <p class="mega-menu-note">
                   {% if isPolish %}
-                    Powiedz nam, jaki proces chcesz usprawnić, a zaproponujemy najszybszy i najbezpieczniejszy pierwszy krok wdrożenia.
+                    Powiedz nam, jaki proces chcesz usprawnić, a zaproponujemy pierwszy krok, roadmapę i realistyczny plan wdrożenia.
                     <a href="{{ calendarUrl }}">Umów konsultację</a>.
                   {% else %}
-                    Tell us your inbound or sales workflow and we will recommend the fastest first implementation.
-                    <a href="{{ calendarUrl }}">Book a discovery call</a>.
+                    Tell us what process you want to improve and we will recommend the first AI roadmap milestone and implementation path.
+                    <a href="{{ calendarUrl }}">Book a strategy call</a>.
                   {% endif %}
                 </p>
               </div>
@@ -3910,24 +3915,24 @@
                 <div>
                   <h1>
                     {% if isPolish %}
-                      Praktyczne wdrożenia AI dla
-                      <span>firm w Warszawie<br />i całej Polsce</span>
+                      Zbuduj roadmapę AI w 4 tygodnie
+                      <span>&mdash; bez zatrudniania zespołu data</span>
                     {% else %}
-                      AI agents for
-                      <span>B2B revenue teams</span>
+                      Build Your AI Roadmap in 4 Weeks
+                      <span>&mdash; Without Hiring a Data Team</span>
                     {% endif %}
                   </h1>
                   <p class="home-lead">
                     {% if isPolish %}
-                      Wdrażamy AI dla firm, które chcą automatyzować procesy, budować agentów AI, wykorzystywać RAG i osiągać mierzalne efekty biznesowe bez zbędnego hype'u.
+                      Pomagamy firmom zaplanować i wdrożyć rozwiązania AI, które realnie zwiększają efektywność i ROI.
                     {% else %}
-                      We help sales and marketing teams qualify leads faster, automate inbound workflows, and reduce manual revenue-team admin.
+                      We help mid-sized companies identify, plan and implement high-ROI AI use cases.
                     {% endif %}
                   </p>
                   <div class="home-cta">
-                    <a class="btn btn-primary" href="{{ calendarUrl }}">{% ms "calendar_month" %}<span>{{ calendarLabel }}</span></a>
-                    <a class="btn btn-ghost btn-see-services" href="{% if isPolish %}/pl/konsulting-ai/{% else %}/ai-lead-qualification-plan/{% endif %}">
-                      <span>{% if isPolish %}Zobacz, od czego zacząć{% else %}Get your AI lead qualification plan{% endif %}</span>
+                    <a class="btn btn-primary" href="{{ roadmapUrl }}">{% ms "rocket_launch" %}<span>{% if isPolish %}Otrzymaj roadmapę AI{% else %}Get AI Roadmap{% endif %}</span></a>
+                    <a class="btn btn-ghost btn-see-services" href="{{ calendarUrl }}">
+                      <span>{% if isPolish %}Umów konsultację{% else %}Book Strategy Call{% endif %}</span>
                       <span class="btn-icon" aria-hidden="true">
                         <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" />
@@ -3936,7 +3941,7 @@
                       </span>
                     </a>
                   </div>
-                  <div class="home-note">{% if isPolish %}Dla średnich i większych firm. Praktyczne wdrożenie. Jasny zakres. Mierzalne efekty.{% else %}Built for B2B revenue workflows. Practical delivery. Clear outcomes.{% endif %}</div>
+                  <div class="home-note">{% if isPolish %}Dla średnich i większych firm. Szybki discovery. Jasny zakres. Mierzalny efekt biznesowy.{% else %}Built for mid-sized companies. Fast discovery. Clear scope. Measurable ROI.{% endif %}</div>
                 </div>
               </div>
             </div>
@@ -3953,11 +3958,11 @@
             </div>
           </section>
 
-          <section class="section compact" aria-label="Before and after AI lead qualification">
+          <section class="section compact" aria-label="Problem and solution comparison">
             <div class="container">
               <div class="section-header">
-                <h2 class="section-title">{% if isPolish %}Przed i po wdrożeniu AI{% else %}Before and after AI lead qualification{% endif %}</h2>
-                <p class="section-lead">{% if isPolish %}Zobacz, jak zmienia się praca po przejściu z ręcznych działań do AI wspierającego proces biznesowy.{% else %}See the shift from manual lead triage to AI-supported qualification.{% endif %}</p>
+                <h2 class="section-title">{% if isPolish %}Dlaczego projekty AI zatrzymują się bez roadmapy{% else %}Why AI projects stall without a roadmap{% endif %}</h2>
+                <p class="section-lead">{% if isPolish %}Różnica między chaotycznym startem a uporządkowanym planem wdrożenia jest zwykle widoczna już w pierwszych tygodniach.{% else %}The difference between a tool-first AI experiment and a roadmap-led rollout shows up early in budget clarity, speed, and ROI visibility.{% endif %}</p>
               </div>
               <div class="table-scroll">
                 <table class="usecase-table compare-table">
@@ -3971,41 +3976,41 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td><strong>{% if isPolish %}Ręczna praca na sprawie{% else %}Manual work per lead{% endif %}</strong></td>
-                      <td>10-20 min</td>
-                      <td>1-2 min</td>
-                      <td>{% if isPolish %}80-90% mniej ręcznej pracy{% else %}80-90% less manual work{% endif %}</td>
+                      <td><strong>{% if isPolish %}Priorytet use case'ów{% else %}Use-case prioritization{% endif %}</strong></td>
+                      <td>{% if isPolish %}Wiele pomysłów bez decyzji{% else %}Too many ideas, no clear first move{% endif %}</td>
+                      <td>{% if isPolish %}Jeden zatwierdzony pierwszy etap{% else %}One approved first implementation{% endif %}</td>
+                      <td>{% if isPolish %}Szybsze decyzje{% else %}Faster decisions{% endif %}</td>
                     </tr>
                     <tr>
-                      <td><strong>{% if isPolish %}Czas do pierwszej decyzji{% else %}Time to first qualification{% endif %}</strong></td>
-                      <td>30-120 min</td>
-                      <td>2-10 min</td>
-                      <td>{% if isPolish %}5-12x szybciej{% else %}5-12x faster qualification{% endif %}</td>
+                      <td><strong>{% if isPolish %}Czas do planu wdrożenia{% else %}Time to implementation plan{% endif %}</strong></td>
+                      <td>8-16 {% if isPolish %}tygodni{% else %}weeks{% endif %}</td>
+                      <td>4 {% if isPolish %}tygodnie{% else %}weeks{% endif %}</td>
+                      <td>{% if isPolish %}2-4x szybciej{% else %}2-4x faster planning{% endif %}</td>
                     </tr>
                     <tr>
-                      <td><strong>{% if isPolish %}Kompletność kontekstu w systemie{% else %}CRM context completeness{% endif %}</strong></td>
-                      <td>40-60%</td>
-                      <td>85-95%</td>
-                      <td>{% if isPolish %}+30 do +50 pp{% else %}+30 to +50 pp{% endif %}</td>
+                      <td><strong>{% if isPolish %}Jasność kosztów{% else %}Cost visibility{% endif %}</strong></td>
+                      <td>{% if isPolish %}Niepewny budżet{% else %}Unclear budget range{% endif %}</td>
+                      <td>{% if isPolish %}Realistyczny zakres i koszt{% else %}Scoped range and realistic budget{% endif %}</td>
+                      <td>{% if isPolish %}Mniej ryzyka budżetowego{% else %}Lower budget risk{% endif %}</td>
                     </tr>
                     <tr>
-                      <td><strong>{% if isPolish %}Terminowość obsługi{% else %}Qualified response SLA hit rate{% endif %}</strong></td>
-                      <td>50-70%</td>
-                      <td>80-95%</td>
-                      <td>{% if isPolish %}+20 do +30 pp{% else %}+20 to +30 pp{% endif %}</td>
+                      <td><strong>{% if isPolish %}Zaangażowanie interesariuszy{% else %}Stakeholder alignment{% endif %}</strong></td>
+                      <td>{% if isPolish %}Sprzeczne oczekiwania{% else %}Conflicting expectations{% endif %}</td>
+                      <td>{% if isPolish %}Wspólne KPI i właściciele{% else %}Shared KPIs and owners{% endif %}</td>
+                      <td>{% if isPolish %}Mniej tarć w delivery{% else %}Less delivery friction{% endif %}</td>
                     </tr>
                     <tr>
-                      <td><strong>{% if isPolish %}Skupienie zespołu na właściwych sprawach{% else %}Rep focus on high-fit leads{% endif %}</strong></td>
-                      <td>{% if isPolish %}Niskie / niespójne{% else %}Low / inconsistent{% endif %}</td>
-                      <td>{% if isPolish %}Wysokie / priorytetyzowane{% else %}High / prioritized{% endif %}</td>
-                      <td>{% if isPolish %}Więcej czasu na realną wartość{% else %}More time on real opportunities{% endif %}</td>
+                      <td><strong>{% if isPolish %}Widoczność ROI{% else %}ROI visibility{% endif %}</strong></td>
+                      <td>{% if isPolish %}Trudna do obrony{% else %}Hard to justify{% endif %}</td>
+                      <td>{% if isPolish %}Powiązana z workflow i KPI{% else %}Connected to workflow and KPIs{% endif %}</td>
+                      <td>{% if isPolish %}Lepsza akceptacja biznesowa{% else %}Stronger business case{% endif %}</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
               <div class="home-cta">
-                <a class="btn btn-primary" href="{{ calendarUrl }}">{% ms "calendar_month" %}<span>{{ calendarLabel }}</span></a>
-                <a class="btn btn-ghost" href="{% if isPolish %}/pl/wdrozenia-ai-dla-firm/{% else %}/ai-lead-qualification-plan/{% endif %}">{% if isPolish %}Poznaj zakres wdrożenia{% else %}Get your AI lead qualification plan{% endif %}</a>
+                <a class="btn btn-primary" href="{{ roadmapUrl }}">{% ms "rocket_launch" %}<span>{% if isPolish %}Otrzymaj roadmapę AI{% else %}Get AI Roadmap{% endif %}</span></a>
+                <a class="btn btn-ghost" href="{{ calendarUrl }}">{% if isPolish %}Umów konsultację{% else %}Book Strategy Call{% endif %}</a>
               </div>
             </div>
           </section>
@@ -4014,8 +4019,8 @@
             <div class="container">
               <div class="ai-loop-wrap">
                 <div class="section-header">
-                  <h2 class="section-title" id="ai-loop-title">{% if isPolish %}Jak pracujemy nad wdrożeniem AI{% else %}How the AI agent works{% endif %}</h2>
-                  <p class="section-lead">{% if isPolish %}Praktyczny przebieg od zdefiniowania procesu do uruchomienia rozwiązania w firmie.{% else %}A practical flow from new lead to sales-ready opportunity.{% endif %}</p>
+                  <h2 class="section-title" id="ai-loop-title">{% if isPolish %}Jak budujemy roadmapę AI{% else %}How we build your AI roadmap{% endif %}</h2>
+                  <p class="section-lead">{% if isPolish %}Praktyczny proces od discovery do planu wdrożenia gotowego do zatwierdzenia i realizacji.{% else %}A practical process from discovery to a decision-ready implementation roadmap.{% endif %}</p>
                 </div>
 
                 <div class="ai-loop-grid">
@@ -4025,8 +4030,8 @@
                         <button class="ai-loop-step is-active" type="button" data-step="0" aria-current="step">
                           <span class="ai-loop-step-dot" aria-hidden="true"></span>
                           <span>
-                            <span class="ai-loop-step-title">{% if isPolish %}Analizujemy proces{% else %}Lead enters your flow{% endif %}</span>
-                            <span class="ai-loop-step-desc">{% if isPolish %}Ustalamy, gdzie AI ma skrócić czas pracy, poprawić obsługę lub uporządkować wiedzę.{% else %}A lead submits a form or appears in your CRM.{% endif %}</span>
+                            <span class="ai-loop-step-title">{% if isPolish %}Mapujemy problem biznesowy{% else %}Map the business problem{% endif %}</span>
+                            <span class="ai-loop-step-desc">{% if isPolish %}Ustalamy, które workflow mają najwyższy koszt operacyjny i największy potencjał ROI.{% else %}We identify the workflows with the highest friction, cost, and upside for AI adoption.{% endif %}</span>
                           </span>
                         </button>
                       </li>
@@ -4034,8 +4039,8 @@
                         <button class="ai-loop-step" type="button" data-step="1">
                           <span class="ai-loop-step-dot" aria-hidden="true"></span>
                           <span>
-                            <span class="ai-loop-step-title">{% if isPolish %}Projektujemy rozwiązanie{% else %}Company research runs automatically{% endif %}</span>
-                            <span class="ai-loop-step-desc">{% if isPolish %}Dobieramy architekturę, źródła danych, poziom automatyzacji i kontrolę człowieka.{% else %}The AI agent collects company and account context.{% endif %}</span>
+                            <span class="ai-loop-step-title">{% if isPolish %}Priorytetyzujemy use case'y{% else %}Prioritize use cases{% endif %}</span>
+                            <span class="ai-loop-step-desc">{% if isPolish %}Oceniamy wartość biznesową, wykonalność, dane, integracje i ryzyko wdrożenia.{% else %}We score candidate use cases by business value, feasibility, integration effort, and delivery risk.{% endif %}</span>
                           </span>
                         </button>
                       </li>
@@ -4043,8 +4048,8 @@
                         <button class="ai-loop-step" type="button" data-step="2">
                           <span class="ai-loop-step-dot" aria-hidden="true"></span>
                           <span>
-                            <span class="ai-loop-step-title">{% if isPolish %}Integrujemy systemy{% else %}ICP fit is checked{% endif %}</span>
-                            <span class="ai-loop-step-desc">{% if isPolish %}Łączymy AI z obecnymi narzędziami, dokumentami, CRM, ERP lub workflow firmy.{% else %}The AI evaluates qualification rules and lead fit.{% endif %}</span>
+                            <span class="ai-loop-step-title">{% if isPolish %}Definiujemy pierwszy etap{% else %}Define the first implementation{% endif %}</span>
+                            <span class="ai-loop-step-desc">{% if isPolish %}Wybieramy pierwszy zakres, KPI, właścicieli i punkty kontroli jakości.{% else %}We scope the first phase, success metrics, owners, and review checkpoints.{% endif %}</span>
                           </span>
                         </button>
                       </li>
@@ -4052,8 +4057,8 @@
                         <button class="ai-loop-step" type="button" data-step="3">
                           <span class="ai-loop-step-dot" aria-hidden="true"></span>
                           <span>
-                            <span class="ai-loop-step-title">{% if isPolish %}Testujemy jakość{% else %}CRM context is enriched{% endif %}</span>
-                            <span class="ai-loop-step-desc">{% if isPolish %}Weryfikujemy odpowiedzi, bezpieczeństwo, uprawnienia i zgodność z procesem biznesowym.{% else %}Key fields and lead notes are prepared for your team.{% endif %}</span>
+                            <span class="ai-loop-step-title">{% if isPolish %}Projektujemy delivery{% else %}Design delivery and integrations{% endif %}</span>
+                            <span class="ai-loop-step-desc">{% if isPolish %}Rozpisujemy integracje, dostęp do danych, governance i kolejność prac wdrożeniowych.{% else %}We define system dependencies, data access, governance, and the implementation sequence.{% endif %}</span>
                           </span>
                         </button>
                       </li>
@@ -4061,8 +4066,8 @@
                         <button class="ai-loop-step" type="button" data-step="4">
                           <span class="ai-loop-step-dot" aria-hidden="true"></span>
                           <span>
-                            <span class="ai-loop-step-title">{% if isPolish %}Uruchamiamy wdrożenie{% else %}Next best action is suggested{% endif %}</span>
-                            <span class="ai-loop-step-desc">{% if isPolish %}Startujemy z zakresem, który daje szybki efekt i nie przeciąża organizacji.{% else %}The AI recommends routing, response priority, and follow-up.{% endif %}</span>
+                            <span class="ai-loop-step-title">{% if isPolish %}Budujemy roadmapę{% else %}Build the rollout roadmap{% endif %}</span>
+                            <span class="ai-loop-step-desc">{% if isPolish %}Pokazujemy etapy na 6-12 miesięcy, decyzje zależne i realistyczne koszty.{% else %}We lay out the next 6 to 12 months with phases, dependencies, and realistic budget logic.{% endif %}</span>
                           </span>
                         </button>
                       </li>
@@ -4070,8 +4075,8 @@
                         <button class="ai-loop-step" type="button" data-step="5">
                           <span class="ai-loop-step-dot" aria-hidden="true"></span>
                           <span>
-                            <span class="ai-loop-step-title">{% if isPolish %}Mierzymy efekty{% else %}Sales receives a qualified opportunity{% endif %}</span>
-                            <span class="ai-loop-step-desc">{% if isPolish %}Sprawdzamy oszczędność czasu, szybkość obsługi, jakość działania i możliwości dalszego skalowania.{% else %}Your team focuses on high-fit opportunities, not manual triage.{% endif %}</span>
+                            <span class="ai-loop-step-title">{% if isPolish %}Przechodzimy do wdrożenia{% else %}Move into implementation{% endif %}</span>
+                            <span class="ai-loop-step-desc">{% if isPolish %}Zespół dostaje decyzje, zakres i plan, z którym można bezpiecznie wejść w realizację.{% else %}Your team gets a roadmap clear enough to approve, budget, and execute without rework.{% endif %}</span>
                           </span>
                         </button>
                       </li>
@@ -4086,7 +4091,7 @@
                       </svg>
                       <div class="ai-loop-center" aria-hidden="true">
                         <div class="ai-loop-center-label">{% if isPolish %}Etap 1{% else %}Step 1{% endif %}</div>
-                        <div class="ai-loop-center-step" id="ai-loop-current-step">{% if isPolish %}Analizujemy proces{% else %}Lead enters your flow{% endif %}</div>
+                        <div class="ai-loop-center-step" id="ai-loop-current-step">{% if isPolish %}Mapujemy problem biznesowy{% else %}Map the business problem{% endif %}</div>
                       </div>
                     </div>
                   </div>
@@ -4099,17 +4104,17 @@
             <div class="container">
               <div class="partner">
                 <div>
-                  <p class="partner-kicker">{% if isPolish %}Partnerstwo i delivery{% else %}Trust and delivery{% endif %}</p>
-                  <h2 class="partner-title">{% if isPolish %}Wdrażamy, nie kończymy na rekomendacjach{% else %}Execution-focused, not advisory-only{% endif %}</h2>
+                  <p class="partner-kicker">{% if isPolish %}Rozwiązanie{% else %}Solution{% endif %}</p>
+                  <h2 class="partner-title">{% if isPolish %}Łączymy strategię AI z realnym delivery{% else %}We connect AI strategy to real delivery{% endif %}</h2>
                   <p class="partner-body">
                     {% if isPolish %}
-                      Pracujemy z firmami, które mają realne procesy do usprawnienia i oczekują konkretnego wyniku biznesowego. Projektujemy rozwiązanie pod rzeczywisty obieg pracy, a potem wdrażamy je w używanym już środowisku.
+                      Nie kończymy na ogólnej prezentacji. Pomagamy wybrać właściwy use case, oszacować koszt, zaplanować integracje i przejść do pierwszego wdrożenia bez chaosu.
                     {% else %}
-                      We work with B2B teams that already have inbound flow or active outbound. We design AI agents around real revenue workflows, then implement directly in your stack.
+                      We do not stop at strategy decks. We help teams choose the right use case, estimate cost, align stakeholders, and move into implementation with a practical plan.
                     {% endif %}
                   </p>
                   <p class="partner-body">
-                    {% if isPolish %}Dostajesz jasny zakres, szybki start, bezpieczne wdrożenie i wsparcie od discovery do działania produkcyjnego.{% else %}You get clear scope, fast delivery, and support from discovery to production.{% endif %}
+                    {% if isPolish %}Dostajesz jasny zakres, priorytety, punkty kontroli i roadmapę, którą można zatwierdzić biznesowo i zrealizować technicznie.{% else %}You get clear scope, prioritization logic, risk visibility, and a roadmap the business and technical teams can actually act on.{% endif %}
                   </p>
                 </div>
               </div>
@@ -4119,29 +4124,29 @@
           <section class="section compact">
             <div class="container">
               <div class="section-header">
-                <h2 class="section-title">{% if isPolish %}Kluczowe usługi{% else %}Core solutions{% endif %}</h2>
-                <p class="section-lead">{% if isPolish %}Cztery główne obszary dla firm planujących praktyczne wdrożenia AI.{% else %}Three focused offers for B2B revenue teams.{% endif %}</p>
+                <h2 class="section-title">{% if isPolish %}Od roadmapy do wdrożenia{% else %}From roadmap to implementation{% endif %}</h2>
+                <p class="section-lead">{% if isPolish %}Trzy główne obszary, które najczęściej spinamy w jeden plan wdrożenia AI.{% else %}Three core workstreams we typically connect inside one AI roadmap engagement.{% endif %}</p>
               </div>
               <div class="services-grid">
-                <a class="service-card" href="{% if isPolish %}/pl/wdrozenia-ai-dla-firm/{% else %}/services/ai-powered-lead-qualification/{% endif %}">
-                  <h3 class="service-title">{% if isPolish %}Wdrożenia AI dla firm{% else %}AI Inbound Lead Qualification Agent{% endif %}</h3>
-                  <p class="service-desc">{% if isPolish %}Projektowanie i wdrażanie AI w procesach operacyjnych, sprzedażowych, dokumentowych i wiedzochłonnych.{% else %}Analyze inbound leads, enrich context, qualify, route, and prepare CRM-ready notes.{% endif %}</p>
+                <a class="service-card" href="{{ roadmapUrl }}">
+                  <h3 class="service-title">{% if isPolish %}Roadmapa AI{% else %}AI Roadmap Consulting{% endif %}</h3>
+                  <p class="service-desc">{% if isPolish %}Priorytetyzacja use case'ów, plan etapów, KPI, koszty i logika pierwszego wdrożenia.{% else %}Use-case prioritization, rollout sequencing, KPI definition, and first-phase planning.{% endif %}</p>
                   <div class="service-meta">{% if isPolish %}Zobacz {% else %}Explore {% endif %}{% ms "arrow_forward" %}</div>
                 </a>
-                <a class="service-card" href="{% if isPolish %}/pl/agenci-ai-dla-firm/{% else %}/services/ai-research-analysis-agents/{% endif %}">
-                  <h3 class="service-title">{% if isPolish %}Agenci AI dla firm{% else %}AI Sales Research Agent{% endif %}</h3>
-                  <p class="service-desc">{% if isPolish %}Agenci AI wspierający sprzedaż, operacje, obsługę klienta i procesy wewnętrzne z kontrolą jakości i bezpieczeństwa.{% else %}Research target accounts, enrich contact context, and prepare outreach-ready insight packs.{% endif %}</p>
+                <a class="service-card" href="{{ consultingUrl }}">
+                  <h3 class="service-title">{% if isPolish %}Doradztwo AI{% else %}AI Consulting Services{% endif %}</h3>
+                  <p class="service-desc">{% if isPolish %}Discovery, ocena gotowości, wybór architektury i przygotowanie organizacji do wdrożenia AI.{% else %}Discovery workshops, readiness assessment, architecture direction, and implementation decision support.{% endif %}</p>
                   <div class="service-meta">{% if isPolish %}Zobacz {% else %}Explore {% endif %}{% ms "arrow_forward" %}</div>
                 </a>
                 <a class="service-card" href="{% if isPolish %}/pl/rag-dla-firm/{% else %}/services/ai-business-process-automation/{% endif %}">
-                  <h3 class="service-title">{% if isPolish %}RAG i wyszukiwanie wiedzy{% else %}Revenue Workflow Automation{% endif %}</h3>
-                  <p class="service-desc">{% if isPolish %}AI pracujące na dokumentach, procedurach i wiedzy firmowej, dające szybszy dostęp do właściwych informacji.{% else %}Connect CRM, forms, email, and internal tools to remove repetitive manual work.{% endif %}</p>
+                  <h3 class="service-title">{% if isPolish %}Wdrożenie i integracje{% else %}Implementation and Integration{% endif %}</h3>
+                  <p class="service-desc">{% if isPolish %}Połączenie AI z CRM, ERP, dokumentami i workflow operacyjnym, aby roadmapa przechodziła w działające rozwiązanie.{% else %}Connect AI with CRM, ERP, documents, and operating workflows so the roadmap turns into production value.{% endif %}</p>
                   <div class="service-meta">{% if isPolish %}Zobacz {% else %}Explore {% endif %}{% ms "arrow_forward" %}</div>
                 </a>
                 {% if isPolish %}
-                  <a class="service-card" href="/pl/konsulting-ai/">
-                    <h3 class="service-title">Konsulting AI</h3>
-                    <p class="service-desc">Warsztaty discovery, roadmapa, priorytetyzacja use case'ów i wybór właściwego pierwszego wdrożenia.</p>
+                  <a class="service-card" href="/pl/agenci-ai-dla-firm/">
+                    <h3 class="service-title">Agenci AI dla firm</h3>
+                    <p class="service-desc">Gdy roadmapa wskaże use case wymagający działania na kontekście, wiedzy i wieloetapowym workflow.</p>
                     <div class="service-meta">Zobacz {% ms "arrow_forward" %}</div>
                   </a>
                 {% endif %}
@@ -4152,25 +4157,25 @@
           <section class="section compact" aria-label="Example use case">
             <div class="container">
               <div class="section-header">
-                <h2 class="section-title">{% if isPolish %}Przykładowy scenariusz{% else %}Example use case{% endif %}</h2>
-                <p class="section-lead">{% if isPolish %}Jak może wyglądać praktyczne wdrożenie AI dla średniej lub większej firmy.{% else %}How this looks in practice for a typical B2B revenue team.{% endif %}</p>
+                <h2 class="section-title">{% if isPolish %}Przykładowy scenariusz{% else %}Example roadmap scenario{% endif %}</h2>
+                <p class="section-lead">{% if isPolish %}Jak może wyglądać uporządkowanie tematu AI w średniej firmie przed pierwszym wdrożeniem.{% else %}How a roadmap engagement looks for a mid-sized company before the first implementation starts.{% endif %}</p>
               </div>
               <article class="example-scenario">
                 {% if isPolish %}
-                  <p><strong>Typowy przykład:</strong> firma usługowa lub przemysłowa z Warszawy, kilka działów, wiele dokumentów i powtarzalnych zapytań wewnętrznych.</p>
-                  <p><strong>Problem:</strong> pracownicy tracą czas na wyszukiwanie informacji, ręczne przekazywanie spraw i obsługę powtarzalnych zadań.</p>
-                  <p><strong>Rozwiązanie:</strong> wdrożenie RAG oraz agentów AI zintegrowanych z obecną bazą wiedzy i systemami operacyjnymi.</p>
-                  <p><strong>Efekt:</strong> szybsza obsługa, lepszy dostęp do wiedzy, mniej pracy ręcznej i bardziej przewidywalny proces.</p>
+                  <p><strong>Typowy przykład:</strong> średnia firma usługowa lub handlowa, kilka działów, CRM, dokumenty i wiele pomysłów na AI jednocześnie.</p>
+                  <p><strong>Problem:</strong> zarząd chce wyników z AI, ale nie wiadomo, który proces wdrożyć najpierw i jak oszacować koszt.</p>
+                  <p><strong>Rozwiązanie:</strong> czterotygodniowe discovery, priorytetyzacja use case'ów, roadmapa etapów i plan pierwszego wdrożenia.</p>
+                  <p><strong>Efekt:</strong> jedna zatwierdzona ścieżka działania, mniej chaosu decyzyjnego i szybszy start pierwszego projektu.</p>
                 {% else %}
-                  <p><strong>Typical example:</strong> B2B SaaS company, 50 employees, 300 inbound leads per month.</p>
-                  <p><strong>Problem:</strong> The sales team spends too much time researching inbound leads before deciding who to prioritize.</p>
-                  <p><strong>Solution:</strong> An AI Inbound Lead Qualification Agent researches each company, checks ICP fit, enriches CRM context, and prepares the next step.</p>
-                  <p><strong>Result:</strong> Sales responds faster, qualification becomes more consistent, and reps spend more time on real opportunities.</p>
+                  <p><strong>Typical example:</strong> A 120-person services company with sales, operations, and support teams all proposing different AI initiatives.</p>
+                  <p><strong>Problem:</strong> Leadership wants ROI from AI, but there is no clear first use case, no cost logic, and no agreement on what to implement first.</p>
+                  <p><strong>Solution:</strong> A four-week roadmap project that maps workflows, scores use cases, defines the first implementation, and sequences the next phases.</p>
+                  <p><strong>Result:</strong> The company gets one approved plan, one realistic budget path, and one implementation the team can actually start.</p>
                 {% endif %}
               </article>
               <div class="home-cta">
-                <a class="btn btn-primary" href="{{ calendarUrl }}">{% ms "calendar_month" %}<span>{{ calendarLabel }}</span></a>
-                <a class="btn btn-ghost" href="{% if isPolish %}/pl/wdrozenia-ai-warszawa/{% else %}/ai-lead-qualification-plan/{% endif %}">{% if isPolish %}Wdrożenia AI Warszawa{% else %}Get your AI lead qualification plan{% endif %}</a>
+                <a class="btn btn-primary" href="{{ roadmapUrl }}">{% ms "rocket_launch" %}<span>{% if isPolish %}Otrzymaj roadmapę AI{% else %}Get AI Roadmap{% endif %}</span></a>
+                <a class="btn btn-ghost" href="{{ calendarUrl }}">{% if isPolish %}Umów konsultację{% else %}Book Strategy Call{% endif %}</a>
               </div>
             </div>
           </section>
@@ -4179,21 +4184,21 @@
             <div class="container">
               <div class="pilot">
                 <p class="pilot-meta">{% if isPolish %}Dla kogo{% else %}Who this is for{% endif %}</p>
-                <h2 class="pilot-title">{% if isPolish %}Dla firm, które chcą wdrożyć AI w realnym procesie{% else %}Built for B2B teams with active pipeline workflows{% endif %}</h2>
+                <h2 class="pilot-title">{% if isPolish %}Dla firm, które chcą podejść do AI jak do projektu biznesowego{% else %}Built for companies that want a business-first AI roadmap{% endif %}</h2>
                 <p class="pilot-body">
-                  {% if isPolish %}Najlepiej pracuje nam się z organizacjami, które mają powtarzalne procesy, dane i jasną potrzebę usprawnienia pracy przy pomocy AI.{% else %}We are the right fit if your team handles inbound leads, runs outbound sales, and wants faster qualification with less manual handoff.{% endif %}
+                  {% if isPolish %}Najlepiej pracuje nam się z organizacjami, które mają powtarzalne procesy, dane i potrzebę uporządkowania inwestycji w AI zanim przejdą do wdrożenia.{% else %}We are the right fit if your company has multiple AI ideas, real workflows to improve, and needs a clear first implementation plan before scaling investment.{% endif %}
                 </p>
                 <ul class="pilot-list">
                   {% if isPolish %}
                     <li>Średnie i większe firmy z procesami wartymi automatyzacji.</li>
-                    <li>Zespoły operacyjne, sprzedażowe, obsługi klienta i back-office.</li>
-                    <li>Firmy korzystające już z CRM, ERP, repozytoriów dokumentów lub własnych systemów.</li>
-                    <li>Organizacje szukające bezpiecznego wdrożenia i mierzalnych efektów.</li>
+                    <li>Zespoły zarządcze, operacyjne, sprzedażowe i customer service.</li>
+                    <li>Firmy korzystające już z CRM, ERP, dokumentów, knowledge base lub własnych systemów.</li>
+                    <li>Organizacje szukające mierzalnego ROI i bezpiecznego planu wdrożenia.</li>
                   {% else %}
-                    <li>B2B companies with active sales teams.</li>
-                    <li>Teams receiving inbound leads.</li>
-                    <li>Companies using a CRM (HubSpot, Salesforce, and similar).</li>
-                    <li>Sales teams spending time on manual lead research.</li>
+                    <li>Mid-sized companies with multiple AI opportunities on the table.</li>
+                    <li>Leadership teams that need one practical first priority.</li>
+                    <li>Companies already using CRM, ERP, docs, internal tools, or knowledge systems.</li>
+                    <li>Organizations that need measurable ROI before scaling AI spend.</li>
                   {% endif %}
                 </ul>
                 <p class="pilot-meta">{% if isPolish %}Mniej odpowiednie na start{% else %}Not ideal for{% endif %}</p>
@@ -4203,9 +4208,9 @@
                     <li>Organizacje oczekujące pełnej automatyzacji bez kontroli jakości i odpowiedzialności.</li>
                     <li>Zespoły, które chcą zaczynać od bardzo szerokiego, niepriorytetyzowanego zakresu.</li>
                   {% else %}
-                    <li>Companies without a sales team.</li>
-                    <li>Companies without inbound or outbound lead flow.</li>
-                    <li>Very early-stage startups without a structured sales process.</li>
+                    <li>Teams looking for a vague innovation workshop with no delivery follow-through.</li>
+                    <li>Companies without a clear owner for the target workflow.</li>
+                    <li>Very early-stage teams without stable processes, data, or decision-makers.</li>
                   {% endif %}
                 </ul>
                 <div class="home-cta">
@@ -4220,56 +4225,73 @@
               <div class="section-header">
                 <h2 class="section-title">{% if isPolish %}Co zyskują firmy{% else %}What companies get{% endif %}</h2>
                 <p class="section-lead">
-                  {% if isPolish %}Jasne efekty biznesowe z praktycznie wdrożonego AI.{% else %}Clear business outcomes from practical AI workflow automation.{% endif %}
+                  {% if isPolish %}Jasne efekty biznesowe jeszcze przed wejściem w kosztowne wdrożenie.{% else %}Clear business outcomes before the company commits to expensive implementation work.{% endif %}
                 </p>
               </div>
               <div class="info-grid">
                 <div class="info-card">
-                  <h3 class="info-title">{% if isPolish %}Oszczędność czasu{% else %}Less manual lead research{% endif %}</h3>
-                  <p class="info-body">{% if isPolish %}Zespół przestaje tracić czas na powtarzalne wyszukiwanie, porządkowanie i przekazywanie informacji.{% else %}AI gathers account context automatically before sales outreach.{% endif %}</p>
+                  <h3 class="info-title">{% if isPolish %}Lepsze decyzje{% else %}Clearer decisions{% endif %}</h3>
+                  <p class="info-body">{% if isPolish %}Zespół przestaje rozpraszać się wieloma pomysłami i wybiera jeden logiczny pierwszy krok.{% else %}Your team stops debating abstract AI ideas and aligns on one practical first move.{% endif %}</p>
                 </div>
                 <div class="info-card">
-                  <h3 class="info-title">{% if isPolish %}Szybsza obsługa{% else %}Faster inbound response{% endif %}</h3>
-                  <p class="info-body">{% if isPolish %}Sprawy są obsługiwane szybciej, a pracownicy mają od razu właściwy kontekst i dostęp do wiedzy.{% else %}Leads are qualified and routed quickly while intent is still high.{% endif %}</p>
+                  <h3 class="info-title">{% if isPolish %}Szybszy start{% else %}Faster execution{% endif %}</h3>
+                  <p class="info-body">{% if isPolish %}Roadmapa skraca czas od discovery do pierwszego wdrożenia i ogranicza koszt błędnych decyzji.{% else %}A roadmap shortens the path from discovery to implementation and reduces costly rework.{% endif %}</p>
                 </div>
                 <div class="info-card">
-                  <h3 class="info-title">{% if isPolish %}Mierzalne efekty{% else %}Better qualified pipeline{% endif %}</h3>
-                  <p class="info-body">{% if isPolish %}Wdrożenie można rozliczyć z konkretów: czasu, jakości, liczby zautomatyzowanych kroków i lepszego dostępu do informacji.{% else %}Sales teams focus on real opportunities instead of low-fit leads.{% endif %}</p>
+                  <h3 class="info-title">{% if isPolish %}Mierzalne ROI{% else %}Measurable ROI{% endif %}</h3>
+                  <p class="info-body">{% if isPolish %}Każdy etap jest powiązany z KPI, zakresem i efektem biznesowym, który można rozliczyć.{% else %}Each phase is tied to KPIs, scope, and business outcomes leadership can measure and defend.{% endif %}</p>
                 </div>
               </div>
             </div>
           </section>
 
-          <section class="section compact" aria-label="AI lead qualification plan">
+          <section class="section compact" aria-label="AI roadmap call to action">
             <div class="container">
               <div class="partner lead-plan-panel">
                 <div>
-                  <p class="partner-kicker">{% if isPolish %}Praktyczny pierwszy krok{% else %}Practical first step{% endif %}</p>
-                  <h2 class="partner-title">{% if isPolish %}Zobacz, od czego zacząć wdrożenie AI{% else %}Get your AI lead qualification plan{% endif %}</h2>
+                  <p class="partner-kicker">{% if isPolish %}Call to action{% else %}Call to action{% endif %}</p>
+                  <h2 class="partner-title">{% if isPolish %}Otrzymaj roadmapę AI dopasowaną do Twojej firmy{% else %}Get an AI roadmap tailored to your company{% endif %}</h2>
                   <p class="partner-body">
-                    {% if isPolish %}Powiedz nam, jaki proces chcesz usprawnić, a wskażemy najlepszy pierwszy zakres wdrożenia AI, integracje i spodziewany efekt biznesowy.{% else %}Tell us how your team handles inbound leads or sales research, and we will recommend the best first AI workflow to implement.{% endif %}
+                    {% if isPolish %}Powiedz nam, jaki proces chcesz usprawnić, a wskażemy najlepszy pierwszy use case, zakres wdrożenia, integracje i spodziewany efekt biznesowy.{% else %}Tell us which workflow you want to improve and we will recommend the best first AI use case, likely scope, and implementation path.{% endif %}
                   </p>
                   <ul class="lead-plan-list">
                     {% if isPolish %}
                       <li>Najlepszy pierwszy use case dla Twojej firmy</li>
                       <li>Rekomendowany zakres wdrożenia</li>
-                      <li>Spodziewany efekt biznesowy</li>
+                      <li>Realistyczny efekt biznesowy i KPI</li>
                       <li>Systemy, które warto zintegrować</li>
                     {% else %}
                       <li>Best first use case for your team</li>
                       <li>Suggested implementation scope</li>
-                      <li>Likely business outcome</li>
+                      <li>Likely ROI and business outcome</li>
                       <li>Recommended systems to connect</li>
                     {% endif %}
                   </ul>
                   <div class="home-cta">
-                    <a class="btn btn-primary" href="{% if isPolish %}/pl/konsulting-ai/{% else %}/ai-lead-qualification-plan/{% endif %}">{% ms "rocket_launch" %}<span>{% if isPolish %}Zobacz, od czego zacząć{% else %}Get your plan{% endif %}</span></a>
+                    <a class="btn btn-primary" href="{{ roadmapUrl }}">{% ms "rocket_launch" %}<span>{% if isPolish %}Otrzymaj roadmapę AI{% else %}Get AI Roadmap{% endif %}</span></a>
                     <a class="btn btn-ghost" href="{{ calendarUrl }}">{{ calendarLabel }}</a>
                   </div>
                 </div>
               </div>
             </div>
           </section>
+
+          {% if faqSchema and faqSchema.length %}
+            <section class="section compact" aria-label="FAQ">
+              <div class="container">
+                <div class="section-header">
+                  <h2 class="section-title">{% if isPolish %}FAQ{% else %}FAQ{% endif %}</h2>
+                  <p class="section-lead">{% if isPolish %}Najczęstsze pytania o roadmapę AI, koszty i pierwszy etap wdrożenia.{% else %}Common questions about AI roadmap planning, cost, and the first implementation phase.{% endif %}</p>
+                </div>
+                <div class="prose">
+                  {% for item in faqSchema %}
+                    <h3>{{ item.question }}</h3>
+                    <p>{{ item.answer }}</p>
+                  {% endfor %}
+                </div>
+              </div>
+            </section>
+          {% endif %}
 
 	          {% set featuredPosts = collections.postPl if isPolish else collections.posts %}
             {% set featuredPosts = featuredPosts | sort(false, false, "date") | reverse %}
@@ -4279,7 +4301,7 @@
 	              <div class="container">
 	                <div class="section-header">
 	                  <h2 class="section-title">{% if isPolish %}Najnowsze wpisy{% else %}Latest from the blog{% endif %}</h2>
-	                  <p class="section-lead">{% if isPolish %}Praktyczne materiały o AI, automatyzacji i wdrożeniach dla firm.{% else %}Practical notes on lead qualification, sales automation, and revenue-team AI workflows.{% endif %}</p>
+	                  <p class="section-lead">{% if isPolish %}Praktyczne materiały o AI, roadmapach, automatyzacji i wdrożeniach dla firm.{% else %}Practical notes on AI roadmap consulting, implementation strategy, and high-ROI automation use cases.{% endif %}</p>
 	                </div>
 	                <div class="blog-grid">
 	                  {% for post in featuredPosts %}
@@ -4290,13 +4312,13 @@
 	                      <article class="post-card post-card--compact">
 	                        {% if post.data.image %}
 	                          <div class="post-card-thumb" aria-hidden="true">
-	                            <img src="{{ post.data.image }}" alt="" loading="lazy" decoding="async" />
+	                            <img src="{{ post.data.image }}" alt="{{ (post.data.imageAlt or post.data.title or '') | escape }}" loading="lazy" decoding="async" {% if post.data.imageWidth %}width="{{ post.data.imageWidth }}"{% endif %} {% if post.data.imageHeight %}height="{{ post.data.imageHeight }}"{% endif %} />
 	                          </div>
 	                        {% endif %}
 	                        <div class="post-card-content">
 	                          <p class="post-card-meta">
 	                            {% if post.date %}
-	                              <time datetime="{{ post.date.toISOString() }}">{{ post.date | readableDate(site.locale) }}</time>
+	                              <time datetime="{{ post.date.toISOString() }}">{{ post.date | readableDate(pageLocale) }}</time>
 	                            {% endif %}
 	                          </p>
 	                          <h3 class="post-card-title"><a href="{{ post.url }}">{{ post.data.title | escape }}</a></h3>
@@ -4310,7 +4332,7 @@
 	                  {% endfor %}
 	                </div>
 	                <div class="hero-cta blog-more">
-	                  <a class="btn btn-ghost" href="{% if isPolish %}/pl/blog/{% else %}/blog/{% endif %}">{% if isPolish %}Zobacz wszystkie wpisy{% else %}See all posts{% endif %} {% ms "arrow_forward" %}</a>
+	                  <a class="btn btn-ghost" href="{{ blogUrl }}">{% if isPolish %}Zobacz wszystkie wpisy{% else %}See all posts{% endif %} {% ms "arrow_forward" %}</a>
 	                </div>
 	              </div>
 	            </section>
@@ -4328,7 +4350,7 @@
                     <a href="/services/">Solutions</a>
                     <span class="crumb-sep" aria-hidden="true">/</span>
                   {% elif isBlog and not isBlogIndex %}
-                    <a href="/blog/">Blog</a>
+                    <a href="{{ blogUrl }}">Blog</a>
                     <span class="crumb-sep" aria-hidden="true">/</span>
                   {% elif isStart and page.url != '/start-with-ai/' %}
                     <a href="/start-with-ai/">Start with AI</a>
@@ -4354,15 +4376,15 @@
                   {{ content | safe }}
                 </article>
                 {% if isServices and not isServicesIndex %}
-                  {% set ctaTitle = "Want to discuss your revenue workflow?" %}
-                  {% set ctaBody = "Share your current lead qualification, inbound, or sales research process. We will tell you what to automate first and what results to expect." %}
-                  {% set ctaButton = "Book a discovery call" %}
+                  {% set ctaTitle = "Porozmawiajmy o Twojej roadmapie AI" if isPolish else "Need help defining your AI roadmap?" %}
+                  {% set ctaBody = "Powiedz nam, który proces chcesz usprawnić, a pomożemy wybrać pierwszy use case, zakres wdrożenia i kolejny krok." if isPolish else "Tell us which workflow you want to improve and we will help you choose the right first use case, scope, and next step." %}
+                  {% set ctaButton = "Umów konsultację" if isPolish else "Book Strategy Call" %}
                   <section class="service-page-cta" aria-label="Service contact call to action">
                     <h2>{{ ctaTitle }}</h2>
                     <p>{{ ctaBody }}</p>
                     <div class="home-cta">
                       <a class="btn btn-primary" href="{{ calendarUrl }}">{% ms "calendar_month" %}<span>{{ ctaButton }}</span></a>
-                      <a class="btn btn-ghost btn-see-services" href="/ai-lead-qualification-plan/"><span>Get your AI lead qualification plan</span><span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" /><path d="M8.8 4.3L12.5 8L8.8 11.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></span></a>
+                      <a class="btn btn-ghost btn-see-services" href="{{ roadmapUrl }}"><span>{% if isPolish %}Otrzymaj roadmapę AI{% else %}Get AI Roadmap{% endif %}</span><span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" /><path d="M8.8 4.3L12.5 8L8.8 11.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></span></a>
                     </div>
                   </section>
                 {% endif %}
@@ -4398,9 +4420,9 @@
               <a href="/implementation-process/">How It Works</a>
               <a href="/about-us/">About</a>
               <a href="/contact-us/">Contact</a>
-              <a href="/ai-lead-qualification-plan/">Get your AI plan</a>
+              <a href="{{ roadmapUrl }}">Get AI Roadmap</a>
               <a href="/ai-use-case-examples/">Use Cases</a>
-              <a href="/blog/">Blog</a>
+              <a href="{{ blogUrl }}">Blog</a>
               <a href="/privacy-policy/">Privacy policy</a>
               <a href="/cookie-policy/">Cookies</a>
             {% endif %}

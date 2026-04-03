@@ -7,7 +7,7 @@ heading: Blog
 description: Praktyczne wpisy o wdrożeniach AI, integracjach, HubSpot, RAG i automatyzacji procesów w firmach.
 permalink: /pl/blog/
 alternateLangs:
-  en: /blog/
+  en: /en/blog/
   pl: /pl/blog/
 ---
 
@@ -61,6 +61,8 @@ alternateLangs:
                     alt="{{ (post.data.imageAlt or post.data.title or '') | escape }}"
                     loading="lazy"
                     decoding="async"
+                    {% if post.data.imageWidth %}width="{{ post.data.imageWidth }}"{% endif %}
+                    {% if post.data.imageHeight %}height="{{ post.data.imageHeight }}"{% endif %}
                   />
                 </a>
               {% endif %}

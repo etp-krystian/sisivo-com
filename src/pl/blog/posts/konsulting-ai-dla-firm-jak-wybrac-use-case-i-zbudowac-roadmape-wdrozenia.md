@@ -13,7 +13,7 @@ tags:
   - roadmap
   - strategy
 alternateLangs:
-  en: /blog/ai-consulting-for-companies-how-to-prioritize-use-cases-and-build-a-roadmap/
+  en: /en/blog/ai-consulting-for-companies-how-to-prioritize-use-cases-and-build-a-roadmap/
   pl: /pl/blog/konsulting-ai-dla-firm-jak-wybrac-use-case-i-zbudowac-roadmape-wdrozenia/
 ---
 

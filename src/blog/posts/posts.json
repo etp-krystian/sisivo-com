@@ -1,7 +1,6 @@
 {
   "layout": "blog-post",
   "tags": ["post"],
-  "permalink": "/blog/{{ page.fileSlug }}/",
+  "permalink": "/en/blog/{{ page.fileSlug }}/",
   "pageType": "article"
 }
-

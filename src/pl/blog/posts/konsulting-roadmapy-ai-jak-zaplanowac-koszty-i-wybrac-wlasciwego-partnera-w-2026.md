@@ -14,7 +14,7 @@ tags:
   - strategy
   - implementation
 alternateLangs:
-  en: /blog/ai-roadmap-consulting-how-to-plan-cost-and-choose-the-right-partner-in-2026/
+  en: /en/blog/ai-roadmap-consulting-how-to-plan-cost-and-choose-the-right-partner-in-2026/
   pl: /pl/blog/konsulting-roadmapy-ai-jak-zaplanowac-koszty-i-wybrac-wlasciwego-partnera-w-2026/
 ---
 

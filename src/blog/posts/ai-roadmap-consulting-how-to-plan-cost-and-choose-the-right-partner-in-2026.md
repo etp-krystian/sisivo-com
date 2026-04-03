@@ -14,7 +14,7 @@ tags:
   - strategy
   - implementation
 alternateLangs:
-  en: /blog/ai-roadmap-consulting-how-to-plan-cost-and-choose-the-right-partner-in-2026/
+  en: /en/blog/ai-roadmap-consulting-how-to-plan-cost-and-choose-the-right-partner-in-2026/
   pl: /pl/blog/konsulting-roadmapy-ai-jak-zaplanowac-koszty-i-wybrac-wlasciwego-partnera-w-2026/
 ---
 
@@ -23,9 +23,9 @@ Featured image source:
 https://unsplash.com/photos/team-collaborating-around-a-whiteboard-in-a-modern-office-K0aM-ztA76Q
 
 Suggested internal links:
-- AI agents post: /blog/ai-agents-for-companies-use-cases-in-sales-operations-and-customer-service/
-- HubSpot integrations post: /blog/custom-hubspot-integrations-when-native-apps-arent-enough/
-- AI consulting post: /blog/ai-consulting-for-companies-how-to-prioritize-use-cases-and-build-a-roadmap/
+- AI agents post: /en/blog/ai-agents-for-companies-use-cases-in-sales-operations-and-customer-service/
+- HubSpot integrations post: /en/blog/custom-hubspot-integrations-when-native-apps-arent-enough/
+- AI consulting post: /en/blog/ai-consulting-for-companies-how-to-prioritize-use-cases-and-build-a-roadmap/
 -->
 
 AI roadmap consulting has become the fastest way for B2B companies to move from scattered AI ideas to a focused implementation plan with measurable ROI.

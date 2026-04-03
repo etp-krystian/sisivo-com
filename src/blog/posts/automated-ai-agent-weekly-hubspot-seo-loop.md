@@ -11,7 +11,7 @@ tags:
   - seo
   - hubspot
 alternateLangs:
-  en: /blog/automated-ai-agent-weekly-hubspot-seo-loop/
+  en: /en/blog/automated-ai-agent-weekly-hubspot-seo-loop/
   pl: /pl/blog/tygodniowa-petla-seo-agent-ai-pisze-publikuje-mierzy-i-poprawia/
 ---
 

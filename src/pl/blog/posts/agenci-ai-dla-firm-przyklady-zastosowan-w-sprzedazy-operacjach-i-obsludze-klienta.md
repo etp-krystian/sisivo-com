@@ -13,7 +13,7 @@ tags:
   - workflows
   - sales
 alternateLangs:
-  en: /blog/ai-agents-for-companies-use-cases-in-sales-operations-and-customer-service/
+  en: /en/blog/ai-agents-for-companies-use-cases-in-sales-operations-and-customer-service/
   pl: /pl/blog/agenci-ai-dla-firm-przyklady-zastosowan-w-sprzedazy-operacjach-i-obsludze-klienta/
 ---
 

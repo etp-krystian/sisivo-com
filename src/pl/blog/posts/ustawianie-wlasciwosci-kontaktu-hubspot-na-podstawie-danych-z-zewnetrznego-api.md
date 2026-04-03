@@ -12,7 +12,7 @@ tags:
   - integrations
   - postPl
 alternateLangs:
-  en: /blog/setting-hubspot-crm-contact-properties-based-on-external-api-data-in-workflows/
+  en: /en/blog/setting-hubspot-crm-contact-properties-based-on-external-api-data-in-workflows/
   pl: /pl/blog/ustawianie-wlasciwosci-kontaktu-hubspot-na-podstawie-danych-z-zewnetrznego-api/
 ---
 

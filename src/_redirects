@@ -1,8 +1,12 @@
 # Cloudflare Pages redirects
 # Format: /from /to 301
-/insight /blog 301
-/insight/ /blog 301
-/insights/custom-hubspot-integrations-when-native-apps-arent-enough /blog/custom-hubspot-integrations-when-native-apps-arent-enough/ 301
-/insights/how-to-find-association-ids-for-custom-object-relationships-in-hubspot /blog/how-to-find-association-ids-for-custom-object-relationships-in-hubspot/ 301
-/insights/how-to-password-protect-a-hubspot-website-using-cloudflare-workers /blog/how-to-password-protect-a-hubspot-website-using-cloudflare-workers/ 301
-/insights/setting-hubspot-crm-contact-properties-based-on-external-api-data-in-workflows /blog/setting-hubspot-crm-contact-properties-based-on-external-api-data-in-workflows/ 301
+/ /en/ 301
+/blog /en/blog/ 301
+/blog/ /en/blog/ 301
+/blog/* /en/blog/:splat 301
+/insight /en/blog/ 301
+/insight/ /en/blog/ 301
+/insights/custom-hubspot-integrations-when-native-apps-arent-enough /en/blog/custom-hubspot-integrations-when-native-apps-arent-enough/ 301
+/insights/how-to-find-association-ids-for-custom-object-relationships-in-hubspot /en/blog/how-to-find-association-ids-for-custom-object-relationships-in-hubspot/ 301
+/insights/how-to-password-protect-a-hubspot-website-using-cloudflare-workers /en/blog/how-to-password-protect-a-hubspot-website-using-cloudflare-workers/ 301
+/insights/setting-hubspot-crm-contact-properties-based-on-external-api-data-in-workflows /en/blog/setting-hubspot-crm-contact-properties-based-on-external-api-data-in-workflows/ 301

@@ -11,7 +11,7 @@ tags:
   - hubspot
   - integrations
 alternateLangs:
-  en: /blog/custom-hubspot-integrations-when-native-apps-arent-enough/
+  en: /en/blog/custom-hubspot-integrations-when-native-apps-arent-enough/
   pl: /pl/blog/customowe-integracje-hubspot-kiedy-natywne-aplikacje-nie-wystarczaja/
 ---
 

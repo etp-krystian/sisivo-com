@@ -56,6 +56,54 @@ module.exports = function (eleventyConfig) {
     permalink: (data) => (data.draft ? false : data.permalink),
     eleventyExcludeFromCollections: (data) =>
       data.draft ? true : data.eleventyExcludeFromCollections,
+    faqSchema: (data) => {
+      if (data.faqSchema) return data.faqSchema;
+
+      const tags = Array.isArray(data.tags) ? data.tags : [];
+      const isBlogPost = tags.includes("post") || tags.includes("postPl");
+      if (!isBlogPost) return data.faqSchema;
+
+      const pageUrl = data.page && data.page.url ? data.page.url : "";
+      const isPolish = data.locale === "pl" || pageUrl.startsWith("/pl/");
+
+      if (isPolish) {
+        return [
+          {
+            question: "Ile trwa przygotowanie roadmapy AI?",
+            answer:
+              "Dla większości średnich firm etap discovery i przygotowanie roadmapy AI zajmuje od 2 do 6 tygodni, zależnie od liczby procesów, interesariuszy i integracji.",
+          },
+          {
+            question: "Od czego zacząć wdrożenie AI w firmie?",
+            answer:
+              "Najlepiej od jednego procesu o wysokiej częstotliwości, mierzalnym efekcie biznesowym i rozsądnym poziomie złożoności wdrożenia.",
+          },
+          {
+            question: "Czy do zbudowania roadmapy AI potrzebny jest własny zespół data?",
+            answer:
+              "Nie. W wielu przypadkach ważniejsze od dużego zespołu data są uporządkowane workflow, dostęp do systemów i partner, który potrafi przełożyć cele biznesowe na praktyczny plan wdrożenia.",
+          },
+        ];
+      }
+
+      return [
+        {
+          question: "How long does it take to build an AI roadmap?",
+          answer:
+            "For most mid-sized companies, discovery and roadmap planning take 2 to 6 weeks depending on workflow complexity, stakeholders, and integration requirements.",
+        },
+        {
+          question: "What is the best first AI use case for a mid-sized company?",
+          answer:
+            "Usually it is a high-frequency workflow with measurable business value, accessible data, and a clear owner on the business side.",
+        },
+        {
+          question: "Do we need an internal data team before starting AI roadmap work?",
+          answer:
+            "No. Many companies can define and launch the first AI use case without building a dedicated data team first, as long as the workflow, systems, and priorities are clear.",
+        },
+      ];
+    },
   });
 
   eleventyConfig.addFilter("readableDate", (dateObj, locale = "en") => {

@@ -12,7 +12,7 @@ tags:
   - automation
   - workflows
 alternateLangs:
-  en: /blog/ai-implementation-for-companies-where-to-start-and-what-to-automate-first/
+  en: /en/blog/ai-implementation-for-companies-where-to-start-and-what-to-automate-first/
   pl: /pl/blog/wdrozenia-ai-dla-firm-w-warszawie-od-czego-zaczac-i-co-automatyzowac-najpierw/
 ---
 

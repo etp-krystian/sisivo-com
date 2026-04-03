@@ -12,7 +12,7 @@ tags:
   - cloudflare
   - security
 alternateLangs:
-  en: /blog/how-to-password-protect-a-hubspot-website-using-cloudflare-workers/
+  en: /en/blog/how-to-password-protect-a-hubspot-website-using-cloudflare-workers/
   pl: /pl/blog/jak-zabezpieczyc-haslem-strone-hubspot-cloudflare-workers/
 ---
 
