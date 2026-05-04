@@ -1,3 +1,7 @@
 # Cloudflare Pages redirects
 # Format: /from /to 301
-/ /en/ 301
+/en / 301
+/en/ / 301
+/pl / 301
+/pl/ / 301
+/pl/* / 301

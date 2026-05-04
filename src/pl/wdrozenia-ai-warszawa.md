@@ -1,5 +1,6 @@
 ---
 layout: base
+draft: true
 locale: pl
 title: Wdrożenia AI Warszawa | AI dla firm w Warszawie
 heading: Wdrożenia AI Warszawa

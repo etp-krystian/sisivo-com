@@ -1,20 +1,17 @@
 ---
 layout: base
-permalink: /en/
-title: "AI Roadmap Consulting (2026): Cost, Strategy & Examples"
-description: "Learn how to build an AI roadmap, estimate costs, and choose the right consulting partner."
-alternateLangs:
-  en: /en/
-  pl: /pl/
+permalink: /
+title: "Sisivo | Sales Operating System for B2B Teams"
+description: "Sisivo helps B2B teams turn chaotic pipeline activity into a working sales system."
 faqSchema:
-  - question: "How quickly can a company get a decision-ready AI roadmap?"
-    answer: "Most mid-sized companies can move from discovery to a decision-ready AI roadmap in about four weeks when the scope is focused and stakeholders are available."
-  - question: "What should an AI roadmap include?"
-    answer: "A strong roadmap should include the first use case to implement, expected ROI, integration requirements, delivery phases, risks, and ownership on both the business and technical sides."
-  - question: "Is AI roadmap consulting only useful before implementation?"
-    answer: "No. It is also valuable when an earlier pilot underperformed, when teams disagree on priorities, or when leadership needs a clearer implementation sequence."
-  - question: "Do we need to hire a data team before starting?"
-    answer: "Not usually. Many companies can plan and launch the first high-ROI AI workflow using existing systems and a focused implementation partner."
+  - question: "Is Sisivo a CRM replacement?"
+    answer: "No. Sisivo sits on top of your current sales motion and helps the team define ICP, messaging, stage rules, and deal decisions more consistently."
+  - question: "What do we need to start?"
+    answer: "An active pipeline, a clear sales owner, and a CRM export from the last 3 to 6 weeks are enough for the first pilot."
+  - question: "How quickly do teams see value?"
+    answer: "The first value usually shows up in 1 to 2 weeks when the team sees which deals are dead, where stage quality breaks down, and what the next best actions should be."
+  - question: "Who is Sisivo best for?"
+    answer: "Best fit is a B2B SaaS or complex-service team with 20 to 80 people, 1 to 5 people in sales, an active pipeline, and pressure to make revenue more predictable."
 ---
 
 <!-- Homepage content is rendered in `src/_includes/base.njk`. -->

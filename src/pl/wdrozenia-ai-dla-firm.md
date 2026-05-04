@@ -1,5 +1,6 @@
 ---
 layout: base
+draft: true
 locale: pl
 title: Wdrożenia AI dla firm | Automatyzacja procesów biznesowych
 heading: Wdrożenia AI dla firm

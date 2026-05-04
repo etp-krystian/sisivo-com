@@ -1,20 +1,20 @@
 <!doctype html>
-{% set pageLocale = locale or (page.url and page.url.indexOf('/pl') == 0 and 'pl') or site.locale or 'en' %}
+{% set pageLocale = 'en' %}
 {% set isPolish = pageLocale == 'pl' %}
-{% set homeUrl = '/pl/' if isPolish else '/en/' %}
+{% set homeUrl = '/' %}
 {% set consultingUrl = '/pl/wdrozenia-ai-dla-firm/' if isPolish else '/services/ai-solutions-development/' %}
 {% set roadmapUrl = '/pl/wdrozenia-ai-dla-firm/' if isPolish else '/services/ai-solutions-development/' %}
 {% set homeLabel = 'Strona główna' if isPolish else 'Home' %}
-{% set calendarLabel = 'Umów konsultację' if isPolish else 'Book Strategy Call' %}
-{% set contactLabel = 'Kontakt' if isPolish else 'Contact' %}
-{% set servicesLabel = 'Usługi AI' if isPolish else 'Solutions' %}
-{% set howItWorksLabel = 'Wdrożenia AI' if isPolish else 'How It Works' %}
-{% set aboutLabel = 'Warszawa' if isPolish else 'About' %}
+{% set calendarLabel = 'Umów przegląd pipeline' if isPolish else 'Book Pipeline Review' %}
+{% set signInLabel = 'Sign in' %}
+{% set servicesLabel = 'System sprzedaży' if isPolish else 'Product' %}
+{% set howItWorksLabel = 'Jak to działa' if isPolish else 'How It Works' %}
+{% set aboutLabel = 'Dlaczego Sisivo' if isPolish else 'Why Sisivo' %}
 {% set menuLabel = 'Menu' if isPolish else 'Menu' %}
 {% set langSwitchLabel = 'EN' if isPolish else 'PL' %}
 {% set langSwitchText = 'English' if isPolish else 'Polski' %}
 {% set langSwitchHint = 'Wersja językowa' if isPolish else 'Language' %}
-{% set isHome = page.url == "/en/" or page.url == "/pl/" %}
+{% set isHome = page.url == "/" %}
 {% set isServicesIndex = page.url == "/services/" %}
 {% set isServices = page.url and page.url.indexOf("/services/") == 0 %}
 {% set isBlog = false %}
@@ -26,42 +26,26 @@
 {% set isLeadPlan = page.url == "/services/ai-solutions-development/" %}
 {% set isContent = not isHome %}
 {% set calendarUrl = "https://calendar.app.google/R21jua9szDGa7T7c9" %}
-{% set alternates = alternateLangs or {} %}
+{% set alternates = {} %}
 {% set canonicalPath = canonicalPath or page.url %}
 {% set canonicalUrl = (site.url + canonicalPath) if site and site.url and canonicalPath else canonicalPath %}
 {% set organization = site.organization or {} %}
 {% set organizationId = (site.url + '#organization') if site and site.url else '#organization' %}
 {% set organizationLogo = (site.url + organization.logo) if site and site.url and organization.logo else organization.logo %}
-{% set isPrimaryServicePage = page.url == '/en/' or page.url == '/services/ai-solutions-development/' or page.url == '/pl/' or page.url == '/pl/wdrozenia-ai-dla-firm/' %}
+{% set isPrimaryServicePage = page.url == '/' or page.url == '/services/ai-solutions-development/' %}
 {% set breadcrumbHomeUrl = homeUrl %}
 {% set breadcrumbHomeLabel = homeLabel %}
 {% set languageSwitchUrl = '' %}
-{% if isPolish and alternates.en %}
-  {% set languageSwitchUrl = alternates.en %}
-{% elif (not isPolish) and alternates.pl %}
-  {% set languageSwitchUrl = alternates.pl %}
-{% endif %}
 <html lang="{{ pageLocale }}">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <script>
       document.documentElement.classList.add("js");
-      window.__gtmContainerId = "GTM-NGX225S4";
-      window.dataLayer = window.dataLayer || [];
-      window.__loadGtmOnce = function () {
-        if (window.__gtmLoaded) return;
-        window.__gtmLoaded = true;
-        window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var s = document.createElement("script");
-        s.async = true;
-        s.src = "https://www.googletagmanager.com/gtm.js?id=" + window.__gtmContainerId;
-        document.head.appendChild(s);
-      };
     </script>
     {% set metaTitle = title or "Sisivo" %}
     {% set pageHeading = heading or metaTitle %}
-    {% set metaDescription = description or "Sisivo product website." %}
+    {% set metaDescription = description or "Sisivo helps B2B teams design and run a predictable sales system." %}
     {% set defaultFeaturedImage = "/images/favicon.png" %}
     {% set effectiveImage = image %}
     {% set effectiveImageAlt = imageAlt %}
@@ -82,10 +66,7 @@
       <meta property="og:url" content="{{ canonicalUrl }}" />
     {% endif %}
     {% if site and site.url and site.url.length %}
-      {% for altLocale, altPath in alternates %}
-        <link rel="alternate" hreflang="{{ altLocale }}" href="{{ site.url }}{{ altPath }}" />
-      {% endfor %}
-      <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ alternates.en or canonicalPath }}" />
+      <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ canonicalPath }}" />
     {% endif %}
     <meta property="og:site_name" content="{{ site.name if site and site.name else 'Sisivo' }}" />
     <meta property="og:title" content="{{ metaTitle | escape }}" />
@@ -111,6 +92,9 @@
     {% endif %}
     <meta name="twitter:card" content="{% if effectiveImage %}summary_large_image{% else %}summary{% endif %}" />
     <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     {% if site and site.url and site.url.length %}
     <script type="application/ld+json">
     {
@@ -138,7 +122,7 @@
         {% if organization.telephone %}"telephone": {{ organization.telephone | json | safe }},{% endif %}
         {% if organization.email %}"email": {{ organization.email | json | safe }},{% endif %}
         "contactType": "sales",
-        "availableLanguage": ["English", "Polish"]
+        "availableLanguage": ["English"]
       }]
     }
     </script>
@@ -153,7 +137,7 @@
       "publisher": {
         "@id": {{ organizationId | json | safe }}
       },
-      "inLanguage": ["en", "pl"]
+      "inLanguage": "en"
     }
     </script>
     {% if isPrimaryServicePage %}
@@ -173,7 +157,7 @@
         { "@type": "City", "name": "Warsaw" },
         { "@type": "Country", "name": "Poland" }
       ],
-      "availableLanguage": ["English", "Polish"]
+      "availableLanguage": ["English"]
     }
     </script>
     {% endif %}
@@ -227,7 +211,7 @@
         ,{
           "@type": "ListItem",
           "position": 2,
-          "name": "Solutions",
+          "name": "Product",
           "item": {{ (site.url + '/services/') | json | safe }}
         }
         ,{
@@ -248,28 +232,49 @@
     }
     </script>
     {% endif %}
-    {% if isHome %}
-      <link rel="preload" as="image" href="/images/hero-image.jpg" type="image/jpeg" fetchpriority="high" />
-    {% endif %}
     <style>
       :root {
         color-scheme: light;
-        --bg: #f8fafc;
-        --surface: #ffffff;
-        --surface-soft: #f1f5f9;
-        --border: #e2e8f0;
-        --text: #0f172a;
-        --muted: #475569;
-        --muted-soft: #64748b;
-        --primary: #00ff66;
-        --primary-soft: #00e65c;
-        --primary-dark: #0b3d20;
-        --primary-rgb: 0, 255, 102;
-        --accent-tech: #0ea5e9;
-        --accent-tech-dark: #0c4a6e;
-        --accent-tech-rgb: 14, 165, 233;
-        --ring: rgba(var(--accent-tech-rgb), 0.34);
-        --shadow: 0 18px 40px rgba(2, 6, 23, 0.08);
+        --cc-bg: #F8FAFC;
+        --cc-surface: #FFFFFF;
+        --cc-sidebar-surface: #F1F5F9;
+        --cc-section-surface: #F8FAFC;
+        --app-stage-bg-rgb: 248, 250, 252;
+        --cc-border: #E5E7EB;
+        --cc-primary: #111827;
+        --cc-primary-hover: #0F172A;
+        --cc-success: #D9FF00;
+        --cc-warning: #D97706;
+        --cc-error: #DC2626;
+        --cc-text: #0A0A0A;
+        --cc-text-secondary: #64748B;
+        --cc-muted: #94A3B8;
+        --cc-hover: #F1F5F9;
+        --cc-selected: #F8FAFF;
+        --cc-progress-bg: #E5E7EB;
+        --button-shadow: none;
+        --button-shadow-hover: none;
+        --brand-green: var(--cc-success);
+        --brand-green-soft: var(--cc-success);
+        --brand-green-dark: var(--cc-success);
+        --brand-green-rgb: 217, 255, 0;
+
+        --bg: var(--cc-bg);
+        --surface: var(--cc-surface);
+        --surface-soft: var(--cc-sidebar-surface);
+        --border: var(--cc-border);
+        --text: var(--cc-text);
+        --muted: var(--cc-text-secondary);
+        --muted-soft: var(--cc-muted);
+        --primary: var(--cc-success);
+        --primary-soft: var(--brand-green-soft);
+        --primary-dark: var(--cc-primary);
+        --primary-rgb: var(--brand-green-rgb);
+        --accent-tech: var(--cc-primary);
+        --accent-tech-dark: var(--cc-primary-hover);
+        --accent-tech-rgb: 17, 24, 39;
+        --ring: rgba(var(--brand-green-rgb), 0.28);
+        --shadow: var(--button-shadow);
         --radius: 16px;
         --radius-sm: 12px;
         --radius-full: 999px;
@@ -284,8 +289,8 @@
         --space-lg: 32px;
         --space-xl: 48px;
         --space-2xl: 64px;
-        --space-section: clamp(48px, 6vw, 64px);
-        --space-section-compact: clamp(32px, 4.5vw, 44px);
+        --space-section: clamp(64px, 7vw, 88px);
+        --space-section-compact: clamp(44px, 5.5vw, 64px);
       }
 
       * {
@@ -303,7 +308,7 @@
       }
 
       body {
-        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        font-family: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
           "Segoe UI", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
         background: var(--bg);
         color: var(--text);
@@ -1423,48 +1428,92 @@
       .section-header {
         display: grid;
         gap: var(--space-2xs);
-        margin-bottom: var(--space-sm);
+        margin-bottom: 18px;
       }
 
       .section-title {
         margin: 0;
-        font-size: 20px;
+        font-size: 22px;
         letter-spacing: -0.02em;
       }
 
       .section-lead {
         margin: 0;
         color: var(--muted);
-        max-width: 72ch;
-        font-size: 14px;
-        line-height: 1.7;
+        max-width: 56ch;
+        font-size: 13px;
+        line-height: 1.55;
       }
 
       .services-grid {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 14px;
-        margin-top: var(--space-sm);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 18px;
+      }
+
+      .feature-stack {
+        display: grid;
+        gap: 40px;
+        margin-top: 24px;
+      }
+
+      .feature-panel {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+        padding: 44px;
+        border-radius: 12px;
+        border: 1px solid rgba(226, 232, 240, 0.95);
+        background: rgba(255, 255, 255, 0.98);
+      }
+
+      .feature-panel-copy {
+        max-width: 36ch;
+      }
+
+      .feature-eyebrow {
+        margin: 0 0 8px;
+        font-size: 13px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--accent-tech-dark);
+      }
+
+      .feature-title {
+        margin: 0 0 14px;
+        font-size: clamp(32px, 3.6vw, 48px);
+        line-height: 1;
+        letter-spacing: -0.03em;
+        color: var(--text);
+      }
+
+      .feature-desc {
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.42;
+        color: var(--muted);
       }
 
       .service-card {
         display: flex;
         flex-direction: column;
         gap: 10px;
-        padding: 16px;
-        border-radius: var(--radius);
+        padding: 20px;
+        border-radius: 8px;
         border: 1px solid rgba(226, 232, 240, 0.95);
         background: rgba(255, 255, 255, 0.9);
-        box-shadow: 0 8px 24px rgba(2, 6, 23, 0.06);
+        box-shadow: none;
         transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
         color: inherit;
       }
 
       .service-card:hover {
         text-decoration: none;
-        transform: translateY(-2px);
+        transform: translateY(-1px);
         border-color: rgba(var(--primary-rgb), 0.28);
-        box-shadow: 0 14px 36px rgba(2, 6, 23, 0.09);
+        box-shadow: none;
       }
 
       .service-title {
@@ -1479,7 +1528,7 @@
         margin: 0;
         color: var(--muted);
         font-size: 13px;
-        line-height: 1.65;
+        line-height: 1.5;
       }
 
       .service-meta {
@@ -1721,8 +1770,8 @@
       }
 
       .prose .trust-card {
-        padding: var(--space-sm);
-        border-radius: var(--radius-sm);
+        padding: 18px;
+        border-radius: 8px;
         border: 1px solid rgba(226, 232, 240, 0.9);
         background: rgba(255, 255, 255, 0.92);
         box-shadow: 0 8px 22px rgba(2, 6, 23, 0.05);
@@ -1978,7 +2027,7 @@
       }
 
       .lead-plan-list {
-        margin: var(--space-xs) 0 0;
+        margin: 10px 0 0;
         padding-left: 18px;
       }
 
@@ -2784,41 +2833,22 @@
 
       .home-hero {
         margin-top: calc(var(--header-height) * -1);
-        padding: calc(var(--space-xl) + var(--header-height)) 0 calc(var(--space-lg) * 1.3);
-        min-height: min(744px, 92vh);
+        padding: calc(var(--space-xl) + var(--header-height)) 0 var(--space-xl);
+        min-height: min(372px, 46vh);
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         position: relative;
-        background: rgba(2, 6, 23, 1);
+        background: var(--surface);
         overflow: visible;
         border-bottom: 1px solid rgba(226, 232, 240, 0.9);
       }
 
       .home-hero-bg {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center top;
-        transform: none;
-        filter: none;
-        z-index: 0;
+        display: none;
       }
 
       .home-hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          180deg,
-          rgba(2, 6, 23, 0) 0%,
-          rgba(2, 6, 23, 0) 56%,
-          rgba(2, 6, 23, 0.22) 78%,
-          rgba(2, 6, 23, 0.4) 100%
-        );
-        z-index: 1;
-        pointer-events: none;
+        content: none;
       }
 
       .home-hero::after {
@@ -2835,44 +2865,116 @@
       .home-hero-grid {
         display: grid;
         grid-template-columns: minmax(0, 1fr);
-        gap: 16px;
+        gap: 24px;
         align-items: center;
+      }
+
+      .home-hero-visual {
+        display: flex;
+        align-items: stretch;
+      }
+
+      .visual-placeholder {
+        width: 100%;
+        min-height: 240px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--space-md);
+        border-radius: var(--radius);
+        border: 1px dashed rgba(100, 116, 139, 0.35);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(241, 245, 249, 0.96) 100%);
+        color: var(--muted);
+        text-align: center;
+        font-size: 13px;
+        line-height: 1.6;
+      }
+
+      .visual-placeholder--hero {
+        min-height: 320px;
+      }
+
+      .visual-placeholder--wide {
+        min-height: 300px;
+      }
+
+      .visual-placeholder--compact {
+        min-height: 180px;
+      }
+
+      .visual-placeholder--logos {
+        min-height: 140px;
+      }
+
+      .visual-placeholder--feature {
+        min-height: 420px;
+      }
+
+      .visual-placeholder--feature,
+      .visual-placeholder--hero {
+        border-radius: 12px;
       }
 
       .home-hero h1 {
         margin: 0 0 var(--space-xs);
-        font-size: clamp(34px, 4vw, 52px);
+        font-size: clamp(28px, 3vw, 40px);
         line-height: 1.03;
         letter-spacing: -0.05em;
-        color: #ffffff;
-        text-shadow: 0 2px 8px rgba(2, 6, 23, 0.2);
+        color: var(--text);
+        text-shadow: none;
       }
 
       .home-hero h1 span {
-        color: rgba(255, 255, 255, 0.92);
+        color: var(--cc-primary);
       }
 
       .home-lead {
-        margin: 0 0 var(--space-sm);
-        max-width: 72ch;
-        color: rgba(255, 255, 255, 0.86);
-        font-size: 16px;
-        line-height: 1.75;
-        text-shadow: 0 1px 5px rgba(2, 6, 23, 0.18);
+        margin: 0 0 var(--space-md);
+        max-width: 46ch;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.55;
+        text-shadow: none;
       }
 
       .home-cta {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        gap: 10px;
-        margin-top: var(--space-sm);
+        gap: 12px;
+        margin-top: var(--space-md);
+      }
+
+      .home-cta--hero {
+        gap: 18px;
+      }
+
+      .cta-inline-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--text);
+        font-size: 15px;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .cta-inline-link svg {
+        width: 16px;
+        height: 16px;
+        stroke: currentColor;
+      }
+
+      .cta-inline-link:hover {
+        text-decoration: none;
+        color: var(--cc-primary-hover);
       }
 
       .home-note {
-        margin-top: var(--space-xs);
-        color: rgba(255, 255, 255, 0.72);
+        margin-top: var(--space-sm);
+        color: var(--muted-soft);
         font-size: 12px;
+        max-width: 42ch;
       }
 
       .hero-scroll {
@@ -3209,17 +3311,17 @@
 
       .info-grid {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 14px;
-        margin-top: var(--space-sm);
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 18px;
       }
 
       .info-card {
-        border-radius: var(--radius);
+        border-radius: 8px;
         border: 1px solid rgba(226, 232, 240, 0.95);
         background: rgba(255, 255, 255, 0.9);
-        box-shadow: 0 10px 28px rgba(2, 6, 23, 0.07);
-        padding: 16px;
+        box-shadow: none;
+        padding: 20px;
       }
 
       .info-title {
@@ -3234,15 +3336,15 @@
         margin: 0;
         color: var(--muted);
         font-size: 13px;
-        line-height: 1.7;
+        line-height: 1.5;
       }
 
       .pilot {
-        border-radius: var(--radius);
+        border-radius: 8px;
         border: 1px solid rgba(var(--primary-rgb), 0.28);
         background: rgba(var(--primary-rgb), 0.06);
-        padding: 18px;
-        box-shadow: 0 14px 34px rgba(var(--primary-rgb), 0.12);
+        padding: 28px;
+        box-shadow: none;
       }
 
       .pilot-meta {
@@ -3256,7 +3358,7 @@
 
       .pilot-title {
         margin: 0 0 var(--space-2xs);
-        font-size: 18px;
+        font-size: 20px;
         letter-spacing: -0.02em;
       }
 
@@ -3264,8 +3366,8 @@
         margin: 0 0 var(--space-xs);
         color: var(--muted);
         font-size: 14px;
-        line-height: 1.75;
-        max-width: 84ch;
+        line-height: 1.55;
+        max-width: 54ch;
       }
 
       .pilot-list {
@@ -3273,7 +3375,7 @@
         padding-left: 18px;
         color: var(--muted);
         font-size: 13px;
-        line-height: 1.75;
+        line-height: 1.55;
       }
 
       .partner {
@@ -3281,11 +3383,11 @@
         grid-template-columns: auto minmax(0, 1fr);
         gap: var(--space-sm);
         align-items: center;
-        border-radius: var(--radius);
+        border-radius: 8px;
         border: 1px solid rgba(226, 232, 240, 0.95);
         background: rgba(255, 255, 255, 0.9);
-        box-shadow: 0 10px 28px rgba(2, 6, 23, 0.07);
-        padding: 18px;
+        box-shadow: none;
+        padding: 28px;
       }
 
       .partner-badge {
@@ -3314,7 +3416,7 @@
 
       .partner-title {
         margin: 0 0 var(--space-2xs);
-        font-size: 18px;
+        font-size: 20px;
         letter-spacing: -0.02em;
         color: var(--text);
       }
@@ -3323,8 +3425,8 @@
         margin: 0 0 var(--space-xs);
         color: var(--muted);
         font-size: 14px;
-        line-height: 1.75;
-        max-width: 70ch;
+        line-height: 1.55;
+        max-width: 52ch;
       }
 
       .blog-header {
@@ -3633,7 +3735,7 @@
         }
 
         .home-hero {
-          padding-top: calc(var(--space-xl) + var(--header-height));
+          padding-top: calc(var(--space-lg) + var(--header-height));
         }
 
         .blog-grid {
@@ -3734,6 +3836,26 @@
       }
 
       @media (min-width: 920px) {
+        .home-hero-grid {
+          grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+          gap: var(--space-xl);
+          align-items: center;
+        }
+
+        .feature-panel {
+          grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+          align-items: center;
+          gap: 44px;
+        }
+
+        .feature-panel:nth-child(even) .feature-panel-copy {
+          order: 2;
+        }
+
+        .feature-panel:nth-child(even) .visual-placeholder {
+          order: 1;
+        }
+
         .ai-loop-grid {
           grid-template-columns: minmax(0, 1fr) minmax(0, 440px);
           align-items: center;
@@ -3745,19 +3867,6 @@
         }
       }
 
-      @media (min-width: 1200px) {
-        .home-hero {
-          min-height: min(967px, 96vh);
-          padding-bottom: calc(var(--space-lg) * 1.6);
-        }
-      }
-
-      @media (min-width: 1500px) {
-        .home-hero {
-          min-height: min(1257px, 98vh);
-          padding-bottom: calc(var(--space-lg) * 2);
-        }
-      }
     </style>
   </head>
   <body class="{% if isServices %}is-services{% endif %}{% if isServicesIndex %}{% if isServices %} {% endif %}is-services-index{% endif %}{% if isBlog %}{% if isServices or isServicesIndex %} {% endif %}is-blog{% endif %}{% if isContact %}{% if isServices or isServicesIndex or isBlog %} {% endif %}is-contact{% endif %}{% if isWhyUs %}{% if isServices or isServicesIndex or isBlog or isContact %} {% endif %}is-why-us{% endif %}{% if isLeadPlan %}{% if isServices or isServicesIndex or isBlog or isContact or isWhyUs %} {% endif %}is-lead-plan{% endif %}{% if isContent %}{% if isServices or isServicesIndex or isBlog or isContact or isWhyUs or isLeadPlan %} {% endif %}is-content{% endif %}">
@@ -3771,73 +3880,9 @@
             </span>
           </a>
 
-          <nav class="nav" aria-label="Site">
-            <div class="nav-item nav-item--mega">
-              <a href="{% if isPolish %}/pl/{% else %}/services/{% endif %}" class="nav-link{% if isServices or (isPolish and page.url == '/pl/') %} is-active{% endif %}">
-                <span>{{ servicesLabel }}</span>
-                <span class="nav-chevron" aria-hidden="true">
-                  <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2.25 4.5L6 8.25L9.75 4.5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </span>
-              </a>
-              <div class="mega-menu" role="group" aria-label="Solutions menu">
-                <div class="mega-menu-head">
-                  <div>
-                    <p class="mega-menu-title">{% if isPolish %}Strony wzorcowe Sisivo{% else %}Sisivo Page Templates{% endif %}</p>
-                    <p class="mega-menu-subtitle">{% if isPolish %}Czysta baza pod stronę produktu: strona główna, oferta, proces, o produkcie i kontakt.{% else %}A clean product-site base with home, solution, process, about, and contact page patterns.{% endif %}</p>
-                  </div>
-                  <a class="mega-menu-all" href="{% if isPolish %}/pl/{% else %}/services/{% endif %}">{% if isPolish %}Zobacz wzorce{% else %}View templates{% endif %} {% ms "arrow_forward" %}</a>
-                </div>
-                <div class="mega-menu-quickstart">
-                  <a class="mega-quick-link" href="{{ roadmapUrl }}">
-                    <span class="mega-quick-title">{% if isPolish %}Strona produktu{% else %}Product Page{% endif %}</span>
-                    <span class="mega-quick-desc">{% if isPolish %}Wzorzec pod opis produktu, korzyści, zakres i wezwanie do kontaktu.{% else %}A pattern for product messaging, benefits, scope, and conversion copy.{% endif %}</span>
-                  </a>
-                  <a class="mega-quick-link" href="{{ consultingUrl }}">
-                    <span class="mega-quick-title">{% if isPolish %}Oferta{% else %}Solution Detail{% endif %}</span>
-                    <span class="mega-quick-desc">{% if isPolish %}Drugi link do tego samego wzorca, wygodny przy dalszym rozpisywaniu menu.{% else %}A reusable detail-page pattern for future product and solution sections.{% endif %}</span>
-                  </a>
-                  <a class="mega-quick-link" href="{% if isPolish %}/pl/wdrozenia-ai-dla-firm/{% else %}/implementation-process/{% endif %}">
-                    <span class="mega-quick-title">{% if isPolish %}Proces{% else %}Process Page{% endif %}</span>
-                    <span class="mega-quick-desc">{% if isPolish %}Układ do pokazania etapów wdrożenia, onboardingu albo sposobu działania produktu.{% else %}A layout for implementation steps, onboarding, or how the product works.{% endif %}</span>
-                  </a>
-                  <a class="mega-quick-link" href="{% if isPolish %}/pl/kontakt/{% else %}/contact-us/{% endif %}">
-                    <span class="mega-quick-title">{% if isPolish %}Kontakt{% else %}Contact Page{% endif %}</span>
-                    <span class="mega-quick-desc">{% if isPolish %}Wzorzec formularza, danych kontaktowych i końcowego CTA.{% else %}A pattern for conversion, contact details, and the final CTA.{% endif %}</span>
-                  </a>
-                </div>
-                <p class="mega-menu-note">
-                  {% if isPolish %}
-                    Powiedz nam, jaki proces chcesz usprawnić, a zaproponujemy pierwszy krok, roadmapę i realistyczny plan wdrożenia.
-                    <a href="{{ calendarUrl }}">Umów konsultację</a>.
-                  {% else %}
-                    Tell us what process you want to improve and we will recommend the first AI roadmap milestone and implementation path.
-                    <a href="{{ calendarUrl }}">Book a strategy call</a>.
-                  {% endif %}
-                </p>
-              </div>
-            </div>
-            <a href="{% if isPolish %}/pl/wdrozenia-ai-dla-firm/{% else %}/implementation-process/{% endif %}" class="nav-link{% if page.url == '/implementation-process/' or (isPolish and page.url == '/pl/wdrozenia-ai-dla-firm/') %} is-active{% endif %}">{{ howItWorksLabel }}</a>
-            <a href="{% if isPolish %}/pl/wdrozenia-ai-warszawa/{% else %}/about-us/{% endif %}" class="nav-link{% if page.url == '/about-us/' or (isPolish and page.url == '/pl/wdrozenia-ai-warszawa/') %} is-active{% endif %}">{{ aboutLabel }}</a>
-          </nav>
-
           <div class="header-actions">
-            <a href="{% if isPolish %}/pl/kontakt/{% else %}/contact-us/{% endif %}" class="btn btn-ghost">{{ contactLabel }}</a>
+            <a href="https://app.sisivo.com" class="btn btn-ghost">{{ signInLabel }}</a>
             <a href="{{ calendarUrl }}" class="btn btn-primary">{% ms "calendar_month" %}<span>{{ calendarLabel }}</span></a>
-            {% if languageSwitchUrl %}
-              <a
-                href="{{ languageSwitchUrl }}"
-                class="language-switch"
-                hreflang="{{ 'en' if isPolish else 'pl' }}"
-                lang="{{ 'en' if isPolish else 'pl' }}"
-                aria-label="{{ langSwitchHint }}: {{ langSwitchText }}"
-              >
-                <span class="language-switch-flag" aria-hidden="true">
-                  <img src="/images/flag-{{ 'en' if isPolish else 'pl' }}.svg" alt="" loading="lazy" decoding="async" />
-                </span>
-              </a>
-            {% endif %}
           </div>
 
           <details class="mobile-nav">
@@ -3852,12 +3897,7 @@
               <span>{{ menuLabel }}</span>
             </summary>
             <div class="mobile-nav-panel" role="dialog" aria-label="Mobile navigation">
-              <a href="{% if isPolish %}/pl/{% else %}/services/{% endif %}">{{ servicesLabel }} {% ms "arrow_forward" %}</a>
-              <a href="{% if isPolish %}/pl/wdrozenia-ai-dla-firm/{% else %}/implementation-process/{% endif %}">{{ howItWorksLabel }} {% ms "arrow_forward" %}</a>
-              <a href="{% if isPolish %}/pl/wdrozenia-ai-warszawa/{% else %}/about-us/{% endif %}">{{ aboutLabel }} {% ms "arrow_forward" %}</a>
-              {% if languageSwitchUrl %}
-                <a href="{{ languageSwitchUrl }}" hreflang="{{ 'en' if isPolish else 'pl' }}" lang="{{ 'en' if isPolish else 'pl' }}">{{ langSwitchLabel }} {% ms "arrow_forward" %}</a>
-              {% endif %}
+              <a href="https://app.sisivo.com">{{ signInLabel }} {% ms "arrow_forward" %}</a>
               <a class="mobile-nav-cta" href="{{ calendarUrl }}">{% ms "calendar_month" %}<span>{{ calendarLabel }}</span></a>
             </div>
           </details>
@@ -3882,187 +3922,92 @@
               <div class="home-hero-grid">
                 <div>
                   <h1>
-                    {% if isPolish %}
-                      Zbuduj roadmapę AI w 4 tygodnie
-                      <span>&mdash; bez zatrudniania zespołu data</span>
-                    {% else %}
-                      Build Your AI Roadmap in 4 Weeks
-                      <span>&mdash; Without Hiring a Data Team</span>
-                    {% endif %}
+                    Sisivo turns pipeline chaos
+                    <span>into a sales system</span>
                   </h1>
                   <p class="home-lead">
-                    {% if isPolish %}
-                      Pomagamy firmom zaplanować i wdrożyć rozwiązania AI, które realnie zwiększają efektywność i ROI.
-                    {% else %}
-                      We help mid-sized companies identify, plan and implement high-ROI AI use cases.
-                    {% endif %}
+                    For B2B teams with deals, outbound, and a CRM, but no shared way to qualify, run, and win deals.
                   </p>
-                  <div class="home-cta">
-                    <a class="btn btn-primary" href="{{ roadmapUrl }}"><span class="btn-icon btn-icon--roadmap" aria-hidden="true"></span><span>{% if isPolish %}Otrzymaj roadmapę AI{% else %}Get AI Roadmap{% endif %}</span></a>
-                    <a class="btn btn-ghost btn-see-services" href="{{ calendarUrl }}">
-                      <span>{% if isPolish %}Umów konsultację{% else %}Book Strategy Call{% endif %}</span>
-                      <span class="btn-icon" aria-hidden="true">
-                        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" />
-                          <path d="M8.8 4.3L12.5 8L8.8 11.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                      </span>
+                  <div class="home-cta home-cta--hero">
+                    <a class="btn btn-primary" href="{{ calendarUrl }}">Book Pipeline Review</a>
+                    <a class="cta-inline-link" href="{{ roadmapUrl }}">
+                      <span>See the System</span>
+                      <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" />
+                        <path d="M8.8 4.3L12.5 8L8.8 11.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
                     </a>
                   </div>
-                  <div class="home-note">{% if isPolish %}Dla średnich i większych firm. Szybki discovery. Jasny zakres. Mierzalny efekt biznesowy.{% else %}Built for mid-sized companies. Fast discovery. Clear scope. Measurable ROI.{% endif %}</div>
+                  <div class="home-note">For B2B SaaS and complex-service teams. First value in 1-2 weeks.</div>
+                </div>
+                <div class="home-hero-visual">
+                  <div class="visual-placeholder visual-placeholder--hero">
+                    Product hero screenshot placeholder
+                    <br />
+                    Pipeline view, deal scoring, or system overview
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="hero-scroll">
-              <a class="hero-scroll-link" href="#ai-loop" aria-label="Scroll down">
-                <span class="hero-scroll-text">Scroll</span>
-                <span class="hero-scroll-icon" aria-hidden="true">
-                  <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 3.5V12.5" stroke-width="1.7" stroke-linecap="round" />
-                    <path d="M4.6 9.4L8 12.8L11.4 9.4" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </span>
-              </a>
-            </div>
           </section>
 
-          <section class="section compact" aria-label="Problem and solution comparison">
+          <section class="section compact" aria-label="Use cases">
             <div class="container">
               <div class="section-header">
-                <h2 class="section-title">{% if isPolish %}Dlaczego projekty AI zatrzymują się bez roadmapy{% else %}Why AI projects stall without a roadmap{% endif %}</h2>
-                <p class="section-lead">{% if isPolish %}Różnica między chaotycznym startem a uporządkowanym planem wdrożenia jest zwykle widoczna już w pierwszych tygodniach.{% else %}The difference between a tool-first AI experiment and a roadmap-led rollout shows up early in budget clarity, speed, and ROI visibility.{% endif %}</p>
+                <h2 class="section-title">Use Sisivo to fix what breaks in sales</h2>
+                <p class="section-lead">Three jobs. One system.</p>
               </div>
-              <div class="table-scroll">
-                <table class="usecase-table compare-table">
-                  <thead>
-                    <tr>
-                      <th>{% if isPolish %}Obszar{% else %}Metric{% endif %}</th>
-                      <th>{% if isPolish %}Przed{% else %}Before{% endif %}</th>
-                      <th>{% if isPolish %}Po{% else %}After{% endif %}</th>
-                      <th>{% if isPolish %}Efekt{% else %}Gain{% endif %}</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><strong>{% if isPolish %}Priorytet use case'ów{% else %}Use-case prioritization{% endif %}</strong></td>
-                      <td>{% if isPolish %}Wiele pomysłów bez decyzji{% else %}Too many ideas, no clear first move{% endif %}</td>
-                      <td>{% if isPolish %}Jeden zatwierdzony pierwszy etap{% else %}One approved first implementation{% endif %}</td>
-                      <td>{% if isPolish %}Szybsze decyzje{% else %}Faster decisions{% endif %}</td>
-                    </tr>
-                    <tr>
-                      <td><strong>{% if isPolish %}Czas do planu wdrożenia{% else %}Time to implementation plan{% endif %}</strong></td>
-                      <td>8-16 {% if isPolish %}tygodni{% else %}weeks{% endif %}</td>
-                      <td>4 {% if isPolish %}tygodnie{% else %}weeks{% endif %}</td>
-                      <td>{% if isPolish %}2-4x szybciej{% else %}2-4x faster planning{% endif %}</td>
-                    </tr>
-                    <tr>
-                      <td><strong>{% if isPolish %}Jasność kosztów{% else %}Cost visibility{% endif %}</strong></td>
-                      <td>{% if isPolish %}Niepewny budżet{% else %}Unclear budget range{% endif %}</td>
-                      <td>{% if isPolish %}Realistyczny zakres i koszt{% else %}Scoped range and realistic budget{% endif %}</td>
-                      <td>{% if isPolish %}Mniej ryzyka budżetowego{% else %}Lower budget risk{% endif %}</td>
-                    </tr>
-                    <tr>
-                      <td><strong>{% if isPolish %}Zaangażowanie interesariuszy{% else %}Stakeholder alignment{% endif %}</strong></td>
-                      <td>{% if isPolish %}Sprzeczne oczekiwania{% else %}Conflicting expectations{% endif %}</td>
-                      <td>{% if isPolish %}Wspólne KPI i właściciele{% else %}Shared KPIs and owners{% endif %}</td>
-                      <td>{% if isPolish %}Mniej tarć w delivery{% else %}Less delivery friction{% endif %}</td>
-                    </tr>
-                    <tr>
-                      <td><strong>{% if isPolish %}Widoczność ROI{% else %}ROI visibility{% endif %}</strong></td>
-                      <td>{% if isPolish %}Trudna do obrony{% else %}Hard to justify{% endif %}</td>
-                      <td>{% if isPolish %}Powiązana z workflow i KPI{% else %}Connected to workflow and KPIs{% endif %}</td>
-                      <td>{% if isPolish %}Lepsza akceptacja biznesowa{% else %}Stronger business case{% endif %}</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="home-cta">
-                <a class="btn btn-primary" href="{{ roadmapUrl }}"><span class="btn-icon btn-icon--roadmap" aria-hidden="true"></span><span>{% if isPolish %}Otrzymaj roadmapę AI{% else %}Get AI Roadmap{% endif %}</span></a>
-                <a class="btn btn-ghost" href="{{ calendarUrl }}">{% if isPolish %}Umów konsultację{% else %}Book Strategy Call{% endif %}</a>
+              <div class="feature-stack">
+                <div class="feature-panel">
+                  <div class="feature-panel-copy">
+                    <p class="feature-eyebrow">01</p>
+                    <h3 class="feature-title">Tighten ICP and qualification</h3>
+                    <p class="feature-desc">Decide who belongs in the pipeline and who does not.</p>
+                  </div>
+                  <div class="visual-placeholder visual-placeholder--feature">ICP / qualification screen placeholder</div>
+                </div>
+                <div class="feature-panel">
+                  <div class="feature-panel-copy">
+                    <p class="feature-eyebrow">02</p>
+                    <h3 class="feature-title">Run a cleaner pipeline</h3>
+                    <p class="feature-desc">Make stages real and remove dead deals faster.</p>
+                  </div>
+                  <div class="visual-placeholder visual-placeholder--feature">Pipeline control screen placeholder</div>
+                </div>
+                <div class="feature-panel">
+                  <div class="feature-panel-copy">
+                    <p class="feature-eyebrow">03</p>
+                    <h3 class="feature-title">Show the revenue impact</h3>
+                    <p class="feature-desc">Show where revenue is lost and what can be recovered.</p>
+                  </div>
+                  <div class="visual-placeholder visual-placeholder--feature">ROI / uplift view placeholder</div>
+                </div>
               </div>
             </div>
           </section>
 
-          <section class="section compact ai-loop" id="ai-loop" aria-labelledby="ai-loop-title">
+          <section class="section compact" aria-label="Why Sisivo">
             <div class="container">
-              <div class="ai-loop-wrap">
-                <div class="section-header">
-                  <h2 class="section-title" id="ai-loop-title">{% if isPolish %}Jak budujemy roadmapę AI{% else %}How we build your AI roadmap{% endif %}</h2>
-                  <p class="section-lead">{% if isPolish %}Praktyczny proces od discovery do planu wdrożenia gotowego do zatwierdzenia i realizacji.{% else %}A practical process from discovery to a decision-ready implementation roadmap.{% endif %}</p>
+              <div class="section-header">
+                <h2 class="section-title">Why teams use Sisivo</h2>
+                <p class="section-lead">Less noise. Better decisions. More control.</p>
+              </div>
+              <div class="info-grid">
+                <div class="info-card">
+                  <h3 class="info-title">Clearer targeting</h3>
+                  <p class="info-body">Fit, readiness, and disqualification become explicit.</p>
                 </div>
-
-                <div class="ai-loop-grid">
-                  <div class="ai-loop-copy">
-                    <ol class="ai-loop-steps">
-                      <li>
-                        <button class="ai-loop-step is-active" type="button" data-step="0" aria-current="step">
-                          <span class="ai-loop-step-dot" aria-hidden="true"></span>
-                          <span>
-                            <span class="ai-loop-step-title">{% if isPolish %}Mapujemy problem biznesowy{% else %}Map the business problem{% endif %}</span>
-                            <span class="ai-loop-step-desc">{% if isPolish %}Ustalamy, które workflow mają najwyższy koszt operacyjny i największy potencjał ROI.{% else %}We identify the workflows with the highest friction, cost, and upside for AI adoption.{% endif %}</span>
-                          </span>
-                        </button>
-                      </li>
-                      <li>
-                        <button class="ai-loop-step" type="button" data-step="1">
-                          <span class="ai-loop-step-dot" aria-hidden="true"></span>
-                          <span>
-                            <span class="ai-loop-step-title">{% if isPolish %}Priorytetyzujemy use case'y{% else %}Prioritize use cases{% endif %}</span>
-                            <span class="ai-loop-step-desc">{% if isPolish %}Oceniamy wartość biznesową, wykonalność, dane, integracje i ryzyko wdrożenia.{% else %}We score candidate use cases by business value, feasibility, integration effort, and delivery risk.{% endif %}</span>
-                          </span>
-                        </button>
-                      </li>
-                      <li>
-                        <button class="ai-loop-step" type="button" data-step="2">
-                          <span class="ai-loop-step-dot" aria-hidden="true"></span>
-                          <span>
-                            <span class="ai-loop-step-title">{% if isPolish %}Definiujemy pierwszy etap{% else %}Define the first implementation{% endif %}</span>
-                            <span class="ai-loop-step-desc">{% if isPolish %}Wybieramy pierwszy zakres, KPI, właścicieli i punkty kontroli jakości.{% else %}We scope the first phase, success metrics, owners, and review checkpoints.{% endif %}</span>
-                          </span>
-                        </button>
-                      </li>
-                      <li>
-                        <button class="ai-loop-step" type="button" data-step="3">
-                          <span class="ai-loop-step-dot" aria-hidden="true"></span>
-                          <span>
-                            <span class="ai-loop-step-title">{% if isPolish %}Projektujemy delivery{% else %}Design delivery and integrations{% endif %}</span>
-                            <span class="ai-loop-step-desc">{% if isPolish %}Rozpisujemy integracje, dostęp do danych, governance i kolejność prac wdrożeniowych.{% else %}We define system dependencies, data access, governance, and the implementation sequence.{% endif %}</span>
-                          </span>
-                        </button>
-                      </li>
-                      <li>
-                        <button class="ai-loop-step" type="button" data-step="4">
-                          <span class="ai-loop-step-dot" aria-hidden="true"></span>
-                          <span>
-                            <span class="ai-loop-step-title">{% if isPolish %}Budujemy roadmapę{% else %}Build the rollout roadmap{% endif %}</span>
-                            <span class="ai-loop-step-desc">{% if isPolish %}Pokazujemy etapy na 6-12 miesięcy, decyzje zależne i realistyczne koszty.{% else %}We lay out the next 6 to 12 months with phases, dependencies, and realistic budget logic.{% endif %}</span>
-                          </span>
-                        </button>
-                      </li>
-                      <li>
-                        <button class="ai-loop-step" type="button" data-step="5">
-                          <span class="ai-loop-step-dot" aria-hidden="true"></span>
-                          <span>
-                            <span class="ai-loop-step-title">{% if isPolish %}Przechodzimy do wdrożenia{% else %}Move into implementation{% endif %}</span>
-                            <span class="ai-loop-step-desc">{% if isPolish %}Zespół dostaje decyzje, zakres i plan, z którym można bezpiecznie wejść w realizację.{% else %}Your team gets a roadmap clear enough to approve, budget, and execute without rework.{% endif %}</span>
-                          </span>
-                        </button>
-                      </li>
-                    </ol>
-                  </div>
-
-                  <div class="ai-loop-visual" aria-hidden="true">
-                    <div class="ai-loop-orbit">
-                      <svg viewBox="0 0 200 200" role="img" aria-label="Animated agent loop">
-                        <circle class="ai-loop-track" cx="100" cy="100" r="74"></circle>
-                        <circle class="ai-loop-progress" cx="100" cy="100" r="74"></circle>
-                      </svg>
-                      <div class="ai-loop-center" aria-hidden="true">
-                        <div class="ai-loop-center-label">{% if isPolish %}Etap 1{% else %}Step 1{% endif %}</div>
-                        <div class="ai-loop-center-step" id="ai-loop-current-step">{% if isPolish %}Mapujemy problem biznesowy{% else %}Map the business problem{% endif %}</div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="info-card">
+                  <h3 class="info-title">More consistent reps</h3>
+                  <p class="info-body">Sales and marketing start working from the same model.</p>
+                </div>
+                <div class="info-card">
+                  <h3 class="info-title">Better deal decisions</h3>
+                  <p class="info-body">Stages and next steps stop depending on personal judgment.</p>
+                </div>
+                <div class="info-card">
+                  <h3 class="info-title">Faster commercial buy-in</h3>
+                  <p class="info-body">Founders get a clearer commercial case for change.</p>
                 </div>
               </div>
             </div>
@@ -4072,18 +4017,21 @@
             <div class="container">
               <div class="partner">
                 <div>
-                  <p class="partner-kicker">{% if isPolish %}Rozwiązanie{% else %}Solution{% endif %}</p>
-                  <h2 class="partner-title">{% if isPolish %}Łączymy strategię AI z realnym delivery{% else %}We connect AI strategy to real delivery{% endif %}</h2>
+                  <p class="partner-kicker">How it works</p>
+                  <h2 class="partner-title">Three steps to control</h2>
                   <p class="partner-body">
-                    {% if isPolish %}
-                      Nie kończymy na ogólnej prezentacji. Pomagamy wybrać właściwy use case, oszacować koszt, zaplanować integracje i przejść do pierwszego wdrożenia bez chaosu.
-                    {% else %}
-                      We do not stop at strategy decks. We help teams choose the right use case, estimate cost, align stakeholders, and move into implementation with a practical plan.
-                    {% endif %}
+                    Start with your current pipeline, not a transformation project.
                   </p>
-                  <p class="partner-body">
-                    {% if isPolish %}Dostajesz jasny zakres, priorytety, punkty kontroli i roadmapę, którą można zatwierdzić biznesowo i zrealizować technicznie.{% else %}You get clear scope, prioritization logic, risk visibility, and a roadmap the business and technical teams can actually act on.{% endif %}
-                  </p>
+                  <ul class="lead-plan-list">
+                    <li><strong>Diagnose:</strong> find dead deals and weak stages.</li>
+                    <li><strong>Model:</strong> define ICP, messaging, and stage rules.</li>
+                    <li><strong>Run:</strong> pilot the system and measure the lift.</li>
+                  </ul>
+                </div>
+                <div>
+                  <div class="visual-placeholder visual-placeholder--wide">
+                    Workflow illustration or “how Sisivo works” screenshot placeholder
+                  </div>
                 </div>
               </div>
             </div>
@@ -4092,145 +4040,47 @@
           <section class="section compact">
             <div class="container">
               <div class="section-header">
-                <h2 class="section-title">{% if isPolish %}Od roadmapy do wdrożenia{% else %}From roadmap to implementation{% endif %}</h2>
-                <p class="section-lead">{% if isPolish %}Trzy główne obszary, które najczęściej spinamy w jeden plan wdrożenia AI.{% else %}Three core workstreams we typically connect inside one AI roadmap engagement.{% endif %}</p>
+                <h2 class="section-title">What’s inside</h2>
+                <p class="section-lead">Three core views.</p>
               </div>
-              <div class="services-grid">
-                <a class="service-card" href="{{ roadmapUrl }}">
-                  <h3 class="service-title">{% if isPolish %}Roadmapa AI{% else %}AI Roadmap Consulting{% endif %}</h3>
-                  <p class="service-desc">{% if isPolish %}Priorytetyzacja use case'ów, plan etapów, KPI, koszty i logika pierwszego wdrożenia.{% else %}Use-case prioritization, rollout sequencing, KPI definition, and first-phase planning.{% endif %}</p>
-                  <div class="service-meta">{% if isPolish %}Zobacz {% else %}Explore {% endif %}{% ms "arrow_forward" %}</div>
-                </a>
-                <a class="service-card" href="{{ consultingUrl }}">
-                  <h3 class="service-title">{% if isPolish %}Doradztwo AI{% else %}AI Consulting Services{% endif %}</h3>
-                  <p class="service-desc">{% if isPolish %}Discovery, ocena gotowości, wybór architektury i przygotowanie organizacji do wdrożenia AI.{% else %}Discovery workshops, readiness assessment, architecture direction, and implementation decision support.{% endif %}</p>
-                  <div class="service-meta">{% if isPolish %}Zobacz {% else %}Explore {% endif %}{% ms "arrow_forward" %}</div>
-                </a>
-                <a class="service-card" href="{{ roadmapUrl }}">
-                  <h3 class="service-title">{% if isPolish %}Wdrożenie i integracje{% else %}Implementation and Integration{% endif %}</h3>
-                  <p class="service-desc">{% if isPolish %}Połączenie AI z CRM, ERP, dokumentami i workflow operacyjnym, aby roadmapa przechodziła w działające rozwiązanie.{% else %}Connect AI with CRM, ERP, documents, and operating workflows so the roadmap turns into production value.{% endif %}</p>
-                  <div class="service-meta">{% if isPolish %}Zobacz {% else %}Explore {% endif %}{% ms "arrow_forward" %}</div>
-                </a>
-              </div>
-            </div>
-          </section>
-
-          <section class="section compact" aria-label="Example use case">
-            <div class="container">
-              <div class="section-header">
-                <h2 class="section-title">{% if isPolish %}Przykładowy scenariusz{% else %}Example roadmap scenario{% endif %}</h2>
-                <p class="section-lead">{% if isPolish %}Jak może wyglądać uporządkowanie tematu AI w średniej firmie przed pierwszym wdrożeniem.{% else %}How a roadmap engagement looks for a mid-sized company before the first implementation starts.{% endif %}</p>
-              </div>
-              <article class="example-scenario">
-                {% if isPolish %}
-                  <p><strong>Typowy przykład:</strong> średnia firma usługowa lub handlowa, kilka działów, CRM, dokumenty i wiele pomysłów na AI jednocześnie.</p>
-                  <p><strong>Problem:</strong> zarząd chce wyników z AI, ale nie wiadomo, który proces wdrożyć najpierw i jak oszacować koszt.</p>
-                  <p><strong>Rozwiązanie:</strong> czterotygodniowe discovery, priorytetyzacja use case'ów, roadmapa etapów i plan pierwszego wdrożenia.</p>
-                  <p><strong>Efekt:</strong> jedna zatwierdzona ścieżka działania, mniej chaosu decyzyjnego i szybszy start pierwszego projektu.</p>
-                {% else %}
-                  <p><strong>Typical example:</strong> A 120-person services company with sales, operations, and support teams all proposing different AI initiatives.</p>
-                  <p><strong>Problem:</strong> Leadership wants ROI from AI, but there is no clear first use case, no cost logic, and no agreement on what to implement first.</p>
-                  <p><strong>Solution:</strong> A four-week roadmap project that maps workflows, scores use cases, defines the first implementation, and sequences the next phases.</p>
-                  <p><strong>Result:</strong> The company gets one approved plan, one realistic budget path, and one implementation the team can actually start.</p>
-                {% endif %}
-              </article>
-              <div class="home-cta">
-                <a class="btn btn-primary" href="{{ roadmapUrl }}"><span class="btn-icon btn-icon--roadmap" aria-hidden="true"></span><span>{% if isPolish %}Otrzymaj roadmapę AI{% else %}Get AI Roadmap{% endif %}</span></a>
-                <a class="btn btn-ghost" href="{{ calendarUrl }}">{% if isPolish %}Umów konsultację{% else %}Book Strategy Call{% endif %}</a>
-              </div>
-            </div>
-          </section>
-
-          <section id="pilot" class="section compact">
-            <div class="container">
-              <div class="pilot">
-                <p class="pilot-meta">{% if isPolish %}Dla kogo{% else %}Who this is for{% endif %}</p>
-                <h2 class="pilot-title">{% if isPolish %}Dla firm, które chcą podejść do AI jak do projektu biznesowego{% else %}Built for companies that want a business-first AI roadmap{% endif %}</h2>
-                <p class="pilot-body">
-                  {% if isPolish %}Najlepiej pracuje nam się z organizacjami, które mają powtarzalne procesy, dane i potrzebę uporządkowania inwestycji w AI zanim przejdą do wdrożenia.{% else %}We are the right fit if your company has multiple AI ideas, real workflows to improve, and needs a clear first implementation plan before scaling investment.{% endif %}
-                </p>
-                <ul class="pilot-list">
-                  {% if isPolish %}
-                    <li>Średnie i większe firmy z procesami wartymi automatyzacji.</li>
-                    <li>Zespoły zarządcze, operacyjne, sprzedażowe i customer service.</li>
-                    <li>Firmy korzystające już z CRM, ERP, dokumentów, knowledge base lub własnych systemów.</li>
-                    <li>Organizacje szukające mierzalnego ROI i bezpiecznego planu wdrożenia.</li>
-                  {% else %}
-                    <li>Mid-sized companies with multiple AI opportunities on the table.</li>
-                    <li>Leadership teams that need one practical first priority.</li>
-                    <li>Companies already using CRM, ERP, docs, internal tools, or knowledge systems.</li>
-                    <li>Organizations that need measurable ROI before scaling AI spend.</li>
-                  {% endif %}
-                </ul>
-                <p class="pilot-meta">{% if isPolish %}Mniej odpowiednie na start{% else %}Not ideal for{% endif %}</p>
-                <ul class="pilot-list">
-                  {% if isPolish %}
-                    <li>Firmy bez jasno określonego procesu lub właściciela obszaru.</li>
-                    <li>Organizacje oczekujące pełnej automatyzacji bez kontroli jakości i odpowiedzialności.</li>
-                    <li>Zespoły, które chcą zaczynać od bardzo szerokiego, niepriorytetyzowanego zakresu.</li>
-                  {% else %}
-                    <li>Teams looking for a vague innovation workshop with no delivery follow-through.</li>
-                    <li>Companies without a clear owner for the target workflow.</li>
-                    <li>Very early-stage teams without stable processes, data, or decision-makers.</li>
-                  {% endif %}
-                </ul>
-                <div class="home-cta">
-                  <a class="btn btn-primary" href="{{ calendarUrl }}">{% ms "calendar_month" %}<span>{{ calendarLabel }}</span></a>
+              <div class="feature-stack">
+                <div class="feature-panel">
+                  <div class="feature-panel-copy">
+                    <p class="feature-eyebrow">View 01</p>
+                    <h3 class="feature-title">ICP and targeting</h3>
+                    <p class="feature-desc">See who fits, who does not, and which signals matter before the pipeline gets noisy.</p>
+                  </div>
+                  <div class="visual-placeholder visual-placeholder--feature">ICP workspace screenshot placeholder</div>
+                </div>
+                <div class="feature-panel">
+                  <div class="feature-panel-copy">
+                    <p class="feature-eyebrow">View 02</p>
+                    <h3 class="feature-title">Messaging and discovery</h3>
+                    <p class="feature-desc">Give reps one way to frame pain, surface urgency, and run a stronger discovery.</p>
+                  </div>
+                  <div class="visual-placeholder visual-placeholder--feature">Messaging / discovery screenshot placeholder</div>
+                </div>
+                <div class="feature-panel">
+                  <div class="feature-panel-copy">
+                    <p class="feature-eyebrow">View 03</p>
+                    <h3 class="feature-title">Pipeline and deal control</h3>
+                    <p class="feature-desc">Track real stage movement, next steps, and ownership across the whole pipeline.</p>
+                  </div>
+                  <div class="visual-placeholder visual-placeholder--feature">Pipeline / deal control screenshot placeholder</div>
                 </div>
               </div>
             </div>
           </section>
 
-          <section class="section">
-            <div class="container">
-              <div class="section-header">
-                <h2 class="section-title">{% if isPolish %}Co zyskują firmy{% else %}What companies get{% endif %}</h2>
-                <p class="section-lead">
-                  {% if isPolish %}Jasne efekty biznesowe jeszcze przed wejściem w kosztowne wdrożenie.{% else %}Clear business outcomes before the company commits to expensive implementation work.{% endif %}
-                </p>
-              </div>
-              <div class="info-grid">
-                <div class="info-card">
-                  <h3 class="info-title">{% if isPolish %}Lepsze decyzje{% else %}Clearer decisions{% endif %}</h3>
-                  <p class="info-body">{% if isPolish %}Zespół przestaje rozpraszać się wieloma pomysłami i wybiera jeden logiczny pierwszy krok.{% else %}Your team stops debating abstract AI ideas and aligns on one practical first move.{% endif %}</p>
-                </div>
-                <div class="info-card">
-                  <h3 class="info-title">{% if isPolish %}Szybszy start{% else %}Faster execution{% endif %}</h3>
-                  <p class="info-body">{% if isPolish %}Roadmapa skraca czas od discovery do pierwszego wdrożenia i ogranicza koszt błędnych decyzji.{% else %}A roadmap shortens the path from discovery to implementation and reduces costly rework.{% endif %}</p>
-                </div>
-                <div class="info-card">
-                  <h3 class="info-title">{% if isPolish %}Mierzalne ROI{% else %}Measurable ROI{% endif %}</h3>
-                  <p class="info-body">{% if isPolish %}Każdy etap jest powiązany z KPI, zakresem i efektem biznesowym, który można rozliczyć.{% else %}Each phase is tied to KPIs, scope, and business outcomes leadership can measure and defend.{% endif %}</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="section compact" aria-label="AI roadmap call to action">
+          <section class="section compact" aria-label="Sisivo next step call to action">
             <div class="container">
               <div class="partner lead-plan-panel">
                 <div>
-                  <p class="partner-kicker">{% if isPolish %}Call to action{% else %}Call to action{% endif %}</p>
-                  <h2 class="partner-title">{% if isPolish %}Otrzymaj roadmapę AI dopasowaną do Twojej firmy{% else %}Get an AI roadmap tailored to your company{% endif %}</h2>
-                  <p class="partner-body">
-                    {% if isPolish %}Powiedz nam, jaki proces chcesz usprawnić, a wskażemy najlepszy pierwszy use case, zakres wdrożenia, integracje i spodziewany efekt biznesowy.{% else %}Tell us which workflow you want to improve and we will recommend the best first AI use case, likely scope, and implementation path.{% endif %}
-                  </p>
-                  <ul class="lead-plan-list">
-                    {% if isPolish %}
-                      <li>Najlepszy pierwszy use case dla Twojej firmy</li>
-                      <li>Rekomendowany zakres wdrożenia</li>
-                      <li>Realistyczny efekt biznesowy i KPI</li>
-                      <li>Systemy, które warto zintegrować</li>
-                    {% else %}
-                      <li>Best first use case for your team</li>
-                      <li>Suggested implementation scope</li>
-                      <li>Likely ROI and business outcome</li>
-                      <li>Recommended systems to connect</li>
-                    {% endif %}
-                  </ul>
+                  <p class="partner-kicker">Next step</p>
+                  <h2 class="partner-title">See the system on your pipeline</h2>
+                  <p class="partner-body">Start with a recent CRM export. Sisivo shows where deals are lost, what should change, and whether the rollout makes sense now.</p>
                   <div class="home-cta">
-                    <a class="btn btn-primary" href="{{ roadmapUrl }}"><span class="btn-icon btn-icon--roadmap" aria-hidden="true"></span><span>{% if isPolish %}Otrzymaj roadmapę AI{% else %}Get AI Roadmap{% endif %}</span></a>
-                    <a class="btn btn-ghost" href="{{ calendarUrl }}">{{ calendarLabel }}</a>
+                    <a class="btn btn-primary" href="{{ calendarUrl }}">Book Pipeline Review</a>
                   </div>
                 </div>
               </div>
@@ -4242,7 +4092,7 @@
               <div class="container">
                 <div class="section-header">
                   <h2 class="section-title">{% if isPolish %}FAQ{% else %}FAQ{% endif %}</h2>
-                  <p class="section-lead">{% if isPolish %}Najczęstsze pytania o roadmapę AI, koszty i pierwszy etap wdrożenia.{% else %}Common questions about AI roadmap planning, cost, and the first implementation phase.{% endif %}</p>
+                  <p class="section-lead">{% if isPolish %}Najczęstsze pytania o dopasowanie, dane z CRM, koszt i sposób wdrożenia Sisivo.{% else %}Common questions about fit, CRM data, cost, and how Sisivo gets implemented.{% endif %}</p>
                 </div>
                 <div class="prose">
                   {% for item in faqSchema %}
@@ -4264,10 +4114,10 @@
                   <a href="{{ homeUrl }}">{{ homeLabel }}</a>
                   <span class="crumb-sep" aria-hidden="true">/</span>
                   {% if isServices and not isServicesIndex %}
-                    <a href="/services/">Solutions</a>
+                    <a href="/services/">Product</a>
                     <span class="crumb-sep" aria-hidden="true">/</span>
                   {% elif isStart and page.url != '/start-with-ai/' %}
-                    <a href="/start-with-ai/">Start with AI</a>
+                    <a href="/start-with-ai/">Start with a Pilot</a>
                     <span class="crumb-sep" aria-hidden="true">/</span>
                   {% endif %}
                   <span aria-current="page">{{ pageHeading | escape }}</span>
@@ -4290,15 +4140,15 @@
                   {{ content | safe }}
                 </article>
                 {% if isServices and not isServicesIndex %}
-                  {% set ctaTitle = "Porozmawiajmy o Twojej roadmapie AI" if isPolish else "Need help defining your AI roadmap?" %}
-                  {% set ctaBody = "Powiedz nam, który proces chcesz usprawnić, a pomożemy wybrać pierwszy use case, zakres wdrożenia i kolejny krok." if isPolish else "Tell us which workflow you want to improve and we will help you choose the right first use case, scope, and next step." %}
-                  {% set ctaButton = "Umów konsultację" if isPolish else "Book Strategy Call" %}
+                  {% set ctaTitle = "Porozmawiajmy o tym, czy Sisivo ma sens dla Twojego pipeline" if isPolish else "Need help deciding whether Sisivo fits your pipeline?" %}
+                  {% set ctaBody = "Powiedz nam, jak dziś wygląda sprzedaż, a pomożemy ocenić dopasowanie, zakres pilota i następny krok." if isPolish else "Tell us how your sales process works today and we will help you evaluate fit, pilot scope, and the right next step." %}
+                  {% set ctaButton = "Umów przegląd pipeline" if isPolish else "Book Pipeline Review" %}
                   <section class="service-page-cta" aria-label="Service contact call to action">
                     <h2>{{ ctaTitle }}</h2>
                     <p>{{ ctaBody }}</p>
                     <div class="home-cta">
                       <a class="btn btn-primary" href="{{ calendarUrl }}">{% ms "calendar_month" %}<span>{{ ctaButton }}</span></a>
-                      <a class="btn btn-ghost btn-see-services" href="{{ roadmapUrl }}"><span class="btn-icon btn-icon--roadmap" aria-hidden="true"></span><span>{% if isPolish %}Otrzymaj roadmapę AI{% else %}Get AI Roadmap{% endif %}</span></a>
+                      <a class="btn btn-ghost btn-see-services" href="{{ roadmapUrl }}"><span class="btn-icon btn-icon--roadmap" aria-hidden="true"></span><span>{% if isPolish %}Zobacz system{% else %}See the System{% endif %}</span></a>
                     </div>
                   </section>
                 {% endif %}
@@ -4318,21 +4168,8 @@
             </div>
           </div>
           <div class="footer-links" aria-label="Footer links">
-            {% if isPolish %}
-              <a href="/pl/">Sisivo</a>
-              <a href="/pl/wdrozenia-ai-dla-firm/">Wdrożenia AI</a>
-              <a href="/pl/wdrozenia-ai-warszawa/">Warszawa</a>
-              <a href="/pl/kontakt/">Kontakt</a>
-              <a href="/pl/polityka-prywatnosci/">Polityka prywatności</a>
-              <a href="/pl/polityka-cookies/">Cookies</a>
-            {% else %}
-              <a href="/services/">Solutions</a>
-              <a href="/implementation-process/">How It Works</a>
-              <a href="/about-us/">About</a>
-              <a href="/contact-us/">Contact</a>
-              <a href="/privacy-policy/">Privacy policy</a>
-              <a href="/cookie-policy/">Cookies</a>
-            {% endif %}
+            <a href="/privacy-policy/">Privacy policy</a>
+            <a href="/cookie-policy/">Cookies</a>
           </div>
         </div>
       </footer>

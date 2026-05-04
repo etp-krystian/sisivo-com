@@ -1,53 +1,82 @@
 ---
 layout: base
-title: How It Works
-description: "Our implementation model for AI lead qualification, sales research, and revenue workflow automation."
+title: How Sisivo Works
+description: "Sisivo runs through a short Diagnosis, Modeling, and Execution motion built for B2B teams with an active pipeline."
 ---
 
-We run practical implementation projects for B2B revenue teams.
+Sisivo is designed to prove value early, before your team commits to a heavy rollout.
 
-No long strategy phase. No vague transformation program.
+## Diagnosis
 
-## 1) Workflow audit
+We start with your existing pipeline, not a blank-sheet strategy exercise.
 
-We map one workflow that is worth automating now:
+What we need:
 
-- inbound lead qualification
-- sales research and prep
-- revenue-team handoffs and admin
+- a CSV export from the last 3 to 6 weeks
+- basic deal stages and values
+- a clear owner on your side, usually the founder or Head of Sales
 
-## 2) Scope and success metrics
+What we look for:
 
-We define:
+- dead deals that should leave the pipeline
+- stage transitions with no real qualification
+- deals that stall after demo because urgency or ownership is missing
+- places where reps follow different logic
 
-- what the agent should do
-- which tools and data are involved
-- what success means (speed, quality, conversion, manual time saved)
+## Modeling
 
-## 3) Build and integration
+Once we see the data, we define the working sales system behind it.
 
-We implement directly in your revenue stack:
+This usually includes:
 
-- CRM
-- forms
-- email tools
-- internal systems
+- ICP and disqualification rules
+- stage-entry and exit criteria
+- qualification logic for MQL and SQL
+- messaging tied to the actual buyer pain
+- next-step discipline after discovery, demo, and proposal
 
-## 4) Launch and optimization
+## Execution
 
-We launch, monitor, and improve based on real usage.
+The first pilot is intentionally small and operational.
 
-You get clear visibility into what changed and what business impact it creates.
+Typical first value in 1 to 2 weeks:
 
-## Typical first phase timeline
+- 20 to 40 percent of dead deals identified and removed
+- clearer next steps for active opportunities
+- a more realistic view of what can close and what should not
 
-Most first implementations are delivered in 4-8 weeks, depending on integrations and approval cycles.
+Typical full first rollout:
 
-<section class="content-page-cta" aria-label="How it works call to action">
-  <h2>Want to map your workflow?</h2>
-  <p>Share your inbound or sales process. We will tell you what to automate first and how to scope it safely.</p>
+- 2 to 4 weeks when the team is responsive
+- low technical overhead at the start
+- no need for a large internal IT project
+
+## What buyers usually care about
+
+### Head of Sales
+
+Wants a system the whole team can actually follow.
+
+### CEO or Founder
+
+Wants a cleaner forecast and a faster path to ROI.
+
+### Sales team
+
+Wants fewer pointless follow-ups and less ambiguity in stage movement.
+
+## When we would not recommend a rollout
+
+- no active pipeline
+- no one owns the sales process
+- the team only wants more leads, not better decisions
+- there is no willingness to change how deals are qualified and advanced
+
+<section class="content-page-cta" aria-label="How Sisivo works CTA">
+  <h2>Want to start with a real pipeline review?</h2>
+  <p>We can usually tell within one working session whether Sisivo will create fast value or whether the team should fix something more basic first.</p>
   <div class="home-cta">
-    <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9">{% ms "calendar_month" %}<span>Book a discovery call</span></a>
-    <a class="btn btn-ghost btn-see-services" href="/services/ai-solutions-development/"><span>Get your AI lead qualification plan</span><span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" /><path d="M8.8 4.3L12.5 8L8.8 11.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></span></a>
+    <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9">{% ms "calendar_month" %}<span>Book Pipeline Review</span></a>
+    <a class="btn btn-ghost btn-see-services" href="/services/ai-solutions-development/"><span>See the System</span><span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" /><path d="M8.8 4.3L12.5 8L8.8 11.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></span></a>
   </div>
 </section>

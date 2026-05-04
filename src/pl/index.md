@@ -1,5 +1,6 @@
 ---
 layout: base
+draft: true
 locale: pl
 title: "AI roadmap – doradztwo i strategia AI dla firm (2026)"
 heading: Roadmapa AI dla firm

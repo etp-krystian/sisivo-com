@@ -36,26 +36,12 @@
 
 
 
-
-  
-
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <script>
       document.documentElement.classList.add("js");
-      window.__gtmContainerId = "GTM-NGX225S4";
-      window.dataLayer = window.dataLayer || [];
-      window.__loadGtmOnce = function () {
-        if (window.__gtmLoaded) return;
-        window.__gtmLoaded = true;
-        window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var s = document.createElement("script");
-        s.async = true;
-        s.src = "https://www.googletagmanager.com/gtm.js?id=" + window.__gtmContainerId;
-        document.head.appendChild(s);
-      };
     </script>
     
     
@@ -71,8 +57,8 @@
       
       
     
-    <title>Contact</title>
-    <meta name="description" content="Talk to us about lead qualification, inbound automation, and revenue workflow AI." />
+    <title>Contact Sisivo</title>
+    <meta name="description" content="Talk to Sisivo about pipeline chaos, qualification, and whether a CSV-based pilot makes sense for your team." />
     <meta http-equiv="content-language" content="en" />
     <meta name="language" content="en" />
     
@@ -80,16 +66,11 @@
       <meta property="og:url" content="https://sisivo.com/contact-us/" />
     
     
-      
-        <link rel="alternate" hreflang="en" href="https://sisivo.com/contact-us/" />
-      
-        <link rel="alternate" hreflang="pl" href="https://sisivo.com/pl/kontakt/" />
-      
       <link rel="alternate" hreflang="x-default" href="https://sisivo.com/contact-us/" />
     
     <meta property="og:site_name" content="Sisivo" />
-    <meta property="og:title" content="Contact" />
-    <meta property="og:description" content="Talk to us about lead qualification, inbound automation, and revenue workflow AI." />
+    <meta property="og:title" content="Contact Sisivo" />
+    <meta property="og:description" content="Talk to Sisivo about pipeline chaos, qualification, and whether a CSV-based pilot makes sense for your team." />
     <meta property="og:type" content="website" />
     
     
@@ -109,6 +90,9 @@
     
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     
     <script type="application/ld+json">
     {
@@ -136,7 +120,7 @@
         "telephone": "+48505316553",
         "email": "krystian@easytechpartners.com",
         "contactType": "sales",
-        "availableLanguage": ["English", "Polish"]
+        "availableLanguage": ["English"]
       }]
     }
     </script>
@@ -147,11 +131,11 @@
       "@id": "https://sisivo.com#website",
       "url": "https://sisivo.com",
       "name": "Sisivo",
-      "description": "Sisivo product website.",
+      "description": "Sisivo helps B2B teams turn chaotic pipeline activity into a working sales system.",
       "publisher": {
         "@id": "https://sisivo.com#organization"
       },
-      "inLanguage": ["en", "pl"]
+      "inLanguage": "en"
     }
     </script>
     
@@ -162,8 +146,8 @@
       "@type": "ContactPage",
       "@id": "https://sisivo.com/contact-us/#contact-page",
       "url": "https://sisivo.com/contact-us/",
-      "name": "Contact",
-      "description": "Talk to us about lead qualification, inbound automation, and revenue workflow AI.",
+      "name": "Contact Sisivo",
+      "description": "Talk to Sisivo about pipeline chaos, qualification, and whether a CSV-based pilot makes sense for your team.",
       "about": {
         "@id": "https://sisivo.com#organization"
       }
@@ -180,13 +164,13 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://sisivo.com/en/"
+          "item": "https://sisivo.com/"
         }
         
         ,{
           "@type": "ListItem",
           "position": 2,
-          "name": "Contact",
+          "name": "Contact Sisivo",
           "item": "https://sisivo.com/contact-us/"
         }
         
@@ -194,26 +178,49 @@
     }
     </script>
     
-    
     <style>
       :root {
         color-scheme: light;
-        --bg: #f8fafc;
-        --surface: #ffffff;
-        --surface-soft: #f1f5f9;
-        --border: #e2e8f0;
-        --text: #0f172a;
-        --muted: #475569;
-        --muted-soft: #64748b;
-        --primary: #00ff66;
-        --primary-soft: #00e65c;
-        --primary-dark: #0b3d20;
-        --primary-rgb: 0, 255, 102;
-        --accent-tech: #0ea5e9;
-        --accent-tech-dark: #0c4a6e;
-        --accent-tech-rgb: 14, 165, 233;
-        --ring: rgba(var(--accent-tech-rgb), 0.34);
-        --shadow: 0 18px 40px rgba(2, 6, 23, 0.08);
+        --cc-bg: #F8FAFC;
+        --cc-surface: #FFFFFF;
+        --cc-sidebar-surface: #F1F5F9;
+        --cc-section-surface: #F8FAFC;
+        --app-stage-bg-rgb: 248, 250, 252;
+        --cc-border: #E5E7EB;
+        --cc-primary: #111827;
+        --cc-primary-hover: #0F172A;
+        --cc-success: #D9FF00;
+        --cc-warning: #D97706;
+        --cc-error: #DC2626;
+        --cc-text: #0A0A0A;
+        --cc-text-secondary: #64748B;
+        --cc-muted: #94A3B8;
+        --cc-hover: #F1F5F9;
+        --cc-selected: #F8FAFF;
+        --cc-progress-bg: #E5E7EB;
+        --button-shadow: none;
+        --button-shadow-hover: none;
+        --brand-green: var(--cc-success);
+        --brand-green-soft: var(--cc-success);
+        --brand-green-dark: var(--cc-success);
+        --brand-green-rgb: 217, 255, 0;
+
+        --bg: var(--cc-bg);
+        --surface: var(--cc-surface);
+        --surface-soft: var(--cc-sidebar-surface);
+        --border: var(--cc-border);
+        --text: var(--cc-text);
+        --muted: var(--cc-text-secondary);
+        --muted-soft: var(--cc-muted);
+        --primary: var(--cc-success);
+        --primary-soft: var(--brand-green-soft);
+        --primary-dark: var(--cc-primary);
+        --primary-rgb: var(--brand-green-rgb);
+        --accent-tech: var(--cc-primary);
+        --accent-tech-dark: var(--cc-primary-hover);
+        --accent-tech-rgb: 17, 24, 39;
+        --ring: rgba(var(--brand-green-rgb), 0.28);
+        --shadow: var(--button-shadow);
         --radius: 16px;
         --radius-sm: 12px;
         --radius-full: 999px;
@@ -228,8 +235,8 @@
         --space-lg: 32px;
         --space-xl: 48px;
         --space-2xl: 64px;
-        --space-section: clamp(48px, 6vw, 64px);
-        --space-section-compact: clamp(32px, 4.5vw, 44px);
+        --space-section: clamp(64px, 7vw, 88px);
+        --space-section-compact: clamp(44px, 5.5vw, 64px);
       }
 
       * {
@@ -247,7 +254,7 @@
       }
 
       body {
-        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        font-family: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
           "Segoe UI", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
         background: var(--bg);
         color: var(--text);
@@ -1367,48 +1374,92 @@
       .section-header {
         display: grid;
         gap: var(--space-2xs);
-        margin-bottom: var(--space-sm);
+        margin-bottom: 18px;
       }
 
       .section-title {
         margin: 0;
-        font-size: 20px;
+        font-size: 22px;
         letter-spacing: -0.02em;
       }
 
       .section-lead {
         margin: 0;
         color: var(--muted);
-        max-width: 72ch;
-        font-size: 14px;
-        line-height: 1.7;
+        max-width: 56ch;
+        font-size: 13px;
+        line-height: 1.55;
       }
 
       .services-grid {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 14px;
-        margin-top: var(--space-sm);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 18px;
+      }
+
+      .feature-stack {
+        display: grid;
+        gap: 40px;
+        margin-top: 24px;
+      }
+
+      .feature-panel {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+        padding: 44px;
+        border-radius: 12px;
+        border: 1px solid rgba(226, 232, 240, 0.95);
+        background: rgba(255, 255, 255, 0.98);
+      }
+
+      .feature-panel-copy {
+        max-width: 36ch;
+      }
+
+      .feature-eyebrow {
+        margin: 0 0 8px;
+        font-size: 13px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--accent-tech-dark);
+      }
+
+      .feature-title {
+        margin: 0 0 14px;
+        font-size: clamp(32px, 3.6vw, 48px);
+        line-height: 1;
+        letter-spacing: -0.03em;
+        color: var(--text);
+      }
+
+      .feature-desc {
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.42;
+        color: var(--muted);
       }
 
       .service-card {
         display: flex;
         flex-direction: column;
         gap: 10px;
-        padding: 16px;
-        border-radius: var(--radius);
+        padding: 20px;
+        border-radius: 8px;
         border: 1px solid rgba(226, 232, 240, 0.95);
         background: rgba(255, 255, 255, 0.9);
-        box-shadow: 0 8px 24px rgba(2, 6, 23, 0.06);
+        box-shadow: none;
         transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
         color: inherit;
       }
 
       .service-card:hover {
         text-decoration: none;
-        transform: translateY(-2px);
+        transform: translateY(-1px);
         border-color: rgba(var(--primary-rgb), 0.28);
-        box-shadow: 0 14px 36px rgba(2, 6, 23, 0.09);
+        box-shadow: none;
       }
 
       .service-title {
@@ -1423,7 +1474,7 @@
         margin: 0;
         color: var(--muted);
         font-size: 13px;
-        line-height: 1.65;
+        line-height: 1.5;
       }
 
       .service-meta {
@@ -1665,8 +1716,8 @@
       }
 
       .prose .trust-card {
-        padding: var(--space-sm);
-        border-radius: var(--radius-sm);
+        padding: 18px;
+        border-radius: 8px;
         border: 1px solid rgba(226, 232, 240, 0.9);
         background: rgba(255, 255, 255, 0.92);
         box-shadow: 0 8px 22px rgba(2, 6, 23, 0.05);
@@ -1922,7 +1973,7 @@
       }
 
       .lead-plan-list {
-        margin: var(--space-xs) 0 0;
+        margin: 10px 0 0;
         padding-left: 18px;
       }
 
@@ -2728,41 +2779,22 @@
 
       .home-hero {
         margin-top: calc(var(--header-height) * -1);
-        padding: calc(var(--space-xl) + var(--header-height)) 0 calc(var(--space-lg) * 1.3);
-        min-height: min(744px, 92vh);
+        padding: calc(var(--space-xl) + var(--header-height)) 0 var(--space-xl);
+        min-height: min(372px, 46vh);
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         position: relative;
-        background: rgba(2, 6, 23, 1);
+        background: var(--surface);
         overflow: visible;
         border-bottom: 1px solid rgba(226, 232, 240, 0.9);
       }
 
       .home-hero-bg {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center top;
-        transform: none;
-        filter: none;
-        z-index: 0;
+        display: none;
       }
 
       .home-hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          180deg,
-          rgba(2, 6, 23, 0) 0%,
-          rgba(2, 6, 23, 0) 56%,
-          rgba(2, 6, 23, 0.22) 78%,
-          rgba(2, 6, 23, 0.4) 100%
-        );
-        z-index: 1;
-        pointer-events: none;
+        content: none;
       }
 
       .home-hero::after {
@@ -2779,44 +2811,116 @@
       .home-hero-grid {
         display: grid;
         grid-template-columns: minmax(0, 1fr);
-        gap: 16px;
+        gap: 24px;
         align-items: center;
+      }
+
+      .home-hero-visual {
+        display: flex;
+        align-items: stretch;
+      }
+
+      .visual-placeholder {
+        width: 100%;
+        min-height: 240px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--space-md);
+        border-radius: var(--radius);
+        border: 1px dashed rgba(100, 116, 139, 0.35);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(241, 245, 249, 0.96) 100%);
+        color: var(--muted);
+        text-align: center;
+        font-size: 13px;
+        line-height: 1.6;
+      }
+
+      .visual-placeholder--hero {
+        min-height: 320px;
+      }
+
+      .visual-placeholder--wide {
+        min-height: 300px;
+      }
+
+      .visual-placeholder--compact {
+        min-height: 180px;
+      }
+
+      .visual-placeholder--logos {
+        min-height: 140px;
+      }
+
+      .visual-placeholder--feature {
+        min-height: 420px;
+      }
+
+      .visual-placeholder--feature,
+      .visual-placeholder--hero {
+        border-radius: 12px;
       }
 
       .home-hero h1 {
         margin: 0 0 var(--space-xs);
-        font-size: clamp(34px, 4vw, 52px);
+        font-size: clamp(28px, 3vw, 40px);
         line-height: 1.03;
         letter-spacing: -0.05em;
-        color: #ffffff;
-        text-shadow: 0 2px 8px rgba(2, 6, 23, 0.2);
+        color: var(--text);
+        text-shadow: none;
       }
 
       .home-hero h1 span {
-        color: rgba(255, 255, 255, 0.92);
+        color: var(--cc-primary);
       }
 
       .home-lead {
-        margin: 0 0 var(--space-sm);
-        max-width: 72ch;
-        color: rgba(255, 255, 255, 0.86);
-        font-size: 16px;
-        line-height: 1.75;
-        text-shadow: 0 1px 5px rgba(2, 6, 23, 0.18);
+        margin: 0 0 var(--space-md);
+        max-width: 46ch;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.55;
+        text-shadow: none;
       }
 
       .home-cta {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        gap: 10px;
-        margin-top: var(--space-sm);
+        gap: 12px;
+        margin-top: var(--space-md);
+      }
+
+      .home-cta--hero {
+        gap: 18px;
+      }
+
+      .cta-inline-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--text);
+        font-size: 15px;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .cta-inline-link svg {
+        width: 16px;
+        height: 16px;
+        stroke: currentColor;
+      }
+
+      .cta-inline-link:hover {
+        text-decoration: none;
+        color: var(--cc-primary-hover);
       }
 
       .home-note {
-        margin-top: var(--space-xs);
-        color: rgba(255, 255, 255, 0.72);
+        margin-top: var(--space-sm);
+        color: var(--muted-soft);
         font-size: 12px;
+        max-width: 42ch;
       }
 
       .hero-scroll {
@@ -3153,17 +3257,17 @@
 
       .info-grid {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 14px;
-        margin-top: var(--space-sm);
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 18px;
       }
 
       .info-card {
-        border-radius: var(--radius);
+        border-radius: 8px;
         border: 1px solid rgba(226, 232, 240, 0.95);
         background: rgba(255, 255, 255, 0.9);
-        box-shadow: 0 10px 28px rgba(2, 6, 23, 0.07);
-        padding: 16px;
+        box-shadow: none;
+        padding: 20px;
       }
 
       .info-title {
@@ -3178,15 +3282,15 @@
         margin: 0;
         color: var(--muted);
         font-size: 13px;
-        line-height: 1.7;
+        line-height: 1.5;
       }
 
       .pilot {
-        border-radius: var(--radius);
+        border-radius: 8px;
         border: 1px solid rgba(var(--primary-rgb), 0.28);
         background: rgba(var(--primary-rgb), 0.06);
-        padding: 18px;
-        box-shadow: 0 14px 34px rgba(var(--primary-rgb), 0.12);
+        padding: 28px;
+        box-shadow: none;
       }
 
       .pilot-meta {
@@ -3200,7 +3304,7 @@
 
       .pilot-title {
         margin: 0 0 var(--space-2xs);
-        font-size: 18px;
+        font-size: 20px;
         letter-spacing: -0.02em;
       }
 
@@ -3208,8 +3312,8 @@
         margin: 0 0 var(--space-xs);
         color: var(--muted);
         font-size: 14px;
-        line-height: 1.75;
-        max-width: 84ch;
+        line-height: 1.55;
+        max-width: 54ch;
       }
 
       .pilot-list {
@@ -3217,7 +3321,7 @@
         padding-left: 18px;
         color: var(--muted);
         font-size: 13px;
-        line-height: 1.75;
+        line-height: 1.55;
       }
 
       .partner {
@@ -3225,11 +3329,11 @@
         grid-template-columns: auto minmax(0, 1fr);
         gap: var(--space-sm);
         align-items: center;
-        border-radius: var(--radius);
+        border-radius: 8px;
         border: 1px solid rgba(226, 232, 240, 0.95);
         background: rgba(255, 255, 255, 0.9);
-        box-shadow: 0 10px 28px rgba(2, 6, 23, 0.07);
-        padding: 18px;
+        box-shadow: none;
+        padding: 28px;
       }
 
       .partner-badge {
@@ -3258,7 +3362,7 @@
 
       .partner-title {
         margin: 0 0 var(--space-2xs);
-        font-size: 18px;
+        font-size: 20px;
         letter-spacing: -0.02em;
         color: var(--text);
       }
@@ -3267,8 +3371,8 @@
         margin: 0 0 var(--space-xs);
         color: var(--muted);
         font-size: 14px;
-        line-height: 1.75;
-        max-width: 70ch;
+        line-height: 1.55;
+        max-width: 52ch;
       }
 
       .blog-header {
@@ -3577,7 +3681,7 @@
         }
 
         .home-hero {
-          padding-top: calc(var(--space-xl) + var(--header-height));
+          padding-top: calc(var(--space-lg) + var(--header-height));
         }
 
         .blog-grid {
@@ -3678,6 +3782,26 @@
       }
 
       @media (min-width: 920px) {
+        .home-hero-grid {
+          grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+          gap: var(--space-xl);
+          align-items: center;
+        }
+
+        .feature-panel {
+          grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+          align-items: center;
+          gap: 44px;
+        }
+
+        .feature-panel:nth-child(even) .feature-panel-copy {
+          order: 2;
+        }
+
+        .feature-panel:nth-child(even) .visual-placeholder {
+          order: 1;
+        }
+
         .ai-loop-grid {
           grid-template-columns: minmax(0, 1fr) minmax(0, 440px);
           align-items: center;
@@ -3689,19 +3813,6 @@
         }
       }
 
-      @media (min-width: 1200px) {
-        .home-hero {
-          min-height: min(967px, 96vh);
-          padding-bottom: calc(var(--space-lg) * 1.6);
-        }
-      }
-
-      @media (min-width: 1500px) {
-        .home-hero {
-          min-height: min(1257px, 98vh);
-          padding-bottom: calc(var(--space-lg) * 2);
-        }
-      }
     </style>
   </head>
   <body class="is-contact is-content">
@@ -3709,76 +3820,15 @@
     <div class="site">
       <header class="site-header" aria-label="Primary navigation">
         <div class="container header-inner">
-          <a href="/en/" class="brand" aria-label="Sisivo">
+          <a href="/" class="brand" aria-label="Sisivo">
             <span class="brand-logo">
               <img src="/images/sisivo-mark.svg" alt="" />
             </span>
           </a>
 
-          <nav class="nav" aria-label="Site">
-            <div class="nav-item nav-item--mega">
-              <a href="/services/" class="nav-link">
-                <span>Solutions</span>
-                <span class="nav-chevron" aria-hidden="true">
-                  <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2.25 4.5L6 8.25L9.75 4.5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </span>
-              </a>
-              <div class="mega-menu" role="group" aria-label="Solutions menu">
-                <div class="mega-menu-head">
-                  <div>
-                    <p class="mega-menu-title">Sisivo Page Templates</p>
-                    <p class="mega-menu-subtitle">A clean product-site base with home, solution, process, about, and contact page patterns.</p>
-                  </div>
-                  <a class="mega-menu-all" href="/services/">View templates <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
-                </div>
-                <div class="mega-menu-quickstart">
-                  <a class="mega-quick-link" href="/services/ai-solutions-development/">
-                    <span class="mega-quick-title">Product Page</span>
-                    <span class="mega-quick-desc">A pattern for product messaging, benefits, scope, and conversion copy.</span>
-                  </a>
-                  <a class="mega-quick-link" href="/services/ai-solutions-development/">
-                    <span class="mega-quick-title">Solution Detail</span>
-                    <span class="mega-quick-desc">A reusable detail-page pattern for future product and solution sections.</span>
-                  </a>
-                  <a class="mega-quick-link" href="/implementation-process/">
-                    <span class="mega-quick-title">Process Page</span>
-                    <span class="mega-quick-desc">A layout for implementation steps, onboarding, or how the product works.</span>
-                  </a>
-                  <a class="mega-quick-link" href="/contact-us/">
-                    <span class="mega-quick-title">Contact Page</span>
-                    <span class="mega-quick-desc">A pattern for conversion, contact details, and the final CTA.</span>
-                  </a>
-                </div>
-                <p class="mega-menu-note">
-                  
-                    Tell us what process you want to improve and we will recommend the first AI roadmap milestone and implementation path.
-                    <a href="https://calendar.app.google/R21jua9szDGa7T7c9">Book a strategy call</a>.
-                  
-                </p>
-              </div>
-            </div>
-            <a href="/implementation-process/" class="nav-link">How It Works</a>
-            <a href="/about-us/" class="nav-link">About</a>
-          </nav>
-
           <div class="header-actions">
-            <a href="/contact-us/" class="btn btn-ghost">Contact</a>
-            <a href="https://calendar.app.google/R21jua9szDGa7T7c9" class="btn btn-primary"><svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" /><path d="M7.5 3.5v3" /><path d="M16.5 3.5v3" /><path d="M3.5 9.5h17" /></svg><span>Book Strategy Call</span></a>
-            
-              <a
-                href="/pl/kontakt/"
-                class="language-switch"
-                hreflang="pl"
-                lang="pl"
-                aria-label="Language: Polski"
-              >
-                <span class="language-switch-flag" aria-hidden="true">
-                  <img src="/images/flag-pl.svg" alt="" loading="lazy" decoding="async" />
-                </span>
-              </a>
-            
+            <a href="https://app.sisivo.com" class="btn btn-ghost">Sign in</a>
+            <a href="https://calendar.app.google/R21jua9szDGa7T7c9" class="btn btn-primary"><svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" /><path d="M7.5 3.5v3" /><path d="M16.5 3.5v3" /><path d="M3.5 9.5h17" /></svg><span>Book Pipeline Review</span></a>
           </div>
 
           <details class="mobile-nav">
@@ -3793,13 +3843,8 @@
               <span>Menu</span>
             </summary>
             <div class="mobile-nav-panel" role="dialog" aria-label="Mobile navigation">
-              <a href="/services/">Solutions <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
-              <a href="/implementation-process/">How It Works <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
-              <a href="/about-us/">About <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
-              
-                <a href="/pl/kontakt/" hreflang="pl" lang="pl">PL <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
-              
-              <a class="mobile-nav-cta" href="https://calendar.app.google/R21jua9szDGa7T7c9"><svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" /><path d="M7.5 3.5v3" /><path d="M16.5 3.5v3" /><path d="M3.5 9.5h17" /></svg><span>Book Strategy Call</span></a>
+              <a href="https://app.sisivo.com">Sign in <svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg></a>
+              <a class="mobile-nav-cta" href="https://calendar.app.google/R21jua9szDGa7T7c9"><svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" /><path d="M7.5 3.5v3" /><path d="M16.5 3.5v3" /><path d="M3.5 9.5h17" /></svg><span>Book Pipeline Review</span></a>
             </div>
           </details>
         </div>
@@ -3811,17 +3856,17 @@
             <section class="page-hero">
               <div class="container">
                 <nav class="page-breadcrumbs" aria-label="Breadcrumb">
-                  <a href="/en/">Home</a>
+                  <a href="/">Home</a>
                   <span class="crumb-sep" aria-hidden="true">/</span>
                   
-                  <span aria-current="page">Contact</span>
+                  <span aria-current="page">Contact Sisivo</span>
                 </nav>
 
                 <div class="page-hero-inner">
                   <div class="page-header">
-                    <h1>Contact</h1>
+                    <h1>Contact Sisivo</h1>
                     
-                      <p class="page-lead">Talk to us about lead qualification, inbound automation, and revenue workflow AI.</p>
+                      <p class="page-lead">Talk to Sisivo about pipeline chaos, qualification, and whether a CSV-based pilot makes sense for your team.</p>
                     
                   </div>
                 </div>
@@ -3843,27 +3888,27 @@
         decoding="async"
       />
     </figure>
-    <p class="contact-kicker">Start with your workflow</p>
-    <h2 id="contact-intro-title">Tell us what your revenue team wants to automate</h2>
+    <p class="contact-kicker">Start with one real pipeline</p>
+    <h2 id="contact-intro-title">Tell us where deals are getting lost</h2>
     <p>
-      Most teams contact us when lead qualification is slow, sales context is incomplete, or pipeline admin takes too much time.
+      Most teams reach out when the pipeline looks busy, but nobody trusts it. Stages are loose, follow-up drags on, and too many deals die after interest.
     </p>
     <ul class="contact-points">
-      <li>Inbound lead qualification and routing</li>
-      <li>Sales research and account enrichment</li>
-      <li>Revenue workflow automation across CRM, forms, and email</li>
+      <li>We review whether ICP and qualification are too broad</li>
+      <li>We check where stages and next-step discipline break down</li>
+      <li>We assess whether a Sisivo pilot makes sense now or later</li>
     </ul>
-<p><h3>What happens next</h3>
+<p><h3>Best fit before the call</h3>
 <ul class="contact-steps">
-<li>We review your current workflow and goal.</li>
-<li>We suggest the best first implementation scope.</li>
-<li>We align on timeline, systems, and success metrics.</li>
+<li>You already have an active B2B pipeline.</li>
+<li>Someone owns sales, usually the founder or Head of Sales.</li>
+<li>You can export a recent CSV from your CRM.</li>
 </ul></p>
   </section>
 <section class="contact-form-card" aria-labelledby="contact-form-title">
-    <h2 id="contact-form-title">Contact form</h2>
+    <h2 id="contact-form-title">Request a pipeline review</h2>
     <p>
-      Best for teams that want a concrete recommendation on what to automate first.
+      Best for teams that want a clear answer on fit, likely ROI, and the next step toward a pilot.
     </p>
     <div id="lead-plan-context"></div>
     <div class="hubspot-form-wrap" id="hubspot-contact-form"></div>
@@ -3897,7 +3942,7 @@
 
     if (!lines.length) return;
 
-    const summary = "AI lead qualification plan request\n" + lines.join("\n");
+    const summary = "Sisivo pipeline review request\n" + lines.join("\n");
     window.__leadPlanSummary = summary;
 
     const context = document.getElementById("lead-plan-context");
@@ -3906,7 +3951,7 @@
     const panel = document.createElement("section");
     panel.className = "lead-plan-panel";
     panel.innerHTML = [
-      "<p><strong>Plan request detected.</strong> We pre-filled your context below so we can recommend the best first AI workflow for your team.</p>",
+      "<p><strong>Pipeline review context detected.</strong> We pre-filled your notes so we can quickly assess fit and likely bottlenecks.</p>",
       "<ul class=\"lead-plan-list\">" + lines.map(function (line) { return "<li>" + line + "</li>"; }).join("") + "</ul>"
     ].join("");
     context.appendChild(panel);
@@ -3933,12 +3978,12 @@
     }
   });
 </script>
-<section class="content-page-cta" aria-label="Contact page call to action">
-  <h2>Choose your next step</h2>
-  <p>Book a discovery call if you want to discuss your workflow live, or get your AI lead qualification plan first.</p>
+<section class="content-page-cta" aria-label="Contact page CTA">
+  <h2>Prefer a live conversation first?</h2>
+  <p>Book a short call if you want to walk through your current sales setup before sending data.</p>
   <div class="home-cta">
-    <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9"><svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" /><path d="M7.5 3.5v3" /><path d="M16.5 3.5v3" /><path d="M3.5 9.5h17" /></svg><span>Book a discovery call</span></a>
-    <a class="btn btn-ghost btn-see-services" href="/services/ai-solutions-development/"><span>Get your AI lead qualification plan</span><span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" /><path d="M8.8 4.3L12.5 8L8.8 11.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></span></a>
+    <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9"><svg class="material-symbols-rounded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" /><path d="M7.5 3.5v3" /><path d="M16.5 3.5v3" /><path d="M3.5 9.5h17" /></svg><span>Book Pipeline Review</span></a>
+    <a class="btn btn-ghost btn-see-services" href="/services/ai-solutions-development/"><span>See the System</span><span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" /><path d="M8.8 4.3L12.5 8L8.8 11.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></span></a>
   </div>
 </section>
 <h2>Prefer direct contact?</h2>
@@ -3960,18 +4005,12 @@ LinkedIn: <a href="https://www.linkedin.com/in/krystiansulek/">linkedin.com/in/k
             <div>© 2026, Sisivo.</div>
             <div class="footer-build">
               Updated:
-              <time datetime="2026-05-04T13:19:35.257Z">2026-05-04 13:19 UTC</time>
+              <time datetime="2026-05-04T14:16:16.486Z">2026-05-04 14:16 UTC</time>
             </div>
           </div>
           <div class="footer-links" aria-label="Footer links">
-            
-              <a href="/services/">Solutions</a>
-              <a href="/implementation-process/">How It Works</a>
-              <a href="/about-us/">About</a>
-              <a href="/contact-us/">Contact</a>
-              <a href="/privacy-policy/">Privacy policy</a>
-              <a href="/cookie-policy/">Cookies</a>
-            
+            <a href="/privacy-policy/">Privacy policy</a>
+            <a href="/cookie-policy/">Cookies</a>
           </div>
         </div>
       </footer>

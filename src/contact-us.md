@@ -1,7 +1,7 @@
 ---
 layout: base
-title: Contact
-description: "Talk to us about lead qualification, inbound automation, and revenue workflow AI."
+title: Contact Sisivo
+description: "Talk to Sisivo about pipeline chaos, qualification, and whether a CSV-based pilot makes sense for your team."
 alternateLangs:
   en: /contact-us/
   pl: /pl/kontakt/
@@ -19,29 +19,29 @@ alternateLangs:
         decoding="async"
       />
     </figure>
-    <p class="contact-kicker">Start with your workflow</p>
-    <h2 id="contact-intro-title">Tell us what your revenue team wants to automate</h2>
+    <p class="contact-kicker">Start with one real pipeline</p>
+    <h2 id="contact-intro-title">Tell us where deals are getting lost</h2>
     <p>
-      Most teams contact us when lead qualification is slow, sales context is incomplete, or pipeline admin takes too much time.
+      Most teams reach out when the pipeline looks busy, but nobody trusts it. Stages are loose, follow-up drags on, and too many deals die after interest.
     </p>
     <ul class="contact-points">
-      <li>Inbound lead qualification and routing</li>
-      <li>Sales research and account enrichment</li>
-      <li>Revenue workflow automation across CRM, forms, and email</li>
+      <li>We review whether ICP and qualification are too broad</li>
+      <li>We check where stages and next-step discipline break down</li>
+      <li>We assess whether a Sisivo pilot makes sense now or later</li>
     </ul>
 
-    <h3>What happens next</h3>
+    <h3>Best fit before the call</h3>
     <ul class="contact-steps">
-      <li>We review your current workflow and goal.</li>
-      <li>We suggest the best first implementation scope.</li>
-      <li>We align on timeline, systems, and success metrics.</li>
+      <li>You already have an active B2B pipeline.</li>
+      <li>Someone owns sales, usually the founder or Head of Sales.</li>
+      <li>You can export a recent CSV from your CRM.</li>
     </ul>
   </section>
 
 <section class="contact-form-card" aria-labelledby="contact-form-title">
-    <h2 id="contact-form-title">Contact form</h2>
+    <h2 id="contact-form-title">Request a pipeline review</h2>
     <p>
-      Best for teams that want a concrete recommendation on what to automate first.
+      Best for teams that want a clear answer on fit, likely ROI, and the next step toward a pilot.
     </p>
     <div id="lead-plan-context"></div>
     <div class="hubspot-form-wrap" id="hubspot-contact-form"></div>
@@ -76,7 +76,7 @@ alternateLangs:
 
     if (!lines.length) return;
 
-    const summary = "AI lead qualification plan request\n" + lines.join("\n");
+    const summary = "Sisivo pipeline review request\n" + lines.join("\n");
     window.__leadPlanSummary = summary;
 
     const context = document.getElementById("lead-plan-context");
@@ -85,7 +85,7 @@ alternateLangs:
     const panel = document.createElement("section");
     panel.className = "lead-plan-panel";
     panel.innerHTML = [
-      "<p><strong>Plan request detected.</strong> We pre-filled your context below so we can recommend the best first AI workflow for your team.</p>",
+      "<p><strong>Pipeline review context detected.</strong> We pre-filled your notes so we can quickly assess fit and likely bottlenecks.</p>",
       "<ul class=\"lead-plan-list\">" + lines.map(function (line) { return "<li>" + line + "</li>"; }).join("") + "</ul>"
     ].join("");
     context.appendChild(panel);
@@ -113,12 +113,12 @@ alternateLangs:
   });
 </script>
 
-<section class="content-page-cta" aria-label="Contact page call to action">
-  <h2>Choose your next step</h2>
-  <p>Book a discovery call if you want to discuss your workflow live, or get your AI lead qualification plan first.</p>
+<section class="content-page-cta" aria-label="Contact page CTA">
+  <h2>Prefer a live conversation first?</h2>
+  <p>Book a short call if you want to walk through your current sales setup before sending data.</p>
   <div class="home-cta">
-    <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9">{% ms "calendar_month" %}<span>Book a discovery call</span></a>
-    <a class="btn btn-ghost btn-see-services" href="/services/ai-solutions-development/"><span>Get your AI lead qualification plan</span><span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" /><path d="M8.8 4.3L12.5 8L8.8 11.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></span></a>
+    <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9">{% ms "calendar_month" %}<span>Book Pipeline Review</span></a>
+    <a class="btn btn-ghost btn-see-services" href="/services/ai-solutions-development/"><span>See the System</span><span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" /><path d="M8.8 4.3L12.5 8L8.8 11.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></span></a>
   </div>
 </section>
 

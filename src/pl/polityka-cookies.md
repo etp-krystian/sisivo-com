@@ -1,5 +1,6 @@
 ---
 layout: base
+draft: true
 locale: pl
 title: Polityka cookies
 heading: Polityka cookies
