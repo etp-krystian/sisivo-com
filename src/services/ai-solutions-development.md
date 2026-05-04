@@ -7,13 +7,13 @@ alternateLangs:
   pl: /pl/wdrozenia-ai-dla-firm/
 ---
 
-This page covers our implementation layer across the three core solutions.
+This page is the remaining product-detail template for Sisivo.
 
 ## Primary solutions
 
-- [AI Inbound Lead Qualification Agent](/services/ai-powered-lead-qualification/)
-- [AI Sales Research Agent](/services/ai-research-analysis-agents/)
-- [Revenue Workflow Automation](/services/ai-business-process-automation/)
+- [Product template index](/services/)
+- [Implementation process](/implementation-process/)
+- [Contact page](/contact-us/)
 
 ## What we deliver
 

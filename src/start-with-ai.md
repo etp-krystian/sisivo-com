@@ -31,16 +31,16 @@ Do not begin with a broad transformation project.
     <p>See our delivery model from workflow audit to launch and optimization.</p>
   </article>
   <article class="trust-card">
-    <h3><a href="/ai-security-data/">Security and Data</a></h3>
-    <p>How we handle permissions, data boundaries, and operational risk.</p>
+    <h3><a href="/services/ai-solutions-development/">Product Detail</a></h3>
+    <p>A reusable detail-page structure for the Sisivo product story.</p>
   </article>
   <article class="trust-card">
     <h3><a href="/business-ai-faq/">Business AI FAQ</a></h3>
     <p>Direct answers for founders, sales leaders, and RevOps teams.</p>
   </article>
   <article class="trust-card">
-    <h3><a href="/ai-use-case-examples/">Use Cases</a></h3>
-    <p>Concrete examples for qualification, sales research, and revenue ops.</p>
+    <h3><a href="/contact-us/">Contact</a></h3>
+    <p>A conversion page pattern for contact details and next steps.</p>
   </article>
 </div>
 
@@ -49,6 +49,6 @@ Do not begin with a broad transformation project.
   <p>Tell us where your team loses time today. We will recommend the best first implementation.</p>
   <div class="home-cta">
     <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9">{% ms "calendar_month" %}<span>Book a discovery call</span></a>
-    <a class="btn btn-ghost btn-see-services" href="/ai-lead-qualification-plan/"><span>Get your AI lead qualification plan</span><span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" /><path d="M8.8 4.3L12.5 8L8.8 11.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></span></a>
+    <a class="btn btn-ghost btn-see-services" href="/services/ai-solutions-development/"><span>View product page pattern</span><span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" /><path d="M8.8 4.3L12.5 8L8.8 11.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></span></a>
   </div>
 </section>

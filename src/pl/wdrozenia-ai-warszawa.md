@@ -18,7 +18,7 @@ faqSchema:
     answer: "Zwykle średnie i większe organizacje, które mają już procesy warte usprawnienia i chcą wdrożyć AI w sposób bezpieczny oraz mierzalny."
 ---
 
-Jeśli szukasz partnera do wdrożenia AI w Warszawie, najważniejsze jest to, czy potrafi przełożyć technologię na konkretny wynik biznesowy. Easy Tech Partners pracuje z firmami, które chcą wdrażać AI w procesach operacyjnych, sprzedażowych, obsługowych i wiedzochłonnych bez zbędnego hype'u.
+Jeśli szukasz partnera do wdrożenia AI w Warszawie, najważniejsze jest to, czy potrafi przełożyć technologię na konkretny wynik biznesowy. Sisivo pracuje z firmami, które chcą wdrażać AI w procesach operacyjnych, sprzedażowych, obsługowych i wiedzochłonnych bez zbędnego hype'u.
 
 ## AI dla firm Warszawa
 
@@ -73,9 +73,9 @@ W projektach wdrożeniowych liczy się zaufanie, dostępność i jasna odpowiedz
 ## Powiązane strony
 
 - [Wdrożenia AI dla firm](/pl/wdrozenia-ai-dla-firm/)
-- [Agenci AI dla firm](/pl/agenci-ai-dla-firm/)
-- [RAG dla firm](/pl/rag-dla-firm/)
-- [Konsulting AI](/pl/konsulting-ai/)
+- [Wdrożenia AI dla firm](/pl/wdrozenia-ai-dla-firm/)
+- [Polska strona główna](/pl/)
+- [Kontakt](/pl/kontakt/)
 - [Strona główna AI po polsku](/pl/)
 
 ## FAQ

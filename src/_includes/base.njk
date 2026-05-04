@@ -2,9 +2,8 @@
 {% set pageLocale = locale or (page.url and page.url.indexOf('/pl') == 0 and 'pl') or site.locale or 'en' %}
 {% set isPolish = pageLocale == 'pl' %}
 {% set homeUrl = '/pl/' if isPolish else '/en/' %}
-{% set blogUrl = '/pl/blog/' if isPolish else '/en/blog/' %}
-{% set consultingUrl = '/pl/konsulting-ai/' if isPolish else '/services/ai-consulting-strategy/' %}
-{% set roadmapUrl = '/pl/roadmapa-ai/' if isPolish else '/services/ai-roadmap-development/' %}
+{% set consultingUrl = '/pl/wdrozenia-ai-dla-firm/' if isPolish else '/services/ai-solutions-development/' %}
+{% set roadmapUrl = '/pl/wdrozenia-ai-dla-firm/' if isPolish else '/services/ai-solutions-development/' %}
 {% set homeLabel = 'Strona główna' if isPolish else 'Home' %}
 {% set calendarLabel = 'Umów konsultację' if isPolish else 'Book Strategy Call' %}
 {% set contactLabel = 'Kontakt' if isPolish else 'Contact' %}
@@ -18,14 +17,13 @@
 {% set isHome = page.url == "/en/" or page.url == "/pl/" %}
 {% set isServicesIndex = page.url == "/services/" %}
 {% set isServices = page.url and page.url.indexOf("/services/") == 0 %}
-{% set isBlog = page.url and (page.url.indexOf("/en/blog/") == 0 or page.url.indexOf("/blog/") == 0 or page.url.indexOf("/pl/blog/") == 0) %}
-{% set isBlogIndex = page.url == "/en/blog/" or page.url == "/blog/" or page.url == "/pl/blog/" %}
+{% set isBlog = false %}
+{% set isBlogIndex = false %}
 {% set isLegal = page.url == "/privacy-policy/" or page.url == "/cookie-policy/" or page.url == "/pl/polityka-prywatnosci/" or page.url == "/pl/polityka-cookies/" %}
-{% set isStart = page.url == "/start-with-ai/" or page.url == "/ai-discovery-sprint/" or page.url == "/implementation-process/" or page.url == "/ai-security-data/" or page.url == "/business-ai-faq/" or page.url == "/ai-use-case-examples/" %}
+{% set isStart = page.url == "/start-with-ai/" or page.url == "/implementation-process/" or page.url == "/business-ai-faq/" %}
 {% set isContact = page.url == "/contact-us/" or page.url == "/pl/kontakt/" %}
-{% set isUseCases = page.url == "/ai-use-case-examples/" %}
 {% set isWhyUs = page.url == "/why-us/" %}
-{% set isLeadPlan = page.url == "/ai-lead-qualification-plan/" %}
+{% set isLeadPlan = page.url == "/services/ai-solutions-development/" %}
 {% set isContent = not isHome %}
 {% set calendarUrl = "https://calendar.app.google/R21jua9szDGa7T7c9" %}
 {% set alternates = alternateLangs or {} %}
@@ -34,7 +32,7 @@
 {% set organization = site.organization or {} %}
 {% set organizationId = (site.url + '#organization') if site and site.url else '#organization' %}
 {% set organizationLogo = (site.url + organization.logo) if site and site.url and organization.logo else organization.logo %}
-{% set isPrimaryServicePage = page.url == '/en/' or page.url == '/services/ai-solutions-development/' or page.url == '/services/ai-agents/' or page.url == '/services/rag-systems/' or page.url == '/services/ai-consulting-strategy/' or page.url == '/services/ai-roadmap-development/' or page.url == '/pl/' or page.url == '/pl/wdrozenia-ai-dla-firm/' or page.url == '/pl/agenci-ai-dla-firm/' or page.url == '/pl/rag-dla-firm/' or page.url == '/pl/konsulting-ai/' or page.url == '/pl/roadmapa-ai/' or page.url == '/pl/wdrozenia-ai-warszawa/' %}
+{% set isPrimaryServicePage = page.url == '/en/' or page.url == '/services/ai-solutions-development/' or page.url == '/pl/' or page.url == '/pl/wdrozenia-ai-dla-firm/' %}
 {% set breadcrumbHomeUrl = homeUrl %}
 {% set breadcrumbHomeLabel = homeLabel %}
 {% set languageSwitchUrl = '' %}
@@ -61,19 +59,19 @@
         document.head.appendChild(s);
       };
     </script>
-    {% set metaTitle = title or "Easy Tech Partners" %}
+    {% set metaTitle = title or "Sisivo" %}
     {% set pageHeading = heading or metaTitle %}
-    {% set metaDescription = description or "AI agents and revenue workflow automation for B2B sales and marketing teams." %}
-    {% set defaultFeaturedImage = "/images/et-featured.jpg" %}
+    {% set metaDescription = description or "Sisivo product website." %}
+    {% set defaultFeaturedImage = "/images/favicon.png" %}
     {% set effectiveImage = image %}
     {% set effectiveImageAlt = imageAlt %}
     {% set effectiveImageWidth = imageWidth %}
     {% set effectiveImageHeight = imageHeight %}
     {% if not effectiveImage and pageType != "article" %}
       {% set effectiveImage = defaultFeaturedImage %}
-      {% set effectiveImageAlt = "Easy Tech Partners" %}
-      {% set effectiveImageWidth = 1200 %}
-      {% set effectiveImageHeight = 628 %}
+      {% set effectiveImageAlt = "Sisivo" %}
+      {% set effectiveImageWidth = 512 %}
+      {% set effectiveImageHeight = 512 %}
     {% endif %}
     <title>{{ metaTitle | escape }}</title>
     <meta name="description" content="{{ metaDescription | escape }}" />
@@ -89,7 +87,7 @@
       {% endfor %}
       <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ alternates.en or canonicalPath }}" />
     {% endif %}
-    <meta property="og:site_name" content="{{ site.name if site and site.name else 'Easy Tech Partners' }}" />
+    <meta property="og:site_name" content="{{ site.name if site and site.name else 'Sisivo' }}" />
     <meta property="og:title" content="{{ metaTitle | escape }}" />
     <meta property="og:description" content="{{ metaDescription | escape }}" />
     <meta property="og:type" content="{% if pageType == 'article' %}article{% else %}website{% endif %}" />
@@ -194,35 +192,6 @@
     }
     </script>
     {% endif %}
-    {% if isBlogIndex %}
-      {% set blogCollection = collections.postPl if isPolish else collections.posts %}
-      {% set blogCollection = blogCollection | sort(false, false, "date") | reverse %}
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "@id": {{ (canonicalUrl + '#blog') | json | safe }},
-      "url": {{ canonicalUrl | json | safe }},
-      "name": {{ pageHeading | json | safe }},
-      "description": {{ metaDescription | json | safe }},
-      "publisher": {
-        "@id": {{ organizationId | json | safe }}
-      },
-      "inLanguage": {{ pageLocale | json | safe }}
-      {% if blogCollection and blogCollection.length %},
-      "blogPost": [
-        {% for post in blogCollection %}
-        {
-          "@type": "BlogPosting",
-          "headline": {{ post.data.title | json | safe }},
-          "url": {{ (site.url + post.url) | json | safe }}
-        }{% if not loop.last %},{% endif %}
-        {% endfor %}
-      ]
-      {% endif %}
-    }
-    </script>
-    {% endif %}
     {% if faqSchema and faqSchema.length %}
     <script type="application/ld+json">
     {
@@ -254,27 +223,7 @@
           "name": {{ breadcrumbHomeLabel | json | safe }},
           "item": {{ (site.url + breadcrumbHomeUrl) | json | safe }}
         }
-        {% if isBlogIndex %}
-        ,{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Blog",
-          "item": {{ canonicalUrl | json | safe }}
-        }
-        {% elif isBlog and not isBlogIndex %}
-        ,{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Blog",
-          "item": {{ (site.url + blogUrl) | json | safe }}
-        }
-        ,{
-          "@type": "ListItem",
-          "position": 3,
-          "name": {{ pageHeading | json | safe }},
-          "item": {{ canonicalUrl | json | safe }}
-        }
-        {% elif isServices and not isServicesIndex %}
+        {% if isServices and not isServicesIndex %}
         ,{
           "@type": "ListItem",
           "position": 2,
@@ -3816,9 +3765,9 @@
     <div class="site">
       <header class="site-header{% if isHome %} site-header--overlay{% endif %}" aria-label="Primary navigation">
         <div class="container header-inner">
-          <a href="{{ homeUrl }}" class="brand" aria-label="Easy Tech Partners">
+          <a href="{{ homeUrl }}" class="brand" aria-label="Sisivo">
             <span class="brand-logo">
-              <img src="/images/easy-tech-logo.svg" alt="" />
+              <img src="{{ site.logo if site and site.logo else '/images/sisivo-mark.svg' }}" alt="" />
             </span>
           </a>
 
@@ -3835,27 +3784,27 @@
               <div class="mega-menu" role="group" aria-label="Solutions menu">
                 <div class="mega-menu-head">
                   <div>
-                    <p class="mega-menu-title">{% if isPolish %}Roadmapa i wdrożenia AI{% else %}AI Roadmap and Delivery{% endif %}</p>
-                    <p class="mega-menu-subtitle">{% if isPolish %}Praktyczne doradztwo i wdrożenia AI dla firm z Polski: roadmapa, discovery, integracje, agenci AI i automatyzacje.{% else %}Practical AI roadmap consulting, implementation planning, and execution for mid-sized companies.{% endif %}</p>
+                    <p class="mega-menu-title">{% if isPolish %}Strony wzorcowe Sisivo{% else %}Sisivo Page Templates{% endif %}</p>
+                    <p class="mega-menu-subtitle">{% if isPolish %}Czysta baza pod stronę produktu: strona główna, oferta, proces, o produkcie i kontakt.{% else %}A clean product-site base with home, solution, process, about, and contact page patterns.{% endif %}</p>
                   </div>
-                  <a class="mega-menu-all" href="{% if isPolish %}/pl/{% else %}/services/{% endif %}">{% if isPolish %}Zobacz wszystkie usługi{% else %}View all solutions{% endif %} {% ms "arrow_forward" %}</a>
+                  <a class="mega-menu-all" href="{% if isPolish %}/pl/{% else %}/services/{% endif %}">{% if isPolish %}Zobacz wzorce{% else %}View templates{% endif %} {% ms "arrow_forward" %}</a>
                 </div>
                 <div class="mega-menu-quickstart">
                   <a class="mega-quick-link" href="{{ roadmapUrl }}">
-                    <span class="mega-quick-title">{% if isPolish %}Roadmapa AI{% else %}AI Roadmap Consulting{% endif %}</span>
-                    <span class="mega-quick-desc">{% if isPolish %}Priorytetyzacja use case'ów, plan wdrożenia, ROI i pierwszy zakres projektu.{% else %}Prioritize use cases, scope the first phase, and define the rollout path with ROI in mind.{% endif %}</span>
+                    <span class="mega-quick-title">{% if isPolish %}Strona produktu{% else %}Product Page{% endif %}</span>
+                    <span class="mega-quick-desc">{% if isPolish %}Wzorzec pod opis produktu, korzyści, zakres i wezwanie do kontaktu.{% else %}A pattern for product messaging, benefits, scope, and conversion copy.{% endif %}</span>
                   </a>
                   <a class="mega-quick-link" href="{{ consultingUrl }}">
-                    <span class="mega-quick-title">{% if isPolish %}Konsulting AI{% else %}AI Consulting Services{% endif %}</span>
-                    <span class="mega-quick-desc">{% if isPolish %}Warsztaty discovery, ocena gotowości, wybór pierwszego use case'u i plan działania.{% else %}Discovery workshops, implementation planning, and practical decision support before delivery starts.{% endif %}</span>
+                    <span class="mega-quick-title">{% if isPolish %}Oferta{% else %}Solution Detail{% endif %}</span>
+                    <span class="mega-quick-desc">{% if isPolish %}Drugi link do tego samego wzorca, wygodny przy dalszym rozpisywaniu menu.{% else %}A reusable detail-page pattern for future product and solution sections.{% endif %}</span>
                   </a>
-                  <a class="mega-quick-link" href="{% if isPolish %}/pl/rag-dla-firm/{% else %}/services/ai-business-process-automation/{% endif %}">
-                    <span class="mega-quick-title">{% if isPolish %}Wdrożenia AI{% else %}AI Implementation Strategy{% endif %}</span>
-                    <span class="mega-quick-desc">{% if isPolish %}Integracje z CRM, ERP, dokumentami i procesami operacyjnymi dla mierzalnego efektu.{% else %}Connect systems, define controls, and move from roadmap to production without guesswork.{% endif %}</span>
+                  <a class="mega-quick-link" href="{% if isPolish %}/pl/wdrozenia-ai-dla-firm/{% else %}/implementation-process/{% endif %}">
+                    <span class="mega-quick-title">{% if isPolish %}Proces{% else %}Process Page{% endif %}</span>
+                    <span class="mega-quick-desc">{% if isPolish %}Układ do pokazania etapów wdrożenia, onboardingu albo sposobu działania produktu.{% else %}A layout for implementation steps, onboarding, or how the product works.{% endif %}</span>
                   </a>
-                  <a class="mega-quick-link" href="{% if isPolish %}/pl/konsulting-ai/{% else %}/ai-use-case-examples/{% endif %}">
-                    <span class="mega-quick-title">{% if isPolish %}Przykłady i use case'y{% else %}Examples and Outcomes{% endif %}</span>
-                    <span class="mega-quick-desc">{% if isPolish %}Zobacz, jak firmy planują i wdrażają AI w sprzedaży, operacjach i pracy na wiedzy.{% else %}See how companies scope and launch high-ROI AI workflows in operations, sales, and service.{% endif %}</span>
+                  <a class="mega-quick-link" href="{% if isPolish %}/pl/kontakt/{% else %}/contact-us/{% endif %}">
+                    <span class="mega-quick-title">{% if isPolish %}Kontakt{% else %}Contact Page{% endif %}</span>
+                    <span class="mega-quick-desc">{% if isPolish %}Wzorzec formularza, danych kontaktowych i końcowego CTA.{% else %}A pattern for conversion, contact details, and the final CTA.{% endif %}</span>
                   </a>
                 </div>
                 <p class="mega-menu-note">
@@ -4157,18 +4106,11 @@
                   <p class="service-desc">{% if isPolish %}Discovery, ocena gotowości, wybór architektury i przygotowanie organizacji do wdrożenia AI.{% else %}Discovery workshops, readiness assessment, architecture direction, and implementation decision support.{% endif %}</p>
                   <div class="service-meta">{% if isPolish %}Zobacz {% else %}Explore {% endif %}{% ms "arrow_forward" %}</div>
                 </a>
-                <a class="service-card" href="{% if isPolish %}/pl/rag-dla-firm/{% else %}/services/ai-business-process-automation/{% endif %}">
+                <a class="service-card" href="{{ roadmapUrl }}">
                   <h3 class="service-title">{% if isPolish %}Wdrożenie i integracje{% else %}Implementation and Integration{% endif %}</h3>
                   <p class="service-desc">{% if isPolish %}Połączenie AI z CRM, ERP, dokumentami i workflow operacyjnym, aby roadmapa przechodziła w działające rozwiązanie.{% else %}Connect AI with CRM, ERP, documents, and operating workflows so the roadmap turns into production value.{% endif %}</p>
                   <div class="service-meta">{% if isPolish %}Zobacz {% else %}Explore {% endif %}{% ms "arrow_forward" %}</div>
                 </a>
-                {% if isPolish %}
-                  <a class="service-card" href="/pl/agenci-ai-dla-firm/">
-                    <h3 class="service-title">Agenci AI dla firm</h3>
-                    <p class="service-desc">Gdy roadmapa wskaże use case wymagający działania na kontekście, wiedzy i wieloetapowym workflow.</p>
-                    <div class="service-meta">Zobacz {% ms "arrow_forward" %}</div>
-                  </a>
-                {% endif %}
               </div>
             </div>
           </section>
@@ -4312,50 +4254,6 @@
             </section>
           {% endif %}
 
-	          {% set featuredPosts = collections.postPl if isPolish else collections.posts %}
-            {% set featuredPosts = featuredPosts | sort(false, false, "date") | reverse %}
-	          {% if featuredPosts and featuredPosts.length %}
-              {% set featuredCount = 0 %}
-	            <section class="section compact" aria-label="Latest blog posts">
-	              <div class="container">
-	                <div class="section-header">
-	                  <h2 class="section-title">{% if isPolish %}Najnowsze wpisy{% else %}Latest from the blog{% endif %}</h2>
-	                  <p class="section-lead">{% if isPolish %}Praktyczne materiały o AI, roadmapach, automatyzacji i wdrożeniach dla firm.{% else %}Practical notes on AI roadmap consulting, implementation strategy, and high-ROI automation use cases.{% endif %}</p>
-	                </div>
-	                <div class="blog-grid">
-	                  {% for post in featuredPosts %}
-                      {% set tags = post.data.tags or [] %}
-                      {% set isPriority = ("ai" in tags) or ("automation" in tags) or ("workflows" in tags) or ("sales" in tags) or ("inbound" in tags) or ("seo" in tags) %}
-	                    {% if isPriority and featuredCount < 3 %}
-                          {% set featuredCount = featuredCount + 1 %}
-	                      <article class="post-card post-card--compact">
-	                        {% if post.data.image %}
-	                          <div class="post-card-thumb" aria-hidden="true">
-	                            <img src="{{ post.data.image }}" alt="{{ (post.data.imageAlt or post.data.title or '') | escape }}" loading="lazy" decoding="async" {% if post.data.imageWidth %}width="{{ post.data.imageWidth }}"{% endif %} {% if post.data.imageHeight %}height="{{ post.data.imageHeight }}"{% endif %} />
-	                          </div>
-	                        {% endif %}
-	                        <div class="post-card-content">
-	                          <p class="post-card-meta">
-	                            {% if post.date %}
-	                              <time datetime="{{ post.date.toISOString() }}">{{ post.date | readableDate(pageLocale) }}</time>
-	                            {% endif %}
-	                          </p>
-	                          <h3 class="post-card-title"><a href="{{ post.url }}">{{ post.data.title | escape }}</a></h3>
-	                          {% if post.data.description %}
-	                            <p class="post-card-desc">{{ post.data.description | escape }}</p>
-	                          {% endif %}
-	                          <a class="post-card-more" href="{{ post.url }}">{% if isPolish %}Czytaj dalej{% else %}Read more{% endif %} {% ms "arrow_forward" %}</a>
-	                        </div>
-	                      </article>
-	                    {% endif %}
-	                  {% endfor %}
-	                </div>
-	                <div class="hero-cta blog-more">
-	                  <a class="btn btn-ghost" href="{{ blogUrl }}">{% if isPolish %}Zobacz wszystkie wpisy{% else %}See all posts{% endif %} {% ms "arrow_forward" %}</a>
-	                </div>
-	              </div>
-	            </section>
-	          {% endif %}
         {% else %}
           {% if renderPageHeader is defined and renderPageHeader == false %}
             {{ content | safe }}
@@ -4367,9 +4265,6 @@
                   <span class="crumb-sep" aria-hidden="true">/</span>
                   {% if isServices and not isServicesIndex %}
                     <a href="/services/">Solutions</a>
-                    <span class="crumb-sep" aria-hidden="true">/</span>
-                  {% elif isBlog and not isBlogIndex %}
-                    <a href="{{ blogUrl }}">Blog</a>
                     <span class="crumb-sep" aria-hidden="true">/</span>
                   {% elif isStart and page.url != '/start-with-ai/' %}
                     <a href="/start-with-ai/">Start with AI</a>
@@ -4416,7 +4311,7 @@
       <footer class="site-footer">
         <div class="container footer-grid">
           <div>
-            <div>© 2026, Easy Tech Partners.</div>
+            <div>© 2026, Sisivo.</div>
             <div class="footer-build">
               Updated:
               <time datetime="{{ build.iso }}">{{ build.display }}</time>
@@ -4424,13 +4319,9 @@
           </div>
           <div class="footer-links" aria-label="Footer links">
             {% if isPolish %}
-              <a href="/pl/">Usługi AI</a>
+              <a href="/pl/">Sisivo</a>
               <a href="/pl/wdrozenia-ai-dla-firm/">Wdrożenia AI</a>
-              <a href="/pl/agenci-ai-dla-firm/">Agenci AI</a>
-              <a href="/pl/rag-dla-firm/">RAG dla firm</a>
-              <a href="/pl/konsulting-ai/">Konsulting AI</a>
               <a href="/pl/wdrozenia-ai-warszawa/">Warszawa</a>
-              <a href="/pl/blog/">Blog</a>
               <a href="/pl/kontakt/">Kontakt</a>
               <a href="/pl/polityka-prywatnosci/">Polityka prywatności</a>
               <a href="/pl/polityka-cookies/">Cookies</a>
@@ -4439,9 +4330,6 @@
               <a href="/implementation-process/">How It Works</a>
               <a href="/about-us/">About</a>
               <a href="/contact-us/">Contact</a>
-              <a href="{{ roadmapUrl }}">Get AI Roadmap</a>
-              <a href="/ai-use-case-examples/">Use Cases</a>
-              <a href="{{ blogUrl }}">Blog</a>
               <a href="/privacy-policy/">Privacy policy</a>
               <a href="/cookie-policy/">Cookies</a>
             {% endif %}

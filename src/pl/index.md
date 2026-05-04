@@ -18,7 +18,7 @@ faqSchema:
     answer: "Nie zawsze. W wielu przypadkach wystarczy dobrze rozpisany workflow, dostęp do obecnych systemów i partner, który potrafi przełożyć cele biznesowe na plan wdrożenia."
 ---
 
-Easy Tech Partners to partner wdrożeniowy dla firm, które chcą wykorzystać AI w konkretnych procesach biznesowych, a nie tylko testować kolejne narzędzia. Pracujemy z zespołami zarządczymi, operacyjnymi, sprzedażowymi i obsługi klienta, które oczekują krótszego czasu pracy nad zadaniami, lepszego dostępu do wiedzy i integracji z obecnymi systemami.
+Sisivo to partner wdrożeniowy dla firm, które chcą wykorzystać AI w konkretnych procesach biznesowych, a nie tylko testować kolejne narzędzia. Pracujemy z zespołami zarządczymi, operacyjnymi, sprzedażowymi i obsługi klienta, które oczekują krótszego czasu pracy nad zadaniami, lepszego dostępu do wiedzy i integracji z obecnymi systemami.
 
 ## W czym pomagamy
 
@@ -26,15 +26,15 @@ Easy Tech Partners to partner wdrożeniowy dla firm, które chcą wykorzystać A
 
 Projektujemy i wdrażamy rozwiązania AI tam, gdzie proces da się usprawnić w sposób mierzalny: w obsłudze dokumentów, komunikacji, analizie danych, pracy operacyjnej i przepływie zadań. Zaczynamy od zakresu, który można bezpiecznie uruchomić i ocenić biznesowo.
 
-### [Agenci AI dla firm](/pl/agenci-ai-dla-firm/)
+### [Wzorzec strony produktu](/pl/wdrozenia-ai-dla-firm/)
 
 Budujemy agentów AI wykonujących powtarzalne zadania, wspierających pracowników i automatyzujących procesy z udziałem człowieka tylko tam, gdzie jest to potrzebne. To dobre rozwiązanie dla firm, które chcą szybszej obsługi, lepszej koordynacji pracy i mniejszej liczby ręcznych działań.
 
-### [RAG i wyszukiwanie wiedzy](/pl/rag-dla-firm/)
+### [Proces i onboarding](/pl/wdrozenia-ai-dla-firm/)
 
 Tworzymy systemy AI pracujące na dokumentach, procedurach, bazach wiedzy i materiałach wewnętrznych. Dzięki temu pracownicy szybciej znajdują odpowiedzi, a firma ma lepszy dostęp do wiedzy bez chaosu informacyjnego.
 
-### [Konsulting AI](/pl/konsulting-ai/)
+### [Kontakt i konwersja](/pl/kontakt/)
 
 Prowadzimy warsztaty, porządkujemy use case'y, pomagamy wybrać architekturę i plan wdrożenia. To dobra ścieżka dla firm, które chcą podjąć dobrą decyzję przed inwestycją w konkretny projekt.
 
@@ -64,7 +64,7 @@ Priorytetyzujemy use case'y i wybieramy obszar, który da się wdrożyć bez prz
 
 Definiujemy wskaźniki przed wdrożeniem i sprawdzamy wynik po starcie. Interesują nas mierzalne efekty, nie deklaracje.
 
-## Dlaczego Easy Tech Partners
+## Dlaczego Sisivo
 
 - dostarczamy praktyczne wdrożenia, a nie tylko rekomendacje strategiczne
 - pracujemy na jasnym zakresie i komunikujemy ograniczenia na początku projektu
@@ -83,9 +83,9 @@ Definiujemy wskaźniki przed wdrożeniem i sprawdzamy wynik po starcie. Interesu
 ## Zobacz usługi powiązane
 
 - [Wdrożenia AI dla firm](/pl/wdrozenia-ai-dla-firm/)
-- [Agenci AI dla firm](/pl/agenci-ai-dla-firm/)
-- [RAG dla firm](/pl/rag-dla-firm/)
-- [Konsulting AI](/pl/konsulting-ai/)
+- [Wdrożenia AI dla firm](/pl/wdrozenia-ai-dla-firm/)
+- [Wdrożenia AI Warszawa](/pl/wdrozenia-ai-warszawa/)
+- [Kontakt](/pl/kontakt/)
 - [Wdrożenia AI Warszawa](/pl/wdrozenia-ai-warszawa/)
 
 ## FAQ

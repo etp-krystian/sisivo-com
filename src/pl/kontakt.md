@@ -1,7 +1,7 @@
 ---
 layout: base
 locale: pl
-title: Kontakt | Easy Tech Partners
+title: Kontakt | Sisivo
 heading: Kontakt
 description: "Porozmawiajmy o wdrożeniu AI, agentach AI, RAG i automatyzacji procesów w Twojej firmie."
 permalink: /pl/kontakt/
@@ -121,7 +121,7 @@ alternateLangs:
   <p>Umów konsultację, jeśli chcesz omówić proces na żywo, albo zacznij od wskazania obszaru, w którym AI ma dać realny efekt.</p>
   <div class="home-cta">
     <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9">{% ms "calendar_month" %}<span>Umów konsultację</span></a>
-    <a class="btn btn-ghost btn-see-services" href="/pl/konsulting-ai/"><span>Zobacz, od czego zacząć</span><span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" /><path d="M8.8 4.3L12.5 8L8.8 11.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></span></a>
+    <a class="btn btn-ghost btn-see-services" href="/pl/wdrozenia-ai-dla-firm/"><span>Zobacz, od czego zacząć</span><span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" /><path d="M8.8 4.3L12.5 8L8.8 11.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></span></a>
   </div>
 </section>
 

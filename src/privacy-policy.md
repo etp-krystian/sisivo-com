@@ -1,19 +1,19 @@
 ---
 layout: base
 title: Privacy Policy
-description: How Easy Tech Partners handles personal data and privacy on this website.
+description: How Sisivo handles personal data and privacy on this website.
 alternateLangs:
   en: /privacy-policy/
   pl: /pl/polityka-prywatnosci/
 ---
 
-This Privacy Policy explains how Easy Tech Partners (“we”, “us”) processes personal data when you use this website and when you contact us.
+This Privacy Policy explains how Sisivo (“we”, “us”) processes personal data when you use this website and when you contact us.
 
 ## Who we are (data controller)
 
-Easy Tech Partners is the controller of your personal data for the purposes described in this policy.
+Sisivo is the controller of your personal data for the purposes described in this policy.
 
-- Controller: Easy Tech Partners  
+- Controller: Sisivo  
 - Contact email: [krystian@easytechpartners.com](mailto:krystian@easytechpartners.com)  
 
 If you have questions about privacy, or want to exercise your rights, contact us using the email above.

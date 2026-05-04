@@ -3,14 +3,14 @@ layout: base
 locale: pl
 title: Polityka cookies
 heading: Polityka cookies
-description: Jak Easy Tech Partners używa plików cookie i podobnych technologii na tej stronie.
+description: Jak Sisivo używa plików cookie i podobnych technologii na tej stronie.
 permalink: /pl/polityka-cookies/
 alternateLangs:
   en: /cookie-policy/
   pl: /pl/polityka-cookies/
 ---
 
-Easy Tech Partners używa plików cookie i podobnych technologii, aby poprawiać działanie strony, analizować ruch oraz wspierać działania marketingowe. Korzystając z tej strony, wyrażasz zgodę na używanie cookies zgodnie z niniejszą polityką, w zakresie wynikającym z Twoich ustawień.
+Sisivo używa plików cookie i podobnych technologii, aby poprawiać działanie strony, analizować ruch oraz wspierać działania marketingowe. Korzystając z tej strony, wyrażasz zgodę na używanie cookies zgodnie z niniejszą polityką, w zakresie wynikającym z Twoich ustawień.
 
 ## Czym są cookies
 

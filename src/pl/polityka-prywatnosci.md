@@ -3,20 +3,20 @@ layout: base
 locale: pl
 title: Polityka prywatności
 heading: Polityka prywatności
-description: Jak Easy Tech Partners przetwarza dane osobowe i dba o prywatność na tej stronie.
+description: Jak Sisivo przetwarza dane osobowe i dba o prywatność na tej stronie.
 permalink: /pl/polityka-prywatnosci/
 alternateLangs:
   en: /privacy-policy/
   pl: /pl/polityka-prywatnosci/
 ---
 
-Niniejsza Polityka prywatności wyjaśnia, w jaki sposób Easy Tech Partners przetwarza dane osobowe, gdy korzystasz z tej strony internetowej oraz gdy kontaktujesz się z nami.
+Niniejsza Polityka prywatności wyjaśnia, w jaki sposób Sisivo przetwarza dane osobowe, gdy korzystasz z tej strony internetowej oraz gdy kontaktujesz się z nami.
 
 ## Kim jesteśmy
 
-Easy Tech Partners jest administratorem danych osobowych przetwarzanych w celach opisanych w tej polityce.
+Sisivo jest administratorem danych osobowych przetwarzanych w celach opisanych w tej polityce.
 
-- Administrator: Easy Tech Partners  
+- Administrator: Sisivo  
 - Email kontaktowy: [krystian@easytechpartners.com](mailto:krystian@easytechpartners.com)
 
 Jeśli masz pytania dotyczące prywatności lub chcesz skorzystać ze swoich praw, napisz do nas na powyższy adres.

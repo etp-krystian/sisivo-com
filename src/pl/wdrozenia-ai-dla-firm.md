@@ -85,9 +85,9 @@ Najczęściej dlatego, że chcą przyspieszyć wdrożenie bez budowania wszystki
 
 ## Powiązane obszary
 
-- [Agenci AI dla firm](/pl/agenci-ai-dla-firm/)
-- [RAG dla firm](/pl/rag-dla-firm/)
-- [Konsulting AI](/pl/konsulting-ai/)
+- [Polska strona główna](/pl/)
+- [Wdrożenia AI Warszawa](/pl/wdrozenia-ai-warszawa/)
+- [Kontakt](/pl/kontakt/)
 - [Wdrożenia AI Warszawa](/pl/wdrozenia-ai-warszawa/)
 - [Polska strona główna AI](/pl/)
 
@@ -114,6 +114,6 @@ Najczęściej mierzymy oszczędność czasu, skrócenie czasu obsługi, liczbę 
   <p>Jeśli chcesz sprawdzić, które procesy warto zautomatyzować w pierwszej kolejności, przygotujemy rekomendację zakresu, integracji i sposobu pomiaru efektu.</p>
   <div class="home-cta">
     <a class="btn btn-primary" href="https://calendar.app.google/R21jua9szDGa7T7c9">{% ms "calendar_month" %}<span>Porozmawiajmy o wdrożeniu AI</span></a>
-    <a class="btn btn-ghost" href="/pl/konsulting-ai/"><span>Zobacz, od czego zacząć</span>{% ms "arrow_forward" %}</a>
+    <a class="btn btn-ghost" href="/pl/kontakt/"><span>Zobacz, od czego zacząć</span>{% ms "arrow_forward" %}</a>
   </div>
 </section>

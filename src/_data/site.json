@@ -1,20 +1,20 @@
 {
-  "name": "Easy Tech Partners",
-  "description": "AI roadmap consulting, implementation strategy, and practical AI delivery for mid-sized companies.",
-  "url": "https://easytechpartners.com",
+  "name": "Sisivo",
+  "description": "Sisivo product website.",
+  "url": "https://sisivo.com",
   "locale": "en",
   "email": "krystian@easytechpartners.com",
   "telephone": "+48505316553",
-  "logo": "/images/easy-tech-logo.svg",
+  "logo": "/images/sisivo-mark.svg",
   "sameAs": [
     "https://www.linkedin.com/in/krystiansulek/"
   ],
   "organization": {
-    "name": "Easy Tech Partners",
-    "legalName": "Easy Tech Partners",
+    "name": "Sisivo",
+    "legalName": "Sisivo",
     "email": "krystian@easytechpartners.com",
     "telephone": "+48505316553",
-    "logo": "/images/easy-tech-logo.svg",
+    "logo": "/images/sisivo-mark.svg",
     "sameAs": [
       "https://www.linkedin.com/in/krystiansulek/"
     ],
@@ -28,6 +28,6 @@
     ]
   },
   "author": {
-    "name": "Easy Tech Partners"
+    "name": "Sisivo"
   }
 }
