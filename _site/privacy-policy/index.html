@@ -3271,6 +3271,63 @@
         line-height: 1.5;
       }
 
+      .value-stack {
+        display: grid;
+        gap: 32px;
+        margin-top: 24px;
+      }
+
+      .value-panel {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+        gap: 40px;
+        align-items: center;
+        padding: 40px;
+        border-radius: 12px;
+        border: 1px solid rgba(226, 232, 240, 0.95);
+        background: rgba(255, 255, 255, 0.98);
+      }
+
+      .value-panel:nth-child(even) .value-panel-copy {
+        order: 2;
+      }
+
+      .value-panel:nth-child(even) .value-panel-visual {
+        order: 1;
+      }
+
+      .value-panel-copy {
+        max-width: 34ch;
+      }
+
+      .value-kicker {
+        margin: 0 0 10px;
+        font-size: 13px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--accent-tech-dark);
+      }
+
+      .value-title {
+        margin: 0 0 14px;
+        font-size: clamp(34px, 4vw, 52px);
+        line-height: 0.98;
+        letter-spacing: -0.04em;
+        color: var(--text);
+      }
+
+      .value-body {
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.42;
+        color: var(--muted);
+      }
+
+      .value-panel-visual .visual-placeholder {
+        min-height: 320px;
+      }
+
       .pilot {
         border-radius: 8px;
         border: 1px solid rgba(var(--primary-rgb), 0.28);
@@ -3662,6 +3719,15 @@
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
+        .value-panel {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .value-panel:nth-child(even) .value-panel-copy,
+        .value-panel:nth-child(even) .value-panel-visual {
+          order: initial;
+        }
+
         .partner {
           grid-template-columns: minmax(0, 1fr);
         }
@@ -3748,6 +3814,11 @@
 
         .info-grid {
           grid-template-columns: minmax(0, 1fr);
+        }
+
+        .value-panel {
+          gap: 24px;
+          padding: 28px;
         }
 
         .blog-grid {
@@ -3956,7 +4027,7 @@
             <div>© 2026, Sisivo.</div>
             <div class="footer-build">
               Updated:
-              <time datetime="2026-05-04T14:16:16.486Z">2026-05-04 14:16 UTC</time>
+              <time datetime="2026-05-04T15:22:23.452Z">2026-05-04 15:22 UTC</time>
             </div>
           </div>
           <div class="footer-links" aria-label="Footer links">
