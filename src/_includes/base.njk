@@ -4119,14 +4119,7 @@
                     For B2B teams with deals, outbound, and a CRM, but no shared way to qualify, run, and win deals.
                   </p>
                   <div class="home-cta home-cta--hero">
-                    <a class="btn btn-primary" href="{{ calendarUrl }}">{% ms "calendar_month" %}<span>Book Pipeline Review</span></a>
-                    <a class="cta-inline-link" href="{{ roadmapUrl }}">
-                      <span>Learn more</span>
-                      <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path d="M3.5 8H12.5" stroke-width="1.8" stroke-linecap="round" />
-                        <path d="M8.8 4.3L12.5 8L8.8 11.7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                    </a>
+                    <a class="btn btn-primary" href="{{ calendarUrl }}">{% ms "calendar_month" %}<span>Book Discovery Call</span></a>
                   </div>
                   <div class="home-note">For B2B SaaS and complex-service teams. First value in 1-2 weeks.</div>
                 </div>
@@ -4256,7 +4249,7 @@
                   <h2 class="partner-title">See the system on your pipeline</h2>
                   <p class="partner-body">Start with a recent CRM export. Sisivo shows where deals are lost, what should change, and whether the rollout makes sense now.</p>
                   <div class="home-cta">
-                    <a class="btn btn-primary" href="{{ calendarUrl }}">{% ms "calendar_month" %}<span>Book Pipeline Review</span></a>
+                    <a class="btn btn-primary" href="{{ calendarUrl }}">{% ms "calendar_month" %}<span>Book Discovery Call</span></a>
                   </div>
                 </div>
               </div>
@@ -4318,13 +4311,12 @@
                 {% if isServices and not isServicesIndex %}
                   {% set ctaTitle = "Porozmawiajmy o tym, czy Sisivo ma sens dla Twojego pipeline" if isPolish else "Need help deciding whether Sisivo fits your pipeline?" %}
                   {% set ctaBody = "Powiedz nam, jak dziś wygląda sprzedaż, a pomożemy ocenić dopasowanie, zakres pilota i następny krok." if isPolish else "Tell us how your sales process works today and we will help you evaluate fit, pilot scope, and the right next step." %}
-                  {% set ctaButton = "Umów przegląd pipeline" if isPolish else "Book Pipeline Review" %}
+                  {% set ctaButton = "Umów przegląd pipeline" if isPolish else "Book Discovery Call" %}
                   <section class="service-page-cta" aria-label="Service contact call to action">
                     <h2>{{ ctaTitle }}</h2>
                     <p>{{ ctaBody }}</p>
                     <div class="home-cta">
                       <a class="btn btn-primary" href="{{ calendarUrl }}">{% ms "calendar_month" %}<span>{{ ctaButton }}</span></a>
-                      <a class="btn btn-ghost btn-see-services" href="{{ roadmapUrl }}"><span class="btn-icon btn-icon--roadmap" aria-hidden="true"></span><span>{% if isPolish %}Dowiedz się więcej{% else %}Learn more{% endif %}</span></a>
                     </div>
                   </section>
                 {% endif %}
