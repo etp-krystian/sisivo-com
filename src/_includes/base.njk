@@ -73,6 +73,14 @@
     <meta property="og:title" content="{{ metaTitle | escape }}" />
     <meta property="og:description" content="{{ metaDescription | escape }}" />
     <meta property="og:type" content="{% if pageType == 'article' %}article{% else %}website{% endif %}" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7383MC8D6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-J7383MC8D6');
+    </script>
     {% if pageType == 'article' and date %}
       <meta property="article:published_time" content="{{ date.toISOString() }}" />
     {% endif %}
