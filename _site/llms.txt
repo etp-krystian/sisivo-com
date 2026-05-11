@@ -1,0 +1,23 @@
+# Sisivo
+
+> Sisivo helps B2B teams turn chaotic pipeline activity into a working sales system.
+
+This website permits access to public content by search engine crawlers and AI user agents.
+
+Canonical site: https://sisivo.com
+Sitemap: https://sisivo.com/sitemap.xml
+
+Public pages:
+- https://sisivo.com/
+- https://sisivo.com/services/
+- https://sisivo.com/services/ai-solutions-development/
+- https://sisivo.com/implementation-process/
+- https://sisivo.com/start-with-ai/
+- https://sisivo.com/business-ai-faq/
+- https://sisivo.com/why-us/
+- https://sisivo.com/about-us/
+- https://sisivo.com/contact-us/
+
+Policies:
+- https://sisivo.com/privacy-policy/
+- https://sisivo.com/cookie-policy/
